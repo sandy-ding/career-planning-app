@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+}
+
+/* @-webkit-keyframes stepsV1 {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+} */
+@keyframes stepsV1 {
+  0% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
