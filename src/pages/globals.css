@@ -22,3 +22,12 @@ body {
     transform: translateX(20px);
   }
 }
+
+.highlight {
+  font-weight: 500;
+  margin: 0 2px;
+  text-decoration-color: #dc2626;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}

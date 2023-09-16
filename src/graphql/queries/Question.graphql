@@ -8,6 +8,9 @@ query question($id: String!) {
     label
     description
     fileUrl
+    answer
+    type
+    isTest
     options {
       value
       label

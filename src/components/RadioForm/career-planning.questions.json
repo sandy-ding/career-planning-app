@@ -1,0 +1,2389 @@
+[
+  {
+    "_id": "1",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "词汇理解",
+    "category4": "词汇辨析",
+    "type": "Radio",
+    "label": "治理环境确为政府职责，环境出现问题，其监管_________，执法 不严难逃其责，但是，当大家不断_________政府不作为时，是不是 也应该_________一下自己：我们有没有污染环境？ 依次填入划横线部分最恰当的一项是：",
+    "options": [
+      {
+        "value": "A",
+        "label": "不周 斥责 检查"
+      },
+      {
+        "value": "B",
+        "label": "不力 指责 检讨"
+      },
+      {
+        "value": "C",
+        "label": "不善 苛责 检点"
+      },
+      {
+        "value": "D",
+        "label": "不当 谴责 检察"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "2",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "词汇理解",
+    "category4": "词汇辨析",
+    "type": "Radio",
+    "label": "餐厅经理表示，五一期间，到后海游玩的市民和外地游客挺多。昨天餐厅从 11 点开始就一直处于“客满”状态，前来购买外卖的市民更是_________，这让店里每天下午都难以打烊，出现了就餐人群从午饭时间一直_________到晚饭时间的火爆场面。",
+    "options": [
+      {
+        "value": "A",
+        "label": "川流不息 继续"
+      },
+      {
+        "value": "B",
+        "label": "源源不断 连续"
+      },
+      {
+        "value": "C",
+        "label": "络绎不绝 延续"
+      },
+      {
+        "value": "D",
+        "label": "连绵不断 陆续"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "3",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "词汇理解",
+    "category4": "关联词",
+    "type": "Radio",
+    "label": "几十年的创作生涯，使我深感真正用心的创作就是拼积累、耗心血， _________ 靠积累琢磨出来的剧本，无论是故事、人物还是语言， 都会“有嚼头”。",
+    "options": [
+      {
+        "value": "A",
+        "label": "但凡"
+      },
+      {
+        "value": "B",
+        "label": "因为"
+      },
+      {
+        "value": "C",
+        "label": "只有"
+      },
+      {
+        "value": "D",
+        "label": "只要"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "4",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "词汇理解",
+    "category4": "关联词",
+    "type": "Radio",
+    "label": "中国哲学逻辑结构系统，____是哲学家思辨的独撰，____是千古的心传，____是中国哲学历史的发展和中国哲学内在逻辑的体现。",
+    "options": [
+      {
+        "value": "A",
+        "label": "既 又 也"
+      },
+      {
+        "value": "B",
+        "label": "既不 也不 而"
+      },
+      {
+        "value": "C",
+        "label": "不仅 而且 还"
+      },
+      {
+        "value": "D",
+        "label": "既 也 更"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "5",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "词汇理解",
+    "category4": "词语替换",
+    "type": "Radio",
+    "label": "中国对葡萄酒征收 17%的增值税、10%的消费税并不会发生改变，关税单方面下降，对<span class='highlight'>抑制</span>进口酒的高价起不了多大作用。",
+    "options": [
+      {
+        "value": "A",
+        "label": "遏制"
+      },
+      {
+        "value": "B",
+        "label": "压制"
+      },
+      {
+        "value": "C",
+        "label": "抵制"
+      },
+      {
+        "value": "D",
+        "label": "限制"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "6",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "词汇理解",
+    "category4": "词语替换",
+    "type": "Radio",
+    "label": "一些商店为了<span class='highlight'>招徕</span>顾客，尝尝向顾客赠送小饰物、小礼品等。",
+    "options": [
+      {
+        "value": "A",
+        "label": "招揽"
+      },
+      {
+        "value": "B",
+        "label": "招待"
+      },
+      {
+        "value": "C",
+        "label": "招呼"
+      },
+      {
+        "value": "D",
+        "label": "招引"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "7",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "词汇理解",
+    "category4": "词语替换",
+    "type": "Radio",
+    "label": "学无止境。如果有了一点成绩，便<span class='highlight'>自命不凡</span>，翘起尾巴，就会妨碍以后的进步。",
+    "options": [
+      {
+        "value": "A",
+        "label": "自以为是"
+      },
+      {
+        "value": "B",
+        "label": "自吹自擂"
+      },
+      {
+        "value": "C",
+        "label": "不自量力"
+      },
+      {
+        "value": "D",
+        "label": "刚愎自用"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "8",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "词汇理解",
+    "category4": "词语替换",
+    "type": "Radio",
+    "label": "在一个太空飞行已经变得快要<span class='highlight'>司空见惯</span>的时代，很容易忽略乘火箭旅行的危险和在环境恶劣的地球外层大气中航行的困难。",
+    "options": [
+      {
+        "value": "A",
+        "label": "习以为常"
+      },
+      {
+        "value": "B",
+        "label": "不足为奇"
+      },
+      {
+        "value": "C",
+        "label": "屡见不鲜"
+      },
+      {
+        "value": "D",
+        "label": "微不足道"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "9",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "词汇理解",
+    "category4": "词语填空",
+    "type": "Radio",
+    "label": "良好的人际关系是不易建立的，而要____良好的人际关系，就应该注意道德原则一一信用。",
+    "options": [
+      {
+        "value": "A",
+        "label": "维持"
+      },
+      {
+        "value": "B",
+        "label": "加强"
+      },
+      {
+        "value": "C",
+        "label": "维护"
+      },
+      {
+        "value": "D",
+        "label": "维系"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "_id": "10",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "词汇理解",
+    "category4": "词语填空",
+    "type": "Radio",
+    "label": "语文考试能得高分的学生大都思维敏捷,____，并且综合能力较强。",
+    "options": [
+      {
+        "value": "A",
+        "label": "见多识广"
+      },
+      {
+        "value": "B",
+        "label": "博古通今"
+      },
+      {
+        "value": "C",
+        "label": "旁征博引"
+      },
+      {
+        "value": "D",
+        "label": "博大精深"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "11",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "句子理解",
+    "category4": "言语推理",
+    "type": "Radio",
+    "label": "如果笔相对于写字，那么书相对于（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "娱乐"
+      },
+      {
+        "value": "B",
+        "label": "阅读"
+      },
+      {
+        "value": "C",
+        "label": "学文化"
+      },
+      {
+        "value": "D",
+        "label": "解除疲劳"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "12",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "句子理解",
+    "category4": "言语推理",
+    "type": "Radio",
+    "label": "找出不同类的一项（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "铁锅"
+      },
+      {
+        "value": "B",
+        "label": "小勺"
+      },
+      {
+        "value": "C",
+        "label": "米饭"
+      },
+      {
+        "value": "D",
+        "label": "碟子"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "13",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "句子理解",
+    "category4": "言语推理",
+    "type": "Radio",
+    "label": "与“儿童：孩子 ”逻辑关系相似的是（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "同学：朋友"
+      },
+      {
+        "value": "B",
+        "label": "兄长：哥哥"
+      },
+      {
+        "value": "C",
+        "label": "饭店：商场"
+      },
+      {
+        "value": "D",
+        "label": "玩具：游戏"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "14",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "句子理解",
+    "category4": "言语推理",
+    "type": "Radio",
+    "label": "下列选项中，与“教授：科学家”两概念的关系一致的是(   )。",
+    "options": [
+      {
+        "value": "A",
+        "label": "图书：英文书"
+      },
+      {
+        "value": "B",
+        "label": "昆明：春城"
+      },
+      {
+        "value": "C",
+        "label": "学生：运动员"
+      },
+      {
+        "value": "D",
+        "label": "足球：篮球"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "15",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "句子理解",
+    "category4": "言语推理",
+    "type": "Radio",
+    "label": "下列选项中，与“歌手：演员”逻辑关系相同的是（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "叮当猫：哆啦A梦"
+      },
+      {
+        "value": "B",
+        "label": "小学生：少先队员"
+      },
+      {
+        "value": "C",
+        "label": "土豆：马铃薯"
+      },
+      {
+        "value": "D",
+        "label": "尼罗河：世界第一大河流"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "16",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "句子理解",
+    "category4": "言语推理",
+    "type": "Radio",
+    "label": "与“麻雀：生物：生物链”逻辑关系相似的是（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "豆浆：早餐：豆制品"
+      },
+      {
+        "value": "B",
+        "label": "开水：纸杯：便利品"
+      },
+      {
+        "value": "C",
+        "label": "发卡：首饰：装扮品"
+      },
+      {
+        "value": "D",
+        "label": "钢笔：电脑：办公品"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "17",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "句子理解",
+    "category4": "言语推理",
+    "type": "Radio",
+    "label": "与“花：牡丹：玫瑰”逻辑关系一致的是（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "茶：红茶：绿茶"
+      },
+      {
+        "value": "B",
+        "label": "草：狗尾草：三叶草"
+      },
+      {
+        "value": "C",
+        "label": "球：足球：绒球"
+      },
+      {
+        "value": "D",
+        "label": "车：轿车：客车"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "18",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "句子理解",
+    "category4": "言语推理",
+    "type": "Radio",
+    "label": "与”法律：诉讼：胜败“逻辑关系相似的是（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "策略：经营：盈亏"
+      },
+      {
+        "value": "B",
+        "label": "战争：武器：存亡"
+      },
+      {
+        "value": "C",
+        "label": "判断：事实：对错"
+      },
+      {
+        "value": "D",
+        "label": "教师：教学：优劣"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "19",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "句子理解",
+    "category4": "主题概括",
+    "type": "Radio",
+    "label": "人体需要的碳水化合物主要靠谷类提供。碳水化合物进入体内后转化为糖分，再进一步转化为维持人体机能的热量。糖分与热量之间的转化需要胰岛素的参与，胰岛素对葡萄糖有降解的作用。如果长期不吃或者少吃米饭，转化的葡萄糖量减少，胰岛素分泌就会减少，胰岛素的工作节奏被打乱，久而久之会给糖尿病提供可乘之机。<br /><br />这段文字意在说明：",
+    "options": [
+      {
+        "value": "A",
+        "label": "碳水化合物是人体所必需的"
+      },
+      {
+        "value": "B",
+        "label": "不吃谷类食物可能会得糖尿病"
+      },
+      {
+        "value": "C",
+        "label": "改善饮食结构可有效治疗糖尿病"
+      },
+      {
+        "value": "D",
+        "label": "糖尿病的病因是胰岛素分泌紊乱"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "20",
+    "category1": "语言能力",
+    "category2": "言语理解",
+    "category3": "句子理解",
+    "category4": "主题概括",
+    "type": "Radio",
+    "label": "综观自然界里的动物和植物，蓝色是一种极其罕见的颜色，我们吃的食物几乎没有蓝色的。在18世纪初普鲁士蓝（即亚铁氰化铁）被意外发明之前，蓝色颜料一直难以获得。当时画家笔下那种鲜艳、饱和的蓝色，主要来自一种名贵的矿石——阿富汗青金石。青金石研磨成粉，可以调制出稳定的蓝色颜料“群青”。这些宝贵的石头通过丝绸之路，从中亚流向欧洲和中国，成为画家笔下神秘绚烂的一抹异色。在莫高窟的壁画中，我们便可以找到这种蓝色。因为珍稀罕见，青金石在市面上流通的价格一度比黄金还要昂贵几倍。<br /><br />这段文字主要介绍：",
+    "options": [
+      {
+        "value": "A",
+        "label": "自然界中蓝色极其罕见的原因"
+      },
+      {
+        "value": "B",
+        "label": "古代绘画中所使用的蓝色颜料"
+      },
+      {
+        "value": "C",
+        "label": "青金石在莫高窟壁画中的使用情况"
+      },
+      {
+        "value": "D",
+        "label": "丝绸之路对中西方文化交流的影响"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "21",
+    "category1": "语言能力",
+    "category2": "言语表达",
+    "category3": "语句填空",
+    "type": "Radio",
+    "label": "虽然现在用户对于不明来历的电子邮件普遍存在戒心，但是黑客_____。如今，诱人产生好奇心的诱饵已经出现在网络、社交软件、移动设备上，而且诱饵已经不限于色情、惊奇的信息，而是包括诸如“工资单”“对账单”等。<br /><br />填入画横线部分最恰当的一句是：",
+    "options": [
+      {
+        "value": "A",
+        "label": "已经把重点放在其他媒介上"
+      },
+      {
+        "value": "B",
+        "label": "正在不断地开辟新的战场"
+      },
+      {
+        "value": "C",
+        "label": "更善于抓住人们的兴趣点"
+      },
+      {
+        "value": "D",
+        "label": "绝对不会就此偃旗息鼓"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "22",
+    "category1": "语言能力",
+    "category2": "言语表达",
+    "category3": "语句填空",
+    "type": "Radio",
+    "label": "我们身处的社会，是由无数人组成的，不管是大学生村官，还是白领实习生，都得和不同的人，不同的事情打交道，也必然会遭遇各种挫折、挑战。在这个过程中，采取什么态度来对待这些挫折、挑战，往往对最终结果具有决定性作用，而情商又决定了人们采取何种态度。从这个角度来看，情商极其重要，如果用一句话加以概括的话，那就是____。<br /><br />填在横线上最恰当的一项是：",
+    "options": [
+      {
+        "value": "A",
+        "label": "情商决定结果"
+      },
+      {
+        "value": "B",
+        "label": "情商决定态度"
+      },
+      {
+        "value": "C",
+        "label": "性格决定命运"
+      },
+      {
+        "value": "D",
+        "label": "态度决定结果"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "23",
+    "category1": "语言能力",
+    "category2": "言语表达",
+    "category3": "语句排序",
+    "type": "Radio",
+    "label": "将以下句子重新排列，顺序最恰当的一组是：",
+    "description": "①随着时间推移，原来分散在不同地区的文明之间的交往越来越多。</br>②一方面，它通过内聚力来维系自身的特质，使自身得以传承和延续。</br>③在这种背景下，一种文明的开放程度和借鉴能力就成为影响其发展的重要因素。</br>④文明往往是内聚力和外引力的统一体。</br>⑤在这个过程中，不同文明的差异性逐渐表现出来，其互补性也会越来越强。</br>⑥另一方面，它通过外引力将外部资源转化成自身养分，使自身得以开放发展。",
+    "options": [
+      {
+        "value": "A",
+        "label": "①②⑥⑤③④"
+      },
+      {
+        "value": "B",
+        "label": "①⑤③④②⑥"
+      },
+      {
+        "value": "C",
+        "label": "④②⑥①⑤③"
+      },
+      {
+        "value": "D",
+        "label": "④②⑤⑥③①"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "24",
+    "category1": "语言能力",
+    "category2": "言语表达",
+    "category3": "语句排序",
+    "type": "Radio",
+    "label": "将以下5个句子重新排列，语序正确的一项是：",
+    "description": "①在利益的驱使下，行业内滋生了“流量至上”甚至“流量造假”等现象，亟待规范和引导。</br>②互联网和社交媒体的升级迭代、文化娱乐产业的蓬勃发展，成为“粉丝经济”兴起的深厚土壤。</br>③理性对待粉丝热情、引导粉丝合理消费，同时将明星效应转化为提升商业品牌知名度的契机，才能更好体现“粉丝经济”背后的流量价值。</br>④对商家来说，粉丝们带来的“流量”往往与“销量”直接挂钩。</br>⑤而粉丝群体中存在的“刷单”“刷票房”“刷好评”等不良行为，也会为自身带来负面评价。",
+    "options": [
+      {
+        "value": "A",
+        "label": "③②⑤①④"
+      },
+      {
+        "value": "B",
+        "label": "③⑤①④②"
+      },
+      {
+        "value": "C",
+        "label": "②③⑤④①"
+      },
+      {
+        "value": "D",
+        "label": "②④①⑤③"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "_id": "25",
+    "category1": "语言能力",
+    "category2": "言语表达",
+    "category3": "语句续写",
+    "type": "Radio",
+    "label": "人的身高是生物学性状之一。一直以来，人们认为身高主要是遗传、饮食和环境因素综合决定的。但是，在人类认识了基因的作用后，开始认为基因在决定身高中占主要作用，于是在人类基因组计划完成后，开始寻找与身高相关的基因，并获得其与健康、疾病等有关的信息和知识。</br></br>接下来最可能讲述的是：",
+    "options": [
+      {
+        "value": "A",
+        "label": "身高差距大的人在外貌、健康状态上差异也大"
+      },
+      {
+        "value": "B",
+        "label": "饮食、环境及个人健康状况对基因有影响"
+      },
+      {
+        "value": "C",
+        "label": "寻找与身高基因有关的数据并实证分析"
+      },
+      {
+        "value": "D",
+        "label": "决定身高的基因还影响着健康、疾病等"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "26",
+    "category1": "语言能力",
+    "category2": "言语表达",
+    "category3": "语句续写",
+    "type": "Radio",
+    "label": "在家常常一人站在窗前向楼下看，安静的院子里有一群流浪猫。流浪猫有其自己的生活，天蒙蒙亮时就会慵懒地走动，等待好心人送来的猫粮。它们三五成群，吃饱了就打打闹闹，累了就找地歇息，高高兴兴地过上一天。我发现其中有一只花猫不怎么合群，老是独自游走或静卧幽处，仿佛心里有事。</br></br>这是一篇文章的开头，接下来最可能讲述的是：",
+    "options": [
+      {
+        "value": "A",
+        "label": "这群流浪猫的奇闻趣事"
+      },
+      {
+        "value": "B",
+        "label": "人怎样与动物和谐相处"
+      },
+      {
+        "value": "C",
+        "label": "楼下为什么聚集流浪猫"
+      },
+      {
+        "value": "D",
+        "label": "那只不合群的猫的故事"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "_id": "27",
+    "category1": "逻辑推理能力",
+    "category2": "具体推理",
+    "category3": "图形推理",
+    "category4": "瑞文-普通",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q27.png",
+    "label": "请选择可以填补空白的图案：",
+    "options": [
+      {
+        "value": "1",
+        "label": "1"
+      },
+      {
+        "value": "2",
+        "label": "2"
+      },
+      {
+        "value": "3",
+        "label": "3"
+      },
+      {
+        "value": "4",
+        "label": "4"
+      },
+      {
+        "value": "5",
+        "label": "5"
+      },
+      {
+        "value": "6",
+        "label": "6"
+      }
+    ],
+    "answer": "4"
+  },
+  {
+    "_id": "28",
+    "category1": "逻辑推理能力",
+    "category2": "具体推理",
+    "category3": "图形推理",
+    "category4": "瑞文-普通",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q28.png",
+    "label": "请选择可以填补空白的图案",
+    "options": [
+      {
+        "value": "1",
+        "label": "1"
+      },
+      {
+        "value": "2",
+        "label": "2"
+      },
+      {
+        "value": "3",
+        "label": "3"
+      },
+      {
+        "value": "4",
+        "label": "4"
+      },
+      {
+        "value": "5",
+        "label": "5"
+      },
+      {
+        "value": "6",
+        "label": "6"
+      }
+    ],
+    "answer": "2"
+  },
+  {
+    "_id": "29",
+    "category1": "逻辑推理能力",
+    "category2": "具体推理",
+    "category3": "图形推理",
+    "category4": "瑞文-图形的叠加和组合",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q29.png",
+    "label": "请选择可以填补空白的图案",
+    "options": [
+      {
+        "value": "1",
+        "label": "1"
+      },
+      {
+        "value": "2",
+        "label": "2"
+      },
+      {
+        "value": "3",
+        "label": "3"
+      },
+      {
+        "value": "4",
+        "label": "4"
+      },
+      {
+        "value": "5",
+        "label": "5"
+      },
+      {
+        "value": "6",
+        "label": "6"
+      }
+    ],
+    "answer": "3"
+  },
+  {
+    "_id": "30",
+    "category1": "逻辑推理能力",
+    "category2": "具体推理",
+    "category3": "图形推理",
+    "category4": "瑞文-图形的叠加和组合",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q30.png",
+    "label": "请选择可以填补空白的图案",
+    "options": [
+      {
+        "value": "1",
+        "label": "1"
+      },
+      {
+        "value": "2",
+        "label": "2"
+      },
+      {
+        "value": "3",
+        "label": "3"
+      },
+      {
+        "value": "4",
+        "label": "4"
+      },
+      {
+        "value": "5",
+        "label": "5"
+      },
+      {
+        "value": "6",
+        "label": "6"
+      }
+    ],
+    "answer": "4"
+  },
+  {
+    "_id": "31",
+    "category1": "逻辑推理能力",
+    "category2": "具体推理",
+    "category3": "图形推理",
+    "category4": "瑞文-图形的叠加和组合",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q31.png",
+    "label": "请选择可以填补空白的图案",
+    "options": [
+      {
+        "value": "1",
+        "label": "1"
+      },
+      {
+        "value": "2",
+        "label": "2"
+      },
+      {
+        "value": "3",
+        "label": "3"
+      },
+      {
+        "value": "4",
+        "label": "4"
+      },
+      {
+        "value": "5",
+        "label": "5"
+      },
+      {
+        "value": "6",
+        "label": "6"
+      },
+      {
+        "value": "7",
+        "label": "7"
+      },
+      {
+        "value": "8",
+        "label": "8"
+      }
+    ],
+    "answer": "5"
+  },
+  {
+    "_id": "32",
+    "category1": "逻辑推理能力",
+    "category2": "具体推理",
+    "category3": "图形推理",
+    "category4": "瑞文-图形的叠加和组合",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q32.png",
+    "label": "请选择可以填补空白的图案",
+    "options": [
+      {
+        "value": "1",
+        "label": "1"
+      },
+      {
+        "value": "2",
+        "label": "2"
+      },
+      {
+        "value": "3",
+        "label": "3"
+      },
+      {
+        "value": "4",
+        "label": "4"
+      },
+      {
+        "value": "5",
+        "label": "5"
+      },
+      {
+        "value": "6",
+        "label": "6"
+      },
+      {
+        "value": "7",
+        "label": "7"
+      },
+      {
+        "value": "8",
+        "label": "8"
+      }
+    ],
+    "answer": "7"
+  },
+  {
+    "_id": "33",
+    "category1": "逻辑推理能力",
+    "category2": "具体推理",
+    "category3": "图形推理",
+    "category4": "瑞文-图形的位置加和变化",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q33.png",
+    "label": "请选择可以填补空白的图案",
+    "options": [
+      {
+        "value": "1",
+        "label": "1"
+      },
+      {
+        "value": "2",
+        "label": "2"
+      },
+      {
+        "value": "3",
+        "label": "3"
+      },
+      {
+        "value": "4",
+        "label": "4"
+      },
+      {
+        "value": "5",
+        "label": "5"
+      },
+      {
+        "value": "6",
+        "label": "6"
+      },
+      {
+        "value": "7",
+        "label": "7"
+      },
+      {
+        "value": "8",
+        "label": "8"
+      }
+    ],
+    "answer": "6"
+  },
+  {
+    "_id": "34",
+    "category1": "逻辑推理能力",
+    "category2": "具体推理",
+    "category3": "图形推理",
+    "category4": "瑞文-图形的位置加和变化",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q34.png",
+    "label": "请选择可以填补空白的图案",
+    "options": [
+      {
+        "value": "1",
+        "label": "1"
+      },
+      {
+        "value": "2",
+        "label": "2"
+      },
+      {
+        "value": "3",
+        "label": "3"
+      },
+      {
+        "value": "4",
+        "label": "4"
+      },
+      {
+        "value": "5",
+        "label": "5"
+      },
+      {
+        "value": "6",
+        "label": "6"
+      },
+      {
+        "value": "7",
+        "label": "7"
+      },
+      {
+        "value": "8",
+        "label": "8"
+      }
+    ],
+    "answer": "1"
+  },
+  {
+    "_id": "35",
+    "category1": "逻辑推理能力",
+    "category2": "具体推理",
+    "category3": "图形推理",
+    "category4": "瑞文-图形的位置加和变化",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q35.png",
+    "label": "请选择可以填补空白的图案",
+    "options": [
+      {
+        "value": "1",
+        "label": "1"
+      },
+      {
+        "value": "2",
+        "label": "2"
+      },
+      {
+        "value": "3",
+        "label": "3"
+      },
+      {
+        "value": "4",
+        "label": "4"
+      },
+      {
+        "value": "5",
+        "label": "5"
+      },
+      {
+        "value": "6",
+        "label": "6"
+      },
+      {
+        "value": "7",
+        "label": "7"
+      },
+      {
+        "value": "8",
+        "label": "8"
+      }
+    ],
+    "answer": "4"
+  },
+  {
+    "_id": "36",
+    "category1": "逻辑推理能力",
+    "category2": "具体推理",
+    "category3": "图形推理",
+    "category4": "瑞文-图形的位置加和变化",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q36.png",
+    "label": "请选择可以填补空白的图案",
+    "options": [
+      {
+        "value": "1",
+        "label": "1"
+      },
+      {
+        "value": "2",
+        "label": "2"
+      },
+      {
+        "value": "3",
+        "label": "3"
+      },
+      {
+        "value": "4",
+        "label": "4"
+      },
+      {
+        "value": "5",
+        "label": "5"
+      },
+      {
+        "value": "6",
+        "label": "6"
+      },
+      {
+        "value": "7",
+        "label": "7"
+      },
+      {
+        "value": "8",
+        "label": "8"
+      }
+    ],
+    "answer": "5"
+  },
+  {
+    "_id": "37",
+    "category1": "逻辑推理能力",
+    "category2": "抽象推理",
+    "category3": "言语推理",
+    "category4": "命题推理",
+    "type": "Radio",
+    "label": "绿色深时，红色就浅；黄色浅时，蓝色就适中；但是要么绿色深，要么黄色浅。所以______。",
+    "options": [
+      {
+        "value": "A",
+        "label": "蓝色适中"
+      },
+      {
+        "value": "B",
+        "label": "黄色和红色都浅"
+      },
+      {
+        "value": "C",
+        "label": "红色浅，或者蓝色适中"
+      },
+      {
+        "value": "D",
+        "label": "都不是"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "38",
+    "category1": "逻辑推理能力",
+    "category2": "抽象推理",
+    "category3": "言语推理",
+    "category4": "命题推理",
+    "type": "Radio",
+    "label": "我住在农场和城市之间，农场位于城市和机场之间。所以______。",
+    "options": [
+      {
+        "value": "A",
+        "label": "农场到我住处比到机场要近"
+      },
+      {
+        "value": "B",
+        "label": "我住在农场和机场之间"
+      },
+      {
+        "value": "C",
+        "label": "我的住处到农场比到机场要近"
+      },
+      {
+        "value": "D",
+        "label": "都不是"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "39",
+    "category1": "逻辑推理能力",
+    "category2": "抽象推理",
+    "category3": "言语推理",
+    "category4": "命题推理",
+    "type": "Radio",
+    "label": "格林威尔在史密斯城的东北，纽约在史密斯城的东北。所以______。",
+    "options": [
+      {
+        "value": "A",
+        "label": "纽约比史密斯城更靠近格林威尔"
+      },
+      {
+        "value": "B",
+        "label": "史密斯城在纽约的西南"
+      },
+      {
+        "value": "C",
+        "label": "纽约离史密斯城不远"
+      },
+      {
+        "value": "D",
+        "label": "都不是"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "40",
+    "category1": "逻辑推理能力",
+    "category2": "抽象推理",
+    "category3": "言语推理",
+    "category4": "命题推理",
+    "type": "Radio",
+    "label": "正方形是有角的图形，这个图形没有角。所以，______。",
+    "options": [
+      {
+        "value": "A",
+        "label": "这个图形是个圆"
+      },
+      {
+        "value": "B",
+        "label": "这个图形不是圆"
+      },
+      {
+        "value": "C",
+        "label": "这个图形不是正方形"
+      },
+      {
+        "value": "D",
+        "label": "都不是"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "41",
+    "category1": "逻辑推理能力",
+    "category2": "抽象推理",
+    "category3": "言语推理",
+    "category4": "朴素推理",
+    "type": "Radio",
+    "label": "花坛中种了牡丹、海棠、月季和芍药各一排花。己知牡丹在中间的两排中，芍药花和海棠花不相邻，海棠花不在第一排。<br/><br/>下列关于四种花由前到后的排序正确的是______。",
+    "options": [
+      {
+        "value": "A",
+        "label": "芍药、月季、海棠、牡丹"
+      },
+      {
+        "value": "B",
+        "label": "月季、牡丹、海棠、芍药"
+      },
+      {
+        "value": "C",
+        "label": "芍药、月季、牡丹、海棠"
+      },
+      {
+        "value": "D",
+        "label": "海棠、牡丹、月季、芍药"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "42",
+    "category1": "逻辑推理能力",
+    "category2": "抽象推理",
+    "category3": "言语推理",
+    "category4": "朴素推理",
+    "type": "Radio",
+    "label": "假定“如果你到中国旅游,就要登长城”为真,可以推出______。",
+    "options": [
+      {
+        "value": "A",
+        "label": "只有来中国旅游,才能登长城"
+      },
+      {
+        "value": "B",
+        "label": "所有来中国旅游的人都要登长城"
+      },
+      {
+        "value": "C",
+        "label": "有些来中国旅游的人不登长城"
+      },
+      {
+        "value": "D",
+        "label": "如果要登长城，就要来中国旅游"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "43",
+    "category1": "逻辑推理能力",
+    "category2": "抽象推理",
+    "category3": "言语推理",
+    "category4": "朴素推理",
+    "type": "Radio",
+    "label": "若李老师和刘老师参加培训，则张老师也参加培训”，要由此推出“李老师没参加培训”，需增加的一项是______。",
+    "options": [
+      {
+        "value": "A",
+        "label": "张老师没参加培训"
+      },
+      {
+        "value": "B",
+        "label": "张老师参加了培训"
+      },
+      {
+        "value": "C",
+        "label": "刘老师参加了培训，张老师没参加"
+      },
+      {
+        "value": "D",
+        "label": "刘老师和张老师都没参加培训"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "44",
+    "category1": "逻辑推理能力",
+    "category2": "抽象推理",
+    "category3": "言语推理",
+    "category4": "朴素推理",
+    "type": "Radio",
+    "label": "下列表述，与“并非‘只有本地人当经理，才能把企业搞好’”的判断一致的是______。",
+    "options": [
+      {
+        "value": "A",
+        "label": "要想把企业搞好，必须由本地人当经理"
+      },
+      {
+        "value": "B",
+        "label": "只要把企业搞好了，谁来当经理都可以"
+      },
+      {
+        "value": "C",
+        "label": "不由本地人当经理，也可以把企业搞好"
+      },
+      {
+        "value": "D",
+        "label": "不由本地人当经理，就不能把企业搞好"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "45",
+    "category1": "逻辑推理能力",
+    "category2": "抽象推理",
+    "category3": "言语推理",
+    "category4": "朴素推理",
+    "type": "Radio",
+    "label": "班里要推选一位同学到校迎新晚会上表演。班长征询同学意见。",
+    "description": "①小王说：小刘很有艺术细胞，小刘合适<br/>②小白说：小张是舞林高手，小张合适<br/>③小刘说：小白唱歌非常好，小白也合适<br/>④小张说：小白过奖了，小白或小刘都合适<br/><br/>如果只有一个人的话与推选结果相符，则推选出来的同学是______。",
+    "options": [
+      {
+        "value": "A",
+        "label": "小王"
+      },
+      {
+        "value": "B",
+        "label": "小张"
+      },
+      {
+        "value": "C",
+        "label": "小刘"
+      },
+      {
+        "value": "D",
+        "label": "小白"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "46",
+    "category1": "逻辑推理能力",
+    "category2": "抽象推理",
+    "category3": "言语推理",
+    "category4": "朴素推理",
+    "type": "Radio",
+    "label": "小张、小王和小李是中国人民大学法学院的同班同学，他们毕业后一个当律师、一个当法官、一个当检察官，小李比检察官年龄大，小王比法官年龄大，小张和法官不同岁。<br/><br/>那么小张、小王和小李的职业分别为______。",
+    "options": [
+      {
+        "value": "A",
+        "label": "检察官、律师、法官"
+      },
+      {
+        "value": "B",
+        "label": "律师、法官、检察官"
+      },
+      {
+        "value": "C",
+        "label": "律师、检察官、法官"
+      },
+      {
+        "value": "D",
+        "label": "检察官、法官、律师"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "47",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "isTest": true,
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q47.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "37"
+  },
+  {
+    "_id": "48",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "isTest": true,
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q48.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "56"
+  },
+  {
+    "_id": "49",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "isTest": true,
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q49.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "459"
+  },
+  {
+    "_id": "50",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "isTest": true,
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q50.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "917"
+  },
+  {
+    "_id": "51",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q51.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "386"
+  },
+  {
+    "_id": "52",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q52.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "475"
+  },
+  {
+    "_id": "53",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q53.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "3517"
+  },
+  {
+    "_id": "54",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q54.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "6927"
+  },
+  {
+    "_id": "55",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q55.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "84259"
+  },
+  {
+    "_id": "56",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q56.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "75314"
+  },
+  {
+    "_id": "57",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q57.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "386174"
+  },
+  {
+    "_id": "58",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q58.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "392861"
+  },
+  {
+    "_id": "59",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q59.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "5174268"
+  },
+  {
+    "_id": "60",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q60.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "2462958"
+  },
+  {
+    "_id": "61",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q61.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "16429763"
+  },
+  {
+    "_id": "62",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q62.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "85735196"
+  },
+  {
+    "_id": "63",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q63.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "538418469"
+  },
+  {
+    "_id": "64",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q64.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "283147539"
+  },
+  {
+    "_id": "65",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q65.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "7361529386"
+  },
+  {
+    "_id": "66",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q66.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "3614972485"
+  },
+  {
+    "_id": "67",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q67.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "37925186416"
+  },
+  {
+    "_id": "68",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q68.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "92752847163"
+  },
+  {
+    "_id": "69",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q69.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "852736948574"
+  },
+  {
+    "_id": "70",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q70.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "864728364917"
+  },
+  {
+    "_id": "71",
+    "category1": "工作记忆能力",
+    "category2": "语音回路",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字顺背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q71.mp3",
+    "label": "我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "answer": "4915283759436"
+  },
+  {
+    "_id": "72",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q72.mp3",
+    "label": "我说一些数字，当我一说完你就按照原数倒背出来。",
+    "answer": "9704743398121"
+  },
+  {
+    "_id": "73",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "isTest": true,
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[1,0],[0,1]]"
+  },
+  {
+    "_id": "74",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "isTest": true,
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[1,1],[0,0]]"
+  },
+  {
+    "_id": "75",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "isTest": true,
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[0,1,1],[0,0,0],[1,0,0]]"
+  },
+  {
+    "_id": "76",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "isTest": true,
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[1,0,0],[0,0,1],[0,1,0]]"
+  },
+  {
+    "_id": "77",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[0,1,0],[0,1,0],[1,0,1]]"
+  },
+  {
+    "_id": "78",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[0,1,1],[0,0,1],[1,0,0]]"
+  },
+  {
+    "_id": "79",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[0,1,1,0],[0,0,0,0],[0,1,1,0],[0,0,0,1]]"
+  },
+  {
+    "_id": "80",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[0,1,0,0],[1,0,0,1],[0,0,1,0],[0,1,0,0]]"
+  },
+  {
+    "_id": "81",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[1,0,0,1],[1,0,0,1],[0,1,0,0],[1,0,0,0]]"
+  },
+  {
+    "_id": "82",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[0,1,0,0],[0,1,1,0],[1,0,0,1],[0,0,0,1]]"
+  },
+  {
+    "_id": "83",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[1,0,0,1,1],[0,0,1,0,0],[0,0,1,0,0],[1,0,1,0,0],[0,0,0,0,0]]"
+  },
+  {
+    "_id": "84",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[0,1,0,0,0],[1,0,0,0,1],[1,0,0,0,1],[0,1,0,0,1],[0,0,0,0,0]]"
+  },
+  {
+    "_id": "85",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[0,0,0,1,1],[0,0,0,1,0],[0,1,1,1,0],[0,1,1,0,0],[0,0,0,0,0]]"
+  },
+  {
+    "_id": "86",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[0,1,0,0,1],[1,0,0,0,0],[1,0,0,0,0],[0,0,0,0,0],[1,0,1,1,1]]"
+  },
+  {
+    "_id": "87",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[1,0,0,0,0],[1,1,1,0,0],[0,0,1,0,1],[0,1,0,0,0],[0,1,1,0,0]]"
+  },
+  {
+    "_id": "88",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[0,0,0,1,0],[0,0,1,0,1],[0,0,0,1,0],[0,1,0,1,0],[0,1,1,1,0]]"
+  },
+  {
+    "_id": "89",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[0,1,0,0,1],[0,0,1,1,0],[0,1,0,0,0],[0,1,0,0,1],[0,1,0,1,1]]"
+  },
+  {
+    "_id": "90",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[1,1,0,0,0],[0,1,0,0,1],[0,0,0,1,1],[1,1,0,0,1],[0,0,0,0,1]]"
+  },
+  {
+    "_id": "91",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[1,0,0,0,1],[1,0,0,1,0],[0,1,1,0,0],[0,1,1,0,0],[1,0,0,1,1]]"
+  },
+  {
+    "_id": "92",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[1,0,0,0,1],[0,1,1,1,1],[1,0,0,0,0],[0,1,0,1,1],[0,0,1,0,0]]"
+  },
+  {
+    "_id": "93",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[1,0,0,0,1],[1,1,0,0,0],[1,0,0,1,0],[0,1,1,1,1],[0,0,1,1,0]]"
+  },
+  {
+    "_id": "94",
+    "category1": "工作记忆能力",
+    "category2": "视空间模块",
+    "category3": "视觉—-空间工作记忆广度",
+    "category4": "视觉矩阵",
+    "type": "Chess",
+    "label": "在屏幕中央会出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。请注意，连续出错3次即停止。",
+    "answer": "[[1,0,0,0,1],[0,1,1,1,0],[1,0,0,0,0],[0,1,0,0,1],[1,0,1,1,1]]"
+  },
+  {
+    "_id": "95",
+    "category1": "数学能力",
+    "category2": "数学运算",
+    "label": "5元买3瓶酒，24瓶要多少钱？",
+    "type": "Radio",
+    "options": [
+      {
+        "value": "A",
+        "label": "28"
+      },
+      {
+        "value": "B",
+        "label": "30"
+      },
+      {
+        "value": "C",
+        "label": "34"
+      },
+      {
+        "value": "D",
+        "label": "36"
+      },
+      {
+        "value": "E",
+        "label": "40"
+      }
+    ],
+    "answer": "E"
+  },
+  {
+    "_id": "96",
+    "category1": "数学能力",
+    "category2": "数学运算",
+    "type": "Radio",
+    "label": "1件短上衣原价32元，第一次降价1/4,又打5折，这时需要多少钱？",
+    "options": [
+      {
+        "value": "A",
+        "label": "8"
+      },
+      {
+        "value": "B",
+        "label": "10"
+      },
+      {
+        "value": "C",
+        "label": "12"
+      },
+      {
+        "value": "D",
+        "label": "16"
+      },
+      {
+        "value": "E",
+        "label": "24"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "97",
+    "category1": "数学能力",
+    "category2": "数学运算",
+    "type": "Radio",
+    "label": "199999+19999+1999+199+19 的值是（  ） 。",
+    "options": [
+      {
+        "value": "A",
+        "label": "200015"
+      },
+      {
+        "value": "B",
+        "label": "222215"
+      },
+      {
+        "value": "C",
+        "label": "202015"
+      },
+      {
+        "value": "D",
+        "label": "220015"
+      },
+      {
+        "value": "E",
+        "label": "201015"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "98",
+    "category1": "数学能力",
+    "category2": "数学运算",
+    "type": "Radio",
+    "label": "425+683+544+828=（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "2480"
+      },
+      {
+        "value": "B",
+        "label": "2488"
+      },
+      {
+        "value": "C",
+        "label": "2486"
+      },
+      {
+        "value": "D",
+        "label": "2484"
+      },
+      {
+        "value": "E",
+        "label": "2487"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "99",
+    "category1": "数学能力",
+    "category2": "数学运算",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q31.png",
+    "label": "哥哥今年15岁，他的年龄是妹妹年龄的3倍。当哥哥的年龄是妹妹年龄2倍时，哥哥几岁？",
+    "options": [
+      {
+        "value": "A",
+        "label": "18"
+      },
+      {
+        "value": "B",
+        "label": "20"
+      },
+      {
+        "value": "C",
+        "label": "24"
+      },
+      {
+        "value": "D",
+        "label": "26"
+      },
+      {
+        "value": "E",
+        "label": "30"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "100",
+    "category1": "数学能力",
+    "category2": "数学运算",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q92.png",
+    "label": "图中阴影部分占总面积百分之几？",
+    "options": [
+      {
+        "value": "A",
+        "label": "20％"
+      },
+      {
+        "value": "B",
+        "label": "25％"
+      },
+      {
+        "value": "C",
+        "label": "30％"
+      },
+      {
+        "value": "D",
+        "label": "35％"
+      },
+      {
+        "value": "E",
+        "label": "40％"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "101",
+    "category1": "数学能力",
+    "category2": "数学运算",
+    "type": "Radio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q93.png",
+    "label": "数数有多少个三角形？",
+    "options": [
+      {
+        "value": "A",
+        "label": "5"
+      },
+      {
+        "value": "B",
+        "label": "7"
+      },
+      {
+        "value": "C",
+        "label": "9"
+      },
+      {
+        "value": "D",
+        "label": "11"
+      },
+      {
+        "value": "E",
+        "label": "13"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "_id": "102",
+    "category1": "数学能力",
+    "category2": "数学运算",
+    "type": "Radio",
+    "label": "打满水缸要11桶水。王林每次只能提两桶水，要打满水缸他需要走几趟？",
+    "options": [
+      {
+        "value": "A",
+        "label": "5"
+      },
+      {
+        "value": "B",
+        "label": "5.5"
+      },
+      {
+        "value": "C",
+        "label": "6"
+      },
+      {
+        "value": "D",
+        "label": "6.5"
+      },
+      {
+        "value": "E",
+        "label": "7"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "103",
+    "category1": "数学能力",
+    "category2": "数学思维逻辑推理",
+    "type": "Radio",
+    "label": "请写出\" （  ） \"处的数字：2  8  14  20 （  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "22"
+      },
+      {
+        "value": "B",
+        "label": "24"
+      },
+      {
+        "value": "C",
+        "label": "26"
+      },
+      {
+        "value": "D",
+        "label": "30"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "104",
+    "category1": "数学能力",
+    "category2": "数学思维逻辑推理",
+    "type": "Radio",
+    "label": "选项ABCD中，哪一个应该填在\"XOOOOXXOOOXXX\"后面是（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "XOO"
+      },
+      {
+        "value": "B",
+        "label": "OO"
+      },
+      {
+        "value": "C",
+        "label": "OOX"
+      },
+      {
+        "value": "D",
+        "label": "OXX"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "105",
+    "category1": "数学能力",
+    "category2": "数学思维逻辑推理",
+    "type": "Radio",
+    "label": "A和B两人掏出同样的钱合起来买点心吃。A对B说：“每个点心都是10元，你比我多吃两个无所谓，到时候只要还我20元就对了。”A这么说合理吗？",
+    "options": [
+      {
+        "value": "A",
+        "label": "合理"
+      },
+      {
+        "value": "B",
+        "label": "不合理，应还15元"
+      },
+      {
+        "value": "C",
+        "label": "不合理，应还10元"
+      },
+      {
+        "value": "D",
+        "label": "以上选项均不正确"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "106",
+    "category1": "数学能力",
+    "category2": "数学思维逻辑推理",
+    "type": "Radio",
+    "label": "某人花19元钱买了个玩具，20元钱卖出去。他觉得不划算，又花21元钱买进，22元钱卖出去。请问它赚了多少钱？",
+    "options": [
+      {
+        "value": "A",
+        "label": "1"
+      },
+      {
+        "value": "B",
+        "label": "2"
+      },
+      {
+        "value": "C",
+        "label": "3"
+      },
+      {
+        "value": "D",
+        "label": "4"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "107",
+    "category1": "数学能力",
+    "category2": "数学思维逻辑推理",
+    "type": "Radio",
+    "label": "如果所有的甲都是乙，所有的乙都是丙，那么，一定所有的甲都是丙。这句话是（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "对的"
+      },
+      {
+        "value": "B",
+        "label": "错的"
+      },
+      {
+        "value": "C",
+        "label": "既不对也不错"
+      },
+      {
+        "value": "D",
+        "label": "以上选项均不正确"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "108",
+    "category1": "数学能力",
+    "category2": "数学思维逻辑推理",
+    "type": "Radio",
+    "label": "小明比小强大，小红比小明小。下列陈述中哪一句最正确？",
+    "options": [
+      {
+        "value": "A",
+        "label": "小红比小强大"
+      },
+      {
+        "value": "B",
+        "label": "小红比小强小"
+      },
+      {
+        "value": "C",
+        "label": "小红与小强一样大"
+      },
+      {
+        "value": "D",
+        "label": "无法确定小红与小强谁大"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "_id": "109",
+    "category1": "数学能力",
+    "category2": "数学思维逻辑推理",
+    "type": "Radio",
+    "label": "“预杉”对于“须杼”相当于8326对于（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "2368"
+      },
+      {
+        "value": "B",
+        "label": "6283"
+      },
+      {
+        "value": "C",
+        "label": "2683"
+      },
+      {
+        "value": "D",
+        "label": "6328"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "_id": "110",
+    "category1": "数学能力",
+    "category2": "数学思维逻辑推理",
+    "type": "Radio",
+    "label": "如果有些甲是乙，所有的丙都是乙，那么，一定有些甲是丙。这句话是（  ）。",
+    "options": [
+      {
+        "value": "A",
+        "label": "对的"
+      },
+      {
+        "value": "B",
+        "label": "错的"
+      },
+      {
+        "value": "C",
+        "label": "既不对也不错"
+      },
+      {
+        "value": "D",
+        "label": "以上选项均不正确"
+      }
+    ],
+    "answer": "B"
+  }
+]

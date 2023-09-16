@@ -1,5 +1,7 @@
-mutation createSubmission($input: SubmissionMutationRequest!) {
-  createSubmission(input: $input) {
-    _id
+mutation submitAnswer($input: SubmissionMutationRequest!) {
+  submitAnswer(input: $input) {
+    questionId
+    isCorrect
+    numOfSubmission
   }
 }

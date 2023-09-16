@@ -1,8 +1,5 @@
 import { useRouter } from "next/router";
-import {
-  useCreateSubmissionMutation,
-  Question,
-} from "@/graphql/generated/graphql";
+import { useSubmitAnswerMutation, Question } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
 import { Button, Form, Radio, Typography } from "antd";
 // import Countdown from "antd/es/statistic/Countdown";
@@ -19,7 +16,7 @@ export default function CountdownRadioForm({
   const questionId = question?._id;
   const [form] = Form.useForm();
 
-  const { mutate } = useCreateSubmissionMutation(getDataSource());
+  const { mutate } = useSubmitAnswerMutation(getDataSource());
 
   const onFinish = () => {
     const values = form.getFieldsValue();
@@ -61,7 +58,7 @@ export default function CountdownRadioForm({
           rules={[{ required: true, message: "请选择选项" }]}
         >
           <Radio.Group name="radiogroup">
-            {question.options.map((option) => (
+            {question?.options?.map((option) => (
               <Radio value={option.value}>{option.label}</Radio>
             ))}
           </Radio.Group>
