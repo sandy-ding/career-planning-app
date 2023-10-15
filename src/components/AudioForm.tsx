@@ -7,7 +7,12 @@ import OtpInput from "react-otp-input";
 import { useState } from "react";
 import { ValidateStatus } from "antd/es/form/FormItem";
 
-export default function AudioForm({ question }: { question: Question }) {
+interface IProps {
+  question: Question;
+  onFinish: (values: { [k: string]: string }) => void;
+}
+
+export default function AudioForm({ question, onFinish }: IProps) {
   const router = useRouter();
   const { _id: questionId, type, answer } = question;
   const [otp, setOtp] = useState("");
@@ -38,28 +43,23 @@ export default function AudioForm({ question }: { question: Question }) {
     },
   });
 
-  const onFinish = (values: { [k: string]: string }) => {
-    if (goNext) {
-      router.push(`${Number(questionId) + 1}`);
-    } else {
-      mutate({
-        input: {
-          questionId,
-          answer: values[questionId],
-        },
-      });
-    }
-  };
-
-  const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
-  };
+  // const onFinish = (values: { [k: string]: string }) => {
+  //   if (goNext) {
+  //     router.push(`${Number(questionId) + 1}`);
+  //   } else {
+  //     mutate({
+  //       input: {
+  //         questionId,
+  //         answer: values[questionId],
+  //       },
+  //     });
+  //   }
+  // };
 
   return (
     <Form
       name="basic"
       onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
       autoComplete="off"
       layout="vertical"
       requiredMark={false}

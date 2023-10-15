@@ -17,31 +17,3 @@ query question($id: String!) {
     }
   }
 }
-
-# query questions(
-#   $page: Int!
-#   $size: Int!
-#   $category2: String
-#   $category3: String
-# ) {
-#   questions(
-#     page: $page
-#     size: $size
-#     category2: $category2
-#     category3: $category3
-#   ) {
-#     _id
-#     no
-#     category1
-#     category2
-#     category3
-#     category4
-#     label
-#     description
-#     options {
-#       value
-#       label
-#     }
-#     imageUrl
-#   }
-# }

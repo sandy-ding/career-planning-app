@@ -1,7 +1,6 @@
 mutation submitAnswer($input: SubmissionMutationRequest!) {
   submitAnswer(input: $input) {
     questionId
-    isCorrect
     numOfSubmission
   }
 }

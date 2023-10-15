@@ -1,0 +1,362 @@
+[
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "1. 我能恰当表达自己的感受和想法。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "2. 我能客观评价自己，知道自己的优缺点。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "3. 我诚实、坦白、勤于反省、勇于认错。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "4. 我是活泼开朗的。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "5. 我明事理、拥有自尊、懂得自律。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "6. 我能集中注意力、按时完成工作。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "7. 我喜欢独立工作、游戏和学习。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "8. 我善于计划和分配日常生活时间。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "9. 我能控制自己的情绪，不随意发脾气。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "10. 我能够面对挫折。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "11. 我经常思考自己的重要人生目标。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "12. 我会检讨自己做事成功或失败的经验，是下次做事更为顺利。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "13. 我认为自己意志坚强或性格独立。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "14. 我喜欢记录个人生活事件。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  },
+  {
+    "_id": "122",
+    "category1": "内省能力",
+    "type": "Radio",
+    "label": "15. 我有自知之明及据此做出适当行为的能力。",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 不同意"
+      },
+      {
+        "value": "B",
+        "label": "B. 部分同意"
+      },
+      {
+        "value": "C",
+        "label": "C. 同意"
+      },
+      {
+        "value": "D",
+        "label": "D. 非常同意"
+      }
+    ]
+  }
+]

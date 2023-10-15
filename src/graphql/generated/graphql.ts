@@ -43,6 +43,7 @@ export type Answer = {
   isCorrect?: Maybe<Scalars['Boolean']['output']>;
   numOfSubmission?: Maybe<Scalars['Float']['output']>;
   questionId: Scalars['String']['output'];
+  time?: Maybe<Scalars['Float']['output']>;
 };
 
 export type Card = {
@@ -109,7 +110,6 @@ export type Question = {
   __typename?: 'Question';
   _id: Scalars['String']['output'];
   answer: Scalars['String']['output'];
-  answerLen: Scalars['Float']['output'];
   category1?: Maybe<Scalars['String']['output']>;
   category2?: Maybe<Scalars['String']['output']>;
   category3?: Maybe<Scalars['String']['output']>;
@@ -124,7 +124,9 @@ export type Question = {
 
 export type SubmissionMutationRequest = {
   answer: Scalars['String']['input'];
+  isCorrect?: InputMaybe<Scalars['Boolean']['input']>;
   questionId: Scalars['String']['input'];
+  time?: InputMaybe<Scalars['Float']['input']>;
 };
 
 export type Token = {
@@ -151,12 +153,12 @@ export type SubmitAnswerMutationVariables = Exact<{
 }>;
 
 
-export type SubmitAnswerMutation = { __typename?: 'Mutation', submitAnswer: { __typename?: 'Answer', questionId: string, isCorrect?: boolean | null, numOfSubmission?: number | null } };
+export type SubmitAnswerMutation = { __typename?: 'Mutation', submitAnswer: { __typename?: 'Answer', questionId: string, numOfSubmission?: number | null } };
 
 
 export const LoginDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"login"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"CardVerifyRequest"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"login"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"accessToken"}}]}}]}}]} as unknown as DocumentNode<LoginMutation, LoginMutationVariables>;
 export const QuestionDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"question"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"question"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"}},{"kind":"Field","name":{"kind":"Name","value":"category1"}},{"kind":"Field","name":{"kind":"Name","value":"category2"}},{"kind":"Field","name":{"kind":"Name","value":"category3"}},{"kind":"Field","name":{"kind":"Name","value":"category4"}},{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"fileUrl"}},{"kind":"Field","name":{"kind":"Name","value":"answer"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"isTest"}},{"kind":"Field","name":{"kind":"Name","value":"options"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"value"}},{"kind":"Field","name":{"kind":"Name","value":"label"}}]}}]}}]}}]} as unknown as DocumentNode<QuestionQuery, QuestionQueryVariables>;
-export const SubmitAnswerDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"submitAnswer"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"SubmissionMutationRequest"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"submitAnswer"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"questionId"}},{"kind":"Field","name":{"kind":"Name","value":"isCorrect"}},{"kind":"Field","name":{"kind":"Name","value":"numOfSubmission"}}]}}]}}]} as unknown as DocumentNode<SubmitAnswerMutation, SubmitAnswerMutationVariables>;
+export const SubmitAnswerDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"submitAnswer"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"SubmissionMutationRequest"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"submitAnswer"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"questionId"}},{"kind":"Field","name":{"kind":"Name","value":"numOfSubmission"}}]}}]}}]} as unknown as DocumentNode<SubmitAnswerMutation, SubmitAnswerMutationVariables>;
 
 export const IloginDocument = `
     mutation login($input: CardVerifyRequest!) {
@@ -215,7 +217,6 @@ export const IsubmitAnswerDocument = `
     mutation submitAnswer($input: SubmissionMutationRequest!) {
   submitAnswer(input: $input) {
     questionId
-    isCorrect
     numOfSubmission
   }
 }

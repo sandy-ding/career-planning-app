@@ -1,36 +1,22 @@
-import { useRouter } from "next/router";
 import { useSubmitAnswerMutation, Question } from "@/graphql/generated/graphql";
-import { getDataSource } from "@/graphql/queryClient";
-import { Button, Form, Radio, Space } from "antd";
+import { Button, Checkbox, Form, Radio, Space } from "antd";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
-export default function RadioForm({ question }: { question: Question }) {
-  const router = useRouter();
+interface IProps {
+  question: Question;
+  onFinish: (values: { [k: string]: string }) => void;
+}
+
+export default function CheckboxForm({ question, onFinish }: IProps) {
   const questionId = question._id;
   const hasImage = !!question.fileUrl;
-  const { mutate } = useSubmitAnswerMutation(getDataSource());
-
-  const onFinish = (values: { [k: string]: string }) => {
-    console.log("Success:", values);
-    mutate({
-      input: {
-        questionId,
-        answer: values[questionId],
-      },
-    });
-    router.push(`${Number(questionId) + 1}`);
-  };
-
-  const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
-  };
 
   return (
     <Form
       name="basic"
       onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
+      // onFinishFailed={onFinishFailed}
       autoComplete="off"
       layout="vertical"
       requiredMark={false}
@@ -38,8 +24,7 @@ export default function RadioForm({ question }: { question: Question }) {
     >
       <Form.Item
         label={
-          <div className="flex">
-            <div className="my-[1em] mr-1">{questionId}.</div>
+          <div className="flex flex-col justify-center w-full">
             <ReactMarkdown rehypePlugins={[rehypeRaw as any]}>
               {`${question.label}</br>${question?.description || ""}`}
             </ReactMarkdown>
@@ -49,25 +34,25 @@ export default function RadioForm({ question }: { question: Question }) {
         name={questionId}
         rules={[{ required: true, message: "请选择选项" }]}
       >
-        <Radio.Group name="radiogroup">
+        <Checkbox.Group name="radiogroup">
           <Space
             direction={hasImage ? "horizontal" : "vertical"}
             size={15}
             className="mt-5"
           >
             {question?.options?.map(({ value, label }) => (
-              <Radio value={value}>
-                {!hasImage && `${value}. `}
+              <Checkbox key={value} value={value}>
+                {!hasImage && `${value}．`}
                 {label}
-              </Radio>
+              </Checkbox>
             ))}
           </Space>
-        </Radio.Group>
+        </Checkbox.Group>
       </Form.Item>
 
-      <Form.Item wrapperCol={{ offset: 8, span: 16 }} className="m-0">
-        <Button type="primary" htmlType="submit" className="float-right">
-          下一题
+      <Form.Item className="flex justify-center">
+        <Button type="primary" htmlType="submit">
+          提交
         </Button>
       </Form.Item>
     </Form>

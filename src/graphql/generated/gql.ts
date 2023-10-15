@@ -15,7 +15,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
 const documents = {
     "mutation login($input: CardVerifyRequest!) {\n  login(input: $input) {\n    accessToken\n  }\n}": types.LoginDocument,
     "query question($id: String!) {\n  question(id: $id) {\n    _id\n    category1\n    category2\n    category3\n    category4\n    label\n    description\n    fileUrl\n    answer\n    type\n    isTest\n    options {\n      value\n      label\n    }\n  }\n}": types.QuestionDocument,
-    "mutation submitAnswer($input: SubmissionMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    isCorrect\n    numOfSubmission\n  }\n}": types.SubmitAnswerDocument,
+    "mutation submitAnswer($input: SubmissionMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    numOfSubmission\n  }\n}": types.SubmitAnswerDocument,
 };
 
 /**
@@ -43,7 +43,7 @@ export function graphql(source: "query question($id: String!) {\n  question(id: 
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "mutation submitAnswer($input: SubmissionMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    isCorrect\n    numOfSubmission\n  }\n}"): (typeof documents)["mutation submitAnswer($input: SubmissionMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    isCorrect\n    numOfSubmission\n  }\n}"];
+export function graphql(source: "mutation submitAnswer($input: SubmissionMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    numOfSubmission\n  }\n}"): (typeof documents)["mutation submitAnswer($input: SubmissionMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    numOfSubmission\n  }\n}"];
 
 export function graphql(source: string) {
   return (documents as any)[source] ?? {};

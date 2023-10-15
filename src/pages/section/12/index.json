@@ -1,0 +1,250 @@
+[
+  {
+    "_id": "122",
+    "category1": "美术能力",
+    "category2": "（一）线段长短估计",
+    "type": "Radio",
+    "label": "1. 线段2是线段1的多少倍？（    ）",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 1倍"
+      },
+      {
+        "value": "B",
+        "label": "B. 1.5倍"
+      },
+      {
+        "value": "C",
+        "label": "C. 2倍"
+      },
+      {
+        "value": "D",
+        "label": "D. 2.5倍"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "_id": "122",
+    "category1": "美术能力",
+    "category2": "（一）线段长短估计",
+    "type": "Radio",
+    "label": "2. 线段2是线段1的多少倍？（    ）",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 1倍"
+      },
+      {
+        "value": "B",
+        "label": "B. 1.5倍"
+      },
+      {
+        "value": "C",
+        "label": "C. 2倍"
+      },
+      {
+        "value": "D",
+        "label": "D. 2.5倍"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "122",
+    "category1": "美术能力",
+    "category2": "（一）线段长短估计",
+    "type": "Radio",
+    "label": "3. 线段2是线段1的多少倍？（    ）",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 1倍"
+      },
+      {
+        "value": "B",
+        "label": "B. 1.5倍"
+      },
+      {
+        "value": "C",
+        "label": "C. 2倍"
+      },
+      {
+        "value": "D",
+        "label": "D. 2.5倍"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "122",
+    "category1": "美术能力",
+    "category2": "（一）线段长短估计",
+    "type": "Radio",
+    "label": "4. 线段2是线段1的多少倍？（    ）",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 2倍"
+      },
+      {
+        "value": "B",
+        "label": "B. 2.5倍"
+      },
+      {
+        "value": "C",
+        "label": "C. 3倍"
+      },
+      {
+        "value": "D",
+        "label": "D. 3.5倍"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "_id": "122",
+    "category1": "美术能力",
+    "category2": "（一）线段长短估计",
+    "type": "Radio",
+    "label": "5. 线段1和线段2谁比较长？（    ）",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 线段1"
+      },
+      {
+        "value": "B",
+        "label": "B. 线段2"
+      },
+      {
+        "value": "C",
+        "label": "C. 一样长"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "122",
+    "category1": "美术能力",
+    "category2": "（一）线段长短估计",
+    "type": "Radio",
+    "label": "6. 线段1和线段2谁比较长？（    ）",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 线段1"
+      },
+      {
+        "value": "B",
+        "label": "B. 线段2"
+      },
+      {
+        "value": "C",
+        "label": "C. 一样长"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "122",
+    "category1": "美术能力",
+    "category2": "（一）线段长短估计",
+    "type": "Radio",
+    "label": "7. 线段1和线段2谁比较长？（    ）",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 线段1"
+      },
+      {
+        "value": "B",
+        "label": "B. 线段2"
+      },
+      {
+        "value": "C",
+        "label": "C. 一样长"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "122",
+    "category1": "美术能力",
+    "category2": "（二）实物估计",
+    "type": "Radio",
+    "label": "1. 图2是图1的多少倍？（    ）",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 1.5倍"
+      },
+      {
+        "value": "B",
+        "label": "B. 2倍"
+      },
+      {
+        "value": "C",
+        "label": "C. 2.5倍"
+      },
+      {
+        "value": "D",
+        "label": "D. 3倍"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "122",
+    "category1": "美术能力",
+    "category2": "（二）实物估计",
+    "type": "Radio",
+    "label": "2. 图2是图1的多少倍？（    ）",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 1.5倍"
+      },
+      {
+        "value": "B",
+        "label": "B. 2倍"
+      },
+      {
+        "value": "C",
+        "label": "C. 2.5倍"
+      },
+      {
+        "value": "D",
+        "label": "D. 3倍"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "122",
+    "category1": "美术能力",
+    "category2": "（一）线段长短估计",
+    "type": "Radio",
+    "label": "3. 下图哪个人身材高大一点？（    ）",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 男人1"
+      },
+      {
+        "value": "B",
+        "label": "B. 男人2"
+      },
+      {
+        "value": "C",
+        "label": "C. 男人3"
+      },
+      {
+        "value": "D",
+        "label": "D. 一样高大"
+      }
+    ],
+    "answer": "D"
+  }
+]
