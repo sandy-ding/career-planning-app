@@ -16,7 +16,7 @@ enum Stage {
 }
 
 export default function ChessForm({ question }: { question: Question }) {
-  const answer = JSON.parse(question.answer);
+  const answer = JSON.parse(question.answer || "");
   const len = answer[0].length;
   const board: ReactElement[] = [];
   const questionId = question._id;

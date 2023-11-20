@@ -38,20 +38,24 @@ enum Stage {
   Part3,
 }
 
-export default function Section3() {
+export default function Section6() {
   const router = useRouter();
   const [menu, setMenu] = useState("");
   const [stage, setStage] = useState(Stage.Intro);
 
   return (
     <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
-      <Title level={5}>{intro.title}</Title>
-      <Menu
-        className="mb-10"
-        selectedKeys={[menu]}
-        mode="horizontal"
-        items={items}
-      />
+      {stage !== Stage.Intro && (
+        <>
+          <Title level={5}>{intro.title}</Title>
+          <Menu
+            className="mb-10"
+            selectedKeys={[menu]}
+            mode="horizontal"
+            items={items}
+          />
+        </>
+      )}
       {stage === Stage.Intro ? (
         <Intro
           {...intro}

@@ -22,29 +22,25 @@ enum Stage {
   Main,
 }
 
-export default function Section1() {
+export default function Section10() {
   const router = useRouter();
   const [questionNo, setQuestionNo] = useState(0);
   const [stage, setStage] = useState(Stage.Intro);
-  const [time, setTime] = useState(0);
   const { mutate } = useSubmitAnswerMutation(getDataSource());
 
   const onFinish = (values: { [k: string]: string }) => {
     const questionId = questions[questionNo]._id;
-    console.log("Success:", values, values[questionId]);
     const currentTime = performance.now();
     mutate({
       input: {
         questionId,
         answer: values[questionId],
-        time: currentTime - time,
       },
     });
     if (questionNo === questions.length - 1) {
-      router.push("2");
+      router.push("11");
     } else {
       setQuestionNo(questionNo + 1);
-      setTime(currentTime);
     }
   };
 
@@ -55,12 +51,11 @@ export default function Section1() {
           {...intro}
           onClick={() => {
             setStage(Stage.Main);
-            setTime(performance.now());
           }}
         />
       ) : (
         <>
-          <Title level={5}>{questions[questionNo].category2}</Title>
+          <Title level={5}>{intro.title}</Title>
           <RadioForm question={questions[questionNo]} onFinish={onFinish} />
         </>
       )}

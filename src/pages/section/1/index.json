@@ -9,19 +9,19 @@
     "options": [
       {
         "value": "A",
-        "label": "不周 斥责 检查"
+        "label": "A. 不周 斥责 检查"
       },
       {
         "value": "B",
-        "label": "不力 指责 检讨"
+        "label": "B. 不力 指责 检讨"
       },
       {
         "value": "C",
-        "label": "不善 苛责 检点"
+        "label": "C. 不善 苛责 检点"
       },
       {
         "value": "D",
-        "label": "不当 谴责 检察"
+        "label": "D. 不当 谴责 检察"
       }
     ],
     "answer": "B"
@@ -36,19 +36,19 @@
     "options": [
       {
         "value": "A",
-        "label": "川流不息 继续"
+        "label": "A. 川流不息 继续"
       },
       {
         "value": "B",
-        "label": "源源不断 连续"
+        "label": "B. 源源不断 连续"
       },
       {
         "value": "C",
-        "label": "络绎不绝 延续"
+        "label": "C. 络绎不绝 延续"
       },
       {
         "value": "D",
-        "label": "连绵不断 陆续"
+        "label": "D. 连绵不断 陆续"
       }
     ],
     "answer": "B"
@@ -63,19 +63,19 @@
     "options": [
       {
         "value": "A",
-        "label": "但凡"
+        "label": "A. 但凡"
       },
       {
         "value": "B",
-        "label": "因为"
+        "label": "B. 因为"
       },
       {
         "value": "C",
-        "label": "只有"
+        "label": "C. 只有"
       },
       {
         "value": "D",
-        "label": "只要"
+        "label": "D. 只要"
       }
     ],
     "answer": "A"
@@ -90,19 +90,19 @@
     "options": [
       {
         "value": "A",
-        "label": "既 又 也"
+        "label": "A. 既 又 也"
       },
       {
         "value": "B",
-        "label": "既不 也不 而"
+        "label": "B. 既不 也不 而"
       },
       {
         "value": "C",
-        "label": "不仅 而且 还"
+        "label": "C. 不仅 而且 还"
       },
       {
         "value": "D",
-        "label": "既 也 更"
+        "label": "D. 既 也 更"
       }
     ],
     "answer": "B"
@@ -117,19 +117,19 @@
     "options": [
       {
         "value": "A",
-        "label": "遏制"
+        "label": "A. 遏制"
       },
       {
         "value": "B",
-        "label": "压制"
+        "label": "B. 压制"
       },
       {
         "value": "C",
-        "label": "抵制"
+        "label": "C. 抵制"
       },
       {
         "value": "D",
-        "label": "限制"
+        "label": "D. 限制"
       }
     ],
     "answer": "A"
@@ -144,19 +144,19 @@
     "options": [
       {
         "value": "A",
-        "label": "招揽"
+        "label": "A. 招揽"
       },
       {
         "value": "B",
-        "label": "招待"
+        "label": "B. 招待"
       },
       {
         "value": "C",
-        "label": "招呼"
+        "label": "C. 招呼"
       },
       {
         "value": "D",
-        "label": "招引"
+        "label": "D. 招引"
       }
     ],
     "answer": "A"
@@ -171,19 +171,19 @@
     "options": [
       {
         "value": "A",
-        "label": "自以为是"
+        "label": "A. 自以为是"
       },
       {
         "value": "B",
-        "label": "自吹自擂"
+        "label": "B. 自吹自擂"
       },
       {
         "value": "C",
-        "label": "不自量力"
+        "label": "C. 不自量力"
       },
       {
         "value": "D",
-        "label": "刚愎自用"
+        "label": "D. 刚愎自用"
       }
     ],
     "answer": "A"
@@ -198,19 +198,19 @@
     "options": [
       {
         "value": "A",
-        "label": "习以为常"
+        "label": "A. 习以为常"
       },
       {
         "value": "B",
-        "label": "不足为奇"
+        "label": "B. 不足为奇"
       },
       {
         "value": "C",
-        "label": "屡见不鲜"
+        "label": "C. 屡见不鲜"
       },
       {
         "value": "D",
-        "label": "微不足道"
+        "label": "D. 微不足道"
       }
     ],
     "answer": "A"
@@ -225,19 +225,19 @@
     "options": [
       {
         "value": "A",
-        "label": "维持"
+        "label": "A. 维持"
       },
       {
         "value": "B",
-        "label": "加强"
+        "label": "B. 加强"
       },
       {
         "value": "C",
-        "label": "维护"
+        "label": "C. 维护"
       },
       {
         "value": "D",
-        "label": "维系"
+        "label": "D. 维系"
       }
     ],
     "answer": "D"
@@ -252,19 +252,19 @@
     "options": [
       {
         "value": "A",
-        "label": "见多识广"
+        "label": "A. 见多识广"
       },
       {
         "value": "B",
-        "label": "博古通今"
+        "label": "B. 博古通今"
       },
       {
         "value": "C",
-        "label": "旁征博引"
+        "label": "C. 旁征博引"
       },
       {
         "value": "D",
-        "label": "博大精深"
+        "label": "D. 博大精深"
       }
     ],
     "answer": "A"
@@ -279,19 +279,19 @@
     "options": [
       {
         "value": "A",
-        "label": "娱乐"
+        "label": "A. 娱乐"
       },
       {
         "value": "B",
-        "label": "阅读"
+        "label": "B. 阅读"
       },
       {
         "value": "C",
-        "label": "学文化"
+        "label": "C. 学文化"
       },
       {
         "value": "D",
-        "label": "解除疲劳"
+        "label": "D. 解除疲劳"
       }
     ],
     "answer": "B"
@@ -306,19 +306,19 @@
     "options": [
       {
         "value": "A",
-        "label": "铁锅"
+        "label": "A. 铁锅"
       },
       {
         "value": "B",
-        "label": "小勺"
+        "label": "B. 小勺"
       },
       {
         "value": "C",
-        "label": "米饭"
+        "label": "C. 米饭"
       },
       {
         "value": "D",
-        "label": "碟子"
+        "label": "D. 碟子"
       }
     ],
     "answer": "C"
@@ -333,19 +333,19 @@
     "options": [
       {
         "value": "A",
-        "label": "同学：朋友"
+        "label": "A. 同学：朋友"
       },
       {
         "value": "B",
-        "label": "兄长：哥哥"
+        "label": "B. 兄长：哥哥"
       },
       {
         "value": "C",
-        "label": "饭店：商场"
+        "label": "C. 饭店：商场"
       },
       {
         "value": "D",
-        "label": "玩具：游戏"
+        "label": "D. 玩具：游戏"
       }
     ],
     "answer": "B"
@@ -360,19 +360,19 @@
     "options": [
       {
         "value": "A",
-        "label": "图书：英文书"
+        "label": "A. 图书：英文书"
       },
       {
         "value": "B",
-        "label": "昆明：春城"
+        "label": "B. 昆明：春城"
       },
       {
         "value": "C",
-        "label": "学生：运动员"
+        "label": "C. 学生：运动员"
       },
       {
         "value": "D",
-        "label": "足球：篮球"
+        "label": "D. 足球：篮球"
       }
     ],
     "answer": "C"
@@ -387,19 +387,19 @@
     "options": [
       {
         "value": "A",
-        "label": "叮当猫：哆啦A梦"
+        "label": "A. 叮当猫：哆啦A梦"
       },
       {
         "value": "B",
-        "label": "小学生：少先队员"
+        "label": "B. 小学生：少先队员"
       },
       {
         "value": "C",
-        "label": "土豆：马铃薯"
+        "label": "C. 土豆：马铃薯"
       },
       {
         "value": "D",
-        "label": "尼罗河：世界第一大河流"
+        "label": "D. 尼罗河：世界第一大河流"
       }
     ],
     "answer": "B"
@@ -414,19 +414,19 @@
     "options": [
       {
         "value": "A",
-        "label": "豆浆：早餐：豆制品"
+        "label": "A. 豆浆：早餐：豆制品"
       },
       {
         "value": "B",
-        "label": "开水：纸杯：便利品"
+        "label": "B. 开水：纸杯：便利品"
       },
       {
         "value": "C",
-        "label": "发卡：首饰：装扮品"
+        "label": "C. 发卡：首饰：装扮品"
       },
       {
         "value": "D",
-        "label": "钢笔：电脑：办公品"
+        "label": "D. 钢笔：电脑：办公品"
       }
     ],
     "answer": "C"
@@ -441,19 +441,19 @@
     "options": [
       {
         "value": "A",
-        "label": "茶：红茶：绿茶"
+        "label": "A. 茶：红茶：绿茶"
       },
       {
         "value": "B",
-        "label": "草：狗尾草：三叶草"
+        "label": "B. 草：狗尾草：三叶草"
       },
       {
         "value": "C",
-        "label": "球：足球：绒球"
+        "label": "C. 球：足球：绒球"
       },
       {
         "value": "D",
-        "label": "车：轿车：客车"
+        "label": "D. 车：轿车：客车"
       }
     ],
     "answer": "B"
@@ -468,19 +468,19 @@
     "options": [
       {
         "value": "A",
-        "label": "策略：经营：盈亏"
+        "label": "A. 策略：经营：盈亏"
       },
       {
         "value": "B",
-        "label": "战争：武器：存亡"
+        "label": "B. 战争：武器：存亡"
       },
       {
         "value": "C",
-        "label": "判断：事实：对错"
+        "label": "C. 判断：事实：对错"
       },
       {
         "value": "D",
-        "label": "教师：教学：优劣"
+        "label": "D. 教师：教学：优劣"
       }
     ],
     "answer": "A"
@@ -495,19 +495,19 @@
     "options": [
       {
         "value": "A",
-        "label": "碳水化合物是人体所必需的"
+        "label": "A. 碳水化合物是人体所必需的"
       },
       {
         "value": "B",
-        "label": "不吃谷类食物可能会得糖尿病"
+        "label": "B. 不吃谷类食物可能会得糖尿病"
       },
       {
         "value": "C",
-        "label": "改善饮食结构可有效治疗糖尿病"
+        "label": "C. 改善饮食结构可有效治疗糖尿病"
       },
       {
         "value": "D",
-        "label": "糖尿病的病因是胰岛素分泌紊乱"
+        "label": "D. 糖尿病的病因是胰岛素分泌紊乱"
       }
     ],
     "answer": "B"
@@ -522,19 +522,19 @@
     "options": [
       {
         "value": "A",
-        "label": "自然界中蓝色极其罕见的原因"
+        "label": "A. 自然界中蓝色极其罕见的原因"
       },
       {
         "value": "B",
-        "label": "古代绘画中所使用的蓝色颜料"
+        "label": "B. 古代绘画中所使用的蓝色颜料"
       },
       {
         "value": "C",
-        "label": "青金石在莫高窟壁画中的使用情况"
+        "label": "C. 青金石在莫高窟壁画中的使用情况"
       },
       {
         "value": "D",
-        "label": "丝绸之路对中西方文化交流的影响"
+        "label": "D. 丝绸之路对中西方文化交流的影响"
       }
     ],
     "answer": "B"
@@ -549,19 +549,19 @@
     "options": [
       {
         "value": "A",
-        "label": "已经把重点放在其他媒介上"
+        "label": "A. 已经把重点放在其他媒介上"
       },
       {
         "value": "B",
-        "label": "正在不断地开辟新的战场"
+        "label": "B. 正在不断地开辟新的战场"
       },
       {
         "value": "C",
-        "label": "更善于抓住人们的兴趣点"
+        "label": "C. 更善于抓住人们的兴趣点"
       },
       {
         "value": "D",
-        "label": "绝对不会就此偃旗息鼓"
+        "label": "D. 绝对不会就此偃旗息鼓"
       }
     ],
     "answer": "B"
@@ -576,19 +576,19 @@
     "options": [
       {
         "value": "A",
-        "label": "情商决定结果"
+        "label": "A. 情商决定结果"
       },
       {
         "value": "B",
-        "label": "情商决定态度"
+        "label": "B. 情商决定态度"
       },
       {
         "value": "C",
-        "label": "性格决定命运"
+        "label": "C. 性格决定命运"
       },
       {
         "value": "D",
-        "label": "态度决定结果"
+        "label": "D. 态度决定结果"
       }
     ],
     "answer": "A"
@@ -604,19 +604,19 @@
     "options": [
       {
         "value": "A",
-        "label": "①②⑥⑤③④"
+        "label": "A. ①②⑥⑤③④"
       },
       {
         "value": "B",
-        "label": "①⑤③④②⑥"
+        "label": "B. ①⑤③④②⑥"
       },
       {
         "value": "C",
-        "label": "④②⑥①⑤③"
+        "label": "C. ④②⑥①⑤③"
       },
       {
         "value": "D",
-        "label": "④②⑤⑥③①"
+        "label": "D. ④②⑤⑥③①"
       }
     ],
     "answer": "C"
@@ -632,19 +632,19 @@
     "options": [
       {
         "value": "A",
-        "label": "③②⑤①④"
+        "label": "A. ③②⑤①④"
       },
       {
         "value": "B",
-        "label": "③⑤①④②"
+        "label": "B. ③⑤①④②"
       },
       {
         "value": "C",
-        "label": "②③⑤④①"
+        "label": "C. ②③⑤④①"
       },
       {
         "value": "D",
-        "label": "②④①⑤③"
+        "label": "D. ②④①⑤③"
       }
     ],
     "answer": "D"
@@ -659,19 +659,19 @@
     "options": [
       {
         "value": "A",
-        "label": "身高差距大的人在外貌、健康状态上差异也大"
+        "label": "A. 身高差距大的人在外貌、健康状态上差异也大"
       },
       {
         "value": "B",
-        "label": "饮食、环境及个人健康状况对基因有影响"
+        "label": "B. 饮食、环境及个人健康状况对基因有影响"
       },
       {
         "value": "C",
-        "label": "寻找与身高基因有关的数据并实证分析"
+        "label": "C. 寻找与身高基因有关的数据并实证分析"
       },
       {
         "value": "D",
-        "label": "决定身高的基因还影响着健康、疾病等"
+        "label": "D. 决定身高的基因还影响着健康、疾病等"
       }
     ],
     "answer": "C"
@@ -686,19 +686,19 @@
     "options": [
       {
         "value": "A",
-        "label": "这群流浪猫的奇闻趣事"
+        "label": "A. 这群流浪猫的奇闻趣事"
       },
       {
         "value": "B",
-        "label": "人怎样与动物和谐相处"
+        "label": "B. 人怎样与动物和谐相处"
       },
       {
         "value": "C",
-        "label": "楼下为什么聚集流浪猫"
+        "label": "C. 楼下为什么聚集流浪猫"
       },
       {
         "value": "D",
-        "label": "那只不合群的猫的故事"
+        "label": "D. 那只不合群的猫的故事"
       }
     ],
     "answer": "D"

@@ -87,7 +87,7 @@ export default function AudioForm({ question, onFinish }: IProps) {
               setValidateStatus("success");
             }
           }}
-          numInputs={question.answerLen}
+          numInputs={question.answer?.length}
           // containerStyle={{ width: "100%", justifyContent: "center" }}
           renderInput={(props) => (
             <input

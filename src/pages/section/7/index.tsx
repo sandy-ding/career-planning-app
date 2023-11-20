@@ -65,7 +65,7 @@ enum Stage {
   Main,
 }
 
-export default function Section1() {
+export default function Section7() {
   const router = useRouter();
   const [questionNo, setQuestionNo] = useState(0);
   const [stage, setStage] = useState(Stage.Intro);
@@ -75,7 +75,6 @@ export default function Section1() {
 
   const onFinish = (values: { [k: string]: string }) => {
     const questionId = questions[questionNo]._id;
-    console.log("Success:", values, values[questionId]);
     const currentTime = performance.now();
     mutate({
       input: {

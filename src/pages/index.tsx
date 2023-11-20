@@ -12,7 +12,7 @@ export default function Question() {
   const { mutate } = useLoginMutation(getDataSource(), {
     onSuccess(data, variables, context) {
       localStorage.setItem("token", data?.login?.accessToken);
-      router.push("/questions/1");
+      router.push("/section/1");
     },
   });
 

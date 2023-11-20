@@ -10,9 +10,9 @@ import { PlusOutlined } from "@ant-design/icons";
 const testAngles = shuffle([0, 1, 2, 3, 4, 5].map((i) => i * 60));
 const testDirections = shuffle([1, -1].map((i) => new Array(3).fill(i)).flat());
 const angles = shuffle(
-  [0, 1, 2, 3, 4, 5].map((i) => new Array(1).fill(i * 60)).flat()
+  [0, 1, 2, 3, 4, 5].map((i) => new Array(20).fill(i * 60)).flat()
 );
-const directions = shuffle([1, -1].map((i) => new Array(3).fill(i)).flat());
+const directions = shuffle([1, -1].map((i) => new Array(60).fill(i)).flat());
 
 const intro = {
   title: "1. 二维空间旋转",

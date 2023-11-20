@@ -49,7 +49,7 @@ enum Stage {
   Part2Main,
 }
 
-export default function Section3() {
+export default function Section5() {
   const router = useRouter();
   const [menu, setMenu] = useState("1");
   const [questionNo, setQuestionNo] = useState(0);

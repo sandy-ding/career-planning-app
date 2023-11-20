@@ -9,23 +9,23 @@
     "options": [
       {
         "value": "A",
-        "label": "28"
+        "label": "A. 28"
       },
       {
         "value": "B",
-        "label": "30"
+        "label": "B. 30"
       },
       {
         "value": "C",
-        "label": "34"
+        "label": "C. 34"
       },
       {
         "value": "D",
-        "label": "36"
+        "label": "D. 36"
       },
       {
         "value": "E",
-        "label": "40"
+        "label": "E. 40"
       }
     ],
     "answer": "E"
@@ -40,23 +40,23 @@
     "options": [
       {
         "value": "A",
-        "label": "8"
+        "label": "A. 8"
       },
       {
         "value": "B",
-        "label": "10"
+        "label": "B. 10"
       },
       {
         "value": "C",
-        "label": "12"
+        "label": "C. 12"
       },
       {
         "value": "D",
-        "label": "16"
+        "label": "D. 16"
       },
       {
         "value": "E",
-        "label": "24"
+        "label": "E. 24"
       }
     ],
     "answer": "C"
@@ -71,23 +71,23 @@
     "options": [
       {
         "value": "A",
-        "label": "200015"
+        "label": "A. 200015"
       },
       {
         "value": "B",
-        "label": "222215"
+        "label": "B. 222215"
       },
       {
         "value": "C",
-        "label": "202015"
+        "label": "C. 202015"
       },
       {
         "value": "D",
-        "label": "220015"
+        "label": "D. 220015"
       },
       {
         "value": "E",
-        "label": "201015"
+        "label": "E. 201015"
       }
     ],
     "answer": "B"
@@ -102,23 +102,23 @@
     "options": [
       {
         "value": "A",
-        "label": "2480"
+        "label": "A. 2480"
       },
       {
         "value": "B",
-        "label": "2488"
+        "label": "B. 2488"
       },
       {
         "value": "C",
-        "label": "2486"
+        "label": "C. 2486"
       },
       {
         "value": "D",
-        "label": "2484"
+        "label": "D. 2484"
       },
       {
         "value": "E",
-        "label": "2487"
+        "label": "E. 2487"
       }
     ],
     "answer": "A"
@@ -133,23 +133,23 @@
     "options": [
       {
         "value": "A",
-        "label": "18"
+        "label": "A. 18"
       },
       {
         "value": "B",
-        "label": "20"
+        "label": "B. 20"
       },
       {
         "value": "C",
-        "label": "24"
+        "label": "C. 24"
       },
       {
         "value": "D",
-        "label": "26"
+        "label": "D. 26"
       },
       {
         "value": "E",
-        "label": "30"
+        "label": "E. 30"
       }
     ],
     "answer": "B"
@@ -165,23 +165,23 @@
     "options": [
       {
         "value": "A",
-        "label": "20％"
+        "label": "A. 20％"
       },
       {
         "value": "B",
-        "label": "25％"
+        "label": "B. 25％"
       },
       {
         "value": "C",
-        "label": "30％"
+        "label": "C. 30％"
       },
       {
         "value": "D",
-        "label": "35％"
+        "label": "D. 35％"
       },
       {
         "value": "E",
-        "label": "40％"
+        "label": "E. 40％"
       }
     ],
     "answer": "B"
@@ -197,23 +197,23 @@
     "options": [
       {
         "value": "A",
-        "label": "5"
+        "label": "A. 5"
       },
       {
         "value": "B",
-        "label": "7"
+        "label": "B. 7"
       },
       {
         "value": "C",
-        "label": "9"
+        "label": "C. 9"
       },
       {
         "value": "D",
-        "label": "11"
+        "label": "D. 11"
       },
       {
         "value": "E",
-        "label": "13"
+        "label": "E. 13"
       }
     ],
     "answer": "D"
@@ -228,23 +228,23 @@
     "options": [
       {
         "value": "A",
-        "label": "5"
+        "label": "A. 5"
       },
       {
         "value": "B",
-        "label": "5.5"
+        "label": "B. 5.5"
       },
       {
         "value": "C",
-        "label": "6"
+        "label": "C. 6"
       },
       {
         "value": "D",
-        "label": "6.5"
+        "label": "D. 6.5"
       },
       {
         "value": "E",
-        "label": "7"
+        "label": "E. 7"
       }
     ],
     "answer": "C"
@@ -259,19 +259,19 @@
     "options": [
       {
         "value": "A",
-        "label": "22"
+        "label": "A. 22"
       },
       {
         "value": "B",
-        "label": "24"
+        "label": "B. 24"
       },
       {
         "value": "C",
-        "label": "26"
+        "label": "C. 26"
       },
       {
         "value": "D",
-        "label": "30"
+        "label": "D. 30"
       }
     ],
     "answer": "C"
@@ -286,19 +286,19 @@
     "options": [
       {
         "value": "A",
-        "label": "XOO"
+        "label": "A. XOO"
       },
       {
         "value": "B",
-        "label": "OO"
+        "label": "B. OO"
       },
       {
         "value": "C",
-        "label": "OOX"
+        "label": "C. OOX"
       },
       {
         "value": "D",
-        "label": "OXX"
+        "label": "D. OXX"
       }
     ],
     "answer": "B"
@@ -313,19 +313,19 @@
     "options": [
       {
         "value": "A",
-        "label": "合理"
+        "label": "A. 合理"
       },
       {
         "value": "B",
-        "label": "不合理，应还15元"
+        "label": "B. 不合理，应还15元"
       },
       {
         "value": "C",
-        "label": "不合理，应还10元"
+        "label": "C. 不合理，应还10元"
       },
       {
         "value": "D",
-        "label": "以上选项均不正确"
+        "label": "D. 以上选项均不正确"
       }
     ],
     "answer": "C"
@@ -340,19 +340,19 @@
     "options": [
       {
         "value": "A",
-        "label": "1"
+        "label": "A. 1"
       },
       {
         "value": "B",
-        "label": "2"
+        "label": "B. 2"
       },
       {
         "value": "C",
-        "label": "3"
+        "label": "C. 3"
       },
       {
         "value": "D",
-        "label": "4"
+        "label": "D. 4"
       }
     ],
     "answer": "B"
@@ -367,19 +367,19 @@
     "options": [
       {
         "value": "A",
-        "label": "对的"
+        "label": "A. 对的"
       },
       {
         "value": "B",
-        "label": "错的"
+        "label": "B. 错的"
       },
       {
         "value": "C",
-        "label": "既不对也不错"
+        "label": "C. 既不对也不错"
       },
       {
         "value": "D",
-        "label": "以上选项均不正确"
+        "label": "D. 以上选项均不正确"
       }
     ],
     "answer": "A"
@@ -394,19 +394,19 @@
     "options": [
       {
         "value": "A",
-        "label": "小红比小强大"
+        "label": "A. 小红比小强大"
       },
       {
         "value": "B",
-        "label": "小红比小强小"
+        "label": "B. 小红比小强小"
       },
       {
         "value": "C",
-        "label": "小红与小强一样大"
+        "label": "C. 小红与小强一样大"
       },
       {
         "value": "D",
-        "label": "无法确定小红与小强谁大"
+        "label": "D. 无法确定小红与小强谁大"
       }
     ],
     "answer": "D"
@@ -421,19 +421,19 @@
     "options": [
       {
         "value": "A",
-        "label": "2368"
+        "label": "A. 2368"
       },
       {
         "value": "B",
-        "label": "6283"
+        "label": "B. 6283"
       },
       {
         "value": "C",
-        "label": "2683"
+        "label": "C. 2683"
       },
       {
         "value": "D",
-        "label": "6328"
+        "label": "D. 6328"
       }
     ],
     "answer": "D"
@@ -448,19 +448,19 @@
     "options": [
       {
         "value": "A",
-        "label": "对的"
+        "label": "A. 对的"
       },
       {
         "value": "B",
-        "label": "错的"
+        "label": "B. 错的"
       },
       {
         "value": "C",
-        "label": "既不对也不错"
+        "label": "C. 既不对也不错"
       },
       {
         "value": "D",
-        "label": "以上选项均不正确"
+        "label": "D. 以上选项均不正确"
       }
     ],
     "answer": "B"

@@ -30,7 +30,9 @@ export default function RadioForm({ question, onFinish }: IProps) {
             <ReactMarkdown rehypePlugins={[rehypeRaw as any]}>
               {`${question.label}</br>${question?.description || ""}`}
             </ReactMarkdown>
-            {question.fileUrl && <img src={question.fileUrl} />}
+            {question.fileUrl && (
+              <img className="max-w-full" src={question.fileUrl} />
+            )}
           </div>
         }
         name={questionId}
@@ -44,7 +46,6 @@ export default function RadioForm({ question, onFinish }: IProps) {
           >
             {question?.options?.map(({ value, label }) => (
               <Radio key={value} value={value}>
-                {!hasImage && `${value}．`}
                 {label}
               </Radio>
             ))}
