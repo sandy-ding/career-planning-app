@@ -2,10 +2,11 @@ import { useRouter } from "next/router";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
 import { Card, Menu, MenuProps, Typography } from "antd";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import questions from "./index.json";
 import Intro from "@/components/Intro";
 import RadioForm from "@/components/RadioForm";
+import { MenuContext } from "@/hooks/MenuContext";
 
 const { Title } = Typography;
 
@@ -70,8 +71,10 @@ export default function Section7() {
   const [questionNo, setQuestionNo] = useState(0);
   const [stage, setStage] = useState(Stage.Intro);
   const [time, setTime] = useState(0);
-  const [menu, setMenu] = useState("1");
   const { mutate } = useSubmitAnswerMutation(getDataSource());
+  const { setMenu } = useContext(MenuContext);
+
+  useEffect(() => setMenu("7"), []);
 
   const onFinish = (values: { [k: string]: string }) => {
     const questionId = questions[questionNo]._id;
@@ -93,7 +96,7 @@ export default function Section7() {
   };
 
   return (
-    <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
+    <>
       {stage === Stage.Intro ? (
         <Intro
           {...intro}
@@ -103,17 +106,8 @@ export default function Section7() {
           }}
         />
       ) : (
-        <>
-          <Title level={5}>{questions[questionNo].category2}</Title>
-          <Menu
-            className="mb-10"
-            selectedKeys={[menu]}
-            mode="horizontal"
-            items={items}
-          />
-          <RadioForm question={questions[questionNo]} onFinish={onFinish} />
-        </>
+        <RadioForm question={questions[questionNo]} onFinish={onFinish} />
       )}
-    </Card>
+    </>
   );
 }

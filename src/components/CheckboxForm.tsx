@@ -51,7 +51,13 @@ export default function CheckboxForm({ question, onFinish }: IProps) {
       </Form.Item>
 
       <Form.Item className="flex justify-center">
-        <Button type="primary" htmlType="submit">
+        <Button
+          type="primary"
+          htmlType="submit"
+          size="large"
+          shape="round"
+          className="!px-16"
+        >
           提交
         </Button>
       </Form.Item>

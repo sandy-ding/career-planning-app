@@ -54,20 +54,20 @@ export default function Part2(props: IProps) {
           }}
         />
       ) : (
-        <>
-          <div className="flex justify-end mt-4 h-10 text-2xl">
+        <div className="h-full">
+          <div className="flex justify-end mt-4 h-10 text-xl">
             倒计时
             <Countdown
               value={countdown}
               format="m:ss"
-              className="float-right leading-8"
+              className="float-right leading-8 !text-xl"
               onFinish={() => {
                 props.onFinish();
               }}
             />
           </div>
           <RadioForm question={questions[questionNo]} onFinish={onFinish} />
-        </>
+        </div>
       )}
     </>
   );

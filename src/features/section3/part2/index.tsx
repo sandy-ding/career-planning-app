@@ -21,7 +21,6 @@ enum Stage {
 
 interface IProps {
   onFinish: () => void;
-  menu: ReactElement;
 }
 
 const intro = {
@@ -144,78 +143,90 @@ export default function Part2(props: IProps) {
   return stage === Stage.Intro ? (
     <Intro {...intro} onClick={() => setStage(Stage.ReadDescription)} />
   ) : (
-    <>
-      <Title level={5}>{intro.title}</Title>
-      {props.menu}
-      <Form
-        name="basic"
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
-        layout="vertical"
-        requiredMark={false}
-        className="flex flex-col justify-between h-full"
+    <Form
+      name="basic"
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
+      autoComplete="off"
+      layout="vertical"
+      requiredMark={false}
+      className="flex flex-col justify-between h-full"
+    >
+      <Form.Item
+        label={
+          <div>
+            <div>{question.isTest && "练习题 "}</div>
+            <label className="contents">{question.label}</label>
+          </div>
+        }
+        className="h-full"
+        help={<div className="flex justify-center mt-2">{help}</div>}
+        validateStatus={validateStatus}
       >
-        {question.isTest && "练习题 "}
-        <Form.Item
-          label={<label className="contents">{question.label}</label>}
-          help={<div className="flex justify-center mt-2">{help}</div>}
-          validateStatus={validateStatus}
-        >
-          {stage === Stage.ReadDescription && (
-            <div className="h-40 flex justify-center items-center mt-4">
-              <Button
-                type="primary"
-                className="float-right"
-                onClick={() => {
-                  setStage(Stage.ShowQuestion);
-                  setCountdown(Date.now() + 1000 * 5);
-                }}
-              >
-                开始
-              </Button>
-            </div>
-          )}
-          {stage === Stage.ShowQuestion && (
-            <div className="flex justify-end mt-4 h-10 text-2xl">
-              倒计时
-              <Countdown
-                value={countdown}
-                format="s"
-                className="float-right leading-8"
-                onFinish={() => {
-                  setStage(Stage.WhiteScreen);
-                  setValue(value.map((row) => row.map(() => 0)));
-                  setTimeout(() => {
-                    setStage(Stage.AnswerQuestion);
-                    setTime(Date.now());
-                  }, 2000);
-                }}
-              />
-              秒
-            </div>
-          )}
-          {stage !== Stage.ReadDescription && stage !== Stage.WhiteScreen && (
-            <div
-              className={classNames(
-                "flex justify-center mt-4"
-                // stage === Stage.AnswerQuestion && "mt-20"
-              )}
-            >
-              <div>{board}</div>
-            </div>
-          )}
-        </Form.Item>
-
-        {(stage === Stage.AnswerQuestion ||
-          stage === Stage.ShowCorrectAnswer) && (
-          <Form.Item wrapperCol={{ offset: 8, span: 16 }} className="m-0">
-            <Button type="primary" htmlType="submit" className="float-right">
-              {goNext ? "下一题" : "提交"}
-            </Button>
-          </Form.Item>
+        {stage === Stage.ShowQuestion && (
+          <div className="flex justify-end mt-4 h-10 text-xl">
+            倒计时
+            <Countdown
+              value={countdown}
+              format="s"
+              className="float-right leading-8 !text-xl"
+              onFinish={() => {
+                setStage(Stage.WhiteScreen);
+                setValue(value.map((row) => row.map(() => 0)));
+                setTimeout(() => {
+                  setStage(Stage.AnswerQuestion);
+                  setTime(Date.now());
+                }, 2000);
+              }}
+            />
+            秒
+          </div>
         )}
-      </Form>
-    </>
+        {stage !== Stage.ReadDescription && stage !== Stage.WhiteScreen && (
+          <div
+            className={classNames(
+              "flex justify-center mt-24"
+              // stage === Stage.AnswerQuestion && "mt-20"
+            )}
+            style={{ marginTop: "100px" }}
+          >
+            <div>{board}</div>
+          </div>
+        )}
+      </Form.Item>
+
+      {stage === Stage.ReadDescription && (
+        <Form.Item wrapperCol={{ offset: 8, span: 16 }} className="m-0">
+          <Button
+            type="primary"
+            htmlType="submit"
+            size="large"
+            shape="round"
+            className="!px-16"
+            onClick={() => {
+              setStage(Stage.ShowQuestion);
+              setCountdown(Date.now() + 1000 * 5);
+            }}
+          >
+            开始
+          </Button>
+        </Form.Item>
+      )}
+
+      {(stage === Stage.AnswerQuestion ||
+        stage === Stage.ShowCorrectAnswer) && (
+        <Form.Item wrapperCol={{ offset: 8, span: 16 }} className="m-0">
+          <Button
+            type="primary"
+            htmlType="submit"
+            size="large"
+            shape="round"
+            className="!px-16"
+          >
+            {goNext ? "下一题" : "提交"}
+          </Button>
+        </Form.Item>
+      )}
+    </Form>
   );
 }

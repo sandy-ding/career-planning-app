@@ -1,12 +1,11 @@
 import { useRouter } from "next/router";
-import { Card, Menu, MenuProps, Typography } from "antd";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Intro from "@/components/Intro";
 import Part1 from "@/features/section6/part1";
 import Part2 from "@/features/section6/part2";
 import Part3 from "@/features/section6/part3";
-
-const { Title } = Typography;
+import { MenuContext } from "@/hooks/MenuContext";
+import { Stage } from "@/types";
 
 const intro = {
   title: "六、空间能力",
@@ -16,71 +15,40 @@ const intro = {
     "测试提示：空间能力测验包括二维空间旋转、三维空间旋转和空间想象三部分。请根据每个阶段的指导语认真完成测验。",
 };
 
-const items: MenuProps["items"] = [
-  {
-    label: "1. 二维空间旋转",
-    key: "1",
-  },
-  {
-    label: "2. 三维空间旋转",
-    key: "2",
-  },
-  {
-    label: "3. 空间想象",
-    key: "3",
-  },
-];
-
-enum Stage {
-  Intro,
-  Part1,
-  Part2,
-  Part3,
-}
-
 export default function Section6() {
   const router = useRouter();
-  const [menu, setMenu] = useState("");
   const [stage, setStage] = useState(Stage.Intro);
+  const { setMenu } = useContext(MenuContext);
+
+  useEffect(() => setMenu("5"), []);
 
   return (
-    <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
-      {stage !== Stage.Intro && (
-        <>
-          <Title level={5}>{intro.title}</Title>
-          <Menu
-            className="mb-10"
-            selectedKeys={[menu]}
-            mode="horizontal"
-            items={items}
-          />
-        </>
-      )}
+    <>
       {stage === Stage.Intro ? (
         <Intro
           {...intro}
           onClick={() => {
             setStage(Stage.Part1);
-            setMenu("1");
+            setMenu("6.1");
           }}
         />
       ) : stage === Stage.Part1 ? (
         <Part1
           onFinish={() => {
             setStage(Stage.Part2);
-            setMenu("2");
+            setMenu("6.2");
           }}
         />
       ) : stage === Stage.Part2 ? (
         <Part2
           onFinish={() => {
             setStage(Stage.Part3);
-            setMenu("3");
+            setMenu("6.3");
           }}
         />
       ) : (
         <Part3 onFinish={() => router.push("7")} />
       )}
-    </Card>
+    </>
   );
 }

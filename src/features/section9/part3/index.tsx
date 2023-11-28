@@ -93,7 +93,7 @@ export default function Part3(props: IProps) {
             </label>
           }
         >
-          <div className="mt-20">
+          <div>
             {showImage ? (
               <div className="flex justify-center">
                 <img
@@ -105,11 +105,11 @@ export default function Part3(props: IProps) {
             ) : (
               <>
                 {stage === Stage.Main && (
-                  <div className="flex justify-end mt-4 h-10 text-2xl">
+                  <div className="flex justify-end mt-4 text-xl">
                     <Countdown
                       value={countdown}
                       format="m:ss"
-                      className="float-right"
+                      className="float-right !text-xl"
                       onFinish={() => {
                         mutate({
                           input: {
@@ -133,7 +133,13 @@ export default function Part3(props: IProps) {
                     onDrop={setAnswer}
                   />
                   {showButton && (
-                    <Button type="primary" className="mt-4" onClick={onSubmit}>
+                    <Button
+                      type="primary"
+                      size="large"
+                      shape="round"
+                      className="!px-16 mt-4"
+                      onClick={onSubmit}
+                    >
                       {isTest ? "开始测试" : "提交"}
                     </Button>
                   )}

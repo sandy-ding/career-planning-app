@@ -186,12 +186,12 @@ export default function Part3(props: IProps) {
           help={<div className="flex justify-center mt-2">{help}</div>}
           validateStatus={validateStatus}
         >
-          <div className="flex justify-end mt-4 h-10 text-2xl">
+          <div className="flex justify-end text-xl">
             倒计时
             <Countdown
               value={countdown}
               format="m:ss"
-              className="float-right leading-8"
+              className="float-right leading-8 !text-xl"
               onFinish={() => {
                 mutate({
                   input: {
@@ -207,7 +207,7 @@ export default function Part3(props: IProps) {
           <div className={classNames("flex justify-center mt-4")}>
             <div
               className="border-1 border-black border-solid"
-              style={{ fontSize: "24px" }}
+              style={{ fontSize: "24px", border: "1px solid black" }}
             >
               {board}
             </div>
@@ -215,7 +215,13 @@ export default function Part3(props: IProps) {
         </Form.Item>
 
         <Form.Item wrapperCol={{ offset: 8, span: 16 }} className="m-0">
-          <Button type="primary" htmlType="submit" className="float-right">
+          <Button
+            type="primary"
+            htmlType="submit"
+            size="large"
+            shape="round"
+            className="!px-16"
+          >
             提交
           </Button>
         </Form.Item>

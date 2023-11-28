@@ -1,13 +1,11 @@
 import { useRouter } from "next/router";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { Card, Typography } from "antd";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import questions from "./index.json";
 import Intro from "@/components/Intro";
 import RadioForm from "@/components/RadioForm";
-
-const { Title } = Typography;
+import { MenuContext } from "@/hooks/MenuContext";
 
 const intro = {
   title: "十、内省能力",
@@ -27,6 +25,9 @@ export default function Section10() {
   const [questionNo, setQuestionNo] = useState(0);
   const [stage, setStage] = useState(Stage.Intro);
   const { mutate } = useSubmitAnswerMutation(getDataSource());
+  const { setMenu } = useContext(MenuContext);
+
+  useEffect(() => setMenu("10"), []);
 
   const onFinish = (values: { [k: string]: string }) => {
     const questionId = questions[questionNo]._id;
@@ -38,27 +39,20 @@ export default function Section10() {
       },
     });
     if (questionNo === questions.length - 1) {
-      router.push("11");
+      router.push("12");
     } else {
       setQuestionNo(questionNo + 1);
     }
   };
 
-  return (
-    <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
-      {stage === Stage.Intro ? (
-        <Intro
-          {...intro}
-          onClick={() => {
-            setStage(Stage.Main);
-          }}
-        />
-      ) : (
-        <>
-          <Title level={5}>{intro.title}</Title>
-          <RadioForm question={questions[questionNo]} onFinish={onFinish} />
-        </>
-      )}
-    </Card>
+  return stage === Stage.Intro ? (
+    <Intro
+      {...intro}
+      onClick={() => {
+        setStage(Stage.Main);
+      }}
+    />
+  ) : (
+    <RadioForm question={questions[questionNo]} onFinish={onFinish} />
   );
 }

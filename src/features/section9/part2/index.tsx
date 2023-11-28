@@ -80,12 +80,12 @@ export default function Part2(props: IProps) {
             </label>
           }
         >
-          <div className="mt-20">
-            <div className="flex justify-end mt-4 h-10 text-2xl">
+          <div>
+            <div className="flex justify-end text-xl">
               <Countdown
                 value={countdown}
                 format="m:ss"
-                className="float-right"
+                className="float-right !text-xl"
                 onFinish={onSubmit}
               />
             </div>
@@ -100,7 +100,13 @@ export default function Part2(props: IProps) {
             </div>
             <div className="flex flex-col items-center">
               {answer.length === areas.length / 2 && (
-                <Button type="primary" className="mt-4" onClick={onSubmit}>
+                <Button
+                  type="primary"
+                  size="large"
+                  shape="round"
+                  className="!px-16 mt-4"
+                  onClick={onSubmit}
+                >
                   提交
                 </Button>
               )}

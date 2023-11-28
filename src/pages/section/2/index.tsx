@@ -1,25 +1,12 @@
 import { useRouter } from "next/router";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { Card, Menu, MenuProps, Typography } from "antd";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import questions from "./index.json";
 import Intro from "@/components/Intro";
 import RadioForm from "@/components/RadioForm";
 import Countdown from "antd/lib/statistic/Countdown";
-
-const items: MenuProps["items"] = [
-  {
-    label: "1. 具体推理",
-    key: "1",
-  },
-  {
-    label: "2. 抽象推理",
-    key: "2",
-  },
-];
-
-const { Title } = Typography;
+import { MenuContext } from "@/hooks/MenuContext";
 
 const intro = {
   title: "二、逻辑推理能力",
@@ -39,8 +26,8 @@ export default function Section2() {
   const [stage, setStage] = useState(Stage.Intro);
   const [countdown, setCountdown] = useState<number>(0);
   const [questionNo, setQuestionNo] = useState(0);
-  const [menu, setMenu] = useState("1");
   const { mutate } = useSubmitAnswerMutation(getDataSource());
+  const { setMenu } = useContext(MenuContext);
 
   const onFinish = (values: { [k: string]: string }) => {
     const questionId = questions[questionNo]._id;
@@ -53,45 +40,36 @@ export default function Section2() {
     });
     if (questionNo === questions.length - 1) {
       router.push("3");
+      setMenu("3");
     } else {
       setQuestionNo(questionNo + 1);
       setMenu(questions[questionNo + 1].menuId);
     }
   };
 
-  return (
-    <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
-      {stage === Stage.Intro ? (
-        <Intro
-          {...intro}
-          onClick={() => {
-            setStage(Stage.Main);
-            setCountdown(Date.now() + 1000 * 60 * 30);
+  return stage === Stage.Intro ? (
+    <Intro
+      {...intro}
+      onClick={() => {
+        setStage(Stage.Main);
+        setCountdown(Date.now() + 1000 * 60 * 30);
+        setMenu(questions[questionNo].menuId);
+      }}
+    />
+  ) : (
+    <>
+      <div className="flex justify-end mt-4 h-10 !text-xl">
+        倒计时
+        <Countdown
+          value={countdown}
+          format="m:ss"
+          className="float-right leading-8 !text-xl"
+          onFinish={() => {
+            router.push("3");
           }}
         />
-      ) : (
-        <>
-          <Title level={5}>{intro.title}</Title>
-          <Menu
-            className="mb-10"
-            selectedKeys={[menu]}
-            mode="horizontal"
-            items={items}
-          />
-          <div className="flex justify-end mt-4 h-10 text-2xl">
-            倒计时
-            <Countdown
-              value={countdown}
-              format="m:ss"
-              className="float-right leading-8"
-              onFinish={() => {
-                router.push("3");
-              }}
-            />
-          </div>
-          <RadioForm question={questions[questionNo]} onFinish={onFinish} />
-        </>
-      )}
-    </Card>
+      </div>
+      <RadioForm question={questions[questionNo]} onFinish={onFinish} />
+    </>
   );
 }

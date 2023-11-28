@@ -1,11 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { Card, Form, Menu, MenuProps } from "antd";
+import { Form } from "antd";
 import questions from "./index.json";
 import Intro from "@/components/Intro";
 import RadioForm from "@/components/RadioForm";
+import { MenuContext } from "@/hooks/MenuContext";
 
 const intro = {
   title: "十四、思维转换能力",
@@ -27,17 +28,6 @@ const intro2 = {
     "指导语：这是思维转换能力的第二段测验。<br />你将在电脑界面上回答一系列问题，屏幕上只会呈现一道题。请你根据题目呈现的文字，尽可能快地选择出与文字相对应的图片。<br />现在，请开始测验。",
 };
 
-const items: MenuProps["items"] = [
-  {
-    label: "1. 图片转换为对应文字",
-    key: "1",
-  },
-  {
-    label: "2. 文字转换为对应图片",
-    key: "2",
-  },
-];
-
 export enum Stage {
   Intro,
   Intro1,
@@ -48,12 +38,14 @@ export enum Stage {
 
 export default function Section14() {
   const router = useRouter();
-  const [menu, setMenu] = useState("1");
   const [questionNo, setQuestionNo] = useState(0);
   const [stage, setStage] = useState(Stage.Intro);
   const [time, setTime] = useState<number>(0);
   const { mutate } = useSubmitAnswerMutation(getDataSource());
   const question = questions[questionNo];
+  const { setMenu } = useContext(MenuContext);
+
+  useEffect(() => setMenu("14"), []);
 
   const onFinish = (values: { [k: string]: string }) => {
     const answer = values[questions[questionNo]._id];
@@ -106,7 +98,7 @@ export default function Section14() {
   }, [stage, questionNo]);
 
   return (
-    <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
+    <>
       {stage === Stage.Intro ? (
         <Intro
           {...intro}
@@ -116,12 +108,6 @@ export default function Section14() {
         />
       ) : (
         <>
-          <Menu
-            className="mb-10"
-            selectedKeys={[menu]}
-            mode="horizontal"
-            items={items}
-          />
           {stage === Stage.Intro1 ? (
             <Intro
               {...intro1}
@@ -152,7 +138,10 @@ export default function Section14() {
                   label={<label className="contents">{question.label}</label>}
                 >
                   <div className="flex justify-center items-center mt-20">
-                    <img className="max-w-full" src={question.fileUrl} />
+                    <img
+                      className="max-w-full max-h-96 object-scale-down"
+                      src={question.fileUrl}
+                    />
                   </div>
                 </Form.Item>
               </Form>
@@ -162,6 +151,6 @@ export default function Section14() {
           )}
         </>
       )}
-    </Card>
+    </>
   );
 }

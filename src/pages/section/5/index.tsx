@@ -1,25 +1,13 @@
 import { useRouter } from "next/router";
-import { Card, Menu, MenuProps, Typography } from "antd";
 import Intro from "@/components/Intro";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import questions from "./index.json";
 import RadioForm from "@/components/RadioForm";
 import Countdown from "antd/lib/statistic/Countdown";
-
-const { Title } = Typography;
-
-const items: MenuProps["items"] = [
-  {
-    label: "1. 表格分析",
-    key: "1",
-  },
-  {
-    label: "2. 图形分析",
-    key: "2",
-  },
-];
+import { MenuContext } from "@/hooks/MenuContext";
+import { Stage } from "@/types";
 
 const intro = {
   title: "五、信息检索与归纳能力",
@@ -41,21 +29,13 @@ const part2Intro = {
     "这是信息检索与归纳能力的第二段测验。<br/>您将在电脑界面上回答一系列问题，屏幕只会呈现一道题，确认选项后将会自动进入下一题，右下角为答题卡，点击数字可进入相应题目。请尽力在8分钟内完成，8分钟后将直接入下一段测验。如果时间充裕，你也可以选择提交答题卡，提前进入下一段测验。<br/>现在，请开始测验，按照界面上的指示进行作答。",
 };
 
-enum Stage {
-  Intro,
-  Part1Intro,
-  Part1Main,
-  Part2Intro,
-  Part2Main,
-}
-
 export default function Section5() {
   const router = useRouter();
-  const [menu, setMenu] = useState("1");
   const [questionNo, setQuestionNo] = useState(0);
   const [stage, setStage] = useState(Stage.Intro);
   const [countdown, setCountdown] = useState<number>(0);
   const { mutate } = useSubmitAnswerMutation(getDataSource());
+  const { setMenu } = useContext(MenuContext);
 
   const onFinish = (values: { [k: string]: string }) => {
     mutate({
@@ -68,7 +48,7 @@ export default function Section5() {
     if (questionNo === 4) {
       setCountdown(Date.now() + 1000 * 60 * 8);
       setQuestionNo(questionNo + 1);
-      setMenu("2");
+      setMenu("5.2");
       setStage(Stage.Part2Intro);
     } else if (questionNo === questions.length - 1) {
       router.push("6");
@@ -77,13 +57,16 @@ export default function Section5() {
     }
   };
 
+  useEffect(() => setMenu("5"), []);
+
   return (
-    <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
+    <>
       {stage === Stage.Intro && (
         <Intro
           {...intro}
           onClick={() => {
             setStage(Stage.Part1Intro);
+            setMenu("5.1");
           }}
         />
       )}
@@ -107,19 +90,12 @@ export default function Section5() {
       )}
       {(stage === Stage.Part1Main || stage === Stage.Part2Main) && (
         <>
-          <Title level={5}>{intro.title}</Title>
-          <Menu
-            className="mb-10"
-            selectedKeys={[menu]}
-            mode="horizontal"
-            items={items}
-          />
-          <div className="flex justify-end mt-4 h-10 text-2xl">
+          <div className="flex justify-end h-10 text-xl">
             倒计时
             <Countdown
               value={countdown}
               format="m:ss"
-              className="float-right leading-8"
+              className="float-right leading-8 !text-xl"
               onFinish={() => {
                 if (questionNo <= 4) {
                   setCountdown(Date.now() + 1000 * 60 * 8);
@@ -150,6 +126,6 @@ export default function Section5() {
           <RadioForm question={questions[questionNo]} onFinish={onFinish} />
         </>
       )}
-    </Card>
+    </>
   );
 }

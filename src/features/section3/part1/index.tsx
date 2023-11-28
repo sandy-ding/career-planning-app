@@ -1,30 +1,22 @@
-import { useRouter } from "next/router";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { Button, Form, MenuProps, Typography } from "antd";
-import { ReactElement, useState } from "react";
+import { Button, Form } from "antd";
+import { useState } from "react";
 import questions from "./index.json";
 import Intro from "@/components/Intro";
 import { ValidateStatus } from "antd/es/form/FormItem";
 import OtpInput from "react-otp-input";
 import AudioPlayer from "@/components/AudioPlayer";
-
-const { Title } = Typography;
+import { Stage } from "@/types";
 
 const intro = {
   title: "（一）数字广度测验",
   description:
-    "下面开始数字广度测验。你将听到我说出一串数字，你只需按要求把听到的数字输入到屏幕中。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。注意若连错3次测验即停止，以最后一次答对数字串所包含的数字个数为最终得分。下面点击“开始”，开始练习吧。",
+    "下面开始数字广度测验。你将听到我说出一串数字，你只需按要求把听到的数字输入到屏幕中。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。注意若连错3次测验即停止，以最后一次答对数字串所包含的数字个数为最终得分。下面点击“练习”，开始练习吧。",
 };
-
-enum Stage {
-  Intro,
-  Main,
-}
 
 interface IProps {
   onFinish: () => void;
-  menu: ReactElement;
 }
 
 export default function Part1(props: IProps) {
@@ -50,9 +42,10 @@ export default function Part1(props: IProps) {
       setHelp("");
       setQuestionNo(questionNo + 1);
       setTime(currentTime);
+      setOtp("");
     } else if (question.isTest) {
       setGoNext(true);
-      if (values[question._id] === question.answer) {
+      if (otp === question.answer) {
         setHelp("回答正确");
         setValidateStatus("success");
       } else {
@@ -61,22 +54,23 @@ export default function Part1(props: IProps) {
       }
     } else {
       setGoNext(false);
-      if (values[question._id] === question.answer) {
+      if (otp === question.answer) {
         setNumOfSubmission(0);
         setQuestionNo(questionNo + 1);
         mutate({
           input: {
             questionId,
-            answer: values[questionId],
+            answer: otp,
             time: currentTime - time,
           },
         });
+        setOtp("");
       } else if (numOfSubmission >= 2) {
         setNumOfSubmission(0);
         mutate({
           input: {
             questionId,
-            answer: values[questionId],
+            answer: otp,
             time: currentTime - time,
           },
         });
@@ -98,37 +92,39 @@ export default function Part1(props: IProps) {
   return stage === Stage.Intro ? (
     <Intro
       {...intro}
+      btnText="练习"
       onClick={() => {
         setStage(Stage.Main);
         setTime(performance.now());
       }}
     />
   ) : (
-    <>
-      <Title level={5}>{intro.title}</Title>
-      {props.menu}
-      <Form
-        name="basic"
-        onFinish={onFinish}
-        autoComplete="off"
-        layout="vertical"
-        requiredMark={false}
-        className="flex flex-col justify-between h-full"
-      >
-        {question.isTest && "练习题 "}
-        <Form.Item
-          label={
+    <Form
+      name="basic"
+      onFinish={onFinish}
+      autoComplete="off"
+      layout="vertical"
+      requiredMark={false}
+      className="flex flex-col justify-between h-full"
+    >
+      <Form.Item
+        label={
+          <div>
+            <div>{question.isTest && "练习题 "}</div>
             <label className="contents">
               {question.label}
               <AudioPlayer fileUrl={question.fileUrl!} />
             </label>
-          }
-          name={questionId}
-          rules={[{ required: true, message: "请输入数字" }]}
-          help={help}
-          validateStatus={validateStatus}
-        >
+          </div>
+        }
+        name={questionId}
+        rules={[{ required: true, message: "请输入数字" }]}
+        help={<div className="flex justify-center">{help}</div>}
+        validateStatus={validateStatus}
+      >
+        <div className="flex justify-center">
           <OtpInput
+            containerStyle={{ marginTop: "100px" }}
             value={otp}
             onChange={(otp: string) => {
               setOtp(otp);
@@ -146,14 +142,20 @@ export default function Part1(props: IProps) {
               />
             )}
           />
-        </Form.Item>
+        </div>
+      </Form.Item>
 
-        <Form.Item wrapperCol={{ offset: 8, span: 16 }} className="m-0">
-          <Button type="primary" htmlType="submit" className="float-right">
-            {goNext ? "下一题" : "提交"}
-          </Button>
-        </Form.Item>
-      </Form>
-    </>
+      <Form.Item className="flex justify-center">
+        <Button
+          type="primary"
+          htmlType="submit"
+          size="large"
+          shape="round"
+          className="!px-16"
+        >
+          {goNext ? "下一题" : "提交"}
+        </Button>
+      </Form.Item>
+    </Form>
   );
 }

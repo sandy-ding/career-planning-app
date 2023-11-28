@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { Question, useQuestionQuery } from "@/graphql/generated/graphql";
-import { getDataSource } from "@/graphql/queryClient";
 import { Button, Typography, Breadcrumb, Card } from "antd";
 import Section1 from "@/pages/section/1";
 import Section2 from "@/pages/section/2";

@@ -2,10 +2,11 @@ import { useRouter } from "next/router";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
 import { Card, Typography } from "antd";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import questions from "./index.json";
 import Intro from "@/components/Intro";
 import RadioForm from "@/components/RadioForm";
+import { MenuContext } from "@/hooks/MenuContext";
 
 const { Title } = Typography;
 
@@ -34,6 +35,10 @@ export default function Section13() {
   const [stage, setStage] = useState(Stage.Intro);
   const { mutate } = useSubmitAnswerMutation(getDataSource());
 
+  const { setMenu } = useContext(MenuContext);
+
+  useEffect(() => setMenu("13"), []);
+
   const onFinish = (values: { [k: string]: string }) => {
     const questionId = questions[questionNo]._id;
     mutate({
@@ -50,7 +55,7 @@ export default function Section13() {
   };
 
   return (
-    <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
+    <>
       {stage === Stage.Intro ? (
         <Intro
           {...intro}
@@ -60,11 +65,10 @@ export default function Section13() {
         />
       ) : (
         <>
-          <Title level={3}>十三、音乐能力</Title>
           <Title level={5}>{subtitles[Math.floor(questionNo / 10)]}</Title>
           <RadioForm question={questions[questionNo]} onFinish={onFinish} />
         </>
       )}
-    </Card>
+    </>
   );
 }

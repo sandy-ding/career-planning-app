@@ -1,8 +1,9 @@
 import { useRouter } from "next/router";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { Card, Menu, MenuProps, Typography } from "antd";
-import { useState } from "react";
+import { Menu, MenuProps, Typography } from "antd";
+import { useContext, useEffect, useState } from "react";
+import { MenuContext } from "@/hooks/MenuContext";
 import questions from "./index.json";
 import Intro from "@/components/Intro";
 import RadioForm from "@/components/RadioForm";
@@ -32,7 +33,7 @@ const intro = {
 
 export default function Section4() {
   const router = useRouter();
-  const [menu, setMenu] = useState("1");
+  const { setMenu } = useContext(MenuContext);
   const [questionNo, setQuestionNo] = useState(0);
   const [stage, setStage] = useState(Stage.Intro);
   const [countdown, setCountdown] = useState<number>(0);
@@ -53,12 +54,13 @@ export default function Section4() {
       router.push("5");
     } else {
       setQuestionNo(questionNo + 1);
-      setMenu(questions[questionNo + 1].menuId);
     }
   };
 
+  useEffect(() => setMenu("4"), []);
+
   return (
-    <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
+    <>
       {stage === Stage.Intro ? (
         <Intro
           {...intro}
@@ -69,19 +71,12 @@ export default function Section4() {
         />
       ) : (
         <>
-          <Title level={5}>{intro.title}</Title>
-          <Menu
-            className="mb-10"
-            selectedKeys={[menu]}
-            mode="horizontal"
-            items={items}
-          />
-          <div className="flex justify-end mt-4 h-10 text-2xl">
+          <div className="flex justify-end mt-4 h-10 text-xl">
             倒计时
             <Countdown
               value={countdown}
               format="m:ss"
-              className="float-right leading-8"
+              className="float-right leading-8 !text-xl"
               onFinish={() => {
                 if (questionNo <= 7) {
                   setCountdown(Date.now() + 1000 * 60 * 8);
@@ -95,6 +90,6 @@ export default function Section4() {
           <RadioForm question={questions[questionNo]} onFinish={onFinish} />
         </>
       )}
-    </Card>
+    </>
   );
 }

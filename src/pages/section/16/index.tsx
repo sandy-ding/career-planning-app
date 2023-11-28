@@ -1,14 +1,12 @@
 import { useRouter } from "next/router";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { Card, Menu, MenuProps, Typography } from "antd";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import questions from "./index.json";
 import Intro from "@/components/Intro";
 import RadioForm from "@/components/RadioForm";
 import Countdown from "antd/lib/statistic/Countdown";
-
-const { Title } = Typography;
+import { MenuContext } from "@/hooks/MenuContext";
 
 export enum Stage {
   Intro,
@@ -16,17 +14,6 @@ export enum Stage {
   Intro2,
   Main,
 }
-
-const items: MenuProps["items"] = [
-  {
-    label: "1. 人际交往礼仪",
-    key: "1",
-  },
-  {
-    label: "2. 人际关系能力",
-    key: "2",
-  },
-];
 
 const intro = {
   title: "十六、人际交往能力",
@@ -50,11 +37,13 @@ const intro2 = {
 
 export default function Section16() {
   const router = useRouter();
-  const [menu, setMenu] = useState("1");
   const [questionNo, setQuestionNo] = useState(0);
   const [stage, setStage] = useState(Stage.Intro);
   const [countdown, setCountdown] = useState<number>(0);
   const { mutate } = useSubmitAnswerMutation(getDataSource());
+
+  const { setMenu } = useContext(MenuContext);
+  useEffect(() => setMenu("16"), []);
 
   const onFinish = (values: { [k: string]: string }) => {
     mutate({
@@ -76,7 +65,7 @@ export default function Section16() {
   };
 
   return (
-    <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
+    <>
       {stage === Stage.Intro ? (
         <Intro
           {...intro}
@@ -103,19 +92,12 @@ export default function Section16() {
         />
       ) : (
         <>
-          <Title level={5}>{intro.title}</Title>
-          <Menu
-            className="mb-10"
-            selectedKeys={[menu]}
-            mode="horizontal"
-            items={items}
-          />
-          <div className="flex justify-end mt-4 h-10 text-2xl">
+          <div className="flex justify-end mt-4 h-10 text-xl">
             倒计时
             <Countdown
               value={countdown}
               format="m:ss"
-              className="float-right leading-8"
+              className="float-right leading-8 !text-xl"
               onFinish={() => {
                 if (questionNo <= 9) {
                   setCountdown(Date.now() + 1000 * 60 * 8);
@@ -129,6 +111,6 @@ export default function Section16() {
           <RadioForm question={questions[questionNo]} onFinish={onFinish} />
         </>
       )}
-    </Card>
+    </>
   );
 }

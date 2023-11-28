@@ -1,13 +1,14 @@
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
 import { Button, Card, Form } from "antd";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Intro from "@/components/Intro";
 import { ValidateStatus } from "antd/es/form/FormItem";
 import { shuffle } from "@/utils";
 import { PlusOutlined } from "@ant-design/icons";
 import sample from "./index.json";
 import { useRouter } from "next/router";
+import { MenuContext } from "@/hooks/MenuContext";
 
 const charMap = {
   blue: "蓝",
@@ -54,6 +55,9 @@ export default function Section15() {
   const testNoRef = useRef(testNo);
   testNoRef.current = testNo;
   const router = useRouter();
+
+  const { setMenu } = useContext(MenuContext);
+  useEffect(() => setMenu("15"), []);
 
   const [validateStatus, setValidateStatus] =
     useState<ValidateStatus>("success");
@@ -157,7 +161,7 @@ export default function Section15() {
   };
 
   return (
-    <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
+    <>
       {stage === Stage.Intro ? (
         <Intro
           {...intro}
@@ -168,6 +172,7 @@ export default function Section15() {
       ) : stage === Stage.Intro1 ? (
         <Intro
           {...intro1}
+          btnText="练习"
           onClick={() => {
             setStage(Stage.Test);
             startTest();
@@ -185,7 +190,7 @@ export default function Section15() {
             label={
               <label className="contents">
                 {stage === Stage.Test && "练习题: "}
-                请尽快判断字的颜色。颜色与字词含义一致按按“F”键，不一致按“J”键。
+                请尽快判断字的颜色。颜色与字词含义一致按“F”键，不一致按“J”键。
               </label>
             }
             help={<div className="flex justify-center mt-4">{help}</div>}
@@ -195,6 +200,9 @@ export default function Section15() {
               <div className="mt-40 flex justify-center">
                 <Button
                   type="primary"
+                  size="large"
+                  shape="round"
+                  className="!px-16"
                   onClick={() => {
                     setStage(Stage.Main);
                     startTest();
@@ -224,6 +232,6 @@ export default function Section15() {
           </Form.Item>
         </Form>
       )}
-    </Card>
+    </>
   );
 }

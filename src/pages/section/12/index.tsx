@@ -2,11 +2,12 @@ import { useRouter } from "next/router";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
 import { Card, Menu, MenuProps, Typography } from "antd";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import questions from "./index.json";
 import Intro from "@/components/Intro";
 import RadioForm from "@/components/RadioForm";
 import Countdown from "antd/lib/statistic/Countdown";
+import { MenuContext } from "@/hooks/MenuContext";
 
 const { Title } = Typography;
 
@@ -38,9 +39,12 @@ export default function Section12() {
   const router = useRouter();
   const [questionNo, setQuestionNo] = useState(0);
   const [stage, setStage] = useState(Stage.Intro);
-  const [menu, setMenu] = useState("1");
   const [countdown, setCountdown] = useState<number>(0);
   const { mutate } = useSubmitAnswerMutation(getDataSource());
+
+  const { setMenu } = useContext(MenuContext);
+
+  useEffect(() => setMenu("12"), []);
 
   const onFinish = (values: { [k: string]: string }) => {
     const questionId = questions[questionNo]._id;
@@ -60,7 +64,7 @@ export default function Section12() {
   };
 
   return (
-    <Card className="shadow px-20 py-5" bodyStyle={{ minHeight: "80vh" }}>
+    <>
       {stage === Stage.Intro ? (
         <Intro
           {...intro}
@@ -71,19 +75,12 @@ export default function Section12() {
         />
       ) : (
         <>
-          <Title level={5}>{questions[questionNo].category2}</Title>
-          <Menu
-            className="mb-10"
-            selectedKeys={[menu]}
-            mode="horizontal"
-            items={items}
-          />
-          <div className="flex justify-end mt-4 h-10 text-2xl">
+          <div className="flex justify-end text-xl">
             倒计时
             <Countdown
               value={countdown}
               format="m:ss"
-              className="float-right leading-8"
+              className="float-right leading-8 !text-xl"
               onFinish={() => {
                 router.push("13");
               }}
@@ -92,6 +89,6 @@ export default function Section12() {
           <RadioForm question={questions[questionNo]} onFinish={onFinish} />
         </>
       )}
-    </Card>
+    </>
   );
 }

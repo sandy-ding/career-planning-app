@@ -153,6 +153,9 @@ export default function Part1(props: IProps) {
             <div className="mt-40 flex justify-center">
               <Button
                 type="primary"
+                size="large"
+                shape="round"
+                className="!px-16"
                 onClick={() => {
                   setStage(Stage.Main);
                   startTest();
