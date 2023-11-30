@@ -28,8 +28,8 @@ export default function Layout({ children }: { children: ReactElement }) {
         <div className="relative flex min-h-screen flex-col">
           <Header />
           <div className="flex-1">
-            <div className="px-8 flex-1 items-start md:grid md:grid-cols-[200px_minmax(0,1fr)] md:gap-2 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-4">
-              <Navbar />
+            <div className="px-8 flex-1 items-start md:gap-2 lg:gap-4">
+              {/* <Navbar /> */}
               <main className="h-full">
                 <Card
                   className="border-0 h-full px-20"

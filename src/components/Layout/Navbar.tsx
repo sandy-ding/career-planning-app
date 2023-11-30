@@ -149,7 +149,7 @@ const Navbar: React.FC = () => {
         <Menu
           className="h-full w-full pt-1 overflow-scroll"
           selectedKeys={[menu]}
-          openKeys={[menu[0]]}
+          openKeys={[menu.substring(0, menu.indexOf("."))]}
           mode="inline"
           theme="light"
           items={items}
