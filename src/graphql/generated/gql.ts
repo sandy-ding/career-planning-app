@@ -13,9 +13,9 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
+    "query answer($questionId: String!) {\n  answer(questionId: $questionId) {\n    answer\n    startTime\n    endTime\n    numOfSubmission\n    duration\n  }\n}\n\nquery answers($questionId: String!) {\n  answers(questionId: $questionId) {\n    questionId\n  }\n}": types.AnswerDocument,
     "mutation login($input: CardVerifyRequest!) {\n  login(input: $input) {\n    accessToken\n  }\n}": types.LoginDocument,
-    "query question($id: String!) {\n  question(id: $id) {\n    _id\n    category1\n    category2\n    category3\n    category4\n    label\n    description\n    fileUrl\n    answer\n    type\n    isTest\n    options {\n      value\n      label\n    }\n  }\n}": types.QuestionDocument,
-    "mutation submitAnswer($input: SubmissionMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    numOfSubmission\n    isCorrect\n  }\n}": types.SubmitAnswerDocument,
+    "mutation submitAnswer($input: AnswerMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    numOfSubmission\n    isCorrect\n    startTime\n    endTime\n    duration\n  }\n}": types.SubmitAnswerDocument,
 };
 
 /**
@@ -35,15 +35,15 @@ export function graphql(source: string): unknown;
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
+export function graphql(source: "query answer($questionId: String!) {\n  answer(questionId: $questionId) {\n    answer\n    startTime\n    endTime\n    numOfSubmission\n    duration\n  }\n}\n\nquery answers($questionId: String!) {\n  answers(questionId: $questionId) {\n    questionId\n  }\n}"): (typeof documents)["query answer($questionId: String!) {\n  answer(questionId: $questionId) {\n    answer\n    startTime\n    endTime\n    numOfSubmission\n    duration\n  }\n}\n\nquery answers($questionId: String!) {\n  answers(questionId: $questionId) {\n    questionId\n  }\n}"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
 export function graphql(source: "mutation login($input: CardVerifyRequest!) {\n  login(input: $input) {\n    accessToken\n  }\n}"): (typeof documents)["mutation login($input: CardVerifyRequest!) {\n  login(input: $input) {\n    accessToken\n  }\n}"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "query question($id: String!) {\n  question(id: $id) {\n    _id\n    category1\n    category2\n    category3\n    category4\n    label\n    description\n    fileUrl\n    answer\n    type\n    isTest\n    options {\n      value\n      label\n    }\n  }\n}"): (typeof documents)["query question($id: String!) {\n  question(id: $id) {\n    _id\n    category1\n    category2\n    category3\n    category4\n    label\n    description\n    fileUrl\n    answer\n    type\n    isTest\n    options {\n      value\n      label\n    }\n  }\n}"];
-/**
- * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
- */
-export function graphql(source: "mutation submitAnswer($input: SubmissionMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    numOfSubmission\n    isCorrect\n  }\n}"): (typeof documents)["mutation submitAnswer($input: SubmissionMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    numOfSubmission\n    isCorrect\n  }\n}"];
+export function graphql(source: "mutation submitAnswer($input: AnswerMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    numOfSubmission\n    isCorrect\n    startTime\n    endTime\n    duration\n  }\n}"): (typeof documents)["mutation submitAnswer($input: AnswerMutationRequest!) {\n  submitAnswer(input: $input) {\n    questionId\n    numOfSubmission\n    isCorrect\n    startTime\n    endTime\n    duration\n  }\n}"];
 
 export function graphql(source: string) {
   return (documents as any)[source] ?? {};

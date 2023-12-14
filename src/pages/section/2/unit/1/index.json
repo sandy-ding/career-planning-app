@@ -1,0 +1,637 @@
+[
+  {
+    "questionId": "1",
+    "label": "我是一个勤奋的人。"
+  },
+  {
+    "questionId": "2",
+    "label": "我觉得大多数人都是值得信任的。",
+    "isReverse": true
+  },
+  {
+    "questionId": "3",
+    "label": "我是一个自律的人。"
+  },
+  {
+    "questionId": "4",
+    "label": "我有丰富的情绪体验。"
+  },
+  {
+    "questionId": "5",
+    "label": "我始终相信明天会更好。",
+    "isReverse": true
+  },
+  {
+    "questionId": "6",
+    "label": "我会敷衍地完成任务，而不是真正的努力。",
+    "isReverse": true
+  },
+  {
+    "questionId": "7",
+    "label": "我习惯理性看待问题而忽略情感因素。",
+    "isReverse": true
+  },
+  {
+    "questionId": "8",
+    "label": "身边人陷入困境时，我会主动帮助或给予安慰或给予安慰。"
+  },
+  {
+    "questionId": "9",
+    "label": "我每天都充满活力。"
+  },
+  {
+    "questionId": "10",
+    "label": "我习惯做学习计划或工作计划。"
+  },
+  {
+    "questionId": "11",
+    "label": "我愿意为了达到目标而付出额外的努力和时间。"
+  },
+  {
+    "questionId": "12",
+    "label": "我有信心应对生活中的困境。"
+  },
+  {
+    "questionId": "13",
+    "label": "面对未知挑战时，我会感到兴奋。"
+  },
+  {
+    "questionId": "14",
+    "label": "即使面对逆境，我也充满希望。",
+    "isReverse": true
+  },
+  {
+    "questionId": "15",
+    "label": "我是一个感性情胜于理性智的人。"
+  },
+  {
+    "questionId": "16",
+    "label": "面对紧急情况时，我仍能从容应对。"
+  },
+  {
+    "questionId": "17",
+    "label": "我通常精力充沛，忙碌多事。"
+  },
+  {
+    "questionId": "18",
+    "label": "因为我的懒惰，总把事情拖到最后一刻。",
+    "isReverse": true
+  },
+  {
+    "questionId": "19",
+    "label": "我喜欢做一些有挑战的事情。"
+  },
+  {
+    "questionId": "20",
+    "label": "集体生活中，虽然会打扰他人，我仍然最先考虑自己。",
+    "isReverse": true
+  },
+  {
+    "questionId": "21",
+    "label": "我对童话或者科幻故事感兴趣。"
+  },
+  {
+    "questionId": "22",
+    "label": "我是一个不愿改变的人。",
+    "isReverse": true
+  },
+  {
+    "questionId": "23",
+    "label": "我常会因为鲁莽而把事情搞砸。",
+    "isReverse": true
+  },
+  {
+    "questionId": "24",
+    "label": "做事情我更相信我的第一感觉。"
+  },
+  {
+    "questionId": "25",
+    "label": "周末，我通常跟朋友们待在一起。"
+  },
+  {
+    "questionId": "26",
+    "label": "我时常觉得自己一无是处。"
+  },
+  {
+    "questionId": "27",
+    "label": "在人多的场合，我也比较镇定。",
+    "isReverse": true
+  },
+  {
+    "questionId": "28",
+    "label": "比起跟其他人共事，我更喜欢一个人完成工作。"
+  },
+  {
+    "questionId": "29",
+    "label": "面对指责，我无法控制自己情绪。",
+    "isReverse": true
+  },
+  {
+    "questionId": "30",
+    "label": "我很难跟别人开玩笑。",
+    "isReverse": true
+  },
+  {
+    "questionId": "31",
+    "label": "我是一个沉闷的人。",
+    "isReverse": true
+  },
+  {
+    "questionId": "32",
+    "label": "与人讨论问题时，我的尖锐总让人尴尬。",
+    "isReverse": true
+  },
+  {
+    "questionId": "33",
+    "label": "我感觉自己充满生机与活力。"
+  },
+  {
+    "questionId": "34",
+    "label": "在表达不同意见时，我会顾及他人的感受。",
+    "isReverse": true
+  },
+  {
+    "questionId": "35",
+    "label": "我喜欢严格按规则行事。",
+    "isReverse": true
+  },
+  {
+    "questionId": "36",
+    "label": "发现别人的错误，我会立即直截了当的指出。",
+    "isReverse": true
+  },
+  {
+    "questionId": "37",
+    "label": "我很难抗拒诱惑。",
+    "isReverse": true
+  },
+  {
+    "questionId": "38",
+    "label": "我是一个情绪稳定的人。"
+  },
+  {
+    "questionId": "39",
+    "label": "我对身边的大部分人都是有耐心的。"
+  },
+  {
+    "questionId": "40",
+    "label": "遇到困难时，我很容易崩溃。",
+    "isReverse": true
+  },
+  {
+    "questionId": "41",
+    "label": "我愿意接受新的观念和事物。"
+  },
+  {
+    "questionId": "42",
+    "label": "我常担忧一些无关紧要的事情。"
+  },
+  {
+    "questionId": "43",
+    "label": "没完成规定任务前，我会拒绝朋友的邀约。"
+  },
+  {
+    "questionId": "44",
+    "label": "我是一个有毅力的人。"
+  },
+  {
+    "questionId": "45",
+    "label": "我习惯独立完成任务，不太依赖他人的帮助"
+  },
+  {
+    "questionId": "46",
+    "label": "我做事没有计划。",
+    "isReverse": true
+  },
+  {
+    "questionId": "47",
+    "label": "我太在乎别人对我的评价。"
+  },
+  {
+    "questionId": "48",
+    "label": "我擅长处理人情世故。"
+  },
+  {
+    "questionId": "49",
+    "label": "我不太关心那些与我无关的人或事。",
+    "isReverse": true
+  },
+  {
+    "questionId": "50",
+    "label": "我认为责任心是一个人成功的重要因素。"
+  },
+  {
+    "questionId": "51",
+    "label": "我会尽力确保每一项任务都的得到妥善处理。"
+  },
+  {
+    "questionId": "52",
+    "label": "我能轻易的影响他人的思想和行为。"
+  },
+  {
+    "questionId": "53",
+    "label": "我喜欢活在想象中。"
+  },
+  {
+    "questionId": "54",
+    "label": "我总感觉焦躁不安。"
+  },
+  {
+    "questionId": "55",
+    "label": "在做事情时我总习惯于依赖他人。",
+    "isReverse": true
+  },
+  {
+    "questionId": "56",
+    "label": "我的情绪很容易受外界影响。"
+  },
+  {
+    "questionId": "57",
+    "label": "我总是看到事物积极的一面。",
+    "isReverse": true
+  },
+  {
+    "questionId": "58",
+    "label": "我是一个独立自主的人。"
+  },
+  {
+    "questionId": "59",
+    "label": "我不愿花过多时间在一件事情上。",
+    "isReverse": true
+  },
+  {
+    "questionId": "60",
+    "label": "我常常做事不考虑后果。",
+    "isReverse": true
+  },
+  {
+    "questionId": "61",
+    "label": "在平时生活中我是一个做事谨慎的人。"
+  },
+  {
+    "questionId": "62",
+    "label": "我常常找不到自己放置的东西。",
+    "isReverse": true
+  },
+  {
+    "questionId": "63",
+    "label": "比起独处，跟大家待在一起更让我开心。"
+  },
+  {
+    "questionId": "64",
+    "label": "在他人眼里我总是一个乐观向上的人。",
+    "isReverse": true
+  },
+  {
+    "questionId": "65",
+    "label": "决策时，我更倾向于依赖自己的判断而非他人的建议。"
+  },
+  {
+    "questionId": "66",
+    "label": "我是一个懦弱的人。",
+    "isReverse": true
+  },
+  {
+    "questionId": "67",
+    "label": "即使有好处，我也不愿去做需要花费精力的事。",
+    "isReverse": true
+  },
+  {
+    "questionId": "68",
+    "label": "我总是无精打采。",
+    "isReverse": true
+  },
+  {
+    "questionId": "69",
+    "label": "我时常觉得自己苦闷压抑。"
+  },
+  {
+    "questionId": "70",
+    "label": "我是一个急躁的人。",
+    "isReverse": true
+  },
+  {
+    "questionId": "71",
+    "label": "对他人所说的事情，我通常很容易相信。",
+    "isReverse": true
+  },
+  {
+    "questionId": "72",
+    "label": "当与他人意见不同时，我会就事论事。",
+    "isReverse": true
+  },
+  {
+    "questionId": "73",
+    "label": "我更倾向于关注当下而不是沉浸在想象中。",
+    "isReverse": true
+  },
+  {
+    "questionId": "74",
+    "label": "做决定之前，我会做很久准备工作。"
+  },
+  {
+    "questionId": "75",
+    "label": "别人认为我是一个感性的人。"
+  },
+  {
+    "questionId": "76",
+    "label": "我经常会全身心的沉浸在音乐中。"
+  },
+  {
+    "questionId": "77",
+    "label": "日常生活中，我总是感觉很从容。",
+    "isReverse": true
+  },
+  {
+    "questionId": "78",
+    "label": "我喜欢很多人社交聚会的场合。"
+  },
+  {
+    "questionId": "79",
+    "label": "计划好的事情，我会严格执行。"
+  },
+  {
+    "questionId": "80",
+    "label": "我对他人情绪不敏感。",
+    "isReverse": true
+  },
+  {
+    "questionId": "81",
+    "label": "我喜欢快节奏的生活。"
+  },
+  {
+    "questionId": "82",
+    "label": "即使与我的工作或学习无关，我也会主动学习新的知识和技能。"
+  },
+  {
+    "questionId": "83",
+    "label": "无论遇到什么困难，我都会坚持完成任务。"
+  },
+  {
+    "questionId": "84",
+    "label": "我敢于面对各种未知的挑战。"
+  },
+  {
+    "questionId": "85",
+    "label": "在做决定的时候，我会尽可能考虑各个方面。"
+  },
+  {
+    "questionId": "86",
+    "label": "我更愿意从事与人打交道的工作。"
+  },
+  {
+    "questionId": "87",
+    "label": "解决难题时，我喜欢从全新的角度思考。"
+  },
+  {
+    "questionId": "88",
+    "label": "为了避免冲突，我时常服从他人。",
+    "isReverse": true
+  },
+  {
+    "questionId": "89",
+    "label": "我觉得自己活在世界上没有意义。"
+  },
+  {
+    "questionId": "90",
+    "label": "我通常将自己的得失放在第一位。",
+    "isReverse": true
+  },
+  {
+    "questionId": "91",
+    "label": "没有百分之百的把握，我不会轻易冒险。"
+  },
+  {
+    "questionId": "92",
+    "label": "对于一些新的想法或概念，我觉得无所谓。",
+    "isReverse": true
+  },
+  {
+    "questionId": "93",
+    "label": "一个人做事时会让我不知所措。",
+    "isReverse": true
+  },
+  {
+    "questionId": "94",
+    "label": "我通常是一个团队的中心。"
+  },
+  {
+    "questionId": "95",
+    "label": "我常紧张到口干舌燥、颤抖、呼吸困难。"
+  },
+  {
+    "questionId": "96",
+    "label": "我愿意牺牲自己的利益去帮助他人。"
+  },
+  {
+    "questionId": "97",
+    "label": "我习惯感情用事而忽略事实本身。"
+  },
+  {
+    "questionId": "98",
+    "label": "我经常有一些天马行空的想法。"
+  },
+  {
+    "questionId": "99",
+    "label": "我总认为别人接近我是有目的的。"
+  },
+  {
+    "questionId": "100",
+    "label": "我对新事物充满好奇，愿意尝试未经历过的事情。"
+  },
+  {
+    "questionId": "101",
+    "label": "有时候，我可能会在任务开始后逐渐失去兴趣而松懈。",
+    "isReverse": true
+  },
+  {
+    "questionId": "102",
+    "label": "即使一件事成功几率不大，我也会奋力一搏。"
+  },
+  {
+    "questionId": "103",
+    "label": "我常常莫名感觉恐惧。"
+  },
+  {
+    "questionId": "104",
+    "label": "当我读诗歌或看一件艺术品时，我能感到兴奋和激动。"
+  },
+  {
+    "questionId": "105",
+    "label": "我期待崭新的每一天。"
+  },
+  {
+    "questionId": "106",
+    "label": "通常我更喜欢一个人待着。",
+    "isReverse": true
+  },
+  {
+    "questionId": "107",
+    "label": "对我负责的事务,我会负责到底、不轻言放弃。"
+  },
+  {
+    "questionId": "108",
+    "label": "我很少回忆过去或想象未来。",
+    "isReverse": true
+  },
+  {
+    "questionId": "109",
+    "label": "我习惯把房间收拾的整整齐齐。"
+  },
+  {
+    "questionId": "110",
+    "label": "我擅长带领大家完成一件事。"
+  },
+  {
+    "questionId": "111",
+    "label": "我常无缘无故地感到害怕。"
+  },
+  {
+    "questionId": "112",
+    "label": "我总是为他人着想。"
+  },
+  {
+    "questionId": "113",
+    "label": "美学和艺术对我来说不是很重要。",
+    "isReverse": true
+  },
+  {
+    "questionId": "114",
+    "label": "在工作学习中，我一直努力上进。"
+  },
+  {
+    "questionId": "115",
+    "label": "我常常草率地的做出一个决定。",
+    "isReverse": true
+  },
+  {
+    "questionId": "116",
+    "label": "当他人与我意见不同时，我会尝试说服他们。"
+  },
+  {
+    "questionId": "117",
+    "label": "我喜欢做一些需要创新的事情。"
+  },
+  {
+    "questionId": "118",
+    "label": "我对事物的思考一旦形成就难以改变。",
+    "isReverse": true
+  },
+  {
+    "questionId": "119",
+    "label": "去美术展览比去科技馆对我更有吸引力。"
+  },
+  {
+    "questionId": "120",
+    "label": "我做事很有条理性。"
+  },
+  {
+    "questionId": "121",
+    "label": "当面临一项困难的任务时，我可能会选择放弃。",
+    "isReverse": true
+  },
+  {
+    "questionId": "122",
+    "label": "我觉得深究事物背后的原因没有必要。",
+    "isReverse": true
+  },
+  {
+    "questionId": "123",
+    "label": "我对高雅的艺术作品没有兴趣。",
+    "isReverse": true
+  },
+  {
+    "questionId": "124",
+    "label": "很难理清自己的情绪感受。",
+    "isReverse": true
+  },
+  {
+    "questionId": "125",
+    "label": "我时常因为直率而得罪人",
+    "isReverse": true
+  },
+  {
+    "questionId": "126",
+    "label": "我很难被影视作品或故事中的情节所打动。",
+    "isReverse": true
+  },
+  {
+    "questionId": "127",
+    "label": "遇到难题，我也不会在短时间内放弃。"
+  },
+  {
+    "questionId": "128",
+    "label": "如果可以选择，我永远不会在公众面前演讲或表演。",
+    "isReverse": true
+  },
+  {
+    "questionId": "129",
+    "label": "我做决定的时候更喜欢参照他人的意见。",
+    "isReverse": true
+  },
+  {
+    "questionId": "130",
+    "label": "在热闹的聚会上，我总是想着尽快回家",
+    "isReverse": true
+  },
+  {
+    "questionId": "131",
+    "label": "我总是能够按时完成任务。"
+  },
+  {
+    "questionId": "132",
+    "label": "即使做一件事情需要较长时间，我也会可以耐心等待。"
+  },
+  {
+    "questionId": "133",
+    "label": "认定的目标，我会坚持到底。"
+  },
+  {
+    "questionId": "134",
+    "label": "我是一个情感细腻的人。"
+  },
+  {
+    "questionId": "135",
+    "label": "跟陌生人打交道，要非常谨慎。"
+  },
+  {
+    "questionId": "136",
+    "label": "有人故意挑衅我时，我也能冷静的应对。"
+  },
+  {
+    "questionId": "137",
+    "label": "一个人我也能生活的很好。"
+  },
+  {
+    "questionId": "138",
+    "label": "遇到困难，我很难坚持到底。",
+    "isReverse": true
+  },
+  {
+    "questionId": "139",
+    "label": "没有什么事能激发我的兴趣。"
+  },
+  {
+    "questionId": "140",
+    "label": "我很少在别人面前表明自己的真实想法。"
+  },
+  {
+    "questionId": "141",
+    "label": "我常忘记遵守自己的诺言。",
+    "isReverse": true
+  },
+  {
+    "questionId": "142",
+    "label": "我做事情总是追求速度而不是质量。",
+    "isReverse": true
+  },
+  {
+    "questionId": "143",
+    "label": "我认为坚持不懈是成功的关键。"
+  },
+  {
+    "questionId": "144",
+    "label": "面对不擅长的事，我总不自觉的退缩。",
+    "isReverse": true
+  }
+]

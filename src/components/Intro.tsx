@@ -20,31 +20,15 @@ export default function Intro({
   onClick,
 }: IProps) {
   return (
-    <div className="flex flex-col justify-between h-full">
-      <div className="pt-20">
-        {title && <Title level={4}>{title}</Title>}
-        <div className="mt-4 mb-2">
-          {" "}
-          <ReactMarkdown rehypePlugins={[rehypeRaw as any]}>
-            {description}
-          </ReactMarkdown>
-        </div>
-        {prompt && (
-          <div>
-            <ReactMarkdown rehypePlugins={[rehypeRaw as any]}>
-              {prompt}
-            </ReactMarkdown>
-          </div>
-        )}
+    <div className="text-center">
+      {title && <Title level={4}>{title}</Title>}
+      <div className="bg-white border p-10 my-14 text-left leading-normal rounded-lg">
+        <ReactMarkdown rehypePlugins={[rehypeRaw as any]}>
+          {description}
+        </ReactMarkdown>
       </div>
-      <div className="text-center mb-20">
-        <Button
-          type="primary"
-          onClick={onClick}
-          size="large"
-          shape="round"
-          className="!px-16"
-        >
+      <div className="text-center">
+        <Button onClick={onClick} size="large" shape="round">
           {btnText || "开始"}
         </Button>
       </div>

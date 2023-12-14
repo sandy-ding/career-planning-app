@@ -1,0 +1,578 @@
+[
+  [
+    {
+      "_id": "168",
+      "category1": "音乐能力",
+      "category2": "I部分：请从下面每题的3个备选答案中选择最适合你的答案。",
+      "type": "Radio",
+      "label": "1．你对音乐敏感吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 这要看是什么音乐。"
+        },
+        {
+          "value": "B",
+          "label": "B. 敏感(包括悦耳和不悦耳的音乐)。"
+        },
+        {
+          "value": "C",
+          "label": "C. 不敏感。"
+        }
+      ]
+    },
+    {
+      "_id": "169",
+      "category1": "音乐能力",
+      "category2": "I部分：请从下面每题的3个备选答案中选择最适合你的答案。",
+      "type": "Radio",
+      "label": "2．在看电影的时候：",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 你觉得音乐加强了影片的气氛。"
+        },
+        {
+          "value": "B",
+          "label": "B. 你不太注意音乐。"
+        },
+        {
+          "value": "C",
+          "label": "C. 你能感觉到音乐的存在，但有时候很讨厌音乐的出现。"
+        }
+      ]
+    },
+    {
+      "_id": "170",
+      "category1": "音乐能力",
+      "category2": "I部分：请从下面每题的3个备选答案中选择最适合你的答案。",
+      "type": "Radio",
+      "label": "3．有些音乐能使你回忆起生活中某些往事吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 经常"
+        },
+        {
+          "value": "B",
+          "label": "B. 有时"
+        },
+        {
+          "value": "C",
+          "label": "C. 很少"
+        }
+      ]
+    },
+    {
+      "_id": "171",
+      "category1": "音乐能力",
+      "category2": "I部分",
+      "type": "Radio",
+      "label": "4．你放一些能抒发自己的感情的唱片吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 经常"
+        },
+        {
+          "value": "B",
+          "label": "B. 有时"
+        },
+        {
+          "value": "C",
+          "label": "C. 很少"
+        }
+      ]
+    },
+    {
+      "_id": "172",
+      "category1": "音乐能力",
+      "category2": "I部分",
+      "type": "Radio",
+      "label": "5．当你打开收音机的时候：",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 你无论什么都听。"
+        },
+        {
+          "value": "B",
+          "label": "B. 你优先听音乐。"
+        },
+        {
+          "value": "C",
+          "label": "C. 你优先听音乐节目、戏剧节目及新闻广播。"
+        }
+      ]
+    },
+    {
+      "_id": "173",
+      "category1": "音乐能力",
+      "category2": "I部分",
+      "type": "Radio",
+      "label": "6．你去参加聚会时：",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 多数情况你喜欢伴随令人振奋的音乐跳舞。"
+        },
+        {
+          "value": "B",
+          "label": "B. 总是同一两个合得来的人在一起。"
+        },
+        {
+          "value": "C",
+          "label": "C. 如果整个聚会都充满音乐舞蹈你会觉得心烦。"
+        }
+      ]
+    },
+    {
+      "_id": "174",
+      "category1": "音乐能力",
+      "category2": "I部分",
+      "type": "Radio",
+      "label": "7．你去听音乐会吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 能避免去，就不去。"
+        },
+        {
+          "value": "B",
+          "label": "B. 只有在特别想听的时候才去。"
+        },
+        {
+          "value": "C",
+          "label": "C. 经常去。"
+        }
+      ]
+    },
+    {
+      "_id": "175",
+      "category1": "音乐能力",
+      "category2": "I部分",
+      "type": "Radio",
+      "label": "8．你通过收音机或电视机听音乐时(不论是古典的还是现代) ",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 你通常能就音乐、演员或作者加以评价。"
+        },
+        {
+          "value": "B",
+          "label": "B. 你只是谈谈音乐，有时也能说出一些演员或作者的名字。"
+        },
+        {
+          "value": "C",
+          "label": "C. 很少评论。"
+        }
+      ]
+    },
+    {
+      "_id": "176",
+      "category1": "音乐能力",
+      "category2": "I部分",
+      "type": "Radio",
+      "label": "9．你同别人一起非正式地听听音乐吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 经常"
+        },
+        {
+          "value": "B",
+          "label": "B. 有时"
+        },
+        {
+          "value": "C",
+          "label": "C. 很少"
+        }
+      ]
+    },
+    {
+      "_id": "177",
+      "category1": "音乐能力",
+      "category2": "I部分",
+      "type": "Radio",
+      "label": "10．你认为下面哪一项是学生在学校最该学习的?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 陶器制造，编织或木工等手工技术。"
+        },
+        {
+          "value": "B",
+          "label": "B. 乐器演奏或音乐欣赏。"
+        },
+        {
+          "value": "C",
+          "label": "C. 摄影技术。"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "_id": "178",
+      "category1": "音乐能力",
+      "category2": "Ⅱ部分",
+      "type": "Radio",
+      "label": "11．你能演奏一种乐器吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "179",
+      "category1": "音乐能力",
+      "category2": "Ⅱ部分",
+      "type": "Radio",
+      "label": "12．你唱歌的调准吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "180",
+      "category1": "音乐能力",
+      "category2": "Ⅱ部分",
+      "type": "Radio",
+      "label": "13．你能说唱时的调子准确与否吗? ",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "181",
+      "category1": "音乐能力",
+      "category2": "Ⅱ部分",
+      "type": "Radio",
+      "label": "14．如果有人唱得不合拍子，你能纠正吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "182",
+      "category1": "音乐能力",
+      "category2": "Ⅱ部分",
+      "type": "Radio",
+      "label": "15．当你听到别人演奏乐器或唱歌跑调的时候，你觉得很难受吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "183",
+      "category1": "音乐能力",
+      "category2": "Ⅱ部分",
+      "type": "Radio",
+      "label": "16．你能凭借听觉用钢琴或其他乐器奏出你以前没有练习过的曲子吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "184",
+      "category1": "音乐能力",
+      "category2": "Ⅱ部分",
+      "type": "Radio",
+      "label": "17．你听一两遍后能准确地记住这段音乐的旋律吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "185",
+      "category1": "音乐能力",
+      "category2": "Ⅱ部分",
+      "type": "Radio",
+      "label": "18．你能边听音乐边准确地打出节拍吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "186",
+      "category1": "音乐能力",
+      "category2": "Ⅱ部分",
+      "type": "Radio",
+      "label": "19．听音乐时，你能凭借听觉跟着主旋律至少唱一个声部(或自己根据合声只是配上一个声部) ?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "187",
+      "category1": "音乐能力",
+      "category2": "Ⅱ部分",
+      "type": "Radio",
+      "label": "20．你听音乐时能辨出一种或多种演奏的乐器吗? ",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "_id": "188",
+      "category1": "音乐能力",
+      "category2": "Ⅲ部分",
+      "type": "Radio",
+      "label": "21．你迷恋音乐吗? ",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "189",
+      "category1": "音乐能力",
+      "category2": "Ⅲ部分",
+      "type": "Radio",
+      "label": "22．你能分别用手和脚同时打出两种不同的节奏吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "190",
+      "category1": "音乐能力",
+      "category2": "Ⅲ部分",
+      "type": "Radio",
+      "label": "23．情不自禁地随着节奏感强烈的音乐晃动身体吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "191",
+      "category1": "音乐能力",
+      "category2": "Ⅲ部分",
+      "type": "Radio",
+      "label": "24．如果你对23题的回答是肯定的，那你听背景音乐（如广播、电视的配乐)也晃动身体吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "192",
+      "category1": "音乐能力",
+      "category2": "Ⅲ部分",
+      "type": "Radio",
+      "label": "25．如果在现代或民间音乐会上或在剧院里，有人叫你随演员拍手唱，你会这样做吗?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是"
+        },
+        {
+          "value": "B",
+          "label": "B. 否"
+        }
+      ]
+    },
+    {
+      "_id": "193",
+      "category1": "音乐能力",
+      "category2": "Ⅲ部分",
+      "type": "Radio",
+      "label": "26．你跳舞时：",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 全身都动。"
+        },
+        {
+          "value": "B",
+          "label": "B. 只是腿和胯部动，而胳膊和头部几乎一点都不动。"
+        },
+        {
+          "value": "C",
+          "label": "C. 尽可能很少动，怕弄丑了自己。"
+        }
+      ]
+    },
+    {
+      "_id": "194",
+      "category1": "音乐能力",
+      "category2": "Ⅲ部分",
+      "type": "Radio",
+      "label": "27．你：",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 偶尔同你所爱的人单独跳舞，过一个浪漫的夜晚。"
+        },
+        {
+          "value": "B",
+          "label": "B. 如果愿意，不论何时，哪怕就你自己也要跳舞。"
+        },
+        {
+          "value": "C",
+          "label": "C. 只是在舞会上不能不跳时才跳。"
+        }
+      ]
+    },
+    {
+      "_id": "195",
+      "category1": "音乐能力",
+      "category2": "Ⅲ部分",
+      "type": "Radio",
+      "label": "28．当你听到从别人录音机里传出来的节奏感非常强的音乐时：",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 你会情不自禁地随之摇动。"
+        },
+        {
+          "value": "B",
+          "label": "B. 你会让他们把声音关小点。"
+        },
+        {
+          "value": "C",
+          "label": "C. 你只是欣赏，没有要动的倾向。"
+        }
+      ]
+    },
+    {
+      "_id": "196",
+      "category1": "音乐能力",
+      "category2": "Ⅲ部分",
+      "type": "Radio",
+      "label": "29．你认为音乐：",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 是供个人享受的。"
+        },
+        {
+          "value": "B",
+          "label": "B. 是你在别人的陪伴下，更愿意欣赏的艺术。"
+        },
+        {
+          "value": "C",
+          "label": "C. 是社交活动才用得着的配乐。"
+        }
+      ]
+    },
+    {
+      "_id": "197",
+      "category1": "音乐能力",
+      "category2": "Ⅲ部分",
+      "type": "Radio",
+      "label": "30．如果你只能听剁一种音乐，你选择下面哪一种?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A. 强烈的摇摆舞曲或流行音乐。"
+        },
+        {
+          "value": "B",
+          "label": "B. 轻音乐或幻想曲。"
+        },
+        {
+          "value": "C",
+          "label": "C. 古典音乐。"
+        }
+      ]
+    }
+  ]
+]

@@ -61,7 +61,8 @@ export default function Part1(props: IProps) {
           input: {
             questionId,
             answer: otp,
-            time: currentTime - time,
+            startTime: time,
+            endTime: currentTime,
           },
         });
         setOtp("");
@@ -71,7 +72,8 @@ export default function Part1(props: IProps) {
           input: {
             questionId,
             answer: otp,
-            time: currentTime - time,
+            startTime: time,
+            endTime: currentTime,
           },
         });
         if (questionNo < 13) {

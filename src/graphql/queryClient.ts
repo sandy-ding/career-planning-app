@@ -1,7 +1,13 @@
 import { QueryClient } from "@tanstack/react-query";
 import { GraphQLClient } from "graphql-request";
 
-export const queryClient = new QueryClient();
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false, // default: true
+    },
+  },
+});
 
 function getSessionToken() {
   if (typeof window !== "undefined") {
@@ -32,7 +38,6 @@ export const gqlClient = new GraphQLClient(
   {
     headers: () => {
       const authHeaders = {} as AuthHeaderProps;
-
       return {
         "Content-Type": "application/json",
         ...authHeaders,

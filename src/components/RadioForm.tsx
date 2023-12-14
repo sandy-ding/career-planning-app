@@ -1,21 +1,31 @@
-import { Question } from "@/graphql/generated/graphql";
-import { Button, Form, Radio, Space } from "antd";
+import { Question } from "@/types";
+import { Form, Radio, Space } from "antd";
+import { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
 interface IProps {
   question: Question;
-  onFinish: (values: { [k: string]: string }) => void;
+  name: string;
+  defaultValue?: string | undefined | null;
+  onFinish?: (values: { [k: string]: string }) => void;
+  onChange?: (value: string) => void;
 }
 
-export default function RadioForm({ question, onFinish }: IProps) {
-  const questionId = question._id;
-  const hasImage = !!question.fileUrl;
+export default function RadioForm({
+  name,
+  question,
+  onChange,
+  defaultValue,
+}: IProps) {
+  const [form] = Form.useForm();
+  useEffect(() => form.resetFields(), [name, defaultValue]);
 
   return (
     <Form
+      form={form}
       name="basic"
-      onFinish={onFinish}
+      initialValues={{ [name]: defaultValue }}
       autoComplete="off"
       layout="vertical"
       requiredMark={false}
@@ -23,7 +33,7 @@ export default function RadioForm({ question, onFinish }: IProps) {
     >
       <Form.Item
         label={
-          <div className="flex flex-col justify-center w-full">
+          <div className="flex flex-col justify-center w-full text-black">
             <ReactMarkdown rehypePlugins={[rehypeRaw as any]}>
               {`${question.label}</br>${question?.description || ""}`}
             </ReactMarkdown>
@@ -35,34 +45,27 @@ export default function RadioForm({ question, onFinish }: IProps) {
             )}
           </div>
         }
-        name={questionId}
+        name={name}
         rules={[{ required: true, message: "请选择选项" }]}
       >
-        <Radio.Group name="radiogroup">
+        <Radio.Group className="w-full">
           <Space
-            direction={hasImage ? "horizontal" : "vertical"}
+            direction="vertical"
             size={15}
-            className="mt-5"
+            className="mt-5 w-full flex-wrap"
           >
             {question?.options?.map(({ value, label }) => (
-              <Radio key={value} value={value}>
+              <Radio
+                key={value}
+                value={value}
+                className="border w-full p-4"
+                onClick={(e: any) => onChange && onChange(e.target.value)}
+              >
                 {label}
               </Radio>
             ))}
           </Space>
         </Radio.Group>
-      </Form.Item>
-
-      <Form.Item className="flex justify-center">
-        <Button
-          type="primary"
-          htmlType="submit"
-          size="large"
-          shape="round"
-          className="!px-16"
-        >
-          提交
-        </Button>
       </Form.Item>
     </Form>
   );

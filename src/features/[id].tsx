@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import { Question, useQuestionQuery } from "@/graphql/generated/graphql";
 import { Button, Typography, Breadcrumb, Card } from "antd";
-import Section1 from "@/pages/section/1";
-import Section2 from "@/pages/section/2";
-import Section3 from "@/pages/section/3";
+import Section1 from "@/pages/section1";
+import Section2 from "@/pages/section1/unit1/2";
+import Section3 from "@/pages/section1/unit1/3";
 // import Countdown from "antd/es/statistic/Countdown";
 
 const { Title } = Typography;

@@ -1,7 +1,10 @@
-mutation submitAnswer($input: SubmissionMutationRequest!) {
+mutation submitAnswer($input: AnswerMutationRequest!) {
   submitAnswer(input: $input) {
     questionId
     numOfSubmission
     isCorrect
+    startTime
+    endTime
+    duration
   }
 }

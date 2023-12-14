@@ -8,8 +8,6 @@ import { ValidateStatus } from "antd/lib/form/FormItem";
 import questions from "./index.json";
 import Intro from "@/components/Intro";
 
-const { Title } = Typography;
-
 enum Stage {
   Intro,
   ReadDescription,

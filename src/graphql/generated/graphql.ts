@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
-import { useMutation, useQuery, UseMutationOptions, UseQueryOptions } from '@tanstack/react-query';
+import { useQuery, useMutation, UseQueryOptions, UseMutationOptions } from '@tanstack/react-query';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -40,10 +40,21 @@ export type Scalars = {
 export type Answer = {
   __typename?: 'Answer';
   answer?: Maybe<Scalars['String']['output']>;
+  duration?: Maybe<Scalars['Float']['output']>;
+  endTime?: Maybe<Scalars['Float']['output']>;
   isCorrect?: Maybe<Scalars['Boolean']['output']>;
   numOfSubmission?: Maybe<Scalars['Float']['output']>;
   questionId: Scalars['String']['output'];
-  time?: Maybe<Scalars['Float']['output']>;
+  startTime?: Maybe<Scalars['Float']['output']>;
+};
+
+export type AnswerMutationRequest = {
+  answer?: InputMaybe<Scalars['String']['input']>;
+  duration?: InputMaybe<Scalars['Float']['input']>;
+  endTime?: InputMaybe<Scalars['Float']['input']>;
+  isCorrect?: InputMaybe<Scalars['Boolean']['input']>;
+  questionId: Scalars['String']['input'];
+  startTime?: InputMaybe<Scalars['Float']['input']>;
 };
 
 export type Card = {
@@ -72,20 +83,24 @@ export type MutationLoginArgs = {
 
 
 export type MutationSubmitAnswerArgs = {
-  input: SubmissionMutationRequest;
-};
-
-export type Option = {
-  __typename?: 'Option';
-  label: Scalars['String']['output'];
-  value: Scalars['String']['output'];
+  input: AnswerMutationRequest;
 };
 
 export type Query = {
   __typename?: 'Query';
+  answer?: Maybe<Answer>;
+  answers?: Maybe<Array<Answer>>;
   generateCards: Array<Card>;
-  question: Question;
-  questions: Array<Question>;
+};
+
+
+export type QueryAnswerArgs = {
+  questionId: Scalars['String']['input'];
+};
+
+
+export type QueryAnswersArgs = {
+  questionId: Scalars['String']['input'];
 };
 
 
@@ -93,46 +108,24 @@ export type QueryGenerateCardsArgs = {
   size: Scalars['Float']['input'];
 };
 
-
-export type QueryQuestionArgs = {
-  id: Scalars['String']['input'];
-};
-
-
-export type QueryQuestionsArgs = {
-  category2?: InputMaybe<Scalars['String']['input']>;
-  category3?: InputMaybe<Scalars['String']['input']>;
-  page: Scalars['Int']['input'];
-  size: Scalars['Int']['input'];
-};
-
-export type Question = {
-  __typename?: 'Question';
-  _id: Scalars['String']['output'];
-  answer?: Maybe<Scalars['String']['output']>;
-  category1?: Maybe<Scalars['String']['output']>;
-  category2?: Maybe<Scalars['String']['output']>;
-  category3?: Maybe<Scalars['String']['output']>;
-  category4?: Maybe<Scalars['String']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
-  fileUrl?: Maybe<Scalars['String']['output']>;
-  isTest?: Maybe<Scalars['Boolean']['output']>;
-  label: Scalars['String']['output'];
-  options?: Maybe<Array<Option>>;
-  type?: Maybe<Scalars['String']['output']>;
-};
-
-export type SubmissionMutationRequest = {
-  answer?: InputMaybe<Scalars['String']['input']>;
-  isCorrect?: InputMaybe<Scalars['Boolean']['input']>;
-  questionId: Scalars['String']['input'];
-  time?: InputMaybe<Scalars['Float']['input']>;
-};
-
 export type Token = {
   __typename?: 'Token';
   accessToken: Scalars['String']['output'];
 };
+
+export type AnswerQueryVariables = Exact<{
+  questionId: Scalars['String']['input'];
+}>;
+
+
+export type AnswerQuery = { __typename?: 'Query', answer?: { __typename?: 'Answer', answer?: string | null, startTime?: number | null, endTime?: number | null, numOfSubmission?: number | null, duration?: number | null } | null };
+
+export type AnswersQueryVariables = Exact<{
+  questionId: Scalars['String']['input'];
+}>;
+
+
+export type AnswersQuery = { __typename?: 'Query', answers?: Array<{ __typename?: 'Answer', questionId: string }> | null };
 
 export type LoginMutationVariables = Exact<{
   input: CardVerifyRequest;
@@ -141,25 +134,63 @@ export type LoginMutationVariables = Exact<{
 
 export type LoginMutation = { __typename?: 'Mutation', login: { __typename?: 'Token', accessToken: string } };
 
-export type QuestionQueryVariables = Exact<{
-  id: Scalars['String']['input'];
-}>;
-
-
-export type QuestionQuery = { __typename?: 'Query', question: { __typename?: 'Question', _id: string, category1?: string | null, category2?: string | null, category3?: string | null, category4?: string | null, label: string, description?: string | null, fileUrl?: string | null, answer?: string | null, type?: string | null, isTest?: boolean | null, options?: Array<{ __typename?: 'Option', value: string, label: string }> | null } };
-
 export type SubmitAnswerMutationVariables = Exact<{
-  input: SubmissionMutationRequest;
+  input: AnswerMutationRequest;
 }>;
 
 
-export type SubmitAnswerMutation = { __typename?: 'Mutation', submitAnswer: { __typename?: 'Answer', questionId: string, numOfSubmission?: number | null, isCorrect?: boolean | null } };
+export type SubmitAnswerMutation = { __typename?: 'Mutation', submitAnswer: { __typename?: 'Answer', questionId: string, numOfSubmission?: number | null, isCorrect?: boolean | null, startTime?: number | null, endTime?: number | null, duration?: number | null } };
 
 
+export const AnswerDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"answer"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"questionId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"answer"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"questionId"},"value":{"kind":"Variable","name":{"kind":"Name","value":"questionId"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"answer"}},{"kind":"Field","name":{"kind":"Name","value":"startTime"}},{"kind":"Field","name":{"kind":"Name","value":"endTime"}},{"kind":"Field","name":{"kind":"Name","value":"numOfSubmission"}},{"kind":"Field","name":{"kind":"Name","value":"duration"}}]}}]}}]} as unknown as DocumentNode<AnswerQuery, AnswerQueryVariables>;
+export const AnswersDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"answers"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"questionId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"answers"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"questionId"},"value":{"kind":"Variable","name":{"kind":"Name","value":"questionId"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"questionId"}}]}}]}}]} as unknown as DocumentNode<AnswersQuery, AnswersQueryVariables>;
 export const LoginDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"login"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"CardVerifyRequest"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"login"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"accessToken"}}]}}]}}]} as unknown as DocumentNode<LoginMutation, LoginMutationVariables>;
-export const QuestionDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"question"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"question"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"}},{"kind":"Field","name":{"kind":"Name","value":"category1"}},{"kind":"Field","name":{"kind":"Name","value":"category2"}},{"kind":"Field","name":{"kind":"Name","value":"category3"}},{"kind":"Field","name":{"kind":"Name","value":"category4"}},{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"fileUrl"}},{"kind":"Field","name":{"kind":"Name","value":"answer"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"isTest"}},{"kind":"Field","name":{"kind":"Name","value":"options"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"value"}},{"kind":"Field","name":{"kind":"Name","value":"label"}}]}}]}}]}}]} as unknown as DocumentNode<QuestionQuery, QuestionQueryVariables>;
-export const SubmitAnswerDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"submitAnswer"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"SubmissionMutationRequest"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"submitAnswer"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"questionId"}},{"kind":"Field","name":{"kind":"Name","value":"numOfSubmission"}},{"kind":"Field","name":{"kind":"Name","value":"isCorrect"}}]}}]}}]} as unknown as DocumentNode<SubmitAnswerMutation, SubmitAnswerMutationVariables>;
+export const SubmitAnswerDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"submitAnswer"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"AnswerMutationRequest"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"submitAnswer"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"questionId"}},{"kind":"Field","name":{"kind":"Name","value":"numOfSubmission"}},{"kind":"Field","name":{"kind":"Name","value":"isCorrect"}},{"kind":"Field","name":{"kind":"Name","value":"startTime"}},{"kind":"Field","name":{"kind":"Name","value":"endTime"}},{"kind":"Field","name":{"kind":"Name","value":"duration"}}]}}]}}]} as unknown as DocumentNode<SubmitAnswerMutation, SubmitAnswerMutationVariables>;
 
+export const IanswerDocument = `
+    query answer($questionId: String!) {
+  answer(questionId: $questionId) {
+    answer
+    startTime
+    endTime
+    numOfSubmission
+    duration
+  }
+}
+    `;
+export const useAnswerQuery = <
+      TData = AnswerQuery,
+      TError = unknown
+    >(
+      dataSource: { endpoint: string, fetchParams?: RequestInit },
+      variables: AnswerQueryVariables,
+      options?: UseQueryOptions<AnswerQuery, TError, TData>
+    ) =>
+    useQuery<AnswerQuery, TError, TData>(
+      ['answer', variables],
+      fetcher<AnswerQuery, AnswerQueryVariables>(dataSource.endpoint, dataSource.fetchParams || {}, IanswerDocument, variables),
+      options
+    );
+export const IanswersDocument = `
+    query answers($questionId: String!) {
+  answers(questionId: $questionId) {
+    questionId
+  }
+}
+    `;
+export const useAnswersQuery = <
+      TData = AnswersQuery,
+      TError = unknown
+    >(
+      dataSource: { endpoint: string, fetchParams?: RequestInit },
+      variables: AnswersQueryVariables,
+      options?: UseQueryOptions<AnswersQuery, TError, TData>
+    ) =>
+    useQuery<AnswersQuery, TError, TData>(
+      ['answers', variables],
+      fetcher<AnswersQuery, AnswersQueryVariables>(dataSource.endpoint, dataSource.fetchParams || {}, IanswersDocument, variables),
+      options
+    );
 export const IloginDocument = `
     mutation login($input: CardVerifyRequest!) {
   login(input: $input) {
@@ -179,46 +210,15 @@ export const useLoginMutation = <
       (variables?: LoginMutationVariables) => fetcher<LoginMutation, LoginMutationVariables>(dataSource.endpoint, dataSource.fetchParams || {}, IloginDocument, variables)(),
       options
     );
-export const IquestionDocument = `
-    query question($id: String!) {
-  question(id: $id) {
-    _id
-    category1
-    category2
-    category3
-    category4
-    label
-    description
-    fileUrl
-    answer
-    type
-    isTest
-    options {
-      value
-      label
-    }
-  }
-}
-    `;
-export const useQuestionQuery = <
-      TData = QuestionQuery,
-      TError = unknown
-    >(
-      dataSource: { endpoint: string, fetchParams?: RequestInit },
-      variables: QuestionQueryVariables,
-      options?: UseQueryOptions<QuestionQuery, TError, TData>
-    ) =>
-    useQuery<QuestionQuery, TError, TData>(
-      ['question', variables],
-      fetcher<QuestionQuery, QuestionQueryVariables>(dataSource.endpoint, dataSource.fetchParams || {}, IquestionDocument, variables),
-      options
-    );
 export const IsubmitAnswerDocument = `
-    mutation submitAnswer($input: SubmissionMutationRequest!) {
+    mutation submitAnswer($input: AnswerMutationRequest!) {
   submitAnswer(input: $input) {
     questionId
     numOfSubmission
     isCorrect
+    startTime
+    endTime
+    duration
   }
 }
     `;

@@ -1,0 +1,110 @@
+[
+  {
+    "_id": "118",
+    "category1": "空间能力",
+    "category2": "（三）空间想象",
+    "type": "Radio",
+    "label": "1．左边的平面图可拼合右边的哪一个图（  ）。",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q118.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      },
+      {
+        "value": "D",
+        "label": "D"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "119",
+    "category1": "空间能力",
+    "category2": "（三）空间想象",
+    "type": "Radio",
+    "label": "2．左边的平面图可拼合右边的哪一个图（  ）。",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q119.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      },
+      {
+        "value": "D",
+        "label": "D"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "120",
+    "category1": "空间能力",
+    "category2": "（三）空间想象",
+    "type": "Radio",
+    "label": "3．左边的平面图可拼合右边的哪一个图（  ）。",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q120.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      },
+      {
+        "value": "D",
+        "label": "D"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "_id": "121",
+    "category1": "空间能力",
+    "category2": "（三）空间想象",
+    "type": "Radio",
+    "label": "4．左图为给定的立体图形，从任一角度观看，下面哪项不可能是该立体图形的视图?",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q121.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      },
+      {
+        "value": "D",
+        "label": "D"
+      }
+    ],
+    "answer": "C"
+  }
+]

@@ -1,0 +1,15 @@
+query answer($questionId: String!) {
+  answer(questionId: $questionId) {
+    answer
+    startTime
+    endTime
+    numOfSubmission
+    duration
+  }
+}
+
+query answers($questionId: String!) {
+  answers(questionId: $questionId) {
+    questionId
+  }
+}
