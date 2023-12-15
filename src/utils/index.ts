@@ -28,7 +28,6 @@ export function getArrayLenSum(arr: any[]) {
 
 const questionPathRegex = /^\/section\/(\d)\/unit\/(\d)/g;
 export function getSectionUnitInfo(path: string) {
-  console.log({ path });
   const match = questionPathRegex.exec(path);
   const unitPath = match?.[0];
   const sectionNo = match?.[1];

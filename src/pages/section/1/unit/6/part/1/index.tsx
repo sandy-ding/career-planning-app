@@ -202,7 +202,7 @@ export default function Idex() {
                         )}
                         {showImage && (
                           <img
-                            src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q113.png"
+                            src="https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-6-1.png"
                             style={{
                               rotate: `${
                                 stage === Stage.Test

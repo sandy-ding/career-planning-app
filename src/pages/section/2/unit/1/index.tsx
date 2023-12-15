@@ -67,6 +67,7 @@ export default function Index() {
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
                 <RadioForm
+                  isHorizontal
                   name={questionId}
                   question={{
                     _id: questionId,

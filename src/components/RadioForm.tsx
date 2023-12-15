@@ -8,6 +8,7 @@ interface IProps {
   question: Question;
   name: string;
   defaultValue?: string | undefined | null;
+  isHorizontal?: boolean;
   onFinish?: (values: { [k: string]: string }) => void;
   onChange?: (value: string) => void;
 }
@@ -17,6 +18,7 @@ export default function RadioForm({
   question,
   onChange,
   defaultValue,
+  isHorizontal,
 }: IProps) {
   const [form] = Form.useForm();
   useEffect(() => form.resetFields(), [name, defaultValue]);
@@ -32,7 +34,7 @@ export default function RadioForm({
     >
       <Form.Item
         label={
-          <div className="flex flex-col justify-center w-full text-black">
+          <div className="flex flex-col justify-center w-full">
             <ReactMarkdown rehypePlugins={[rehypeRaw as any]}>
               {`${question.label}</br>${question?.description || ""}`}
             </ReactMarkdown>
@@ -49,15 +51,15 @@ export default function RadioForm({
       >
         <Radio.Group className="w-full">
           <Space
-            direction="vertical"
+            direction={isHorizontal ? "horizontal" : "vertical"}
             size={15}
-            className="mt-5 w-full flex-wrap"
+            className="flex justify-between mt-5 w-full flex-wrap"
           >
             {question?.options?.map(({ value, label }) => (
               <Radio
                 key={value}
                 value={value}
-                className="border w-full p-4"
+                className="border w-full p-4 text-primary-700"
                 onClick={(e: any) => onChange && onChange(e.target.value)}
               >
                 {label}

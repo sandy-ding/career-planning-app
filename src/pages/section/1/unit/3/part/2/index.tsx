@@ -97,7 +97,6 @@ export default function Index() {
     const currentTime = Date.now();
     const answerStr = JSON.stringify(value);
     if (goNext) {
-      console.log("goNext");
       setGoNext(false);
       setHelp("");
       setQuestionIndex(questionIndex + 1);

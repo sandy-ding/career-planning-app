@@ -10,22 +10,16 @@ export default function Question() {
   const router = useRouter();
 
   const { mutate } = useLoginMutation(getDataSource(), {
-    onSuccess(data, variables, context) {
+    onSuccess(data) {
       localStorage.setItem("token", data?.login?.accessToken);
       router.push("/section/1");
     },
   });
 
   const onFinish = (values: CardVerifyRequest) => {
-    console.log("Success:", values);
     const res = mutate({
       input: values,
     });
-    console.log({ res });
-  };
-
-  const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
   };
 
   return (
@@ -33,7 +27,6 @@ export default function Question() {
       <Form
         name="basic"
         onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
         autoComplete="off"
         layout="vertical"
         requiredMark={false}

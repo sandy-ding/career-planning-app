@@ -17,15 +17,9 @@ export default function Question() {
   });
 
   const onFinish = (values: CardVerifyRequest) => {
-    console.log("Success:", values);
     const res = mutate({
       input: values,
     });
-    console.log({ res });
-  };
-
-  const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
   };
 
   return (
@@ -33,7 +27,6 @@ export default function Question() {
       <Form
         name="basic"
         onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
         autoComplete="off"
         layout="vertical"
         requiredMark={false}

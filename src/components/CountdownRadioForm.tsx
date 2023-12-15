@@ -1,11 +1,8 @@
 import { useRouter } from "next/router";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { Button, Form, Radio, Typography } from "antd";
+import { Button, Form, Radio } from "antd";
 import { Question } from "@/types";
-
-const { Title } = Typography;
-const deadline = Date.now() + 1000 * 60 * 8;
 
 export default function CountdownRadioForm({
   question,
@@ -20,7 +17,6 @@ export default function CountdownRadioForm({
 
   const onFinish = () => {
     const values = form.getFieldsValue();
-    console.log("Success:", values);
     mutate({
       input: {
         questionId,
@@ -28,10 +24,6 @@ export default function CountdownRadioForm({
       },
     });
     router.push(`${Number(questionId) + 1}`);
-  };
-
-  const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
   };
 
   return (
@@ -43,7 +35,6 @@ export default function CountdownRadioForm({
       <Form
         name="basic"
         onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
         autoComplete="off"
         layout="vertical"
         requiredMark={false}

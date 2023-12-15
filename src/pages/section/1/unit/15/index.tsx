@@ -27,7 +27,6 @@ const mainQuestions = shuffle(
   sample.map((i) => new Array(8).fill(i)).flat(),
   5
 );
-console.log(testQuestions, mainQuestions);
 
 const overview = {
   title: "控制抑制能力",

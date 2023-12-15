@@ -181,7 +181,7 @@ export default function Index() {
                 {isLoading ? (
                   <Loading />
                 ) : (
-                  <>
+                  <div className="flex justify-around gap-8">
                     {partNo === 1 ? (
                       <div>
                         根据下表，回答1—5题。
@@ -204,7 +204,7 @@ export default function Index() {
                       question={questions[partIndex][questionIndex]}
                       onChange={onChange}
                     />
-                  </>
+                  </div>
                 )}
               </div>
             </div>

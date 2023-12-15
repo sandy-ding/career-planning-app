@@ -12,9 +12,7 @@ export default function AudioPlayer({ fileUrl }: { fileUrl: string }) {
     }
     setPlayed(true);
     setPlaying(true);
-    console.log({ played });
   };
-  console.log({ fileUrl });
   return (
     // <div className="w-40">
     <SoundTwoTone

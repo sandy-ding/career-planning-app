@@ -108,11 +108,6 @@ export default function Idex() {
       setTestNo(testNo + 1);
     }
     setTimeout(() => {
-      console.log(
-        "setShowLight",
-        testNo,
-        stage === Stage.Test ? testLights[testNo] : lights[testNo]
-      );
       setShowLight(stage === Stage.Test ? testLights[testNo] : lights[testNo]);
       setTime(Date.now());
     }, 500);

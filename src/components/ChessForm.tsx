@@ -67,9 +67,7 @@ export default function ChessForm({ question }: { question: Question }) {
   }
 
   const onFinish = () => {
-    console.log("Success:", value);
     const answerStr = JSON.stringify(value);
-    console.log("numOfSubmission", numOfSubmission);
     if (question.answer === answerStr) {
       mutate({
         input: {
@@ -95,15 +93,10 @@ export default function ChessForm({ question }: { question: Question }) {
     }
   };
 
-  const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
-  };
-
   return (
     <Form
       name="basic"
       onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
       autoComplete="off"
       layout="vertical"
       requiredMark={false}

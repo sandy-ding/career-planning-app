@@ -9,6 +9,7 @@ import Progress from "@/components/Progress";
 import { Stage } from "@/types";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
+import QuizEnd from "@/components/QuizEnd";
 
 const sectionNo = 3;
 const overview = {
@@ -65,13 +66,9 @@ export default function Index() {
   };
 
   const onEnd = async () => {
-    if (partNo === 1) {
-      setStage(Stage.PartIntro);
-      setPartNo(2);
-      setQuestionNo(1);
-    } else {
-      // router.push(`${unitNo + 1}`);
-    }
+    setStage(Stage.PartIntro);
+    setPartNo(2);
+    setQuestionNo(1);
   };
 
   const notIntroStage = stage !== Stage.Intro && stage !== Stage.PartIntro;
@@ -101,6 +98,7 @@ export default function Index() {
           <div className="grow flex gap-10 px-10 items-center bg-primary-200">
             <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
               <RadioForm
+                isHorizontal
                 name={questionId}
                 question={{
                   _id: questionId,
@@ -133,7 +131,12 @@ export default function Index() {
             </div>
           </div>
         )}
-        {stage === Stage.End && <UnitEnd goNext={onEnd} />}
+        {stage === Stage.End &&
+          (partNo === 1 ? (
+            <UnitEnd goNext={onEnd} />
+          ) : (
+            <QuizEnd goNext={() => {}} />
+          ))}
       </>
     </div>
   );
