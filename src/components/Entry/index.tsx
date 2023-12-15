@@ -24,6 +24,7 @@ export default function Entry({
   return (
     <div className="h-screen flex flex-col bg-white">
       <Header title={headerTitle}>
+        <div />
         <Image src="/user.png" alt="user" width="32" height="32" />
       </Header>
 

@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
-import { useSubmitAnswerMutation, Question } from "@/graphql/generated/graphql";
+import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
 import { Button, Form, Radio, Typography } from "antd";
-// import Countdown from "antd/es/statistic/Countdown";
+import { Question } from "@/types";
 
 const { Title } = Typography;
 const deadline = Date.now() + 1000 * 60 * 8;

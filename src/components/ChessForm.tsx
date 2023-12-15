@@ -1,6 +1,7 @@
 import React, { ReactElement, useEffect, useState } from "react";
 import classNames from "classnames";
-import { Question, useSubmitAnswerMutation } from "@/graphql/generated/graphql";
+import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
+import { Question } from "@/types";
 import { Button, Form } from "antd";
 import { getDataSource } from "@/graphql/queryClient";
 import { useRouter } from "next/router";

@@ -20,6 +20,9 @@ export interface Question {
   _id: string;
   label: string;
   description?: string;
+  answer?: string;
+  type?: string;
+  isTest?: boolean;
   fileUrl?: string;
   options: { value: string; label: string }[];
 }

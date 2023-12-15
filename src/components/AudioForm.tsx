@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
-import { useSubmitAnswerMutation, Question } from "@/graphql/generated/graphql";
+import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
 import { Button, Form } from "antd";
 import AudioPlayer from "./AudioPlayer";
 import OtpInput from "react-otp-input";
 import { useState } from "react";
 import { ValidateStatus } from "antd/es/form/FormItem";
+import { Question } from "@/types";
 
 interface IProps {
   question: Question;

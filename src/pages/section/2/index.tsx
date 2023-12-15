@@ -1,4 +1,4 @@
-import Entry from "@/features/Entry";
+import Entry from "@/components/Entry";
 
 const props = {
   headerTitle: "人格测验",
