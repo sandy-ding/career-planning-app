@@ -1,14 +1,10 @@
 import { useRouter } from "next/router";
-import {
-  useAnswerQuery,
-  useSubmitAnswerMutation,
-} from "@/graphql/generated/graphql";
+import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
 import { ReactElement, useEffect, useState } from "react";
 import Header from "@/components/Layout/Header";
 import questions from "./index.json";
 import Progress from "@/components/Progress";
-import Loading from "@/components/Loading";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 import { Button, Form } from "antd";
@@ -41,13 +37,11 @@ const overview = {
 
 export default function Index() {
   const router = useRouter();
-  const dataSource = getDataSource();
   const [time, setTime] = useState(0);
   const [questionIndex, setQuestionIndex] = useState(0);
   const question = questions[questionIndex];
-  const answer = JSON.parse(question.answer);
+  const answer: number[][] = JSON.parse(question.answer);
   const len = answer[0].length;
-  let board: ReactElement[] = [];
   const { mutate } = useSubmitAnswerMutation(getDataSource());
   const questionId = `${partId}.${question.questionId}`;
 
@@ -60,6 +54,7 @@ export default function Index() {
   const [help, setHelp] = useState("");
   const [goNext, setGoNext] = useState(false);
 
+  let board: ReactElement[] = [];
   for (let i = 0; i < len; i++) {
     const cols = [];
     for (let j = 0; j < len; j++) {
@@ -98,13 +93,15 @@ export default function Index() {
     setValue(answer);
   }, [questionIndex]);
 
-  const onFinish = async (values: { [k: string]: string }) => {
+  const onFinish = async () => {
+    const currentTime = Date.now();
     const answerStr = JSON.stringify(value);
     if (goNext) {
+      console.log("goNext");
       setGoNext(false);
       setHelp("");
       setQuestionIndex(questionIndex + 1);
-      setStage(Stage.ReadDescription);
+      startTest();
       setNumOfSubmission(0);
     } else if (question.isTest) {
       if (question.answer === answerStr) {
@@ -122,29 +119,22 @@ export default function Index() {
       setGoNext(false);
       if (question.answer === answerStr) {
         setQuestionIndex(questionIndex + 1);
-        setStage(Stage.ReadDescription);
+        setStage(Stage.ShowQuestion);
         setNumOfSubmission(0);
         mutate({
           input: {
             questionId,
             answer: answerStr,
-            startTime: time,
-            endTime: Date.now(),
+            duration: currentTime - time,
           },
         });
+        startTest();
       } else if (numOfSubmission >= 2) {
         mutate({
           input: {
             questionId,
             answer: answerStr,
-            startTime: time,
-            endTime: Date.now(),
-          },
-        });
-        await submitPart({
-          input: {
-            questionId: partId,
-            endTime: Date.now(),
+            duration: currentTime - time,
           },
         });
         setStage(Stage.End);
@@ -156,82 +146,41 @@ export default function Index() {
     }
   };
 
-  useEffect(() => {
-    const activeQuestionId = localStorage.getItem("activeQuestionId");
-    if (activeQuestionId) {
-      const activeIds = activeQuestionId?.split(".");
-      setQuestionIndex(
-        questions.findIndex((i) => i.questionId === activeIds?.[3])
-      );
-    }
-  }, []);
-
-  useEffect(() => {
-    if (stage === Stage.ShowQuestion) {
-      localStorage.setItem("activeQuestionId", questionId);
-    }
-  }, [questionId, stage]);
-
-  const { mutateAsync: submitPart } = useSubmitAnswerMutation(getDataSource());
-
-  const onStart = async () => {
-    await submitPart({
-      input: {
-        questionId: partId,
-        startTime: Date.now(),
-      },
-    });
-    setStage(Stage.ReadDescription);
-    setTime(Date.now());
+  const startTest = () => {
+    setStage(Stage.ShowQuestion);
+    setCountdown(Date.now() + 1000 * 5);
   };
 
-  const { isLoading } = useAnswerQuery(
-    dataSource,
-    {
-      questionId: partId,
-    },
-    {
-      onSuccess(data) {
-        if (data?.answer?.endTime) {
-          setStage(Stage.End);
-        } else if (data?.answer?.startTime) {
-          setStage(Stage.ReadDescription);
-        }
-      },
-    }
-  );
-
-  const onEnd = async () => {
+  const onEnd = () => {
     router.push(`/section/${sectionNo}/unit/${unitNo + 1}`);
-    localStorage.removeItem("activeQuestionId");
+  };
+
+  const onCountdownFinish = () => {
+    setStage(Stage.WhiteScreen);
+    setValue(answer.map((row) => row.map(() => 0)));
+    setTimeout(() => {
+      setStage(Stage.AnswerQuestion);
+      setTime(Date.now());
+    }, 2000);
   };
 
   return (
     <div className="flex flex-col h-screen bg-primary-200">
-      <Header title={overview.title}>
+      <Header title="工作记忆能力">
         {stage === Stage.ShowQuestion ? (
           <Countdown
             value={countdown}
             format="m:ss"
             className="leading-8 !text-xl"
-            onFinish={() => {
-              setStage(Stage.WhiteScreen);
-              setValue(value.map((row) => row.map(() => 0)));
-              setTimeout(() => {
-                setStage(Stage.AnswerQuestion);
-                setTime(Date.now());
-              }, 2000);
-            }}
+            onFinish={onCountdownFinish}
           />
         ) : (
           <></>
         )}
         <Image src="/countdown.png" alt="user" width="32" height="32" />
       </Header>
-      {isLoading ? (
-        <Loading />
-      ) : stage === Stage.Intro ? (
-        <Overview {...overview} btnText="练习" onClick={onStart} />
+      {stage === Stage.Intro ? (
+        <Overview {...overview} btnText="练习" onClick={startTest} />
       ) : (
         <>
           <Progress
@@ -268,32 +217,13 @@ export default function Index() {
                     {stage !== Stage.ReadDescription &&
                       stage !== Stage.WhiteScreen && (
                         <div
-                          className={classNames(
-                            "flex justify-center mt-24"
-                            // stage === Stage.AnswerQuestion && "mt-20"
-                          )}
+                          className={classNames("flex justify-center mt-24")}
                           style={{ marginTop: "100px" }}
                         >
                           <div>{board}</div>
                         </div>
                       )}
                   </Form.Item>
-
-                  {stage === Stage.ReadDescription && (
-                    <Form.Item className="flex justify-center">
-                      <Button
-                        htmlType="submit"
-                        size="large"
-                        shape="round"
-                        onClick={() => {
-                          setStage(Stage.ShowQuestion);
-                          setCountdown(Date.now() + 1000 * 5);
-                        }}
-                      >
-                        开始
-                      </Button>
-                    </Form.Item>
-                  )}
 
                   {(stage === Stage.AnswerQuestion ||
                     stage === Stage.ShowCorrectAnswer) && (
@@ -307,7 +237,7 @@ export default function Index() {
               </div>
             </div>
           ) : (
-            <UnitEnd disableBack goNext={onEnd} />
+            <UnitEnd goNext={onEnd} />
           )}
         </>
       )}

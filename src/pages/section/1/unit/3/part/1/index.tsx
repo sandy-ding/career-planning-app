@@ -1,15 +1,11 @@
 import { useRouter } from "next/router";
-import {
-  useAnswerQuery,
-  useSubmitAnswerMutation,
-} from "@/graphql/generated/graphql";
+import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Header from "@/components/Layout/Header";
 import questions from "./index.json";
 import Progress from "@/components/Progress";
 import { Stage } from "@/types";
-import Loading from "@/components/Loading";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 import { Button, Form } from "antd";
@@ -35,36 +31,19 @@ export default function Idex() {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [numOfSubmission, setNumOfSubmission] = useState(0);
   const [goNext, setGoNext] = useState(false);
-  const [time, setTime] = useState(0);
-  const dataSource = getDataSource();
 
-  const question = questions[questionIndex];
+  const [time, setTime] = useState(0);
   const [otp, setOtp] = useState("");
   const [validateStatus, setValidateStatus] =
     useState<ValidateStatus>("success");
   const [help, setHelp] = useState("");
+  const question = questions[questionIndex];
   const questionId = `${partId}.${question.questionId}`;
 
   const { mutate } = useSubmitAnswerMutation(getDataSource());
 
-  useEffect(() => {
-    const activeQuestionId = localStorage.getItem("activeQuestionId");
-    if (activeQuestionId) {
-      const activeIds = activeQuestionId?.split(".");
-      setQuestionIndex(
-        questions.findIndex((i) => i.questionId === activeIds?.[3])
-      );
-    }
-  }, []);
-
-  useEffect(() => {
-    if (stage === Stage.Main) {
-      localStorage.setItem("activeQuestionId", questionId);
-    }
-  }, [questionId, stage]);
-
-  const onFinish = async (values: { [k: string]: string }) => {
-    const currentTime = performance.now();
+  const onFinish = async () => {
+    const currentTime = Date.now();
     if (goNext) {
       setGoNext(false);
       setHelp("");
@@ -89,8 +68,7 @@ export default function Idex() {
           input: {
             questionId,
             answer: otp,
-            startTime: time,
-            endTime: currentTime,
+            duration: currentTime - time,
           },
         });
         setOtp("");
@@ -100,8 +78,7 @@ export default function Idex() {
           input: {
             questionId,
             answer: otp,
-            startTime: time,
-            endTime: currentTime,
+            duration: currentTime - time,
           },
         });
         if (questionIndex < 13) {
@@ -109,12 +86,6 @@ export default function Idex() {
           setHelp("");
         } else {
           setStage(Stage.End);
-          await submitPart({
-            input: {
-              questionId: partId,
-              endTime: Date.now(),
-            },
-          });
         }
       } else {
         setNumOfSubmission(numOfSubmission + 1);
@@ -125,46 +96,19 @@ export default function Idex() {
     }
   };
 
-  const { mutateAsync: submitPart } = useSubmitAnswerMutation(getDataSource());
-
   const onStart = async () => {
-    await submitPart({
-      input: {
-        questionId: partId,
-        startTime: Date.now(),
-      },
-    });
     setStage(Stage.Main);
     setTime(Date.now());
   };
 
-  const { isLoading } = useAnswerQuery(
-    dataSource,
-    {
-      questionId: partId,
-    },
-    {
-      onSuccess(data) {
-        if (data?.answer?.endTime) {
-          setStage(Stage.End);
-        } else if (data?.answer?.startTime) {
-          setStage(Stage.Main);
-        }
-      },
-    }
-  );
-
   const onEnd = async () => {
-    router.push(`/section/${sectionNo}/unit/${unitNo}/part/2`);
-    localStorage.removeItem("activeQuestionId");
+    router.push(`${partNo + 1}`);
   };
 
   return (
     <div className="flex flex-col h-screen bg-primary-200">
-      <Header title={overview.title} />
-      {isLoading ? (
-        <Loading />
-      ) : stage === Stage.Intro ? (
+      <Header title="工作记忆能力" />
+      {stage === Stage.Intro ? (
         <Overview {...overview} btnText="练习" onClick={onStart} />
       ) : (
         <>
@@ -238,7 +182,7 @@ export default function Idex() {
               </div>
             </div>
           ) : (
-            <UnitEnd disableBack goNext={onEnd} />
+            <UnitEnd goNext={onEnd} />
           )}
         </>
       )}

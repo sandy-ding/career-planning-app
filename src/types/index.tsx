@@ -13,6 +13,7 @@ export enum Stage {
   Part2,
   Part3,
   Main,
+  PartIntro,
 }
 
 export interface Question {

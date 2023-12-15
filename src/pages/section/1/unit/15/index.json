@@ -1,0 +1,50 @@
+[
+  {
+    "char": "green",
+    "color": "red"
+  },
+  {
+    "char": "blue",
+    "color": "green"
+  },
+  {
+    "char": "red",
+    "color": "red"
+  },
+  {
+    "char": "blue",
+    "color": "blue"
+  },
+  {
+    "char": "blue",
+    "color": "red"
+  },
+  {
+    "char": "red",
+    "color": "red"
+  },
+  {
+    "char": "green",
+    "color": "green"
+  },
+  {
+    "char": "red",
+    "color": "blue"
+  },
+  {
+    "char": "green",
+    "color": "blue"
+  },
+  {
+    "char": "red",
+    "color": "green"
+  },
+  {
+    "char": "blue",
+    "color": "blue"
+  },
+  {
+    "char": "green",
+    "color": "green"
+  }
+]

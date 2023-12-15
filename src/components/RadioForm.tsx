@@ -25,7 +25,6 @@ export default function RadioForm({
     <Form
       form={form}
       name="basic"
-      initialValues={{ [name]: defaultValue }}
       autoComplete="off"
       layout="vertical"
       requiredMark={false}

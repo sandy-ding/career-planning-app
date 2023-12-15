@@ -1,0 +1,242 @@
+[
+  {
+    "_id": "208",
+    "category1": "思维转换能力",
+    "category2": "（二）文字转换为对应图片",
+    "menuId": "2",
+    "type": "Radio",
+    "label": "1. 菱形",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q208.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "209",
+    "category1": "思维转换能力",
+    "category2": "（二）文字转换为对应图片",
+    "menuId": "2",
+    "type": "Radio",
+    "label": "2. 三角形在圆形的左边",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q209.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "210",
+    "category1": "思维转换能力",
+    "category2": "（二）文字转换为对应图片",
+    "menuId": "2",
+    "type": "Radio",
+    "label": "3. 长方形不是不在三角形之下",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q210.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "211",
+    "category1": "思维转换能力",
+    "category2": "（二）文字转换为对应图片",
+    "menuId": "2",
+    "type": "Radio",
+    "label": "4. 菱形在三角形的右边",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q211.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "212",
+    "category1": "思维转换能力",
+    "category2": "（二）文字转换为对应图片",
+    "menuId": "2",
+    "type": "Radio",
+    "label": "5. 圆形在正方形之下",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q212.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "213",
+    "category1": "思维转换能力",
+    "category2": "（二）文字转换为对应图片",
+    "menuId": "2",
+    "type": "Radio",
+    "label": "6. 菱形不是不在长方形之下",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q213.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "214",
+    "category1": "思维转换能力",
+    "category2": "（二）文字转换为对应图片",
+    "menuId": "2",
+    "type": "Radio",
+    "label": "7. 三角形在正方形和圆形之上",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q214.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "215",
+    "category1": "思维转换能力",
+    "category2": "（二）文字转换为对应图片",
+    "menuId": "2",
+    "type": "Radio",
+    "label": "8. 圆形不是不在三角形和长方形之间",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q215.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "216",
+    "category1": "思维转换能力",
+    "category2": "（二）文字转换为对应图片",
+    "menuId": "2",
+    "type": "Radio",
+    "label": "9. 三角形在圆形的左边",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q216.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "217",
+    "category1": "思维转换能力",
+    "category2": "（二）文字转换为对应图片",
+    "menuId": "2",
+    "type": "Radio",
+    "label": "10. 圆形在长方形之上，不在三角形的左边",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q217.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A"
+      },
+      {
+        "value": "B",
+        "label": "B"
+      },
+      {
+        "value": "C",
+        "label": "C"
+      }
+    ],
+    "answer": "B"
+  }
+]

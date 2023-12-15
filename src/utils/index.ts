@@ -1,9 +1,23 @@
 export const ossUrl = "https://career-planning-app.oss-cn-beijing.aliyuncs.com";
 
-export function shuffle(array: any[]) {
-  for (let i = array.length; i; i--) {
-    let j = Math.floor(Math.random() * i);
-    [array[i - 1], array[j]] = [array[j], array[i - 1]];
+export function shuffle(array: any[], seed: number) {
+  let currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
+  seed = seed || 1;
+  let random = function () {
+    var x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+  };
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(random() * currentIndex);
+    currentIndex -= 1;
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
   }
   return array;
 }
@@ -28,4 +42,10 @@ export function getSectionUnitInfo(path: string) {
     unitId,
     questionIdPrefix,
   };
+}
+
+export function getCountdown(duration: number) {
+  const date = new Date(duration);
+  const seconds = date.getSeconds();
+  return `${date.getMinutes()}:${seconds < 10 ? 0 : ""}${date.getSeconds()}`;
 }

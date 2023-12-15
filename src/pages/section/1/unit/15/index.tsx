@@ -1,66 +1,72 @@
 import { useRouter } from "next/router";
 import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Header from "@/components/Layout/Header";
 import Progress from "@/components/Progress";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
+import { ValidateStatus } from "antd/lib/form/FormItem";
+import { shuffle } from "@/utils";
+import sample from "./index.json";
 import { Button, Form } from "antd";
-import { ValidateStatus } from "antd/es/form/FormItem";
 import { PlusOutlined } from "@ant-design/icons";
 
 const sectionNo = 1;
-const unitNo = 6;
-const partNo = 1;
+const unitNo = 15;
 const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
 
-const overview = {
-  title: "二维空间旋转",
-  description:
-    "你将在屏幕正中央看到一个字母，请判断该字母是正向或或者反向。如果是正向，请按“F”键，如果是反向，请按“J”键。在判断正确的前提下，反应越快越好。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。下面点击“练习”，开始练习吧。",
+const charMap = {
+  blue: "蓝",
+  green: "绿",
+  red: "红",
 };
 
-// const testAngles = shuffle([0, 1, 2, 3, 4, 5].map((i) => i * 60));
-// const testDirections = shuffle([1, -1].map((i) => new Array(3).fill(i)).flat());
-// const angles = shuffle(
-//   [0, 1, 2, 3, 4, 5].map((i) => new Array(12).fill(i * 60)).flat()
-// );
-// const directions = shuffle([1, -1].map((i) => new Array(36).fill(i)).flat());
+const testQuestions = shuffle(sample, 5);
+const mainQuestions = shuffle(
+  sample.map((i) => new Array(8).fill(i)).flat(),
+  5
+);
+console.log(testQuestions, mainQuestions);
 
-const testAngles = [60, 120, 180, 300, 0, 240];
-const testDirections = [1, 1, -1, -1, 1, -1];
-const angles = [
-  300, 300, 240, 60, 180, 180, 0, 240, 0, 60, 60, 240, 180, 0, 240, 120, 300,
-  120, 60, 180, 300, 180, 300, 0, 0, 120, 180, 120, 180, 300, 300, 0, 180, 0, 0,
-  120, 60, 120, 180, 300, 240, 120, 240, 60, 240, 60, 60, 300, 120, 240, 240,
-  120, 300, 60, 240, 60, 240, 180, 300, 0, 0, 120, 0, 0, 180, 60, 300, 120, 120,
-  180, 240, 60,
-];
-const directions = [
-  1, 1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1,
-  -1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1,
-  -1, -1, 1, -1, -1, 1, -1, -1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1,
-  1, -1, -1, -1, -1,
-];
+const overview = {
+  title: "控制抑制能力",
+  description:
+    "抑制控制能力指个体在目标导向活动中有意识地抑制干扰或反应倾向的能力，与实际生活中对突发事件的应变能力密切相关。这种认知能力作为我们的执行职能之一，有助于预测，规划和目标设定，从而控制阻断行为并停止不适当的自动反应。控制抑制能力通过Stroop任务实验来衡量。",
+};
+
+const overview1 = {
+  title: "控制抑制能力",
+  description:
+    "指导语：欢迎参与控制抑制能力测验！<br /><br />你将在屏幕正中央看到一个字母，分辨其颜色，颜色与字词含义一致按按“F”键，不一致按“J”键。在判断正确的前提下，反应越快越好。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。下面点击“练习”，开始练习吧。",
+};
 
 enum Stage {
   Intro,
+  Intro1,
   Test,
   Mid,
   Main,
   End,
 }
 
-export default function Idex() {
+export default function Index() {
   const router = useRouter();
   const [stage, setStage] = useState(Stage.Intro);
+  const [time, setTime] = useState(Date.now());
   const [testNo, setTestNo] = useState(-1);
+
+  const questionId = `${unitId}.${testNo + 1}`;
+
   const [showCenter, setShowCenter] = useState(false);
-  const [showImage, setShowImage] = useState(false);
-  const [time, setTime] = useState(0);
-  const questionId = `${partId}.${testNo + 1}`;
+  const [showWord, setShowWord] = useState(false);
+
+  const [answerTime, setAnswerTime] = useState(false);
+  const isTest = stage === Stage.Test;
+  const questions = isTest ? testQuestions : mainQuestions;
+
+  const testNoRef = useRef(testNo);
+  testNoRef.current = testNo;
 
   const [validateStatus, setValidateStatus] =
     useState<ValidateStatus>("success");
@@ -70,13 +76,14 @@ export default function Idex() {
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       const key = e.key.toUpperCase();
-      if (showImage) {
-        if (key == "F" || key == "J") {
+      if (answerTime && testNo < questions.length) {
+        if (key === "F" || key === "J") {
+          const isCorrect =
+            (questions[testNo].color === questions[testNo].char &&
+              key === "F") ||
+            (questions[testNo].color !== questions[testNo].char && key === "J");
           if (stage === Stage.Test) {
-            if (
-              (testDirections[testNo] < 0 && key === "J") ||
-              (testDirections[testNo] > 0 && key === "F")
-            ) {
+            if (isCorrect) {
               setValidateStatus("success");
               setHelp("回答正确");
             } else {
@@ -86,28 +93,28 @@ export default function Idex() {
 
             setTimeout(() => {
               setHelp("");
-              setShowImage(false);
-              startTest();
-            }, 500);
+              setAnswerTime(false);
+              setTimeout(() => {
+                startTest();
+              }, 500);
+            }, 400);
           } else if (stage === Stage.Main) {
             mutate({
               input: {
                 questionId,
                 answer: key,
-                isCorrect:
-                  (directions[testNo] < 0 && key === "J") ||
-                  (directions[testNo] > 0 && key === "F"),
+                isCorrect,
                 duration: Date.now() - time,
               },
             });
-
-            if (testNo === directions.length - 1) {
+            if (testNo === mainQuestions.length - 1) {
               setStage(Stage.End);
+            } else {
+              setAnswerTime(false);
+              setTimeout(() => {
+                startTest();
+              }, 500);
             }
-
-            setTimeout(() => {
-              startTest();
-            }, 500);
           }
         }
       }
@@ -118,44 +125,59 @@ export default function Idex() {
     return function cleanup() {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [showImage]);
+  }, [answerTime]);
 
   const startTest = () => {
-    setShowCenter(true);
-    setShowImage(false);
+    setAnswerTime(false);
+    if (testNo !== testQuestions.length - 1) {
+      setShowCenter(true);
+    }
     setTimeout(() => {
-      if (stage === Stage.Test && testNo === testDirections.length - 1) {
+      if (stage === Stage.Test && testNo === testQuestions.length - 1) {
         setStage(Stage.Mid);
         setTestNo(-1);
       } else {
         setTestNo(testNo + 1);
       }
       setShowCenter(false);
-      setShowImage(true);
+      setAnswerTime(true);
+      setShowWord(true);
+      setTimeout(
+        (thisTestNo) => {
+          if (thisTestNo === testNoRef.current) {
+            setShowWord(false);
+          }
+        },
+        isTest ? 1000 : 2000,
+        testNo + 1
+      );
       setTime(Date.now());
-    }, 1000);
-  };
-
-  const onStart = async () => {
-    setStage(Stage.Test);
-    startTest();
+    }, 800);
   };
 
   const onEnd = async () => {
-    router.push(`${partNo + 1}`);
+    router.push(`${unitNo + 1}`);
   };
 
   return (
     <div className="flex flex-col h-screen bg-primary-200">
-      <Header title="空间能力" />
+      <Header title={overview.title} />
       {stage === Stage.Intro ? (
-        <Overview {...overview} btnText="练习" onClick={onStart} />
+        <Overview {...overview} onClick={() => setStage(Stage.Intro1)} />
+      ) : stage === Stage.Intro1 ? (
+        <Overview
+          {...overview1}
+          onClick={() => {
+            setStage(Stage.Test);
+            startTest();
+          }}
+        />
       ) : (
         <>
           <Progress
             currentIndex={0}
-            currentPercent={stage === Stage.End ? 1 : testNo / 78}
-            titles={["二维空间旋转", "三维空间旋转", "空间想象"]}
+            currentPercent={testNo / questions.length}
+            titles={[""]}
           />
           {stage !== Stage.End ? (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
@@ -171,7 +193,7 @@ export default function Idex() {
                     label={
                       <label className="contents">
                         {stage === Stage.Test && "练习题: "}
-                        请判断该字母是正向或或者反向。如果是正向，请按“F”键，如果是反向，请按“J”键。
+                        请尽快判断字的颜色。颜色与字词含义一致按“F”键，不一致按“J”键。
                       </label>
                     }
                     help={
@@ -193,29 +215,28 @@ export default function Idex() {
                         </Button>
                       </div>
                     ) : (
-                      <div className="flex justify-center items-center mt-40">
+                      <div
+                        className="flex justify-center items-center mt-40 mx-auto w-40 h-40 text-6xl"
+                        style={{ background: "black" }}
+                      >
                         {showCenter && (
                           <PlusOutlined
                             className="text-3xl flex justify-center items-center"
-                            style={{ width: "116px", height: "124px" }}
-                          />
-                        )}
-                        {showImage && (
-                          <img
-                            src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q113.png"
                             style={{
-                              rotate: `${
-                                stage === Stage.Test
-                                  ? testAngles[testNo]
-                                  : angles[testNo]
-                              }deg`,
-                              transform: `scaleX(${
-                                stage === Stage.Test
-                                  ? testDirections[testNo]
-                                  : directions[testNo]
-                              })`,
+                              width: "116px",
+                              height: "124px",
+                              color: "white",
                             }}
                           />
+                        )}
+                        {!showCenter && showWord && (
+                          <div style={{ color: `${questions[testNo].color}` }}>
+                            {
+                              charMap[
+                                questions[testNo].char as keyof typeof charMap
+                              ]
+                            }
+                          </div>
                         )}
                       </div>
                     )}

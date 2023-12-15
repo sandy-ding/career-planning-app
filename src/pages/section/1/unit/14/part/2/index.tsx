@@ -10,11 +10,14 @@ import { Stage } from "@/types";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 
-const sectionNo = 2;
+const sectionNo = 1;
+const unitNo = 14;
+const partNo = 2;
+const unitId = `${sectionNo}.${unitNo}`;
 const overview = {
-  title: "人格测验",
+  title: "（二）文字转换为对应图片",
   description:
-    "您好！本测验请根据自己的真实感受来填写以下问题，每道题目仅选择一个最佳选项，请根据自己的情况进行5点评分：1 非常不符合，2 不符合，3 一般，4 符合，5 非常符合。测验共144题，所有答案没有对错、好坏之分。",
+    "指导语：这是思维转换能力的第二段测验。<br /><br />你将在电脑界面上回答一系列问题，屏幕上只会呈现一道题。请你根据题目呈现的文字，尽可能快地选择出与文字相对应的图片。<br /><br />现在，请开始测验。",
 };
 
 export default function Index() {
@@ -23,20 +26,26 @@ export default function Index() {
 
   const [stage, setStage] = useState(Stage.Intro);
   const [questionNo, setQuestionNo] = useState(1);
+  const [time, setTime] = useState(Date.now());
   const { mutateAsync: submitAnswer } = useSubmitAnswerMutation(dataSource);
 
+  const isQuestionStage = stage === Stage.Question;
+  const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const questionId = `${sectionNo}.${questionNo}`;
+  const questionId = `${unitId}.${partNo}.${questionNo}`;
 
   const isLast = questionIndex === questions.length - 1;
 
   const onChange = async (value: string) => {
+    const currentTime = Date.now();
     await submitAnswer({
       input: {
         questionId,
         answer: value,
+        duration: currentTime - time,
       },
     });
+    setTime(currentTime);
     goNext();
   };
 
@@ -47,53 +56,33 @@ export default function Index() {
     setQuestionNo(questionNo + 1);
   };
 
+  const onStart = async () => {
+    setTime(Date.now());
+    setStage(Stage.Question);
+  };
+
   const onEnd = async () => {
-    router.push(`/section/${sectionNo + 1}`);
+    router.push(`/section/${sectionNo}/unit/${unitNo + 1}`);
   };
 
   return (
     <div className="flex flex-col h-screen bg-primary-200">
-      <Header title={overview.title} />
+      <Header title="思维转换能力" />
       {stage === Stage.Intro ? (
-        <Overview {...overview} onClick={() => setStage(Stage.Question)} />
+        <Overview {...overview} onClick={onStart} />
       ) : (
         <>
           <Progress
-            currentIndex={0}
+            currentIndex={partIndex}
             currentPercent={questionIndex / questions.length}
-            titles={[""]}
+            titles={["图片转换为对应文字", "文字转换为对应图片"]}
           />
-          {stage === Stage.Question ? (
+          {isQuestionStage ? (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
                 <RadioForm
                   name={questionId}
-                  question={{
-                    _id: questionId,
-                    label: `${questionNo}．${questions[questionIndex].label}`,
-                    options: [
-                      {
-                        value: "1",
-                        label: "1 完全不符合",
-                      },
-                      {
-                        value: "2",
-                        label: "2 不符合",
-                      },
-                      {
-                        value: "3",
-                        label: "3 一般符合",
-                      },
-                      {
-                        value: "4",
-                        label: "4 符合",
-                      },
-                      {
-                        value: "5",
-                        label: "5 完全符合",
-                      },
-                    ],
-                  }}
+                  question={questions[questionIndex]}
                   onChange={onChange}
                 />
               </div>

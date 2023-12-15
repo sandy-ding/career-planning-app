@@ -21,10 +21,12 @@ export default function Progress({
   titles,
   currentIndex,
   currentPercent,
+  isDone,
 }: {
   currentIndex: number;
   currentPercent: number;
   titles: string[];
+  isDone?: boolean;
 }) {
   return (
     <div className="sticky top-14 z-50 flex w-full justify-items-stretch bg-gray-400">
@@ -33,10 +35,10 @@ export default function Progress({
           key={index}
           title={title}
           percent={
-            index === currentIndex
-              ? currentPercent
-              : index < currentIndex
+            isDone || index < currentIndex
               ? 1
+              : index === currentIndex
+              ? currentPercent
               : 0
           }
         />
