@@ -1,13 +1,13 @@
-import { StateCreator } from "zustand";
+// import { StateCreator } from "zustand";
 
-export interface TitleSlice {
-  title: string;
-  setTitle: (title: string) => void;
-}
+// export interface TitleSlice {
+//   title: string;
+//   setTitle: (title: string) => void;
+// }
 
-export const createTitleSlice: StateCreator<TitleSlice, [], [], TitleSlice> = (
-  set
-) => ({
-  title: "",
-  setTitle: (title: string) => set(() => ({ title })),
-});
+// export const createTitleSlice: StateCreator<TitleSlice, [], [], TitleSlice> = (
+//   set
+// ) => ({
+//   title: "",
+//   setTitle: (title: string) => set(() => ({ title })),
+// });

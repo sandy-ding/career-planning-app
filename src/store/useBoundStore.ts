@@ -1,6 +1,6 @@
-import { create } from "zustand";
-import { TitleSlice, createTitleSlice } from "./createTitleSlice";
+// import { create } from "zustand";
+// import { TitleSlice, createTitleSlice } from "./createTitleSlice";
 
-export const useBoundStore = create<TitleSlice>()((...a) => ({
-  ...createTitleSlice(...a),
-}));
+// export const useBoundStore = create<TitleSlice>()((...a) => ({
+//   ...createTitleSlice(...a),
+// }));
