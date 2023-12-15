@@ -23,7 +23,7 @@ type AuthHeaderProps = {
 export const getDataSource = () => {
   const token = getSessionToken();
   return {
-    endpoint: "http://localhost:4000/api/graphql",
+    endpoint: "http://121.41.169.130:4000/api/graphql",
     fetchParams: {
       headers: {
         "Content-Type": "application/json",
@@ -34,7 +34,7 @@ export const getDataSource = () => {
 };
 
 export const gqlClient = new GraphQLClient(
-  "http://localhost:4000/api/graphql",
+  "http://121.41.169.130:4000/api/graphql",
   {
     headers: () => {
       const authHeaders = {} as AuthHeaderProps;
