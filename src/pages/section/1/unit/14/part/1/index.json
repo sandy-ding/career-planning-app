@@ -5,6 +5,7 @@
     "category2": "（一）图片转换为对应文字",
     "menuId": "1",
     "label": "1. 长方形",
+    "className": "w-[300px]",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q198.png",
     "answer": "T"
   },

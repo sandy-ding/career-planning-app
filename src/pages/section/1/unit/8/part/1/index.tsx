@@ -127,7 +127,7 @@ export default function Idex() {
         <>
           <Progress
             currentIndex={0}
-            currentPercent={testNo / lights.length}
+            currentPercent={stage === Stage.Test ? 0 : testNo / lights.length}
             titles={["辨别反应时", "简单反应时", "匹配反应时"]}
           />
           {stage !== Stage.End ? (
@@ -138,13 +138,12 @@ export default function Idex() {
                   autoComplete="off"
                   layout="vertical"
                   requiredMark={false}
-                  className="flex flex-col justify-between h-full"
+                  className="flex flex-col justify-between h-96"
                 >
                   <Form.Item
                     label={
-                      <label className="contents">
-                        {stage === Stage.Test && "练习题: "}
-                        如果红灯亮起，请按F键；如果绿灯亮起，请按J键。
+                      <label className="w-full text-center">
+                        {stage === Stage.Test && "练习题"}
                       </label>
                     }
                     help={
@@ -180,13 +179,13 @@ export default function Idex() {
                             ...(showLight === Light.Red && {
                               left: "-208px",
                               background: "#ff002a",
-                              boxShadow: "0px 0px 25px 18px #ff002a",
+                              boxShadow: "0px 0px 30px 30px #ff002a",
                             }),
 
                             ...(showLight === Light.Green && {
                               left: "-98px",
                               background: "#00ff44",
-                              boxShadow: "0px 0px 20px 20px #00ff44",
+                              boxShadow: "0px 0px 23px 23px #00ff44",
                             }),
                           }}
                         />
@@ -194,6 +193,11 @@ export default function Idex() {
                     )}
                   </Form.Item>
                 </Form>
+                {stage !== Stage.Mid && (
+                  <div className="w-full pt-10 text-primary-700 text-center text-[22px]">
+                    如果红灯亮起，请按“F”键；如果绿灯亮起，请按“J”键。
+                  </div>
+                )}
               </div>
             </div>
           ) : (

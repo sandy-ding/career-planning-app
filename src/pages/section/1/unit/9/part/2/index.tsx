@@ -34,7 +34,7 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "目标比较",
   description:
-    "这是自然观察能力测验的第二段。<br/>接下来电脑屏幕上会呈现出两幅图片，请你尽可能地在图片中找出10处不同之处，并用鼠标点击图片对应处。请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br/>现在，请开始测验。",
+    "这是自然观察能力测验的第二段。<br/>接下来电脑屏幕上会呈现出两幅图片，你可以通过鼠标点击两幅图片中的不同之处进行选择。一共有10处不同，请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br/>现在，请开始测验。",
 };
 
 const countdownDuration = 1000 * 60 * 10;
@@ -43,6 +43,7 @@ export default function Idex() {
   const router = useRouter();
   const [stage, setStage] = useState(Stage.Intro);
   const [time, setTime] = useState(0);
+  const [showBtn, setShowBtn] = useState(false);
 
   const questionId = `${partId}.${1}`;
   const [answer, setAnswer] = useState<string[]>([]);
@@ -75,6 +76,12 @@ export default function Idex() {
     });
     setStage(Stage.End);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowBtn(true);
+    }, 1000 * 10);
+  }, []);
 
   const onClick = (
     area: any,
@@ -149,7 +156,7 @@ export default function Idex() {
                 >
                   <Form.Item
                     label={
-                      <label className="contents">
+                      <label className="w-full text-center">
                         请你尽可能多的在图片中找出题目要求的各个目标物。
                       </label>
                     }
@@ -164,8 +171,9 @@ export default function Idex() {
                           spotDifference
                         />
                       </div>
-                      <div className="flex flex-col items-center">
-                        {answer.length === areas.length / 2 ? (
+                      <div className="flex flex-col items-center text-primary-700 mt-4">
+                        剩余{areas.length / 2 - answer.length}个目标物
+                        {showBtn && (
                           <Button
                             size="large"
                             shape="round"
@@ -174,8 +182,6 @@ export default function Idex() {
                           >
                             提交
                           </Button>
-                        ) : (
-                          `剩余${areas.length / 2 - answer.length}个目标物`
                         )}
                       </div>
                     </div>

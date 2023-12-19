@@ -186,13 +186,13 @@ export default function Index() {
                   autoComplete="off"
                   layout="vertical"
                   requiredMark={false}
-                  className="flex flex-col justify-between h-full"
+                  className="flex flex-col justify-between h-96"
                 >
                   <Form.Item
                     label={
-                      <label className="contents">
+                      <label className="w-full text-center">
                         {stage === Stage.Test && "练习题: "}
-                        请尽快判断字的颜色。颜色与字词含义一致按“F”键，不一致按“J”键。
+                        请尽快判断字的颜色。
                       </label>
                     }
                     help={
@@ -241,6 +241,11 @@ export default function Index() {
                     )}
                   </Form.Item>
                 </Form>
+                {stage !== Stage.Mid && (
+                  <div className="w-full pt-10 text-primary-700 text-center text-[22px]">
+                    颜色与字词含义一致按 F 键，不一致按 J 键。
+                  </div>
+                )}
               </div>
             </div>
           ) : (

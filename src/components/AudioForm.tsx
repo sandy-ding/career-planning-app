@@ -11,9 +11,10 @@ import { Question } from "@/types";
 interface IProps {
   question: Question;
   onFinish: (values: { [k: string]: string }) => void;
+  onRadioEnd: () => void;
 }
 
-export default function AudioForm({ question, onFinish }: IProps) {
+export default function AudioForm({ question, onFinish, onRadioEnd }: IProps) {
   const router = useRouter();
   const { _id: questionId, type, answer } = question;
   const [otp, setOtp] = useState("");
@@ -44,19 +45,6 @@ export default function AudioForm({ question, onFinish }: IProps) {
     },
   });
 
-  // const onFinish = (values: { [k: string]: string }) => {
-  //   if (goNext) {
-  //     router.push(`${Number(questionId) + 1}`);
-  //   } else {
-  //     mutate({
-  //       input: {
-  //         questionId,
-  //         answer: values[questionId],
-  //       },
-  //     });
-  //   }
-  // };
-
   return (
     <Form
       name="basic"
@@ -71,7 +59,7 @@ export default function AudioForm({ question, onFinish }: IProps) {
         label={
           <label className="contents">
             {questionId}. {question.label}
-            <AudioPlayer fileUrl={question.fileUrl!} />
+            <AudioPlayer fileUrl={question.fileUrl!} onEnd={onRadioEnd} />
           </label>
         }
         name={questionId}

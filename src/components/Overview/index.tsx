@@ -20,18 +20,18 @@ export default function Overview({
 }: IProps) {
   return (
     <div className="h-screen bg-primary-200">
-      <div className="flex p-20">
+      <div className="flex pt-5">
         <div className="w-4/5 min-w-[500px] mx-auto">
           <div className="text-center">
-            {title && <Title level={3}>{title}</Title>}
-            <div className="bg-white border p-10 my-14 text-left leading-normal rounded-lg text-primary-700 text-lg">
+            {title && <Title level={4}>{title}</Title>}
+            <div className="bg-white border p-10 my-14 text-left leading-normal rounded-lg text-primary-700 text-2xl">
               <ReactMarkdown rehypePlugins={[rehypeRaw as any]}>
                 {description}
               </ReactMarkdown>
             </div>
             <div className="text-center">
               <Button onClick={onClick} size="large" shape="round">
-                {btnText || "开始"}
+                {btnText || "开始测试"}
               </Button>
             </div>
           </div>

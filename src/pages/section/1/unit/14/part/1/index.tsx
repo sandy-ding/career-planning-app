@@ -92,15 +92,19 @@ export default function Idex() {
                   className="flex flex-col justify-between h-full"
                 >
                   <Form.Item
-                    label={<label className="contents">{question.label}</label>}
+                    label={
+                      <label className="w-full text-center">
+                        {question.label}
+                      </label>
+                    }
                   >
                     <div className="flex justify-center items-center mt-20">
                       <img
-                        className="max-w-full max-h-96 object-scale-down"
+                        className="max-w-full max-h-96 object-scale-down w-[400px]"
                         src={question.fileUrl}
                       />
                     </div>
-                    <div className="text-center">
+                    <div className="text-center text-primary-700 mt-4">
                       如果一致请按 F 键，如果不一致请按 J 键。
                     </div>
                   </Form.Item>

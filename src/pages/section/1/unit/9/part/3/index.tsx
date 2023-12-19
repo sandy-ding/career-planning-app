@@ -4,7 +4,7 @@ import {
   useSubmitAnswerMutation,
 } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Header from "@/components/Layout/Header";
 import Progress from "@/components/Progress";
@@ -99,6 +99,9 @@ export default function Index() {
       setTime(Date.now());
       setCountdown(Date.now() + countdownDuration);
     }, 5000);
+    setTimeout(() => {
+      setShowButton(true);
+    }, 1000 * 15);
   };
 
   const onStart = async () => {
@@ -177,7 +180,7 @@ export default function Index() {
                 >
                   <Form.Item
                     label={
-                      <label className="contents">
+                      <label className="w-full text-center mb-4">
                         {isTest ? "练习题: " : `${questionNo}．`}
                         请你尽可能快地将图片复原。
                       </label>
@@ -200,7 +203,7 @@ export default function Index() {
                               width={400}
                               height={400}
                               pieces={questionNo === 3 ? 4 : 3}
-                              onComplete={() => setShowButton(true)}
+                              // onComplete={() => setShowButton(true)}
                               onDrop={setAnswer}
                             />
                             {showButton && (
@@ -210,7 +213,7 @@ export default function Index() {
                                 className="mt-4"
                                 onClick={onSubmit}
                               >
-                                {isTest ? "开始测试" : "提交"}
+                                提交
                               </Button>
                             )}
                           </div>

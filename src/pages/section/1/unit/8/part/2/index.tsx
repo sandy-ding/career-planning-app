@@ -114,7 +114,7 @@ export default function Idex() {
         <>
           <Progress
             currentIndex={partNo - 1}
-            currentPercent={testNo / count}
+            currentPercent={stage === Stage.Test ? 0 : testNo / count}
             titles={["辨别反应时", "简单反应时", "匹配反应时"]}
           />
           {stage !== Stage.End ? (
@@ -125,13 +125,12 @@ export default function Idex() {
                   autoComplete="off"
                   layout="vertical"
                   requiredMark={false}
-                  className="flex flex-col justify-between h-full"
+                  className="flex flex-col justify-between"
                 >
                   <Form.Item
                     label={
                       <label className="contents">
-                        {stage === Stage.Test && "练习题: "}
-                        请在灯泡亮起时尽可能快地按下G键。
+                        {stage === Stage.Test && "练习题"}
                       </label>
                     }
                     help={
@@ -178,6 +177,11 @@ export default function Idex() {
                     )}
                   </Form.Item>
                 </Form>
+                {stage !== Stage.Mid && (
+                  <div className="w-full pt-10 text-primary-700 text-center text-[22px]">
+                    请在灯泡亮起时尽可能快地按下G键。
+                  </div>
+                )}
               </div>
             </div>
           ) : (

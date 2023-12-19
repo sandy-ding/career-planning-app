@@ -197,7 +197,7 @@
     "category2": "（二）文字转换为对应图片",
     "menuId": "2",
     "type": "Radio",
-    "label": "9. 三角形在圆形的左边",
+    "label": "9. 三角形不在长方形的右边，也不在菱形的左边",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q216.png",
     "options": [
       {

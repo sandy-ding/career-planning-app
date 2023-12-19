@@ -181,29 +181,33 @@ export default function Index() {
                 {isLoading ? (
                   <Loading />
                 ) : (
-                  <div className="flex justify-around gap-8">
-                    {partNo === 1 ? (
-                      <div>
-                        根据下表，回答1—5题。
-                        <img
-                          src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q103.png"
-                          className="block w-96 mt-4"
-                        />
-                      </div>
-                    ) : (
-                      <div>
-                        根据下表，回答6—10题。
-                        <img
-                          src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q108.png"
-                          className="block w-96 mt-4"
-                        />
-                      </div>
-                    )}
-                    <RadioForm
-                      name={questionId}
-                      question={questions[partIndex][questionIndex]}
-                      onChange={onChange}
-                    />
+                  <div className="flex justify-around gap-4">
+                    <div className="basis-1/2">
+                      {partNo === 1 ? (
+                        <div>
+                          根据下表，回答1—5题。
+                          <img
+                            src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q103.png"
+                            className="block w-full mt-4"
+                          />
+                        </div>
+                      ) : (
+                        <div>
+                          根据下表，回答6—10题。
+                          <img
+                            src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q108.png"
+                            className="block w-full mt-4"
+                          />
+                        </div>
+                      )}
+                    </div>
+                    <div className="basis-1/2">
+                      <RadioForm
+                        name={questionId}
+                        question={questions[partIndex][questionIndex]}
+                        onChange={onChange}
+                      />
+                    </div>
                   </div>
                 )}
               </div>

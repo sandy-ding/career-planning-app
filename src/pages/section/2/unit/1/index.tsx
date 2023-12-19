@@ -9,6 +9,7 @@ import Progress from "@/components/Progress";
 import { Stage } from "@/types";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
+import Encouragement from "@/components/Encouragement";
 
 const sectionNo = 2;
 const overview = {
@@ -37,7 +38,11 @@ export default function Index() {
         answer: value,
       },
     });
-    goNext();
+    if (questionNo % 25 === 0) {
+      setStage(Stage.Encouragement);
+    } else {
+      goNext();
+    }
   };
 
   const goNext = () => {
@@ -63,7 +68,16 @@ export default function Index() {
             currentPercent={questionIndex / questions.length}
             titles={[""]}
           />
-          {stage === Stage.Question ? (
+          {stage === Stage.Encouragement && (
+            <Encouragement
+              index={questionNo / 25 - 1}
+              onClick={() => {
+                setStage(Stage.Question);
+                goNext();
+              }}
+            />
+          )}
+          {stage === Stage.Question && (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
                 <RadioForm
@@ -99,9 +113,8 @@ export default function Index() {
                 />
               </div>
             </div>
-          ) : (
-            <UnitEnd goNext={onEnd} />
           )}
+          {stage === Stage.End && <UnitEnd goNext={onEnd} />}
         </>
       )}
     </div>

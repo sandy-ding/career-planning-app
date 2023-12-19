@@ -1,5 +1,6 @@
 import { Question } from "@/types";
 import { Form, Radio, Space } from "antd";
+import classNames from "classnames";
 import { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -7,6 +8,7 @@ import rehypeRaw from "rehype-raw";
 interface IProps {
   question: Question;
   name: string;
+  className?: string;
   defaultValue?: string | undefined | null;
   isHorizontal?: boolean;
   onFinish?: (values: { [k: string]: string }) => void;
@@ -16,6 +18,7 @@ interface IProps {
 export default function RadioForm({
   name,
   question,
+  className,
   onChange,
   defaultValue,
   isHorizontal,
@@ -34,13 +37,16 @@ export default function RadioForm({
     >
       <Form.Item
         label={
-          <div className="flex flex-col justify-center w-full">
+          <div className="flex flex-col justify-center items-center w-full border px-4">
             <ReactMarkdown rehypePlugins={[rehypeRaw as any]}>
               {`${question.label}</br>${question?.description || ""}`}
             </ReactMarkdown>
             {question.fileUrl && (
               <img
-                className="max-w-full max-h-96 object-scale-down"
+                className={classNames(
+                  "max-w-full max-h-96 object-scale-down",
+                  className
+                )}
                 src={question.fileUrl}
               />
             )}

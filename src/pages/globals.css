@@ -45,3 +45,11 @@ body {
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
+
+.ant-form-item-label > label {
+  width: 100%;
+}
+
+.ant-form-item-label > label::after {
+  display: none !important;
+}

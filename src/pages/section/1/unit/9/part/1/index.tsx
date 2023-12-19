@@ -45,6 +45,7 @@ export default function Idex() {
   const router = useRouter();
   const [stage, setStage] = useState(Stage.Intro);
   const [time, setTime] = useState(0);
+  const [showBtn, setShowBtn] = useState(false);
 
   const questionId = `${partId}.${1}`;
   const [index, setIndex] = useState<number>();
@@ -65,6 +66,12 @@ export default function Idex() {
       },
     }
   );
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowBtn(true);
+    }, 1000 * 10);
+  }, []);
 
   const { mutate, mutateAsync } = useSubmitAnswerMutation(dataSource);
 
@@ -149,7 +156,7 @@ export default function Idex() {
                 >
                   <Form.Item
                     label={
-                      <label className="contents">
+                      <label className="w-full text-center">
                         请你尽可能多的在图片中找出题目要求的各个目标物。
                       </label>
                     }
@@ -163,13 +170,12 @@ export default function Idex() {
                           stayMultiHighlighted
                         />
                       </div>
-                      <div className="flex flex-col items-center">
-                        {answer.length === areas.length ? (
+                      <div className="flex flex-col gap-4 items-center text-primary-700  mt-4">
+                        剩余{areas.length - answer.length}个目标物
+                        {showBtn && (
                           <Button size="large" shape="round" onClick={onSubmit}>
                             提交
                           </Button>
-                        ) : (
-                          `剩余${areas.length - answer.length}个目标物`
                         )}
                       </div>
                     </div>

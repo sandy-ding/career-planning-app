@@ -14,6 +14,7 @@ export enum Stage {
   Part3,
   Main,
   PartIntro,
+  Encouragement,
 }
 
 export interface Question {
@@ -22,6 +23,7 @@ export interface Question {
   description?: string;
   answer?: string;
   type?: string;
+  className?: string;
   isTest?: boolean;
   fileUrl?: string;
   options: { value: string; label: string }[];

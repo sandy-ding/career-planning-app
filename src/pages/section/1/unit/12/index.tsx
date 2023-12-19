@@ -159,6 +159,7 @@ export default function Index() {
                     name={questionId}
                     question={questions[partIndex][questionIndex]}
                     onChange={onChange}
+                    className={questions[partIndex][questionIndex]?.className}
                   />
                 )}
               </div>

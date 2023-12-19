@@ -31,6 +31,7 @@ export default function Idex() {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [numOfSubmission, setNumOfSubmission] = useState(0);
   const [goNext, setGoNext] = useState(false);
+  const [showInput, setShowInput] = useState(false);
 
   const [time, setTime] = useState(0);
   const [otp, setOtp] = useState("");
@@ -45,6 +46,7 @@ export default function Idex() {
   const onFinish = async () => {
     const currentTime = Date.now();
     if (goNext) {
+      setShowInput(false);
       setGoNext(false);
       setHelp("");
       setQuestionIndex(questionIndex + 1);
@@ -84,6 +86,7 @@ export default function Idex() {
         if (questionIndex < 13) {
           setQuestionIndex(13);
           setHelp("");
+          setOtp("");
         } else {
           setStage(Stage.End);
         }
@@ -136,7 +139,10 @@ export default function Idex() {
                         <div>{question.isTest && "练习题 "}</div>
                         <label className="contents">
                           {question.label}
-                          <AudioPlayer fileUrl={question.fileUrl!} />
+                          <AudioPlayer
+                            fileUrl={question.fileUrl!}
+                            onEnd={() => setShowInput(true)}
+                          />
                         </label>
                       </div>
                     }
@@ -145,27 +151,28 @@ export default function Idex() {
                     help={<div className="flex justify-center">{help}</div>}
                     validateStatus={validateStatus}
                   >
-                    <div className="flex justify-center">
-                      <OtpInput
-                        containerStyle={{ marginTop: "100px" }}
-                        value={otp}
-                        onChange={(otp: string) => {
-                          setOtp(otp);
-                          if (help) {
-                            setHelp("");
-                            setValidateStatus("success");
-                          }
-                        }}
-                        numInputs={question.answer.length}
-                        // containerStyle={{ width: "100%", justifyContent: "center" }}
-                        renderInput={(props) => (
-                          <input
-                            {...props}
-                            className="!w-20 h-20 m-4 text-3xl border-2 border-black"
-                          />
-                        )}
-                      />
-                    </div>
+                    {showInput && (
+                      <div className="flex justify-center">
+                        <OtpInput
+                          containerStyle={{ marginTop: "100px" }}
+                          value={otp}
+                          onChange={(otp: string) => {
+                            setOtp(otp);
+                            if (help) {
+                              setHelp("");
+                              setValidateStatus("success");
+                            }
+                          }}
+                          numInputs={question.answer.length}
+                          renderInput={(props) => (
+                            <input
+                              {...props}
+                              className="!w-20 h-20 m-4 text-3xl border-2 border-black"
+                            />
+                          )}
+                        />
+                      </div>
+                    )}
                   </Form.Item>
 
                   <Form.Item className="flex justify-center">
@@ -173,7 +180,7 @@ export default function Idex() {
                       htmlType="submit"
                       size="large"
                       shape="round"
-                      disabled={!otp}
+                      disabled={!otp || otp.length !== question.answer.length}
                     >
                       {goNext ? "下一题" : "提交"}
                     </Button>

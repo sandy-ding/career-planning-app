@@ -74,7 +74,6 @@ export default function Index() {
           {stage === Stage.Question ? (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
-                <div>请你找出哪两个图形与左边的标准图形一样。</div>
                 <CheckboxForm
                   name={questionId}
                   question={questions[questionIndex]}

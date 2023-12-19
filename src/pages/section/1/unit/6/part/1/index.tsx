@@ -9,6 +9,7 @@ import UnitEnd from "@/components/UnitEnd";
 import { Button, Form } from "antd";
 import { ValidateStatus } from "antd/es/form/FormItem";
 import { PlusOutlined } from "@ant-design/icons";
+import classNames from "classnames";
 
 const sectionNo = 1;
 const unitNo = 6;
@@ -154,7 +155,9 @@ export default function Idex() {
         <>
           <Progress
             currentIndex={0}
-            currentPercent={stage === Stage.End ? 1 : testNo / 78}
+            currentPercent={
+              stage === Stage.Test ? 0 : stage === Stage.End ? 1 : testNo / 78
+            }
             titles={["二维空间旋转", "三维空间旋转", "空间想象"]}
           />
           {stage !== Stage.End ? (
@@ -165,13 +168,13 @@ export default function Idex() {
                   autoComplete="off"
                   layout="vertical"
                   requiredMark={false}
-                  className="flex flex-col justify-between h-full"
+                  className="flex flex-col justify-between h-96"
                 >
                   <Form.Item
                     label={
-                      <label className="contents">
+                      <label className="w-full text-center">
                         {stage === Stage.Test && "练习题: "}
-                        请判断该字母是正向或或者反向。如果是正向，请按“F”键，如果是反向，请按“J”键。
+                        请判断该字母是正向或或者反向。
                       </label>
                     }
                     help={
@@ -193,34 +196,41 @@ export default function Idex() {
                         </Button>
                       </div>
                     ) : (
-                      <div className="flex justify-center items-center mt-40">
-                        {showCenter && (
-                          <PlusOutlined
-                            className="text-3xl flex justify-center items-center"
-                            style={{ width: "116px", height: "124px" }}
-                          />
-                        )}
-                        {showImage && (
-                          <img
-                            src="https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-6-1.png"
-                            style={{
-                              rotate: `${
-                                stage === Stage.Test
-                                  ? testAngles[testNo]
-                                  : angles[testNo]
-                              }deg`,
-                              transform: `scaleX(${
-                                stage === Stage.Test
-                                  ? testDirections[testNo]
-                                  : directions[testNo]
-                              })`,
-                            }}
-                          />
-                        )}
-                      </div>
+                      <>
+                        <div className="flex justify-center items-center mt-40">
+                          {showCenter && (
+                            <PlusOutlined
+                              className="text-3xl flex justify-center items-center"
+                              style={{ width: "116px", height: "124px" }}
+                            />
+                          )}
+                          {showImage && (
+                            <img
+                              src="https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-6-1.png"
+                              style={{
+                                rotate: `${
+                                  stage === Stage.Test
+                                    ? testAngles[testNo]
+                                    : angles[testNo]
+                                }deg`,
+                                transform: `scaleX(${
+                                  stage === Stage.Test
+                                    ? testDirections[testNo]
+                                    : directions[testNo]
+                                })`,
+                              }}
+                            />
+                          )}
+                        </div>
+                      </>
                     )}
                   </Form.Item>
                 </Form>
+                {stage !== Stage.Mid && (
+                  <div className="w-full text-primary-700 text-center text-[22px]">
+                    如果是正向，请按“F”键，如果是反向，请按“J”键。
+                  </div>
+                )}
               </div>
             </div>
           ) : (

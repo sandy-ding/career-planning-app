@@ -44,13 +44,13 @@ const questions = [
   },
   {
     label:
-      "ΠΔ \u00A0 \u00A0 μω \u00A0 \u00A0 ΦΓ \u00A0 \u00A0 τθ \u00A0 \u00A0 νo",
+      "ΠΔ \u00A0 \u00A0 ΦΓ \u00A0 \u00A0 νο \u00A0 \u00A0 μω \u00A0 \u00A0 τθ",
     question: [
-      ["φψ", "νo", "ρα", "Γγ", "υφ"],
+      ["φψ", "vo", "ρα", "Γγ", "υφ"],
       ["oν", "βτ", "ΠΔ", "σσ", "κγ"],
       ["μω", "ΦΓ", "ωε", "ΩΛ", "ιζ"],
-      ["ηψ", "ψφ", "χΠ", "τθ", "ζλ"],
-      ["σδ", "μη", "ζσ", "υφ", "νo"],
+      ["ηψ", "ψφ", "χΠ", "τθ", "ξλ"],
+      ["σδ", "μη", "ζσ", "υφ", "νο"],
     ],
     answer: "[[0,0,0,0,0],[0,0,1,0,0],[1,1,0,0,0],[0,0,0,1,0],[0,0,0,0,1]]",
   },
@@ -259,7 +259,7 @@ export default function Index() {
                 >
                   <Form.Item
                     label={
-                      <label className="contents" style={{ fontSize: "16px" }}>
+                      <label className="block w-full text-center">
                         {`${questionNo + 1}`}. {question.label}
                       </label>
                     }
@@ -268,7 +268,7 @@ export default function Index() {
                     }
                     validateStatus={validateStatus}
                   >
-                    <div className={classNames("flex justify-center mt-4")}>
+                    <div className={classNames("flex justify-center mt-8")}>
                       <div
                         className="border-1 border-black border-solid"
                         style={{ fontSize: "24px", border: "1px solid black" }}

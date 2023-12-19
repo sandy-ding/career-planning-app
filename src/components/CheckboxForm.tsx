@@ -34,11 +34,13 @@ export default function CheckboxForm({
     >
       <Form.Item
         label={
-          <div className="flex flex-col justify-center w-full text-black">
+          <div className="flex flex-col justify-center w-full text-black border px-4 text-primary-700">
             <ReactMarkdown rehypePlugins={[rehypeRaw as any]}>
               {`${question.label}</br>${question?.description || ""}`}
             </ReactMarkdown>
-            {question.fileUrl && <img src={question.fileUrl} />}
+            {question.fileUrl && (
+              <img src={question.fileUrl} className="w-full" />
+            )}
           </div>
         }
         name={name}
@@ -51,7 +53,11 @@ export default function CheckboxForm({
             className="mt-5 w-full flex-wrap"
           >
             {question?.options?.map(({ value, label }) => (
-              <Checkbox key={value} value={value} className="border w-full p-4">
+              <Checkbox
+                key={value}
+                value={value}
+                className="border w-full p-4 text-primary-700"
+              >
                 {!hasImage && `${value}．`}
                 {label}
               </Checkbox>

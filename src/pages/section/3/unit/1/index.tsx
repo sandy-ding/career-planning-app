@@ -10,6 +10,7 @@ import { Stage } from "@/types";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 import QuizEnd from "@/components/QuizEnd";
+import Encouragement from "@/components/Encouragement";
 
 const sectionNo = 3;
 const overview = {
@@ -51,7 +52,11 @@ export default function Index() {
         answer: value,
       },
     });
-    goNext();
+    if (questionNo % 25 === 0) {
+      setStage(Stage.Encouragement);
+    } else {
+      goNext();
+    }
   };
 
   const goNext = () => {
@@ -85,6 +90,15 @@ export default function Index() {
             currentIndex={partIndex}
             currentPercent={questionIndex / questions[partIndex].length}
             titles={["第一部分", "第二部分"]}
+          />
+        )}
+        {stage === Stage.Encouragement && (
+          <Encouragement
+            index={questionNo / 25 - 1}
+            onClick={() => {
+              setStage(Stage.Question);
+              goNext();
+            }}
           />
         )}
         {stage === Stage.PartIntro && partNo === 1 && (

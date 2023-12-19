@@ -69,10 +69,12 @@ export default function Index() {
             j === len - 1 && "border-r-2"
           )}
           onClick={() => {
-            const v = [...value];
-            v[i][j] = value[i][j] === 0 ? 1 : 0;
-            setValue(v);
-            if (help) setHelp("");
+            if (stage !== Stage.ShowQuestion) {
+              const v = [...value];
+              v[i][j] = value[i][j] === 0 ? 1 : 0;
+              setValue(v);
+              if (help) setHelp("");
+            }
           }}
         >
           {Boolean(value?.[i]?.[j]) && (
@@ -224,14 +226,19 @@ export default function Index() {
                       )}
                   </Form.Item>
 
-                  {(stage === Stage.AnswerQuestion ||
-                    stage === Stage.ShowCorrectAnswer) && (
-                    <Form.Item className="flex justify-center">
-                      <Button htmlType="submit" size="large" shape="round">
-                        {goNext ? "下一题" : "提交"}
-                      </Button>
-                    </Form.Item>
-                  )}
+                  <Form.Item className="flex justify-center">
+                    <Button
+                      htmlType="submit"
+                      size="large"
+                      shape="round"
+                      disabled={
+                        stage !== Stage.AnswerQuestion &&
+                        stage !== Stage.ShowCorrectAnswer
+                      }
+                    >
+                      {goNext ? "下一题" : "提交"}
+                    </Button>
+                  </Form.Item>
                 </Form>
               </div>
             </div>
