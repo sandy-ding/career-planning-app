@@ -1,262 +1,242 @@
 [
-  [
-    {
-      "_id": "122",
-      "category1": "机械能力",
-      "category2": "（一）速度",
-      "menuId": "7.1",
-      "type": "Radio",
-      "label": "1．车正以向哪个方向加速？",
-      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-1.png",
-      "options": [
-        {
-          "value": "A",
-          "label": "A. 朝A方向"
-        },
-        {
-          "value": "B",
-          "label": "B. 朝B方向"
-        },
-        {
-          "value": "C",
-          "label": "C. AB均不是"
-        }
-      ],
-      "answer": "A"
-    }
-  ],
-  [
-    {
-      "_id": "123",
-      "category1": "机械能力",
-      "category2": "（二）力和杠杆",
-      "menuId": "7.2",
-      "type": "Radio",
-      "label": "2．图中人物应该朝哪个方向移动身体以平衡跷跷板？",
-      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-2.png",
-      "options": [
-        {
-          "value": "A",
-          "label": "A. 朝A方向"
-        },
-        {
-          "value": "B",
-          "label": "B. 朝B方向"
-        },
-        {
-          "value": "C",
-          "label": "C. AB均不是"
-        }
-      ],
-      "answer": "B"
-    }
-  ],
-  [
-    {
-      "_id": "124",
-      "category1": "机械能力",
-      "category2": "（三）流体",
-      "menuId": "7.3",
-      "type": "Radio",
-      "label": "3．以下三个图中哪一个是正确的？（结合水位和红色处标记）",
-      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-3.png",
-      "options": [
-        {
-          "value": "A",
-          "label": "A. A正确"
-        },
-        {
-          "value": "B",
-          "label": "B. B正确"
-        },
-        {
-          "value": "C",
-          "label": "C. C正确"
-        }
-      ],
-      "answer": "A"
-    }
-  ],
-  [
-    {
-      "_id": "125",
-      "category1": "机械能力",
-      "category2": "（四）滑轮",
-      "menuId": "7.4",
-      "type": "Radio",
-      "label": "4．哪一图中的人物会更费力一些？",
-      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-4.png",
-      "options": [
-        {
-          "value": "A",
-          "label": "A. A图中的人物"
-        },
-        {
-          "value": "B",
-          "label": "B. B图中的人物"
-        },
-        {
-          "value": "C",
-          "label": "C. AB中两人用力相等"
-        }
-      ],
-      "answer": "C"
-    }
-  ],
-  [
-    {
-      "_id": "126",
-      "category1": "机械能力",
-      "category2": "（五）热力学（热）",
-      "menuId": "7.5",
-      "type": "Radio",
-      "label": "5．如果封闭的氧气罐被加热，压力表将向哪个方向移动？",
-      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-5.png",
-      "options": [
-        {
-          "value": "A",
-          "label": "A. 朝A方向"
-        },
-        {
-          "value": "B",
-          "label": "B. 朝B方向"
-        },
-        {
-          "value": "C",
-          "label": "C. AB均不是"
-        }
-      ],
-      "answer": "A"
-    }
-  ],
-  [
-    {
-      "_id": "127",
-      "category1": "机械能力",
-      "category2": "（六）电力",
-      "menuId": "7.6",
-      "type": "Radio",
-      "label": "6．如果红色开关关闭，哪个灯泡会亮起？",
-      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-6.png",
-      "options": [
-        {
-          "value": "A",
-          "label": "A. A灯泡亮"
-        },
-        {
-          "value": "B",
-          "label": "B. B灯泡亮"
-        },
-        {
-          "value": "C",
-          "label": "C. AB两灯泡都亮"
-        }
-      ],
-      "answer": "C"
-    }
-  ],
-  [
-    {
-      "_id": "128",
-      "category1": "机械能力",
-      "category2": "（七）齿轮",
-      "menuId": "7.7",
-      "type": "Radio",
-      "label": "7．灰色齿轮朝哪个方向转动？",
-      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-7.png",
-      "options": [
-        {
-          "value": "A",
-          "label": "A. 朝A方向"
-        },
-        {
-          "value": "B",
-          "label": "B. 朝B方向"
-        },
-        {
-          "value": "C",
-          "label": "C. AB均不是"
-        }
-      ],
-      "answer": "A"
-    }
-  ],
-  [
-    {
-      "_id": "129",
-      "category1": "机械能力",
-      "category2": "（八）车轮",
-      "menuId": "7.8",
-      "type": "Radio",
-      "label": "8．车轮会朝哪个方向旋转？",
-      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-8.png",
-      "options": [
-        {
-          "value": "A",
-          "label": "A. 朝A方向"
-        },
-        {
-          "value": "B",
-          "label": "B. 朝B方向"
-        },
-        {
-          "value": "C",
-          "label": "C. AB均不是"
-        }
-      ],
-      "answer": "B"
-    }
-  ],
-  [
-    {
-      "_id": "130",
-      "category1": "机械能力",
-      "category2": "（九）声学",
-      "menuId": "7.9",
-      "type": "Radio",
-      "label": "9．男人听到的哪个警笛声声音更大？",
-      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-9.png",
-      "options": [
-        {
-          "value": "A",
-          "label": "A. 警笛A"
-        },
-        {
-          "value": "B",
-          "label": "B. 警笛B"
-        },
-        {
-          "value": "C",
-          "label": "C. 两个警笛声音一样大"
-        }
-      ],
-      "answer": "B"
-    }
-  ],
-  [
-    {
-      "_id": "131",
-      "category1": "机械能力",
-      "category2": "（十）光学",
-      "menuId": "7.10",
-      "type": "Radio",
-      "label": "10．男人看到镜子中自己的形象是什么样子的？",
-      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-10.png",
-      "options": [
-        {
-          "value": "A",
-          "label": "A. 形象A"
-        },
-        {
-          "value": "B",
-          "label": "B. 形象B"
-        },
-        {
-          "value": "C",
-          "label": "C. 两者均不是"
-        }
-      ],
-      "answer": "A"
-    }
-  ]
+  {
+    "_id": "122",
+    "category1": "机械能力",
+    "category2": "（一）速度",
+    "menuId": "7.1",
+    "type": "Radio",
+    "label": "1．车正以向哪个方向加速？",
+    "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-1.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 朝A方向"
+      },
+      {
+        "value": "B",
+        "label": "B. 朝B方向"
+      },
+      {
+        "value": "C",
+        "label": "C. AB均不是"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "123",
+    "category1": "机械能力",
+    "category2": "（二）力和杠杆",
+    "menuId": "7.2",
+    "type": "Radio",
+    "label": "2．图中人物应该朝哪个方向移动身体以平衡跷跷板？",
+    "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-2.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 朝A方向"
+      },
+      {
+        "value": "B",
+        "label": "B. 朝B方向"
+      },
+      {
+        "value": "C",
+        "label": "C. AB均不是"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "124",
+    "category1": "机械能力",
+    "category2": "（三）流体",
+    "menuId": "7.3",
+    "type": "Radio",
+    "label": "3．以下三个图中哪一个是正确的？（结合水位和红色处标记）",
+    "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-3.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. A正确"
+      },
+      {
+        "value": "B",
+        "label": "B. B正确"
+      },
+      {
+        "value": "C",
+        "label": "C. C正确"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "125",
+    "category1": "机械能力",
+    "category2": "（四）滑轮",
+    "menuId": "7.4",
+    "type": "Radio",
+    "label": "4．哪一图中的人物会更费力一些？",
+    "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-4.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. A图中的人物"
+      },
+      {
+        "value": "B",
+        "label": "B. B图中的人物"
+      },
+      {
+        "value": "C",
+        "label": "C. AB中两人用力相等"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "126",
+    "category1": "机械能力",
+    "category2": "（五）热力学（热）",
+    "menuId": "7.5",
+    "type": "Radio",
+    "label": "5．如果封闭的氧气罐被加热，压力表将向哪个方向移动？",
+    "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-5.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 朝A方向"
+      },
+      {
+        "value": "B",
+        "label": "B. 朝B方向"
+      },
+      {
+        "value": "C",
+        "label": "C. AB均不是"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "127",
+    "category1": "机械能力",
+    "category2": "（六）电力",
+    "menuId": "7.6",
+    "type": "Radio",
+    "label": "6．如果红色开关关闭，哪个灯泡会亮起？",
+    "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-6.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. A灯泡亮"
+      },
+      {
+        "value": "B",
+        "label": "B. B灯泡亮"
+      },
+      {
+        "value": "C",
+        "label": "C. AB两灯泡都亮"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "_id": "128",
+    "category1": "机械能力",
+    "category2": "（七）齿轮",
+    "menuId": "7.7",
+    "type": "Radio",
+    "label": "7．灰色齿轮朝哪个方向转动？",
+    "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-7.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 朝A方向"
+      },
+      {
+        "value": "B",
+        "label": "B. 朝B方向"
+      },
+      {
+        "value": "C",
+        "label": "C. AB均不是"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "_id": "129",
+    "category1": "机械能力",
+    "category2": "（八）车轮",
+    "menuId": "7.8",
+    "type": "Radio",
+    "label": "8．车轮会朝哪个方向旋转？",
+    "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-8.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 朝A方向"
+      },
+      {
+        "value": "B",
+        "label": "B. 朝B方向"
+      },
+      {
+        "value": "C",
+        "label": "C. AB均不是"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "130",
+    "category1": "机械能力",
+    "category2": "（九）声学",
+    "menuId": "7.9",
+    "type": "Radio",
+    "label": "9．男人听到的哪个警笛声声音更大？",
+    "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-9.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 警笛A"
+      },
+      {
+        "value": "B",
+        "label": "B. 警笛B"
+      },
+      {
+        "value": "C",
+        "label": "C. 两个警笛声音一样大"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "_id": "131",
+    "category1": "机械能力",
+    "category2": "（十）光学",
+    "menuId": "7.10",
+    "type": "Radio",
+    "label": "10．男人看到镜子中自己的形象是什么样子的？",
+    "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-7-10.png",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. 形象A"
+      },
+      {
+        "value": "B",
+        "label": "B. 形象B"
+      },
+      {
+        "value": "C",
+        "label": "C. 两者均不是"
+      }
+    ],
+    "answer": "A"
+  }
 ]

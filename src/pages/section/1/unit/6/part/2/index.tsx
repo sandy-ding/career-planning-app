@@ -18,7 +18,8 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "三维空间旋转",
   description:
-    "下面每道题的最左边有一个标准图形，右边的 4 个图形中总有两个与左边的标准图形是一样的(只是呈现的角度不同)，请你找出哪两个图形与左边的标准图形一样。",
+    "<strong>指导语</strong>：下面每道题的最左边有一个标准图形，右边的 4 个图形中总有两个与左边的标准图形是一样的(只是呈现的角度不同)，请你找出哪两个图形与左边的标准图形一样。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-6-2.mp3",
 };
 
 export default function Index() {
@@ -27,7 +28,6 @@ export default function Index() {
   const [questionNo, setQuestionNo] = useState(1);
   const [time, setTime] = useState(0);
 
-  const isQuestionStage = stage === Stage.Question;
   const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
   const questionId = `${partId}.${questionNo}`;
@@ -78,6 +78,7 @@ export default function Index() {
                   name={questionId}
                   question={questions[questionIndex]}
                   onFinish={onFinish}
+                  className="w-[250px]"
                 />
               </div>
             </div>

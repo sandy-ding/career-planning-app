@@ -19,7 +19,8 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "图片转换为对应文字",
   description:
-    "指导语：这是思维转换能力的第一段测验。<br /><br />你将在电脑界面上回答一系列问题，屏幕上只会呈现一道题。请你根据呈现的图片，尽可能快地判断图片与给出的语句是否一致。如果一致请按F键，如果不一致请按J键。<br /><br />现在，请开始测验。",
+    "<strong>指导语</strong>：这是思维转换能力的第一段测验。<br /><br />你将在电脑界面上回答一系列问题，屏幕上只会呈现一道题。请你根据呈现的图片，尽可能快地判断图片与给出的语句是否一致。如果一致请按“F”键，如果不一致请按“J”键。<br /><br />现在，请开始测验。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-14-1.mp3",
 };
 
 export default function Idex() {
@@ -105,7 +106,7 @@ export default function Idex() {
                       />
                     </div>
                     <div className="text-center text-primary-700 mt-4">
-                      如果一致请按 F 键，如果不一致请按 J 键。
+                      一致按“F”键；不一致按“J”键。
                     </div>
                   </Form.Item>
                 </Form>

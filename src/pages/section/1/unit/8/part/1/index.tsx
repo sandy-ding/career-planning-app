@@ -32,7 +32,8 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "辨别反应时",
   description:
-    "这是信息加工能力测验的第一段测验。<br /><br />接下来电脑界面上将呈现出红绿灯的图片，请你根据图片的指示尽可能快地做出按键反应。如果红灯亮起，请按F键；如果绿灯亮起，请按J键。<br /><br />现在，请先进行练习测验，练习完成后开始正式测验。",
+    "<strong>指导语</strong>：这是信息加工能力测验的第一段测验。<br /><br />接下来电脑界面上将呈现出红绿灯的图片，请你根据图片的指示尽可能快地做出按键反应。如果红灯亮起，请按“F”键；如果绿灯亮起，请按“J”键。<br /><br />现在，请先进行练习测验，练习完成后开始正式测验。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-8-1.mp3",
 };
 
 const testLights = [0, 1, 0, 0, 1, 0];
@@ -195,7 +196,7 @@ export default function Idex() {
                 </Form>
                 {stage !== Stage.Mid && (
                   <div className="w-full pt-10 text-primary-700 text-center text-[22px]">
-                    如果红灯亮起，请按“F”键；如果绿灯亮起，请按“J”键。
+                    红灯亮按“F”键；绿灯亮按“J”键。
                   </div>
                 )}
               </div>

@@ -9,7 +9,6 @@ import UnitEnd from "@/components/UnitEnd";
 import { Button, Form } from "antd";
 import { ValidateStatus } from "antd/es/form/FormItem";
 import { PlusOutlined } from "@ant-design/icons";
-import classNames from "classnames";
 
 const sectionNo = 1;
 const unitNo = 6;
@@ -20,7 +19,8 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "二维空间旋转",
   description:
-    "你将在屏幕正中央看到一个字母，请判断该字母是正向或或者反向。如果是正向，请按“F”键，如果是反向，请按“J”键。在判断正确的前提下，反应越快越好。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。下面点击“练习”，开始练习吧。",
+    "<strong>指导语</strong>：你将在屏幕正中央看到一个字母，请判断该字母是正向或或者反向。如果是正向，请按“F”键，如果是反向，请按“J”键。在判断正确的前提下，反应越快越好。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。下面点击“练习”，开始练习吧。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-6-1.mp3",
 };
 
 // const testAngles = shuffle([0, 1, 2, 3, 4, 5].map((i) => i * 60));
@@ -228,7 +228,7 @@ export default function Idex() {
                 </Form>
                 {stage !== Stage.Mid && (
                   <div className="w-full text-primary-700 text-center text-[22px]">
-                    如果是正向，请按“F”键，如果是反向，请按“J”键。
+                    正向按“F”键，反向按“J”键。
                   </div>
                 )}
               </div>

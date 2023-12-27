@@ -24,6 +24,7 @@ const overview = {
   title: "美术能力",
   description:
     "美术能力是指一个人在视觉艺术领域的技能和才能。美术能力不仅包括绘画和绘图的技能，还包括对颜色、形状、纹理等视觉元素的理解，以及能够用艺术媒介表达思想和情感的能力。<br/><br/>测试提示：美术能力测验通过线段的宽窄和实图大小2个部分来衡量，限时8分钟，共10题，答对一题得一分，答错不计分。接下来，开始测试。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-12.mp3",
 };
 const countdownDuration = 1000 * 60 * 8;
 
@@ -35,9 +36,7 @@ export default function Index() {
   const [time, setTime] = useState(Date.now());
   const [stage, setStage] = useState(Stage.Intro);
   const [questionNo, setQuestionNo] = useState(1);
-  const [countdown, setCountdown] = useState<number>(
-    Date.now() + countdownDuration
-  );
+  const [countdown, setCountdown] = useState<number>();
   const { mutateAsync: submitAnswer } = useSubmitAnswerMutation(dataSource);
 
   const isQuestionStage = stage === Stage.Question;
@@ -121,7 +120,7 @@ export default function Index() {
           {!isLoading &&
             (stage === Stage.End ? (
               <div className="leading-8 text-[28px]">
-                {getCountdown(countdown - Date.now())}
+                {getCountdown((countdown || 0) - Date.now())}
               </div>
             ) : (
               !!countdown && (
@@ -159,7 +158,7 @@ export default function Index() {
                     name={questionId}
                     question={questions[partIndex][questionIndex]}
                     onChange={onChange}
-                    className={questions[partIndex][questionIndex]?.className}
+                    className={"w-[350px]"}
                   />
                 )}
               </div>

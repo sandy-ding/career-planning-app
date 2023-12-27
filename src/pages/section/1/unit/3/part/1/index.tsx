@@ -22,10 +22,11 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "数字广度测验",
   description:
-    "下面开始数字广度测验。你将听到我说出一串数字，你只需按要求把听到的数字输入到屏幕中。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。注意若连错3次测验即停止，以最后一次答对数字串所包含的数字个数为最终得分。下面点击“练习”，开始练习吧。",
+    "<strong>指导语</strong>：下面开始数字广度测验。你将听到我说出一串数字，你只需按要求把听到的数字输入到屏幕中。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。注意若连错3次测验即停止，以最后一次答对数字串所包含的数字个数为最终得分。下面点击“练习”，开始练习吧。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1.mp3",
 };
 
-export default function Idex() {
+export default function Index() {
   const router = useRouter();
   const [stage, setStage] = useState(Stage.Intro);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -49,9 +50,11 @@ export default function Idex() {
       setShowInput(false);
       setGoNext(false);
       setHelp("");
-      setQuestionIndex(questionIndex + 1);
-      setTime(currentTime);
       setOtp("");
+      setQuestionIndex(questionIndex + 1);
+      if (question.isTest && (questionIndex === 1 || questionIndex === 14)) {
+        setStage(Stage.Mid);
+      }
     } else if (question.isTest) {
       setGoNext(true);
       if (otp === question.answer) {
@@ -64,6 +67,7 @@ export default function Idex() {
     } else {
       setGoNext(false);
       if (otp === question.answer) {
+        setShowInput(false);
         setNumOfSubmission(0);
         setQuestionIndex(questionIndex + 1);
         mutate({
@@ -75,6 +79,7 @@ export default function Idex() {
         });
         setOtp("");
       } else if (numOfSubmission >= 2) {
+        setShowInput(false);
         setNumOfSubmission(0);
         mutate({
           input: {
@@ -99,11 +104,6 @@ export default function Idex() {
     }
   };
 
-  const onStart = async () => {
-    setStage(Stage.Main);
-    setTime(Date.now());
-  };
-
   const onEnd = async () => {
     router.push(`${partNo + 1}`);
   };
@@ -112,7 +112,11 @@ export default function Idex() {
     <div className="flex flex-col h-screen bg-primary-200">
       <Header title="工作记忆能力" />
       {stage === Stage.Intro ? (
-        <Overview {...overview} btnText="练习" onClick={onStart} />
+        <Overview
+          {...overview}
+          btnText="练习"
+          onClick={() => setStage(Stage.Main)}
+        />
       ) : (
         <>
           <Progress
@@ -122,7 +126,7 @@ export default function Idex() {
             }
             titles={["数字广度测验", "视觉矩阵测验"]}
           />
-          {stage === Stage.Main ? (
+          {stage === Stage.Main && (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
                 <Form
@@ -135,13 +139,16 @@ export default function Idex() {
                 >
                   <Form.Item
                     label={
-                      <div>
+                      <div className="w-full text-center">
                         <div>{question.isTest && "练习题 "}</div>
                         <label className="contents">
                           {question.label}
                           <AudioPlayer
                             fileUrl={question.fileUrl!}
-                            onEnd={() => setShowInput(true)}
+                            onEnd={() => {
+                              setShowInput(true);
+                              setTime(Date.now());
+                            }}
                           />
                         </label>
                       </div>
@@ -188,9 +195,16 @@ export default function Idex() {
                 </Form>
               </div>
             </div>
-          ) : (
-            <UnitEnd goNext={onEnd} />
           )}
+          {stage === Stage.Mid && (
+            <Overview
+              description="很好。点击“开始”，开启正式测验，注意若连错3次测验即停止，以最后一次答对数字串所包含的数字个数为最终得分。"
+              btnText="开始"
+              onClick={() => setStage(Stage.Main)}
+              audioUrl="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-M.mp3"
+            />
+          )}
+          {stage === Stage.End && <UnitEnd goNext={onEnd} />}
         </>
       )}
     </div>

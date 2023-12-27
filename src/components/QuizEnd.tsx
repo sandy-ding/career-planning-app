@@ -1,5 +1,3 @@
-import { Button } from "antd";
-
 interface IProps {
   goNext: () => void;
 }
@@ -11,11 +9,6 @@ export default function QuizEnd({ goNext }: IProps) {
         <img src="/fireworks.png" className="w-16 h-16" />
         <div className="grow">恭喜您完成了全部测试！！！</div>
         <img src="/fireworks.png" className="w-16 h-16" />
-      </div>
-      <div className="flex gap-4">
-        <Button size="large" onClick={goNext}>
-          查看结果
-        </Button>
       </div>
     </div>
   );

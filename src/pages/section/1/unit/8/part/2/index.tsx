@@ -33,7 +33,8 @@ const count = 15;
 const overview = {
   title: "简单反应时",
   description:
-    "这是信息加工能力测验的第二段测验。接下来电脑界面上将呈现一个灯泡，请在灯泡亮起时尽可能快地按下G键。现在，请先进行练习测验，练习完成后开始正式测验。",
+    "<strong>指导语</strong>：这是信息加工能力测验的第二段测验。<br /><br />接下来电脑界面上将呈现一个灯泡，请在灯泡亮起时尽可能快地按下“G”键。<br /><br />现在，请先进行练习测验，练习完成后开始正式测验。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-8-2.mp3",
 };
 
 export default function Idex() {
@@ -129,7 +130,7 @@ export default function Idex() {
                 >
                   <Form.Item
                     label={
-                      <label className="contents">
+                      <label className="w-full text-center">
                         {stage === Stage.Test && "练习题"}
                       </label>
                     }
@@ -179,7 +180,7 @@ export default function Idex() {
                 </Form>
                 {stage !== Stage.Mid && (
                   <div className="w-full pt-10 text-primary-700 text-center text-[22px]">
-                    请在灯泡亮起时尽可能快地按下G键。
+                    请在灯泡亮起时尽可能快地按下“G”键。
                   </div>
                 )}
               </div>

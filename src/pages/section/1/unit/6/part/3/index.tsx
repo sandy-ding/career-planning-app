@@ -7,7 +7,6 @@ import { getDataSource } from "@/graphql/queryClient";
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import questions from "./index.json";
-import RadioForm from "@/components/RadioForm";
 import Header from "@/components/Layout/Header";
 import Progress from "@/components/Progress";
 import { Stage } from "@/types";
@@ -16,6 +15,7 @@ import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 import Countdown from "antd/lib/statistic/Countdown";
 import { getCountdown } from "@/utils";
+import RadioImageForm from "@/components/RadioImageForm";
 
 const sectionNo = 1;
 const unitNo = 6;
@@ -25,7 +25,8 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "空间想象",
   description:
-    "您将在电脑界面上回答一系列问题，请尽量在8分钟内完成，8分钟后将直接进入下一段测验。现在，请按照界面上的指示进行作答。",
+    "<strong>指导语</strong>：您将在电脑界面上回答一系列问题，请尽量在8分钟内完成，8分钟后将直接进入下一段测验。现在，请按照界面上的指示进行作答。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-6-3.mp3",
 };
 const countdownDuration = 1000 * 60 * 8;
 
@@ -138,9 +139,9 @@ export default function Index() {
             titles={["二维空间旋转", "三维空间旋转", "空间想象"]}
           />
           {stage === Stage.Question ? (
-            <div className="grow flex gap-10 px-10 items-center bg-primary-200">
-              <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
-                <RadioForm
+            <div className="grow w-full flex gap-10 px-10 items-center bg-primary-200">
+              <div className="grow w-full h-[calc(100%-80px)] p-20 py-10 bg-white">
+                <RadioImageForm
                   name={questionId}
                   question={questions[questionIndex]}
                   onChange={onChange}

@@ -34,7 +34,8 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "目标比较",
   description:
-    "这是自然观察能力测验的第二段。<br/>接下来电脑屏幕上会呈现出两幅图片，你可以通过鼠标点击两幅图片中的不同之处进行选择。一共有10处不同，请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br/>现在，请开始测验。",
+    "<strong>指导语</strong>：这是自然观察能力测验的第二段。<br/><br/>接下来电脑屏幕上会呈现出两副图片，你可以通过鼠标点击两副图片中的不同之处进行选择，一共有10处不同，请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br/><br/>现在，请开始测验。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-9-2.mp3",
 };
 
 const countdownDuration = 1000 * 60 * 10;
@@ -112,6 +113,7 @@ export default function Idex() {
     setStage(Stage.Main);
   };
 
+  console.log({ stage });
   return (
     <div className="flex flex-col h-screen bg-primary-200">
       <Header title="自然观察能力">
@@ -141,7 +143,9 @@ export default function Idex() {
         <>
           <Progress
             currentIndex={partNo - 1}
-            currentPercent={answer.length / (areas.length / 2)}
+            currentPercent={
+              stage === Stage.End ? 1 : answer.length / (areas.length / 2)
+            }
             titles={["目标搜索", "目标比较", "目标拼图"]}
           />
           {stage !== Stage.End ? (
@@ -162,6 +166,9 @@ export default function Idex() {
                     }
                   >
                     <div>
+                      <div className="flex flex-col items-center my-2 text-primary-700">
+                        剩余{areas.length / 2 - answer.length}个目标物
+                      </div>
                       <div className="flex justify-center">
                         <ImageMapper
                           src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q138.png"
@@ -172,7 +179,6 @@ export default function Idex() {
                         />
                       </div>
                       <div className="flex flex-col items-center text-primary-700 mt-4">
-                        剩余{areas.length / 2 - answer.length}个目标物
                         {showBtn && (
                           <Button
                             size="large"

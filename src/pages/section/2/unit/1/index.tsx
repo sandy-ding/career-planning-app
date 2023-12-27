@@ -16,6 +16,7 @@ const overview = {
   title: "人格测验",
   description:
     "您好！本测验请根据自己的真实感受来填写以下问题，每道题目仅选择一个最佳选项，请根据自己的情况进行5点评分：1 非常不符合，2 不符合，3 一般，4 符合，5 非常符合。测验共144题，所有答案没有对错、好坏之分。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/2-1.mp3",
 };
 
 export default function Index() {
@@ -82,6 +83,7 @@ export default function Index() {
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
                 <RadioForm
                   isHorizontal
+                  isTextCenter
                   name={questionId}
                   question={{
                     _id: questionId,

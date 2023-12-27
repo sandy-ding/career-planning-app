@@ -7,7 +7,7 @@ import { getDataSource } from "@/graphql/queryClient";
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import questions from "./index.json";
-import RadioForm from "@/components/RadioForm";
+import RadioImageForm from "@/components/RadioImageForm";
 import Header from "@/components/Layout/Header";
 import Progress from "@/components/Progress";
 import { Stage } from "@/types";
@@ -16,6 +16,7 @@ import UnitEnd from "@/components/UnitEnd";
 import Countdown from "antd/lib/statistic/Countdown";
 import Loading from "@/components/Loading";
 import { getCountdown } from "@/utils";
+import RadioForm from "@/components/RadioForm";
 
 const sectionNo = 1;
 const unitNo = 2;
@@ -24,6 +25,7 @@ const overview = {
   title: "逻辑推理能力",
   description:
     "逻辑推理能力是指对各种事物关系的分析推理能力，涉及对图形和文字材料的理解、比较、演绎和归纳等，包括形象/具体推理（图形推理）和抽象推理（言语推理）两大类。<br/><br/>测试提示：逻辑推理测验共计20道单项选择题，每题只有一个最佳选项，答对一题得一分，答错不计分。请您<strong>尽快</strong>做出回答。下面开始测试。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-2.mp3",
 };
 const countdownDuration = 1000 * 60 * 30;
 
@@ -128,6 +130,7 @@ export default function Index() {
                   format="m:ss"
                   className="leading-8"
                   onFinish={onFinish}
+                  valueStyle={{ fontSize: "28px" }}
                 />
               )
             ))}
@@ -148,12 +151,21 @@ export default function Index() {
           {stage === Stage.Question ? (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
-                <RadioForm
-                  name={questionId}
-                  defaultValue={data?.answer?.answer}
-                  question={questions[partIndex][questionIndex]}
-                  onChange={onChange}
-                />
+                {partIndex === 0 ? (
+                  <RadioImageForm
+                    name={questionId}
+                    defaultValue={data?.answer?.answer}
+                    question={questions[partIndex][questionIndex]}
+                    onChange={onChange}
+                  />
+                ) : (
+                  <RadioForm
+                    name={questionId}
+                    defaultValue={data?.answer?.answer}
+                    question={questions[partIndex][questionIndex]}
+                    onChange={onChange}
+                  />
+                )}
               </div>
             </div>
           ) : (

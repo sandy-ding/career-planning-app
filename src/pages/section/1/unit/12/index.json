@@ -7,7 +7,6 @@
       "type": "Radio",
       "menuId": "12.1",
       "label": "1. 线段2是线段1的多少倍？",
-      "className": "w-[340px]",
       "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q154.png",
       "options": [
         {

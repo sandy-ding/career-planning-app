@@ -1,7 +1,7 @@
 import Entry from "@/components/Entry";
 
 const props = {
-  headerTitle: "人格测验",
+  headerTitle: "个性测评",
   title: "你了解自己的人格吗？",
   btnUrl: "/section/2/overview",
   className: "pt-0",

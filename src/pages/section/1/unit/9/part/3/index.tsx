@@ -4,7 +4,7 @@ import {
   useSubmitAnswerMutation,
 } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Header from "@/components/Layout/Header";
 import Progress from "@/components/Progress";
@@ -19,7 +19,8 @@ import Puzzle from "@/components/Puzzle/Puzzle";
 const overview = {
   title: "目标拼图",
   description:
-    "这是自然观察能力测验的第三段。<br/><br/>接下来电脑屏幕上会呈现出一副完整的图片，请你仔细观察。之后图片将会被打乱顺序，请你尽可能快地将图片复原。请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br/><br/>现在请先开始练习，练习完成后开始正式测验。",
+    "<strong>指导语</strong>：这是自然观察能力测验的第三段。<br/><br/>接下来电脑屏幕上会呈现出一副完整的图片，请你仔细观察。之后图片将会被打乱顺序，请你尽可能快地将图片复原。请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br/><br/>现在请先开始练习，练习完成后开始正式测验。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-9-3.mp3",
 };
 
 enum Stage {
@@ -158,7 +159,7 @@ export default function Index() {
       {isLoading ? (
         <Loading />
       ) : stage === Stage.Intro ? (
-        <Overview {...overview} onClick={onStart} />
+        <Overview {...overview} onClick={onStart} btnText="练习" />
       ) : (
         <>
           <Progress
@@ -203,7 +204,7 @@ export default function Index() {
                               width={400}
                               height={400}
                               pieces={questionNo === 3 ? 4 : 3}
-                              // onComplete={() => setShowButton(true)}
+                              onComplete={() => setShowButton(true)}
                               onDrop={setAnswer}
                             />
                             {showButton && (

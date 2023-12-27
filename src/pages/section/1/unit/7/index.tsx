@@ -18,25 +18,22 @@ const overview = {
   title: "机械能力",
   description:
     "机械能力是对实际情境中的机械关系和物理定律的理解能力。它包括速度、力和杠杆、流体、滑轮、热力学、电力、齿轮、车轮、声学、光学这10个主题。机械能力强的人，擅长运用基本的物理知识解决现实生活中的问题。<br/><br/>测试提示：本测验为单项选择题，每题只有一个最佳选项，每答对一题得一分，答错不计分。下面开始测试吧！",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-7.mp3",
 };
 
 export default function Index() {
   const router = useRouter();
   const dataSource = getDataSource();
 
-  const [partNo, setPartNo] = useState(1);
   const [time, setTime] = useState(Date.now());
   const [stage, setStage] = useState(Stage.Intro);
   const [questionNo, setQuestionNo] = useState(1);
   const { mutateAsync: submitAnswer } = useSubmitAnswerMutation(dataSource);
 
-  const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const questionId = `${unitId}.${partNo}.${questionNo}`;
+  const questionId = `${unitId}.${questionNo}`;
 
-  const isLast =
-    partIndex === questions.length - 1 &&
-    questionIndex === questions[partIndex].length - 1;
+  const isLast = questionIndex === questions.length - 1;
 
   const onChange = async (value: string) => {
     const currentTime = Date.now();
@@ -54,13 +51,8 @@ export default function Index() {
   const goNext = () => {
     if (isLast) {
       setStage(Stage.End);
-      setQuestionNo(questionNo + 1);
-    } else if (questionIndex === questions[partIndex].length - 1) {
-      setPartNo(partNo + 1);
-      setQuestionNo(1);
-    } else {
-      setQuestionNo(questionNo + 1);
     }
+    setQuestionNo(questionNo + 1);
   };
 
   const onStart = async () => {
@@ -80,27 +72,16 @@ export default function Index() {
       ) : (
         <>
           <Progress
-            currentIndex={partIndex}
-            currentPercent={questionIndex / questions[partIndex].length}
-            titles={[
-              "速度",
-              "力和杠杆",
-              "流体",
-              "滑轮",
-              "热力学",
-              "电力",
-              "齿轮",
-              "车轮",
-              "声学",
-              "光学",
-            ]}
+            currentIndex={0}
+            currentPercent={questionIndex / questions.length}
+            titles={[""]}
           />
           {stage === Stage.Question ? (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
                 <RadioForm
                   name={questionId}
-                  question={questions[partIndex][questionIndex]}
+                  question={questions[questionIndex]}
                   onChange={onChange}
                 />
               </div>

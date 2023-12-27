@@ -31,7 +31,8 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "目标搜索",
   description:
-    "这是自然观察能力测验的第一段。<br /><br />接下来电脑屏幕上会呈现出一副图片，请你尽可能多的在图片中找出题目要求的各个目标物，并用鼠标点击图片对应处。请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br /><br />现在，请开始测验。",
+    "<strong>指导语</strong>：这是自然观察能力测验的第一段。<br /><br />接下来电脑屏幕上会呈现出一副图片，请你尽可能多的在图片中找出题目要求的各个目标物，并用鼠标点击图片对应处。请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br /><br />现在，请开始测验。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-9-1.mp3",
 };
 
 const URL = "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q137.png";
@@ -141,7 +142,9 @@ export default function Idex() {
         <>
           <Progress
             currentIndex={partNo - 1}
-            currentPercent={answer.length / areas.length}
+            currentPercent={
+              stage === Stage.End ? 1 : answer.length / areas.length
+            }
             titles={["目标搜索", "目标比较", "目标拼图"]}
           />
           {stage !== Stage.End ? (
@@ -162,6 +165,9 @@ export default function Idex() {
                     }
                   >
                     <div>
+                      <div className="flex flex-col gap-4 items-center my-2 text-primary-700">
+                        剩余{areas.length - answer.length}个目标物
+                      </div>
                       <div className="flex justify-center">
                         <ImageMapper
                           src={URL}
@@ -170,8 +176,7 @@ export default function Idex() {
                           stayMultiHighlighted
                         />
                       </div>
-                      <div className="flex flex-col gap-4 items-center text-primary-700  mt-4">
-                        剩余{areas.length - answer.length}个目标物
+                      <div className="flex flex-col gap-4 items-center mt-4">
                         {showBtn && (
                           <Button size="large" shape="round" onClick={onSubmit}>
                             提交

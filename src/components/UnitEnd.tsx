@@ -17,7 +17,7 @@ export default function UnitEnd({ goNext }: IProps) {
         <div className="w-16 h-16" />
       </div>
       <div className="flex">
-        <Button size="large" onClick={goNext}>
+        <Button size="large" shape="round" onClick={goNext}>
           继续
         </Button>
       </div>

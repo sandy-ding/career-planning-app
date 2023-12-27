@@ -6,32 +6,39 @@
       "category2": "（一）具体推理",
       "menuId": "2.1",
       "type": "Radio",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q27.png",
+      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-1.png",
+      "style": { "clipPath": "polygon(10% 0, 100% 0%, 100% 100%, 0 100%)" },
       "label": "1．请选择可以填补空白的图案：",
       "options": [
         {
           "value": "A",
-          "label": "A. "
+          "label": "A. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-1-1.png"
         },
         {
           "value": "B",
-          "label": "B. "
+          "label": "B. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-1-2.png"
         },
         {
           "value": "C",
-          "label": "C. "
+          "label": "C. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-1-3.png"
         },
         {
           "value": "D",
-          "label": "D. "
+          "label": "D. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-1-4.png"
         },
         {
           "value": "E",
-          "label": "E. "
+          "label": "E. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-1-5.png"
         },
         {
           "value": "F",
-          "label": "F. "
+          "label": "F. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-1-6.png"
         }
       ],
       "answer": "4"
@@ -42,32 +49,38 @@
       "category2": "（一）具体推理",
       "menuId": "2.1",
       "type": "Radio",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q28.png",
+      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-2.png",
       "label": "2．请选择可以填补空白的图案",
       "options": [
         {
           "value": "A",
-          "label": "A. "
+          "label": "A. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-2-1.png"
         },
         {
           "value": "B",
-          "label": "B. "
+          "label": "B. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-2-2.png"
         },
         {
           "value": "C",
-          "label": "C. "
+          "label": "C. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-2-3.png"
         },
         {
           "value": "D",
-          "label": "D. "
+          "label": "D. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-2-4.png"
         },
         {
           "value": "E",
-          "label": "E. "
+          "label": "E. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-2-5.png"
         },
         {
           "value": "F",
-          "label": "F. "
+          "label": "F. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-2-6.png"
         }
       ],
       "answer": "2"
@@ -78,32 +91,38 @@
       "category2": "（一）具体推理",
       "menuId": "2.1",
       "type": "Radio",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q29.png",
+      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-3.png",
       "label": "3．请选择可以填补空白的图案",
       "options": [
         {
           "value": "A",
-          "label": "A. "
+          "label": "A. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-3-1.png"
         },
         {
           "value": "B",
-          "label": "B. "
+          "label": "B. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-3-2.png"
         },
         {
           "value": "C",
-          "label": "C. "
+          "label": "C. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-3-3.png"
         },
         {
           "value": "D",
-          "label": "D. "
+          "label": "D. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-3-4.png"
         },
         {
           "value": "E",
-          "label": "E. "
+          "label": "E. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-3-5.png"
         },
         {
           "value": "F",
-          "label": "F. "
+          "label": "F. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-3-6.png"
         }
       ],
       "answer": "3"
@@ -114,32 +133,38 @@
       "category2": "（一）具体推理",
       "menuId": "2.1",
       "type": "Radio",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q30.png",
+      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-4.png",
       "label": "4．请选择可以填补空白的图案",
       "options": [
         {
           "value": "A",
-          "label": "A. "
+          "label": "A. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-4-1.png"
         },
         {
           "value": "B",
-          "label": "B. "
+          "label": "B. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-4-2.png"
         },
         {
           "value": "C",
-          "label": "C. "
+          "label": "C. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-4-3.png"
         },
         {
           "value": "D",
-          "label": "D. "
+          "label": "D. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-4-4.png"
         },
         {
           "value": "E",
-          "label": "E. "
+          "label": "E. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-4-5.png"
         },
         {
           "value": "F",
-          "label": "F. "
+          "label": "F. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-4-6.png"
         }
       ],
       "answer": "4"
@@ -150,40 +175,48 @@
       "category2": "（一）具体推理",
       "menuId": "2.1",
       "type": "Radio",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q31.png",
+      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-5.png",
       "label": "5．请选择可以填补空白的图案",
       "options": [
         {
           "value": "A",
-          "label": "A. "
+          "label": "A. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-5-1.png"
         },
         {
           "value": "B",
-          "label": "B. "
+          "label": "B. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-5-2.png"
         },
         {
           "value": "C",
-          "label": "C. "
+          "label": "C. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-5-3.png"
         },
         {
           "value": "D",
-          "label": "D. "
+          "label": "D. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-5-4.png"
         },
         {
           "value": "E",
-          "label": "E. "
+          "label": "E. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-5-5.png"
         },
         {
           "value": "F",
-          "label": "F. "
+          "label": "F. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-5-6.png"
         },
         {
           "value": "G",
-          "label": "G. "
+          "label": "G. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-5-7.png"
         },
         {
           "value": "H",
-          "label": "H. "
+          "label": "H. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-5-8.png"
         }
       ],
       "answer": "5"
@@ -194,40 +227,48 @@
       "category2": "（一）具体推理",
       "menuId": "2.1",
       "type": "Radio",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q32.png",
+      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-6.png",
       "label": "6．请选择可以填补空白的图案",
       "options": [
         {
           "value": "A",
-          "label": "A. "
+          "label": "A. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-6-1.png"
         },
         {
           "value": "B",
-          "label": "B. "
+          "label": "B. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-6-2.png"
         },
         {
           "value": "C",
-          "label": "C. "
+          "label": "C. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-6-3.png"
         },
         {
           "value": "D",
-          "label": "D. "
+          "label": "D. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-6-4.png"
         },
         {
           "value": "E",
-          "label": "E. "
+          "label": "E. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-6-5.png"
         },
         {
           "value": "F",
-          "label": "F. "
+          "label": "F. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-6-6.png"
         },
         {
           "value": "G",
-          "label": "G. "
+          "label": "G. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-6-7.png"
         },
         {
           "value": "H",
-          "label": "H. "
+          "label": "H. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-6-8.png"
         }
       ],
       "answer": "7"
@@ -238,40 +279,48 @@
       "category2": "（一）具体推理",
       "menuId": "2.1",
       "type": "Radio",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q33.png",
+      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-7.png",
       "label": "7．请选择可以填补空白的图案",
       "options": [
         {
           "value": "A",
-          "label": "A. "
+          "label": "A. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-7-1.png"
         },
         {
           "value": "B",
-          "label": "B. "
+          "label": "B. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-7-2.png"
         },
         {
           "value": "C",
-          "label": "C. "
+          "label": "C. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-7-3.png"
         },
         {
           "value": "D",
-          "label": "D. "
+          "label": "D. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-7-4.png"
         },
         {
           "value": "E",
-          "label": "E. "
+          "label": "E. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-7-5.png"
         },
         {
           "value": "F",
-          "label": "F. "
+          "label": "F. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-7-6.png"
         },
         {
           "value": "G",
-          "label": "G. "
+          "label": "G. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-7-7.png"
         },
         {
           "value": "H",
-          "label": "H. "
+          "label": "H. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-7-8.png"
         }
       ],
       "answer": "6"
@@ -282,40 +331,48 @@
       "category2": "（一）具体推理",
       "menuId": "2.1",
       "type": "Radio",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q34.png",
+      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-8.png",
       "label": "8．请选择可以填补空白的图案",
       "options": [
         {
           "value": "A",
-          "label": "A. "
+          "label": "A. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-8-1.png"
         },
         {
           "value": "B",
-          "label": "B. "
+          "label": "B. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-8-2.png"
         },
         {
           "value": "C",
-          "label": "C. "
+          "label": "C. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-8-3.png"
         },
         {
           "value": "D",
-          "label": "D. "
+          "label": "D. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-8-4.png"
         },
         {
           "value": "E",
-          "label": "E. "
+          "label": "E. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-8-5.png"
         },
         {
           "value": "F",
-          "label": "F. "
+          "label": "F. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-8-6.png"
         },
         {
           "value": "G",
-          "label": "G. "
+          "label": "G. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-8-7.png"
         },
         {
           "value": "H",
-          "label": "H. "
+          "label": "H. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-8-8.png"
         }
       ],
       "answer": "1"
@@ -326,40 +383,48 @@
       "category2": "（一）具体推理",
       "menuId": "2.1",
       "type": "Radio",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q35.png",
+      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-9.png",
       "label": "9．请选择可以填补空白的图案",
       "options": [
         {
           "value": "A",
-          "label": "A. "
+          "label": "A. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-9-1.png"
         },
         {
           "value": "B",
-          "label": "B. "
+          "label": "B. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-9-2.png"
         },
         {
           "value": "C",
-          "label": "C. "
+          "label": "C. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-9-3.png"
         },
         {
           "value": "D",
-          "label": "D. "
+          "label": "D. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-9-4.png"
         },
         {
           "value": "E",
-          "label": "E. "
+          "label": "E. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-9-5.png"
         },
         {
           "value": "F",
-          "label": "F. "
+          "label": "F. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-9-6.png"
         },
         {
           "value": "G",
-          "label": "G. "
+          "label": "G. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-9-7.png"
         },
         {
           "value": "H",
-          "label": "H. "
+          "label": "H. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-9-8.png"
         }
       ],
       "answer": "4"
@@ -370,40 +435,48 @@
       "category2": "（一）具体推理",
       "menuId": "2.1",
       "type": "Radio",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q36.png",
+      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-10.png",
       "label": "10．请选择可以填补空白的图案",
       "options": [
         {
           "value": "A",
-          "label": "A. "
+          "label": "A. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-10-1.png"
         },
         {
           "value": "B",
-          "label": "B. "
+          "label": "B. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-10-2.png"
         },
         {
           "value": "C",
-          "label": "C. "
+          "label": "C. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-10-3.png"
         },
         {
           "value": "D",
-          "label": "D. "
+          "label": "D. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-10-4.png"
         },
         {
           "value": "E",
-          "label": "E. "
+          "label": "E. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-10-5.png"
         },
         {
           "value": "F",
-          "label": "F. "
+          "label": "F. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-10-6.png"
         },
         {
           "value": "G",
-          "label": "G. "
+          "label": "G. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-10-7.png"
         },
         {
           "value": "H",
-          "label": "H. "
+          "label": "H. ",
+          "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-10-8.png"
         }
       ],
       "answer": "5"

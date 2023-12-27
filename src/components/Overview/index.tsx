@@ -1,15 +1,17 @@
 import Header from "@/components/Layout/Header";
 import { Button, Typography } from "antd";
+import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
 const { Title } = Typography;
 
 interface IProps {
-  title: string;
+  title?: string;
   description: string;
   btnText?: string;
   onClick: () => void;
+  audioUrl?: string;
 }
 
 export default function Overview({
@@ -17,7 +19,16 @@ export default function Overview({
   description,
   btnText,
   onClick,
+  audioUrl,
 }: IProps) {
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const audio = new Audio(audioUrl);
+    setAudio(audio);
+    audio.play();
+  }, []);
+
   return (
     <div className="h-screen bg-primary-200">
       <div className="flex pt-5">
@@ -30,7 +41,14 @@ export default function Overview({
               </ReactMarkdown>
             </div>
             <div className="text-center">
-              <Button onClick={onClick} size="large" shape="round">
+              <Button
+                onClick={() => {
+                  audio?.pause();
+                  onClick();
+                }}
+                size="large"
+                shape="round"
+              >
                 {btnText || "开始测试"}
               </Button>
             </div>

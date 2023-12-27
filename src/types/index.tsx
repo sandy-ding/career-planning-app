@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 export enum Stage {
   Intro,
   Part1Intro,
@@ -26,5 +28,6 @@ export interface Question {
   className?: string;
   isTest?: boolean;
   fileUrl?: string;
-  options: { value: string; label: string }[];
+  styles?: CSSProperties;
+  options: { value: string; label: string; fileUrl?: string }[];
 }

@@ -67,8 +67,8 @@ const initialValue = [
 const overview = {
   title: "匹配反应时",
   description:
-    "这是信息加工能力测验的第三段测验。接下来电脑界面上将呈现5×5排列的字符组合图片，请根据题目要求在图片中找出相应的5个字符组合，并用鼠标点击对应位置。选择完成后点击提交，确认后将进入下一题。",
-  prompt: "现在，请开始测验。",
+    "<strong>指导语</strong>：这是信息加工能力测验的第三段测验。<br /><br />接下来电脑界面上将呈现5×5排列的字符组合图片，请根据题目要求在图片中找出相应的5个字符组合，并用鼠标点击对应位置。<br /><br />选择完成后点击提交，确认后将进入下一题。<br /><br />现在，请开始测验。",
+  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-8-3.mp3",
 };
 
 const sectionNo = 1;
@@ -244,7 +244,7 @@ export default function Index() {
             currentPercent={
               stage === Stage.Main ? questionNo / questions.length : 1
             }
-            titles={["二维空间旋转", "三维空间旋转", "空间想象"]}
+            titles={["辨别反应时", "简单反应时", "匹配反应时"]}
           />
           {stage === Stage.Main ? (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
