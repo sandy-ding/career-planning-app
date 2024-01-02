@@ -5,7 +5,7 @@ interface IProgressItemProps {
 
 const ProgressItem = ({ title, percent }: IProgressItemProps) => {
   return (
-    <div className="relative flex-1 h-8">
+    <div className="relative flex-1 h-8 border-r">
       <div
         className="absolute w-full h-full bg-primary-700"
         style={{ clipPath: `inset(0 ${(1 - percent) * 100}% 0 0)` }}

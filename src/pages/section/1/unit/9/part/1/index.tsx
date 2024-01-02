@@ -31,7 +31,7 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "目标搜索",
   description:
-    "<strong>指导语</strong>：这是自然观察能力测验的第一段。<br /><br />接下来电脑屏幕上会呈现出一副图片，请你尽可能多的在图片中找出题目要求的各个目标物，并用鼠标点击图片对应处。请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br /><br />现在，请开始测验。",
+    "<strong>指导语</strong>：这是自然观察能力测验的第一段。<br /><br />接下来电脑屏幕上会呈现出一幅图片，请你尽可能多的在图片中找出题目要求的各个目标物，并用鼠标点击图片对应处。请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br /><br />现在，请开始测验。",
   audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-9-1.mp3",
 };
 
@@ -160,7 +160,7 @@ export default function Idex() {
                   <Form.Item
                     label={
                       <label className="w-full text-center">
-                        请你尽可能多的在图片中找出题目要求的各个目标物。
+                        请你尽可能多的在图片中找出题目要求的各个目标物，并用鼠标点击图片对应处。
                       </label>
                     }
                   >

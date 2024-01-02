@@ -34,7 +34,7 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "目标比较",
   description:
-    "<strong>指导语</strong>：这是自然观察能力测验的第二段。<br/><br/>接下来电脑屏幕上会呈现出两副图片，你可以通过鼠标点击两副图片中的不同之处进行选择，一共有10处不同，请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br/><br/>现在，请开始测验。",
+    "<strong>指导语</strong>：接下来电脑屏幕上会呈现出两幅图片，你需要参照左图，通过鼠标点选的方式选出右图中与之不同的地方（只点右图），一共有10处不同，请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br/><br/>现在，请开始测验。",
   audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-9-2.mp3",
 };
 
@@ -161,7 +161,7 @@ export default function Idex() {
                   <Form.Item
                     label={
                       <label className="w-full text-center">
-                        请你尽可能多的在图片中找出题目要求的各个目标物。
+                        请通过鼠标点选的方式选出右图中与之不同的地方（只点右图）。
                       </label>
                     }
                   >

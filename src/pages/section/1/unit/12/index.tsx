@@ -158,7 +158,7 @@ export default function Index() {
                     name={questionId}
                     question={questions[partIndex][questionIndex]}
                     onChange={onChange}
-                    className={"w-[350px]"}
+                    className={"!w-[350px]"}
                   />
                 )}
               </div>

@@ -251,7 +251,7 @@
       "category1": "音乐能力",
       "category2": "Ⅱ部分",
       "type": "Radio",
-      "label": "13．你能音乐时能否辨认调子准确? ",
+      "label": "13．你听音乐时能否辨认调子准确? ",
       "options": [
         {
           "value": "A",
@@ -353,7 +353,7 @@
       "category1": "音乐能力",
       "category2": "Ⅱ部分",
       "type": "Radio",
-      "label": "19．听音乐时，记住某一段音乐吗?",
+      "label": "19．听音乐时，你能凭借听觉记住某一段音乐吗?",
       "options": [
         {
           "value": "A",

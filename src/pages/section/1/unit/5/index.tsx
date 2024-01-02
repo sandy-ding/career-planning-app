@@ -190,7 +190,7 @@ export default function Index() {
                         <div>
                           根据下表，回答1—5题。
                           <img
-                            src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q103.png"
+                            src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-5-1.png"
                             className="block w-full mt-4"
                           />
                         </div>

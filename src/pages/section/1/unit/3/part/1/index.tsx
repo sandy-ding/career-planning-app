@@ -22,7 +22,7 @@ const partId = `${unitId}.${partNo}`;
 const overview = {
   title: "数字广度测验",
   description:
-    "<strong>指导语</strong>：下面开始数字广度测验。你将听到我说出一串数字，你只需按要求把听到的数字输入到屏幕中。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。注意若连错3次测验即停止，以最后一次答对数字串所包含的数字个数为最终得分。下面点击“练习”，开始练习吧。",
+    "<strong>指导语</strong>：下面开始数字广度测验。你将听到我说出一串数字，你只需按要求把听到的数字输入到屏幕中。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。注意：若连错3次测验即停止，以最后一次答对数字串所包含的数字个数为最终得分。下面点击“练习”，开始练习吧。",
   audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1.mp3",
 };
 
@@ -174,7 +174,7 @@ export default function Index() {
                           renderInput={(props) => (
                             <input
                               {...props}
-                              className="!w-20 h-20 m-4 text-3xl border-2 border-black"
+                              className="!w-12 h-12 m-1 text-3xl border-2 border-black"
                             />
                           )}
                         />
