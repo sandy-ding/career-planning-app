@@ -34,8 +34,8 @@ enum Stage {
 const sectionNo = 1;
 const unitNo = 9;
 const partNo = 3;
-const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
+const unitId = "I";
+const partId = `${unitId}${partNo}`;
 const countdownDuration = 1000 * 60 * 10;
 const totalNum = 3;
 

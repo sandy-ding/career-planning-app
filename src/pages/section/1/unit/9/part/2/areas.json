@@ -1,226 +1,92 @@
 [
   {
-    "id": "469f9800-c45a-483f-b13e-bd24f3fb79f4",
+    "id": "1",
     "title": "Hardwood",
-    "shape": "poly",
-    "name": "left-0",
-    "fillColor": "#00000000",
-    "strokeColor": "#00000000",
-    "coords": [
-      0, 150, 10, 145, 20, 154, 20, 162, 20, 172, 20, 182, 14, 202, 7, 194, 0,
-      184
-    ]
+    "shape": "circle",
+    "name": "1",
+    "fillColor": "#ffc83280",
+    "strokeColor": "black",
+    "coords": [6, 161, 23]
   },
   {
-    "id": "1db62daa-22a4-4b02-b5c0-fffdcf77c66c",
+    "id": "2",
     "title": "Carpet",
-    "shape": "poly",
-    "name": "right-0",
+    "shape": "circle",
+    "name": "2",
     "fillColor": "#ffc83280",
     "strokeColor": "black",
-    "coords": [
-      371, 152, 378, 146, 386, 147, 391, 154, 392, 163, 391, 171, 390, 180, 386,
-      194, 371, 185
-    ]
+    "coords": [90, 177, 12]
   },
   {
-    "id": "a87203cb-3916-48ea-856f-2bacab8b7eda",
+    "id": "3",
     "title": "Floor",
-    "shape": "poly",
-    "name": "left-1",
-    "fillColor": "#00000000",
-    "strokeColor": "#00000000",
-    "coords": [75, 182, 94, 162, 102, 170, 94, 188, 80, 188]
-  },
-  {
-    "id": "37ed1569-1e68-4816-9033-1a88c53b39df",
-    "title": "Electrical Fixture",
-    "shape": "poly",
-    "name": "right-1",
+    "shape": "circle",
+    "name": "3",
     "fillColor": "#ffc83280",
     "strokeColor": "black",
-    "coords": [448, 180, 464, 167, 472, 176, 466, 191, 451, 191]
+    "coords": [226, 81, 44]
   },
   {
-    "id": "ce471cbe-4103-45cc-899c-2be6497dc79a",
+    "id": "4",
     "title": "Electrical Fixture",
-    "shape": "poly",
-    "name": "left-2",
-    "fillColor": "#00000000",
-    "strokeColor": "#00000000",
-    "coords": [
-      188, 111, 202, 79, 219, 46, 244, 38, 259, 43, 272, 62, 279, 88, 249, 87,
-      223, 97, 216, 115
-    ]
-  },
-  {
-    "id": "5fde0edd-4e1c-4130-9ee5-4ec6dfd34f46",
-    "title": "Electrical Fixture",
-    "shape": "poly",
-    "name": "right-2",
+    "shape": "circle",
+    "name": "4",
     "fillColor": "#ffc83280",
     "strokeColor": "black",
-    "coords": [
-      558, 108, 573, 67, 591, 47, 608, 42, 622, 53, 630, 68, 632, 83, 630, 93,
-      612, 86, 594, 93, 582, 114, 569, 115
-    ]
+    "coords": [234, 247, 22]
   },
   {
-    "id": "976082e0-0653-4e5d-8094-cc351e482e72",
+    "id": "5",
     "title": "Electrical Fixture",
-    "shape": "poly",
-    "name": "left-3",
-    "fillColor": "#00000000",
-    "strokeColor": "#00000000",
-    "coords": [
-      208, 248, 212, 232, 223, 227, 228, 235, 234, 243, 244, 244, 253, 237, 258,
-      245, 258, 255, 258, 265, 247, 257, 243, 248, 223, 246
-    ]
+    "shape": "circle",
+    "name": "5",
+    "fillColor": "#ffc83280",
+    "strokeColor": "black",
+    "coords": [99, 331, 14]
   },
   {
-    "id": "cc3c2799-ce62-4236-b4f6-6f4b50e7b666",
+    "id": "6",
+    "title": "Electrical Fixture",
+    "shape": "circle",
+    "name": "6",
+    "fillColor": "#ffc83280",
+    "strokeColor": "black",
+    "coords": [202, 307, 25]
+  },
+  {
+    "id": "7",
+    "title": "Electrical Fixture",
+    "shape": "circle",
+    "name": "7",
+    "fillColor": "#ffc83280",
+    "strokeColor": "black",
+    "coords": [255, 328, 23]
+  },
+  {
+    "id": "8",
     "title": "GWB",
-    "shape": "poly",
-    "name": "right-3",
+    "shape": "circle",
+    "name": "8",
     "fillColor": "#ffc83280",
     "strokeColor": "black",
-    "coords": [
-      582, 245, 583, 236, 591, 230, 596, 235, 602, 241, 607, 245, 613, 241, 619,
-      233, 626, 237, 627, 246, 627, 251, 626, 257, 616, 254, 610, 247, 597, 246,
-      591, 250, 583, 252
-    ]
+    "coords": [66, 432, 36]
   },
   {
-    "id": "6c682813-8162-42eb-b3a7-c7296a009b5a",
+    "id": "9",
     "title": "Brick",
     "shape": "circle",
-    "name": "left-4",
-    "fillColor": "#00000000",
-    "strokeColor": "#00000000",
-    "coords": [93, 340, 9]
+    "name": "9",
+    "fillColor": "#ffc83280",
+    "strokeColor": "black",
+    "coords": [171, 414, 31]
   },
   {
-    "id": "53c311f7-4e1c-4636-ac7e-b9cdec0d7ab7",
+    "id": "10",
     "title": "Right Wall",
     "shape": "circle",
-    "name": "right-4",
+    "name": "10",
     "fillColor": "#ffc83280",
     "strokeColor": "black",
-    "coords": [469, 333, 14]
-  },
-  {
-    "id": "469f9800-c45a-483f-b13e-bd24f3fb79f1",
-    "title": "Hardwood",
-    "shape": "poly",
-    "name": "left-5",
-    "fillColor": "#00000000",
-    "strokeColor": "#00000000",
-    "coords": [
-      185, 348, 191, 327, 197, 307, 213, 311, 211, 320, 205, 333, 202, 344
-    ]
-  },
-  {
-    "id": "1db62daa-22a4-4b02-b5c0-fffdcf77c61c",
-    "title": "Carpet",
-    "shape": "poly",
-    "name": "right-5",
-    "fillColor": "#ffc83280",
-    "strokeColor": "black",
-    "coords": [556, 345, 565, 312, 581, 311, 577, 327, 574, 343]
-  },
-  {
-    "id": "a87203cb-3916-48ea-856f-2bacab8b1eda",
-    "title": "Floor",
-    "shape": "poly",
-    "name": "left-6",
-    "fillColor": "#00000000",
-    "strokeColor": "#00000000",
-    "coords": [
-      257, 358, 249, 346, 248, 328, 254, 310, 266, 319, 267, 333, 267, 350
-    ]
-  },
-  {
-    "id": "37ed1569-1e68-4816-9033-1a88c53b19df",
-    "title": "Electrical Fixture",
-    "shape": "poly",
-    "name": "right-6",
-    "fillColor": "#ffc83280",
-    "strokeColor": "black",
-    "coords": [
-      622, 348, 618, 335, 620, 315, 630, 305, 637, 321, 639, 337, 634, 353, 627,
-      356
-    ]
-  },
-  {
-    "id": "ce471cbe-4103-45cc-899c-2be6497dc19a",
-    "title": "Electrical Fixture",
-    "shape": "poly",
-    "name": "left-7",
-    "fillColor": "#00000000",
-    "strokeColor": "#00000000",
-    "coords": [
-      76, 470, 62, 460, 55, 432, 55, 410, 58, 399, 69, 411, 81, 412, 85, 433,
-      87, 449, 87, 461
-    ]
-  },
-  {
-    "id": "5fde0edd-4e1c-4130-9ee5-4ec6dfd31f46",
-    "title": "Electrical Fixture",
-    "shape": "poly",
-    "name": "right-7",
-    "fillColor": "#ffc83280",
-    "strokeColor": "black",
-    "coords": [
-      442, 467, 432, 459, 423, 427, 427, 404, 441, 407, 448, 420, 454, 446, 454,
-      459, 452, 470
-    ]
-  },
-  {
-    "id": "976082e0-0653-4e5d-8094-cc351e412e72",
-    "title": "Electrical Fixture",
-    "shape": "poly",
-    "name": "left-8",
-    "fillColor": "#00000000",
-    "strokeColor": "#00000000",
-    "coords": [
-      143, 420, 166, 411, 183, 398, 198, 394, 201, 401, 186, 410, 173, 426, 142,
-      440
-    ]
-  },
-  {
-    "id": "cc3c2799-ce62-4236-b4f6-6f4b50e7b166",
-    "title": "GWB",
-    "shape": "poly",
-    "name": "right-8",
-    "fillColor": "#ffc83280",
-    "strokeColor": "black",
-    "coords": [
-      513, 419, 538, 410, 553, 398, 568, 390, 570, 401, 554, 414, 542, 425, 510,
-      439
-    ]
-  },
-  {
-    "id": "976082e0-0653-4e5d-8094-cc351e482e71",
-    "title": "Electrical Fixture",
-    "shape": "poly",
-    "name": "left-9",
-    "fillColor": "#00000000",
-    "strokeColor": "#00000000",
-    "coords": [
-      298, 437, 304, 419, 315, 407, 327, 407, 335, 411, 340, 422, 346, 431, 349,
-      439, 338, 442, 333, 449, 332, 457, 320, 458, 306, 454, 299, 446
-    ]
-  },
-  {
-    "id": "cc3c2799-ce62-4236-b4f6-6f4b50e7b616",
-    "title": "GWB",
-    "shape": "poly",
-    "name": "right-9",
-    "fillColor": "#ffc83280",
-    "strokeColor": "black",
-    "coords": [
-      670, 457, 667, 444, 671, 432, 680, 422, 689, 412, 699, 411, 706, 415, 710,
-      421, 713, 430, 715, 438, 704, 444, 699, 453, 700, 462, 684, 462
-    ]
+    "coords": [318, 434, 25]
   }
 ]

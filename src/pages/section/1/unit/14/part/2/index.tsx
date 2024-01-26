@@ -13,7 +13,7 @@ import UnitEnd from "@/components/UnitEnd";
 const sectionNo = 1;
 const unitNo = 14;
 const partNo = 2;
-const unitId = `${sectionNo}.${unitNo}`;
+const unitId = "N";
 const overview = {
   title: "（二）文字转换为对应图片",
   description:
@@ -33,7 +33,7 @@ export default function Index() {
   const isQuestionStage = stage === Stage.Question;
   const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const questionId = `${unitId}.${partNo}.${questionNo}`;
+  const questionId = `${unitId}${partNo}.${questionNo}`;
 
   const isLast = questionIndex === questions.length - 1;
 

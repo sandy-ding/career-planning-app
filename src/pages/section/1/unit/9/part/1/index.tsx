@@ -22,11 +22,9 @@ enum Stage {
   End,
 }
 
-const sectionNo = 1;
-const unitNo = 9;
 const partNo = 1;
-const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
+const unitId = "I";
+const partId = `${unitId}${partNo}`;
 
 const overview = {
   title: "目标搜索",
@@ -48,7 +46,6 @@ export default function Idex() {
   const [time, setTime] = useState(0);
   const [showBtn, setShowBtn] = useState(false);
 
-  const questionId = `${partId}.${1}`;
   const [index, setIndex] = useState<number>();
   const [answer, setAnswer] = useState<number[]>([]);
   const [countdown, setCountdown] = useState(0);
@@ -77,13 +74,6 @@ export default function Idex() {
   const { mutate, mutateAsync } = useSubmitAnswerMutation(dataSource);
 
   const onSubmit = () => {
-    mutate({
-      input: {
-        questionId,
-        duration: Date.now() - time,
-        answer: JSON.stringify(answer),
-      },
-    });
     setStage(Stage.End);
   };
 
@@ -94,7 +84,17 @@ export default function Idex() {
   }, [index, answer]);
 
   const onClick = (area: any, index: number) => {
+    const { id } = area;
+    const currentTime = Date.now();
+    mutate({
+      input: {
+        questionId: `${partId}.${id}`,
+        duration: currentTime - time,
+        isCorrect: true,
+      },
+    });
     setIndex(index);
+    setTime(currentTime);
   };
 
   const onStart = async () => {

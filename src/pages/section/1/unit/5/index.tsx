@@ -17,9 +17,8 @@ import Countdown from "antd/lib/statistic/Countdown";
 import { getCountdown } from "@/utils";
 import { Stage } from "@/types";
 
-const sectionNo = 1;
 const unitNo = 5;
-const unitId = `${sectionNo}.${unitNo}`;
+const unitId = "E";
 const overview = {
   title: "信息检索与归纳能力",
   description:
@@ -56,7 +55,7 @@ export default function Index() {
 
   const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const partId = `${unitId}.${partNo}`;
+  const partId = `${unitId}${partNo}`;
   const questionId = `${partId}.${questionNo}`;
 
   const { isLoading } = useAnswerQuery(

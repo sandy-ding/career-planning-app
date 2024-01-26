@@ -17,9 +17,8 @@ import UnitEnd from "@/components/UnitEnd";
 import Countdown from "antd/lib/statistic/Countdown";
 import { getCountdown } from "@/utils";
 
-const sectionNo = 1;
 const unitNo = 12;
-const unitId = `${sectionNo}.${unitNo}`;
+const unitId = "L";
 const overview = {
   title: "美术能力",
   description:
@@ -42,7 +41,7 @@ export default function Index() {
   const isQuestionStage = stage === Stage.Question;
   const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const questionId = `${unitId}.${partNo}.${questionNo}`;
+  const questionId = `${unitId}${partNo}.${questionNo}`;
 
   const { isLoading } = useAnswerQuery(
     dataSource,

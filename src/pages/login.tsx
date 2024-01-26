@@ -13,12 +13,12 @@ export default function Question() {
   const { mutate } = useLoginMutation(getDataSource(), {
     onSuccess(data) {
       localStorage.setItem("token", data?.login?.accessToken);
-      router.push("/section/1");
+      router.push("/profile");
     },
   });
 
   const onFinish = (values: CardVerifyRequest) => {
-    const res = mutate({
+    mutate({
       input: values,
     });
   };

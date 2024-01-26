@@ -25,11 +25,9 @@ enum Stage {
   End,
 }
 
-const sectionNo = 1;
-const unitNo = 9;
 const partNo = 2;
-const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
+const unitId = "I";
+const partId = `${unitId}${partNo}`;
 
 const overview = {
   title: "目标比较",
@@ -46,7 +44,6 @@ export default function Idex() {
   const [time, setTime] = useState(0);
   const [showBtn, setShowBtn] = useState(false);
 
-  const questionId = `${partId}.${1}`;
   const [answer, setAnswer] = useState<string[]>([]);
   const [countdown, setCountdown] = useState(0);
 
@@ -68,13 +65,6 @@ export default function Idex() {
   const { mutate, mutateAsync } = useSubmitAnswerMutation(dataSource);
 
   const onSubmit = () => {
-    mutate({
-      input: {
-        questionId,
-        duration: Date.now() - time,
-        answer: JSON.stringify(answer),
-      },
-    });
     setStage(Stage.End);
   };
 
@@ -90,11 +80,19 @@ export default function Idex() {
     e: AreaEvent,
     updatedAreas: MapAreas[]
   ) => {
+    const { id } = area;
+    const currentTime = Date.now();
+    mutate({
+      input: {
+        questionId: `${partId}.${id}`,
+        duration: currentTime - time,
+        isCorrect: true,
+      },
+    });
     setAnswer(
-      updatedAreas
-        .filter((area) => !!area.preFillColor && area.name.startsWith("right"))
-        .map((i) => i.name.split("-")?.[1])
+      updatedAreas.filter((area) => !!area.preFillColor).map((i) => i.id!)
     );
+    setTime(currentTime);
   };
 
   const onStart = async () => {
@@ -113,7 +111,6 @@ export default function Idex() {
     setStage(Stage.Main);
   };
 
-  console.log({ stage });
   return (
     <div className="flex flex-col h-screen bg-primary-200">
       <Header title="自然观察能力">
@@ -144,7 +141,7 @@ export default function Idex() {
           <Progress
             currentIndex={partNo - 1}
             currentPercent={
-              stage === Stage.End ? 1 : answer.length / (areas.length / 2)
+              stage === Stage.End ? 1 : answer.length / areas.length
             }
             titles={["目标搜索", "目标比较", "目标拼图"]}
           />
@@ -167,15 +164,15 @@ export default function Idex() {
                   >
                     <div>
                       <div className="flex flex-col items-center my-2 text-primary-700">
-                        剩余{areas.length / 2 - answer.length}个目标物
+                        剩余{areas.length - answer.length}个目标物
                       </div>
                       <div className="flex justify-center">
+                        <img src="https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-9-2-1.png" />
                         <ImageMapper
-                          src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q138.png"
+                          src="https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-9-2-2.png"
                           map={{ name: "areas", areas }}
                           onClick={onClick}
                           stayMultiHighlighted
-                          spotDifference
                         />
                       </div>
                       <div className="flex flex-col items-center text-primary-700 mt-4">

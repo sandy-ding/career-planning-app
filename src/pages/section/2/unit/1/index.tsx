@@ -12,6 +12,7 @@ import UnitEnd from "@/components/UnitEnd";
 import Encouragement from "@/components/Encouragement";
 
 const sectionNo = 2;
+const unitId = "Q";
 const overview = {
   title: "人格测验",
   description:
@@ -25,10 +26,11 @@ export default function Index() {
 
   const [stage, setStage] = useState(Stage.Intro);
   const [questionNo, setQuestionNo] = useState(1);
+  const [time, setTime] = useState(Date.now());
   const { mutateAsync: submitAnswer } = useSubmitAnswerMutation(dataSource);
 
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const questionId = `${sectionNo}.${questionNo}`;
+  const questionId = `${unitId}.${questionNo}`;
 
   const isLast = questionIndex === questions.length - 1;
 
@@ -37,6 +39,7 @@ export default function Index() {
       input: {
         questionId,
         answer: value,
+        duration: Date.now() - time,
       },
     });
     if (questionNo % 25 === 0) {
@@ -51,6 +54,12 @@ export default function Index() {
       setStage(Stage.End);
     }
     setQuestionNo(questionNo + 1);
+    setTime(Date.now());
+  };
+
+  const onStart = async () => {
+    setStage(Stage.Question);
+    setTime(Date.now());
   };
 
   const onEnd = async () => {
@@ -61,7 +70,7 @@ export default function Index() {
     <div className="flex flex-col h-screen bg-primary-200">
       <Header title={overview.title} />
       {stage === Stage.Intro ? (
-        <Overview {...overview} onClick={() => setStage(Stage.Question)} />
+        <Overview {...overview} onClick={onStart} />
       ) : (
         <>
           <Progress

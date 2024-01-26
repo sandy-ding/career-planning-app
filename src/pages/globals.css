@@ -57,3 +57,7 @@ body {
 .ant-form-item-label > label::after {
   display: none !important;
 }
+
+.ant-picker {
+  width: 100%;
+}

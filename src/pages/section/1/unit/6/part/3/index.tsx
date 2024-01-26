@@ -20,8 +20,8 @@ import RadioImageForm from "@/components/RadioImageForm";
 const sectionNo = 1;
 const unitNo = 6;
 const partNo = 3;
-const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
+const unitId = "F";
+const partId = `${unitId}${partNo}`;
 const overview = {
   title: "空间想象",
   description:
@@ -42,7 +42,7 @@ export default function Index() {
 
   const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const questionId = `${unitId}.${partNo}.${questionNo}`;
+  const questionId = `${unitId}${partNo}.${questionNo}`;
 
   const { isLoading } = useAnswerQuery(
     dataSource,

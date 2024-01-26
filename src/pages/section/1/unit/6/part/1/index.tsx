@@ -10,11 +10,9 @@ import { Button, Form } from "antd";
 import { ValidateStatus } from "antd/es/form/FormItem";
 import { PlusOutlined } from "@ant-design/icons";
 
-const sectionNo = 1;
-const unitNo = 6;
 const partNo = 1;
-const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
+const unitId = "F";
+const partId = `${unitId}${partNo}`;
 
 const overview = {
   title: "二维空间旋转",
@@ -183,17 +181,22 @@ export default function Idex() {
                     validateStatus={validateStatus}
                   >
                     {stage === Stage.Mid ? (
-                      <div className="mt-40 flex justify-center">
-                        <Button
-                          size="large"
-                          shape="round"
-                          onClick={() => {
-                            setStage(Stage.Main);
-                            startTest();
-                          }}
-                        >
-                          开始测试
-                        </Button>
+                      <div className="mt-40">
+                        <div className="text-center text-primary-700">
+                          现在你将进入正式测验，点击“开始测验”按钮开始吧！
+                        </div>
+                        <div className="mt-40 flex justify-center">
+                          <Button
+                            size="large"
+                            shape="round"
+                            onClick={() => {
+                              setStage(Stage.Main);
+                              startTest();
+                            }}
+                          >
+                            开始测试
+                          </Button>
+                        </div>
                       </div>
                     ) : (
                       <>

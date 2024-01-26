@@ -18,9 +18,8 @@ import Loading from "@/components/Loading";
 import { getCountdown } from "@/utils";
 import RadioForm from "@/components/RadioForm";
 
-const sectionNo = 1;
 const unitNo = 2;
-const unitId = `${sectionNo}.${unitNo}`;
+const unitId = "B";
 const overview = {
   title: "逻辑推理能力",
   description:
@@ -42,7 +41,7 @@ export default function Index() {
 
   const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const questionId = `${unitId}.${partNo}.${questionNo}`;
+  const questionId = `${unitId}${partNo}.${questionNo}`;
 
   const { data, isLoading } = useAnswerQuery(
     dataSource,

@@ -11,9 +11,8 @@ import { Stage } from "@/types";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 
-const sectionNo = 1;
 const unitNo = 7;
-const unitId = `${sectionNo}.${unitNo}`;
+const unitId = "G";
 const overview = {
   title: "机械能力",
   description:

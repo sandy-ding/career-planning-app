@@ -10,11 +10,9 @@ import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 import CheckboxForm from "@/components/CheckboxForm";
 
-const sectionNo = 1;
-const unitNo = 6;
 const partNo = 2;
-const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
+const unitId = "F";
+const partId = `${unitId}${partNo}`;
 const overview = {
   title: "三维空间旋转",
   description:
@@ -43,20 +41,22 @@ export default function Index() {
     router.push(`${partNo + 1}`);
   };
 
-  const onFinish = (values: { [k: string]: string }) => {
+  const onChange = (values: string[]) => {
     const currentTime = Date.now();
-    mutateAsync({
-      input: {
-        questionId,
-        answer: JSON.stringify(values[questionId]),
-        duration: currentTime - time,
-      },
-    });
-    setTime(currentTime);
-    if (questionNo === questions.length) {
-      setStage(Stage.End);
+    if (values.length === 2) {
+      mutateAsync({
+        input: {
+          questionId,
+          answer: JSON.stringify(values.sort()),
+          duration: currentTime - time,
+        },
+      });
+      setTime(currentTime);
+      if (questionNo === questions.length) {
+        setStage(Stage.End);
+      }
+      setQuestionNo(questionNo + 1);
     }
-    setQuestionNo(questionNo + 1);
   };
 
   return (
@@ -77,7 +77,7 @@ export default function Index() {
                 <CheckboxForm
                   name={questionId}
                   question={questions[questionIndex]}
-                  onFinish={onFinish}
+                  onChange={onChange}
                   className="w-[250px]"
                 />
               </div>

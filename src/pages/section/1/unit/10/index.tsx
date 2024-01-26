@@ -14,9 +14,8 @@ import Loading from "@/components/Loading";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 
-const sectionNo = 1;
 const unitNo = 10;
-const unitId = `${sectionNo}.${unitNo}`;
+const unitId = "J";
 const overview = {
   title: "内省能力",
   description:
@@ -31,30 +30,22 @@ export default function Index() {
   const [stage, setStage] = useState(Stage.Intro);
   const [questionNo, setQuestionNo] = useState(1);
   const { mutateAsync: submitAnswer } = useSubmitAnswerMutation(dataSource);
+  const [time, setTime] = useState(Date.now());
 
-  const isQuestionStage = stage === Stage.Question;
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
   const questionId = `${unitId}.${questionNo}`;
-
   const isLast = questionIndex === questions.length - 1;
 
-  const { data, isLoading } = useAnswerQuery(
-    dataSource,
-    {
-      questionId,
-    },
-    {
-      enabled: isQuestionStage,
-    }
-  );
-
   const onChange = async (value: string) => {
+    const currentTime = Date.now();
     await submitAnswer({
       input: {
         questionId,
         answer: value,
+        duration: currentTime - time,
       },
     });
+    setTime(currentTime);
     goNext();
   };
 
@@ -69,6 +60,7 @@ export default function Index() {
 
   const onStart = async () => {
     setStage(Stage.Question);
+    setTime(Date.now());
   };
 
   const onEnd = async () => {
@@ -97,16 +89,11 @@ export default function Index() {
           {stage === Stage.Question ? (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
-                {isLoading ? (
-                  <Loading />
-                ) : (
-                  <RadioForm
-                    name={questionId}
-                    defaultValue={data?.answer?.answer}
-                    question={questions[questionIndex]}
-                    onChange={onChange}
-                  />
-                )}
+                <RadioForm
+                  name={questionId}
+                  question={questions[questionIndex]}
+                  onChange={onChange}
+                />
               </div>
             </div>
           ) : (

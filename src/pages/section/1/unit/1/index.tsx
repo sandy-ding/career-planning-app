@@ -10,9 +10,7 @@ import { Stage } from "@/types";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 
-const sectionNo = 1;
 const unitNo = 1;
-const unitId = `${sectionNo}.${unitNo}`;
 const overview = {
   title: "语言能力",
   description:
@@ -33,7 +31,7 @@ export default function Index() {
   const isQuestionStage = stage === Stage.Question;
   const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const questionId = `${unitId}.${partNo}.${questionNo}`;
+  const questionId = `A${partNo}.${questionNo}`;
 
   const isLast =
     partIndex === questions.length - 1 &&

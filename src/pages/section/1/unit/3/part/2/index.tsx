@@ -26,8 +26,8 @@ enum Stage {
 const sectionNo = 1;
 const unitNo = 3;
 const partNo = 2;
-const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
+const unitId = "C";
+const partId = `${unitId}${partNo}`;
 
 const overview = {
   title: "视觉矩阵测验",
@@ -120,9 +120,6 @@ export default function Index() {
     } else {
       setGoNext(false);
       if (question.answer === answerStr) {
-        setQuestionIndex(questionIndex + 1);
-        setStage(Stage.ShowQuestion);
-        setNumOfSubmission(0);
         mutate({
           input: {
             questionId,
@@ -130,7 +127,14 @@ export default function Index() {
             duration: currentTime - time,
           },
         });
-        startTest();
+        if (questionIndex === questions.length - 1) {
+          setStage(Stage.End);
+        } else {
+          setQuestionIndex(questionIndex + 1);
+          setStage(Stage.ShowQuestion);
+          setNumOfSubmission(0);
+          startTest();
+        }
       } else if (numOfSubmission >= 2) {
         mutate({
           input: {

@@ -12,7 +12,7 @@ import UnitEnd from "@/components/UnitEnd";
 import QuizEnd from "@/components/QuizEnd";
 import Encouragement from "@/components/Encouragement";
 
-const sectionNo = 3;
+const unitId = "R";
 const overview = {
   title: "职业兴趣测验",
   description:
@@ -31,18 +31,17 @@ const overview2 = {
 };
 
 export default function Index() {
-  const router = useRouter();
   const dataSource = getDataSource();
 
   const [partNo, setPartNo] = useState(1);
   const [stage, setStage] = useState(Stage.Intro);
   const [questionNo, setQuestionNo] = useState(1);
-
+  const [time, setTime] = useState(Date.now());
   const { mutateAsync: submitAnswer } = useSubmitAnswerMutation(dataSource);
 
   const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const questionId = `${sectionNo}.${partNo}.${questionNo}`;
+  const questionId = `${unitId}${partNo}.${questionNo}`;
 
   const isLast = questionNo === questions[partIndex].length;
 
@@ -51,6 +50,7 @@ export default function Index() {
       input: {
         questionId,
         answer: value,
+        duration: Date.now() - time,
       },
     });
     if (questionNo % 25 === 0) {
@@ -65,10 +65,12 @@ export default function Index() {
       setStage(Stage.End);
     }
     setQuestionNo(questionNo + 1);
+    setTime(Date.now());
   };
 
   const onStart = () => {
     setStage(Stage.Question);
+    setTime(Date.now());
   };
 
   const onEnd = async () => {
@@ -103,10 +105,10 @@ export default function Index() {
           />
         )}
         {stage === Stage.PartIntro && partNo === 1 && (
-          <Overview {...overview1} onClick={() => onStart()} />
+          <Overview {...overview1} onClick={onStart} />
         )}
         {stage === Stage.PartIntro && partNo === 2 && (
-          <Overview {...overview2} onClick={() => onStart()} />
+          <Overview {...overview2} onClick={onStart} />
         )}
 
         {stage === Stage.Question && (

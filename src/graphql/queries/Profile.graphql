@@ -1,0 +1,55 @@
+query profile {
+  profile {
+    name
+    gender
+    yearOfBirth
+    nation
+    schoolRoll
+    studentType
+    school
+    grade
+    colorVision
+    vision
+    speciality
+    interest
+    fathersYearOfBirth
+    fathersWork
+    fathersEducation
+    fathersMonthlyIncome
+    mothersYearOfBirth
+    mothersWork
+    mothersEducation
+    mothersMontylyIncome
+    email
+    telephone
+    address
+  }
+}
+
+mutation updateProfile($input: ProfileMutationRequest!) {
+  updateProfile(input: $input) {
+    name
+    gender
+    yearOfBirth
+    nation
+    schoolRoll
+    studentType
+    school
+    grade
+    colorVision
+    vision
+    speciality
+    interest
+    fathersYearOfBirth
+    fathersWork
+    fathersEducation
+    fathersMonthlyIncome
+    mothersYearOfBirth
+    mothersWork
+    mothersEducation
+    mothersMontylyIncome
+    email
+    telephone
+    address
+  }
+}

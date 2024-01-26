@@ -22,11 +22,9 @@ enum Light {
   Off,
 }
 
-const sectionNo = 1;
-const unitNo = 8;
 const partNo = 2;
-const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
+const unitId = "H";
+const partId = `${unitId}${partNo}`;
 const testCount = 5;
 const count = 15;
 
@@ -140,17 +138,22 @@ export default function Idex() {
                     validateStatus={validateStatus}
                   >
                     {stage === Stage.Mid ? (
-                      <div className="mt-40 flex justify-center">
-                        <Button
-                          size="large"
-                          shape="round"
-                          onClick={() => {
-                            setStage(Stage.Main);
-                            startTest();
-                          }}
-                        >
-                          开始测试
-                        </Button>
+                      <div className="mt-40">
+                        <div className="text-center text-primary-700">
+                          现在你将进入正式测验，点击“开始测验”按钮开始吧！
+                        </div>
+                        <div className="mt-40 flex justify-center">
+                          <Button
+                            size="large"
+                            shape="round"
+                            onClick={() => {
+                              setStage(Stage.Main);
+                              startTest();
+                            }}
+                          >
+                            开始测试
+                          </Button>
+                        </div>
                       </div>
                     ) : (
                       <div className="flex justify-center items-center mt-20">

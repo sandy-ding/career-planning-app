@@ -1,17 +1,14 @@
 import { useRouter } from "next/router";
 import {
   useAnswerQuery,
-  useAnswersQuery,
   useSubmitAnswerMutation,
 } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import questions from "./index.json";
 import RadioForm from "@/components/RadioForm";
 import Header from "@/components/Layout/Header";
-import { Button } from "antd";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import Progress from "@/components/Progress";
 import { Stage } from "@/types";
 import Loading from "@/components/Loading";
@@ -21,8 +18,7 @@ import Countdown from "antd/lib/statistic/Countdown";
 import { getCountdown } from "@/utils";
 
 const sectionNo = 1;
-const unitNo = 16;
-const unitId = `${sectionNo}.${unitNo}`;
+const unitId = "P";
 const overview = {
   title: "人际交往能力",
   description:
@@ -59,7 +55,7 @@ export default function Index() {
 
   const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const partId = `${unitId}.${partNo}`;
+  const partId = `${unitId}${partNo}`;
   const questionId = `${partId}.${questionNo}`;
 
   const { isLoading } = useAnswerQuery(

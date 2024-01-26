@@ -8,7 +8,7 @@
     "type": "Audio",
     "isTest": true,
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-t-1.mp3",
-    "label": "1. 我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "1. 按顺序输入刚刚听到的数字。",
     "answer": "37"
   },
   {
@@ -20,7 +20,7 @@
     "type": "Audio",
     "isTest": true,
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-t-2.mp3",
-    "label": "2. 我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "2. 按顺序输入刚刚听到的数字。",
     "answer": "459"
   },
   {
@@ -30,7 +30,7 @@
     "category3": "言语工作记忆广度——数字广度测验",
     "category4": "数字顺背",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-1.mp3",
-    "label": "1. 我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "1. 按顺序输入刚刚听到的数字。",
     "answer": "386"
   },
   {
@@ -41,7 +41,7 @@
     "category4": "数字顺背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-2.mp3",
-    "label": "2. 我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "2. 按顺序输入刚刚听到的数字。",
     "answer": "3517"
   },
   {
@@ -52,7 +52,7 @@
     "category4": "数字顺背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-3.mp3",
-    "label": "3. 我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "3. 按顺序输入刚刚听到的数字。",
     "answer": "84259"
   },
   {
@@ -63,7 +63,7 @@
     "category4": "数字顺背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-4.mp3",
-    "label": "4. 我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "4. 按顺序输入刚刚听到的数字。",
     "answer": "386174"
   },
   {
@@ -74,7 +74,7 @@
     "category4": "数字顺背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-5.mp3",
-    "label": "5. 我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "5. 按顺序输入刚刚听到的数字。",
     "answer": "5174268"
   },
   {
@@ -85,7 +85,7 @@
     "category4": "数字顺背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-6.mp3",
-    "label": "6. 我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "6. 按顺序输入刚刚听到的数字。",
     "answer": "16429763"
   },
   {
@@ -96,7 +96,7 @@
     "category4": "数字顺背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-7.mp3",
-    "label": "7. 我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "7. 按顺序输入刚刚听到的数字。",
     "answer": "538418469"
   },
   {
@@ -107,7 +107,7 @@
     "category4": "数字顺背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-8.mp3",
-    "label": "8.我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "8.按顺序输入刚刚听到的数字。",
     "answer": "7361529386"
   },
   {
@@ -118,7 +118,7 @@
     "category4": "数字顺背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-9.mp3",
-    "label": "9.我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "9.按顺序输入刚刚听到的数字。",
     "answer": "37925186416"
   },
   {
@@ -129,7 +129,7 @@
     "category4": "数字顺背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-10.mp3",
-    "label": "10. 我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "10. 按顺序输入刚刚听到的数字。",
     "answer": "852736948574"
   },
   {
@@ -140,7 +140,7 @@
     "category4": "数字顺背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-11.mp3",
-    "label": "11. 我说一些数字，当我一说完你就按照我说的顺序重述出来。",
+    "label": "11. 按顺序输入刚刚听到的数字。",
     "answer": "4915283759436"
   },
   {
@@ -152,7 +152,7 @@
     "type": "Audio",
     "isTest": true,
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-t-3.mp3",
-    "label": "1. 我说一些数字，当我一说完你就按照原数倒背出来。",
+    "label": "1. 按倒序输入刚刚听到的数字。",
     "answer": "56"
   },
   {
@@ -164,114 +164,8 @@
     "type": "Audio",
     "isTest": true,
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-t-4.mp3",
-    "label": "2. 我说一些数字，当我一说完你就按照原数倒背出来。",
+    "label": "2. 按倒序输入刚刚听到的数字。",
     "answer": "917"
-  },
-  {
-    "questionId": "12",
-    "category1": "工作记忆能力",
-    "category2": "中央执行器",
-    "category3": "言语工作记忆广度——数字广度测验",
-    "category4": "数字倒背",
-    "type": "Audio",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-12.mp3",
-    "label": "1. 我说一些数字，当我一说完你就按照原数倒背出来。",
-    "answer": "475"
-  },
-
-  {
-    "questionId": "13",
-    "category1": "工作记忆能力",
-    "category2": "中央执行器",
-    "category3": "言语工作记忆广度——数字广度测验",
-    "category4": "数字倒背",
-    "type": "Audio",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-13.mp3",
-    "label": "2. 我说一些数字，当我一说完你就按照原数倒背出来。",
-    "answer": "6927"
-  },
-
-  {
-    "questionId": "14",
-    "category1": "工作记忆能力",
-    "category2": "中央执行器",
-    "category3": "言语工作记忆广度——数字广度测验",
-    "category4": "数字倒背",
-    "type": "Audio",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-14.mp3",
-    "label": "3. 我说一些数字，当我一说完你就按照原数倒背出来。",
-    "answer": "75314"
-  },
-
-  {
-    "questionId": "15",
-    "category1": "工作记忆能力",
-    "category2": "中央执行器",
-    "category3": "言语工作记忆广度——数字广度测验",
-    "category4": "数字倒背",
-    "type": "Audio",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-15.mp3",
-    "label": "4. 我说一些数字，当我一说完你就按照原数倒背出来。",
-    "answer": "392861"
-  },
-
-  {
-    "questionId": "16",
-    "category1": "工作记忆能力",
-    "category2": "中央执行器",
-    "category3": "言语工作记忆广度——数字广度测验",
-    "category4": "数字倒背",
-    "type": "Audio",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-16.mp3",
-    "label": "5. 我说一些数字，当我一说完你就按照原数倒背出来。",
-    "answer": "2462958"
-  },
-
-  {
-    "questionId": "17",
-    "category1": "工作记忆能力",
-    "category2": "中央执行器",
-    "category3": "言语工作记忆广度——数字广度测验",
-    "category4": "数字倒背",
-    "type": "Audio",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-17.mp3",
-    "label": "6. 我说一些数字，当我一说完你就按照原数倒背出来。",
-    "answer": "85736196"
-  },
-
-  {
-    "questionId": "18",
-    "category1": "工作记忆能力",
-    "category2": "中央执行器",
-    "category3": "言语工作记忆广度——数字广度测验",
-    "category4": "数字倒背",
-    "type": "Audio",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-18.mp3",
-    "label": "7. 我说一些数字，当我一说完你就按照原数倒背出来。",
-    "answer": "283147539"
-  },
-
-  {
-    "questionId": "19",
-    "category1": "工作记忆能力",
-    "category2": "中央执行器",
-    "category3": "言语工作记忆广度——数字广度测验",
-    "category4": "数字倒背",
-    "type": "Audio",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-19.mp3",
-    "label": "8. 我说一些数字，当我一说完你就按照原数倒背出来。",
-    "answer": "3614972485"
-  },
-  {
-    "questionId": "20",
-    "category1": "工作记忆能力",
-    "category2": "中央执行器",
-    "category3": "言语工作记忆广度——数字广度测验",
-    "category4": "数字倒背",
-    "type": "Audio",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-20.mp3",
-    "label": "9. 我说一些数字，当我一说完你就按照原数倒背出来。",
-    "answer": "92752847163"
   },
   {
     "questionId": "21",
@@ -281,9 +175,10 @@
     "category4": "数字倒背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-21.mp3",
-    "label": "10. 我说一些数字，当我一说完你就按照原数倒背出来。",
-    "answer": "864728364917"
+    "label": "1. 按倒序输入刚刚听到的数字。",
+    "answer": "475"
   },
+
   {
     "questionId": "22",
     "category1": "工作记忆能力",
@@ -292,7 +187,112 @@
     "category4": "数字倒背",
     "type": "Audio",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-22.mp3",
-    "label": "11. 我说一些数字，当我一说完你就按照原数倒背出来。",
+    "label": "2. 按倒序输入刚刚听到的数字。",
+    "answer": "6927"
+  },
+
+  {
+    "questionId": "23",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-23.mp3",
+    "label": "3. 按倒序输入刚刚听到的数字。",
+    "answer": "75314"
+  },
+
+  {
+    "questionId": "24",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-24.mp3",
+    "label": "4. 按倒序输入刚刚听到的数字。",
+    "answer": "392861"
+  },
+
+  {
+    "questionId": "25",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-25.mp3",
+    "label": "5. 按倒序输入刚刚听到的数字。",
+    "answer": "2462958"
+  },
+
+  {
+    "questionId": "26",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-26.mp3",
+    "label": "6. 按倒序输入刚刚听到的数字。",
+    "answer": "85736196"
+  },
+
+  {
+    "questionId": "27",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-27.mp3",
+    "label": "7. 按倒序输入刚刚听到的数字。",
+    "answer": "283147539"
+  },
+
+  {
+    "questionId": "28",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-28.mp3",
+    "label": "8. 按倒序输入刚刚听到的数字。",
+    "answer": "3614972485"
+  },
+  {
+    "questionId": "29",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-29.mp3",
+    "label": "9. 按倒序输入刚刚听到的数字。",
+    "answer": "92752847163"
+  },
+  {
+    "questionId": "30",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-30.mp3",
+    "label": "10. 按倒序输入刚刚听到的数字。",
+    "answer": "864728364917"
+  },
+  {
+    "questionId": "31",
+    "category1": "工作记忆能力",
+    "category2": "中央执行器",
+    "category3": "言语工作记忆广度——数字广度测验",
+    "category4": "数字倒背",
+    "type": "Audio",
+    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-31.mp3",
+    "label": "11. 按倒序输入刚刚听到的数字。",
     "answer": "9704743398121"
   }
 ]

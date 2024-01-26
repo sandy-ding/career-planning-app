@@ -37,7 +37,6 @@ const Puzzle = (props: IProps) => {
   const onDropPiece = (sourcePosition: any, dropPosition: any) => {
     const oldPositions = positions.slice();
     const newPositions = [];
-
     for (let i in oldPositions) {
       const value = oldPositions[i];
       let newValue = value;
@@ -59,12 +58,27 @@ const Puzzle = (props: IProps) => {
     }
   };
 
+  const canDropPiece = (sourcePosition: any, dropPosition: any) => {
+    const sourcePositionIndex = positions.findIndex(
+      (i) => i === sourcePosition
+    );
+    const dropPositionIndex = positions.findIndex((i) => i === dropPosition);
+    const neighborIndex = [
+      sourcePositionIndex + 1,
+      sourcePositionIndex - 1,
+      sourcePositionIndex + pieces,
+      sourcePositionIndex - pieces,
+    ];
+    return neighborIndex.includes(dropPositionIndex);
+  };
+
   const renderPieces = () =>
     positions.map((i) => (
       <Piece
         key={i}
         position={i}
         onDropPiece={onDropPiece}
+        canDropPiece={canDropPiece}
         {...coords[i]}
         {...props}
       />

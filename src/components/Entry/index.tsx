@@ -35,7 +35,7 @@ export default function Entry({
             bgImage
           )}
         >
-          <div className="w-1/2 text-center">
+          <div className="min-w-2/3 text-center">
             <div className="my-40 text-6xl text-primary-700">{title}</div>
             <Button
               htmlType="submit"

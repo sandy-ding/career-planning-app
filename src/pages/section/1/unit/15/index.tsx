@@ -12,9 +12,8 @@ import sample from "./index.json";
 import { Button, Form } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 
-const sectionNo = 1;
 const unitNo = 15;
-const unitId = `${sectionNo}.${unitNo}`;
+const unitId = "O";
 
 const charMap = {
   blue: "蓝",
@@ -24,7 +23,7 @@ const charMap = {
 
 const testQuestions = shuffle(sample, 5);
 const mainQuestions = shuffle(
-  sample.map((i) => new Array(8).fill(i)).flat(),
+  sample.map((i) => new Array(5).fill(i)).flat(),
   5
 );
 
@@ -203,17 +202,22 @@ export default function Index() {
                     validateStatus={validateStatus}
                   >
                     {stage === Stage.Mid ? (
-                      <div className="mt-40 flex justify-center">
-                        <Button
-                          size="large"
-                          shape="round"
-                          onClick={() => {
-                            setStage(Stage.Main);
-                            startTest();
-                          }}
-                        >
-                          开始测试
-                        </Button>
+                      <div className="mt-40">
+                        <div className="text-center text-primary-700">
+                          现在你将进入正式测验，点击“开始测验”按钮开始吧！
+                        </div>
+                        <div className="mt-40 flex justify-center">
+                          <Button
+                            size="large"
+                            shape="round"
+                            onClick={() => {
+                              setStage(Stage.Main);
+                              startTest();
+                            }}
+                          >
+                            开始测试
+                          </Button>
+                        </div>
                       </div>
                     ) : (
                       <div

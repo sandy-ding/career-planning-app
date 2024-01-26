@@ -10,6 +10,7 @@ interface IProps {
   pieces: number;
   position: number;
   onDropPiece: Function;
+  canDropPiece: Function;
 }
 
 const puzzlePieceStyles = (
@@ -27,14 +28,14 @@ const puzzlePieceStyles = (
 });
 
 const Piece = memo((props: IProps) => {
-  const { position, onDropPiece } = props;
+  const { position, onDropPiece, canDropPiece } = props;
 
   const [, dragEl] = useDrag({
     type: "PIECE",
     item: { position },
   });
 
-  const [{ isOver }, dropRef] = useDrop({
+  const [{ isOver, canDrop }, dropRef] = useDrop({
     accept: "PIECE",
     drop: (props: { position: string }) => {
       onDropPiece(
@@ -42,9 +43,16 @@ const Piece = memo((props: IProps) => {
         position // drop position
       );
     },
+    canDrop: (props: { position: string }) => {
+      return canDropPiece(
+        props.position, // source position
+        position // drop position
+      );
+    },
     collect: (monitor) => {
       return {
         isOver: monitor.isOver(),
+        canDrop: monitor.canDrop(),
       };
     },
   });

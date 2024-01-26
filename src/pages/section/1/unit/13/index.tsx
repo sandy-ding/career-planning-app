@@ -10,9 +10,8 @@ import { Stage } from "@/types";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 
-const sectionNo = 1;
 const unitNo = 13;
-const unitId = `${sectionNo}.${unitNo}`;
+const unitId = "M";
 const overview = {
   title: "音乐能力",
   description:
@@ -27,24 +26,28 @@ export default function Index() {
   const [partNo, setPartNo] = useState(1);
   const [stage, setStage] = useState(Stage.Intro);
   const [questionNo, setQuestionNo] = useState(1);
+  const [time, setTime] = useState(Date.now());
   const { mutateAsync: submitAnswer } = useSubmitAnswerMutation(dataSource);
 
   const isQuestionStage = stage === Stage.Question;
   const partIndex = useMemo(() => partNo - 1, [partNo]);
   const questionIndex = useMemo(() => questionNo - 1, [questionNo]);
-  const questionId = `${unitId}.${partNo}.${questionNo}`;
+  const questionId = `${unitId}${partNo}.${questionNo}`;
 
   const isLast =
     partIndex === questions.length - 1 &&
     questionIndex === questions[partIndex].length - 1;
 
   const onChange = async (value: string) => {
+    const currentTime = Date.now();
     await submitAnswer({
       input: {
         questionId,
         answer: value,
+        duration: currentTime - time,
       },
     });
+    setTime(currentTime);
     goNext();
   };
 
@@ -62,6 +65,7 @@ export default function Index() {
 
   const onStart = async () => {
     setStage(Stage.Question);
+    setTime(Date.now());
   };
 
   const onEnd = async () => {

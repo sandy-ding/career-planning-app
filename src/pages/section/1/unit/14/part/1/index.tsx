@@ -10,11 +10,9 @@ import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 import { Form } from "antd";
 
-const sectionNo = 1;
-const unitNo = 14;
 const partNo = 1;
-const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
+const unitId = "N";
+const partId = `${unitId}${partNo}`;
 
 const overview = {
   title: "图片转换为对应文字",

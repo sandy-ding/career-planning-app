@@ -67,15 +67,15 @@ const initialValue = [
 const overview = {
   title: "匹配反应时",
   description:
-    "<strong>指导语</strong>：这是信息加工能力测验的第三段测验。<br /><br />接下来电脑界面上将呈现5×5排列的字符组合图片，请根据题目要求在图片中找出相应的5个字符组合，并用鼠标点击对应位置。<br /><br />选择完成后点击提交，确认后将进入下一题。<br /><br />现在，请开始测验。",
+    "<strong>指导语</strong>：这是信息加工能力测验的第三段测验。<br /><br />接下来电脑界面上将呈现5×5排列的字符组合图片，请根据题目要求在图片中找出相应的5个字符组合，并用鼠标点击对应位置。选择完成后点击提交，确认后将进入下一题。<br /><br />现在，请开始测验。",
   audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-8-3.mp3",
 };
 
 const sectionNo = 1;
 const unitNo = 8;
 const partNo = 3;
-const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
+const unitId = "H";
+const partId = `${unitId}${partNo}`;
 const countdownDuration = 1000 * 60 * 10;
 
 enum Stage {
@@ -159,30 +159,25 @@ export default function Index() {
   const onFinish = () => {
     const currentTime = Date.now();
     const answerStr = JSON.stringify(value);
-    if (answerStr === question.answer) {
-      setValue([
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-      ]);
-      mutateAsync({
-        input: {
-          questionId,
-          duration: currentTime - time,
-          isCorrect: true,
-        },
-      });
-      setTime(currentTime);
-      if (questionNo === questions.length - 1) {
-        setStage(Stage.End);
-      } else {
-        setQuestionNo(questionNo + 1);
-      }
+    setValue([
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+    ]);
+    mutateAsync({
+      input: {
+        questionId,
+        duration: currentTime - time,
+        answer: answerStr,
+      },
+    });
+    setTime(currentTime);
+    if (questionNo === questions.length - 1) {
+      setStage(Stage.End);
     } else {
-      setHelp("回答错误");
-      setValidateStatus("error");
+      setQuestionNo(questionNo + 1);
     }
   };
 

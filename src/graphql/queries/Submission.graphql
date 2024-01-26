@@ -8,3 +8,15 @@ mutation submitAnswer($input: AnswerMutationRequest!) {
     duration
   }
 }
+
+query submissions($cursor: String, $limit: Int) {
+  submissions(cursor: $cursor, limit: $limit) {
+    _id
+    answers {
+      questionId
+      answer
+      isCorrect
+      duration
+    }
+  }
+}

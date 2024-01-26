@@ -1,5 +1,5 @@
 import { Question } from "@/types";
-import { Button, Checkbox, Form, Space } from "antd";
+import { Button, Checkbox, Form } from "antd";
 import classNames from "classnames";
 import { ReactElement, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
@@ -10,7 +10,8 @@ interface IProps {
   question: Question;
   className?: string;
   defaultValue?: string | undefined | null;
-  onFinish: (values: { [k: string]: string }) => void;
+  onFinish?: (values: { [k: string]: string }) => void;
+  onChange: (values: any) => void;
 }
 
 export default function CheckboxForm({
@@ -18,15 +19,14 @@ export default function CheckboxForm({
   question,
   className,
   defaultValue,
+  onChange,
   onFinish,
 }: IProps) {
-  const hasImage = !!question.fileUrl;
   const [form] = Form.useForm();
   useEffect(() => form.resetFields(), [name, defaultValue]);
 
   const col = 4;
 
-  console.log(question?.options);
   let Options: ReactElement[] = [];
   const cols = [];
   for (let j = 0; j < col; j++) {
@@ -84,15 +84,13 @@ export default function CheckboxForm({
         name={name}
         rules={[{ required: true, message: "请选择选项" }]}
       >
-        <Checkbox.Group name="radiogroup" className="w-full">
+        <Checkbox.Group
+          name="radiogroup"
+          className="w-full"
+          onChange={() => onChange(form.getFieldValue(name))}
+        >
           {Options}
         </Checkbox.Group>
-      </Form.Item>
-
-      <Form.Item className="flex justify-center">
-        <Button htmlType="submit" size="large" shape="round">
-          提交
-        </Button>
       </Form.Item>
     </Form>
   );

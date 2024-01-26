@@ -13,16 +13,14 @@ import { ValidateStatus } from "antd/es/form/FormItem";
 import OtpInput from "react-otp-input";
 import AudioPlayer from "@/components/AudioPlayer";
 
-const sectionNo = 1;
-const unitNo = 3;
 const partNo = 1;
-const unitId = `${sectionNo}.${unitNo}`;
-const partId = `${unitId}.${partNo}`;
+const unitId = "C";
+const partId = `${unitId}${partNo}`;
 
 const overview = {
   title: "数字广度测验",
   description:
-    "<strong>指导语</strong>：下面开始数字广度测验。你将听到我说出一串数字，你只需按要求把听到的数字输入到屏幕中。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。注意：若连错3次测验即停止，以最后一次答对数字串所包含的数字个数为最终得分。下面点击“练习”，开始练习吧。",
+    "<strong>指导语</strong>：下面开始数字广度测验。你将听到“哔”一声（提示音），之后我会说出一串数字，你需按照我说的顺序，把听到的数字输入到屏幕中。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。注意：若连错3次测验即停止，以最后一次答对数字串所包含的数字个数为最终得分。下面点击“练习”，开始练习吧。",
   audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1.mp3",
 };
 
@@ -196,14 +194,22 @@ export default function Index() {
               </div>
             </div>
           )}
-          {stage === Stage.Mid && (
-            <Overview
-              description="很好。点击“开始”，开启正式测验，注意若连错3次测验即停止，以最后一次答对数字串所包含的数字个数为最终得分。"
-              btnText="开始"
-              onClick={() => setStage(Stage.Main)}
-              audioUrl="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-M.mp3"
-            />
-          )}
+          {stage === Stage.Mid &&
+            (questionIndex < 13 ? (
+              <Overview
+                description="很好。点击“开始”，开启正式测验，你将听到“哔”一声（提示音），之后我会说出一串数字，你需按照我说的顺序，把听到的数字输入到屏幕中。注意：若连错3次测验即停止。"
+                btnText="开始"
+                onClick={() => setStage(Stage.Main)}
+                audioUrl="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-M-1.mp3"
+              />
+            ) : (
+              <Overview
+                description="很好。点击“开始”，开启正式测验。你将听到“哔”一声（提示音），之后我会说出一串数字，你需要把听到的数字按倒序输入到屏幕中。注意：若连错3次测验即停止。"
+                btnText="开始"
+                onClick={() => setStage(Stage.Main)}
+                audioUrl="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-M-2.mp3"
+              />
+            ))}
           {stage === Stage.End && <UnitEnd goNext={onEnd} />}
         </>
       )}
