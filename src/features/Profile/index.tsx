@@ -367,7 +367,10 @@ export default function Profile() {
               <Form.Item
                 label="Email：："
                 name="email"
-                rules={[{ type: "email", message: "请输入正确的Email" }]}
+                rules={[
+                  { required: true, message: "请输入Email" },
+                  { type: "email", message: "请输入正确的Email" },
+                ]}
               >
                 <Input />
               </Form.Item>
