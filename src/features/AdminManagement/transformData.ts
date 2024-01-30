@@ -1,5 +1,5 @@
-import fs from "fs";
-import { stringify } from "csv-stringify";
+// import fs from "fs";
+// import { stringify } from "csv-stringify";
 import { Answer } from "@/graphql/generated/graphql";
 
 // const filename = "test_results.csv";

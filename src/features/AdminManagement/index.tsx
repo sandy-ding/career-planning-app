@@ -10,8 +10,8 @@ import { Button, Table } from "antd";
 import { ColumnsType } from "antd/lib/table";
 import { getPartData } from "./transformData";
 import fs from "fs";
-import { stringify } from "csv-stringify";
-import { Answer } from "@/graphql/generated/graphql";
+// import { stringify } from "csv-stringify";
+// import { Answer } from "@/graphql/generated/graphql";
 
 const filename = "test_results.csv";
 const writableStream = fs.createWriteStream(filename);
@@ -93,9 +93,9 @@ export default function AdminManagement() {
         return questionId.startsWith("1.1.");
       }) || []
     );
-    const stringifier = stringify({ header: true, columns: columns });
-    stringifier.write(tData);
-    stringifier.pipe(writableStream);
+    // const stringifier = stringify({ header: true, columns: columns });
+    // stringifier.write(tData);
+    // stringifier.pipe(writableStream);
     console.log("Finished writing data");
   };
 
