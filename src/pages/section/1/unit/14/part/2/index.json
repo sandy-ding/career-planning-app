@@ -6,19 +6,21 @@
     "menuId": "2",
     "type": "Radio",
     "label": "1. 菱形",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q208.png",
     "options": [
       {
         "value": "A",
-        "label": "A"
+        "label": "A",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-1-1.png"
       },
       {
         "value": "B",
-        "label": "B"
+        "label": "B",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-1-2.png"
       },
       {
         "value": "C",
-        "label": "C"
+        "label": "C",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-1-3.png"
       }
     ],
     "answer": "C"
@@ -30,19 +32,21 @@
     "menuId": "2",
     "type": "Radio",
     "label": "2. 三角形在圆形的左边",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q209.png",
     "options": [
       {
         "value": "A",
-        "label": "A"
+        "label": "A",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-2-1.png"
       },
       {
         "value": "B",
-        "label": "B"
+        "label": "B",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-2-2.png"
       },
       {
         "value": "C",
-        "label": "C"
+        "label": "C",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-2-3.png"
       }
     ],
     "answer": "A"
@@ -54,19 +58,21 @@
     "menuId": "2",
     "type": "Radio",
     "label": "3. 长方形不是不在三角形之下",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q210.png",
     "options": [
       {
         "value": "A",
-        "label": "A"
+        "label": "A",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-3-1.png"
       },
       {
         "value": "B",
-        "label": "B"
+        "label": "B",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-3-2.png"
       },
       {
         "value": "C",
-        "label": "C"
+        "label": "C",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-3-3.png"
       }
     ],
     "answer": "A"
@@ -78,19 +84,21 @@
     "menuId": "2",
     "type": "Radio",
     "label": "4. 菱形在三角形的右边",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q211.png",
     "options": [
       {
         "value": "A",
-        "label": "A"
+        "label": "A",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-4-1.png"
       },
       {
         "value": "B",
-        "label": "B"
+        "label": "B",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-4-2.png"
       },
       {
         "value": "C",
-        "label": "C"
+        "label": "C",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-4-3.png"
       }
     ],
     "answer": "B"
@@ -102,19 +110,21 @@
     "menuId": "2",
     "type": "Radio",
     "label": "5. 圆形在正方形之下",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q212.png",
     "options": [
       {
         "value": "A",
-        "label": "A"
+        "label": "A",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-5-1.png"
       },
       {
         "value": "B",
-        "label": "B"
+        "label": "B",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-5-2.png"
       },
       {
         "value": "C",
-        "label": "C"
+        "label": "C",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-5-3.png"
       }
     ],
     "answer": "C"
@@ -126,19 +136,21 @@
     "menuId": "2",
     "type": "Radio",
     "label": "6. 菱形不是不在长方形之下",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q213.png",
     "options": [
       {
         "value": "A",
-        "label": "A"
+        "label": "A",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-6-1.png"
       },
       {
         "value": "B",
-        "label": "B"
+        "label": "B",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-6-2.png"
       },
       {
         "value": "C",
-        "label": "C"
+        "label": "C",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-6-3.png"
       }
     ],
     "answer": "A"
@@ -150,19 +162,21 @@
     "menuId": "2",
     "type": "Radio",
     "label": "7. 三角形在正方形和圆形之上",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q214.png",
     "options": [
       {
         "value": "A",
-        "label": "A"
+        "label": "A",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-7-1.png"
       },
       {
         "value": "B",
-        "label": "B"
+        "label": "B",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-7-2.png"
       },
       {
         "value": "C",
-        "label": "C"
+        "label": "C",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-7-3.png"
       }
     ],
     "answer": "C"
@@ -174,19 +188,21 @@
     "menuId": "2",
     "type": "Radio",
     "label": "8. 圆形不是不在三角形和长方形之间",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q215.png",
     "options": [
       {
         "value": "A",
-        "label": "A"
+        "label": "A",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-8-1.png"
       },
       {
         "value": "B",
-        "label": "B"
+        "label": "B",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-8-2.png"
       },
       {
         "value": "C",
-        "label": "C"
+        "label": "C",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-8-3.png"
       }
     ],
     "answer": "A"
@@ -198,19 +214,21 @@
     "menuId": "2",
     "type": "Radio",
     "label": "9. 三角形不在长方形的右边，也不在菱形的左边",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q216.png",
     "options": [
       {
         "value": "A",
-        "label": "A"
+        "label": "A",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-9-1.png"
       },
       {
         "value": "B",
-        "label": "B"
+        "label": "B",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-9-2.png"
       },
       {
         "value": "C",
-        "label": "C"
+        "label": "C",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-9-3.png"
       }
     ],
     "answer": "B"
@@ -222,19 +240,21 @@
     "menuId": "2",
     "type": "Radio",
     "label": "10. 圆形在长方形之上，不在三角形的左边",
-    "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q217.png",
     "options": [
       {
         "value": "A",
-        "label": "A"
+        "label": "A",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-10-1.png"
       },
       {
         "value": "B",
-        "label": "B"
+        "label": "B",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-10-2.png"
       },
       {
         "value": "C",
-        "label": "C"
+        "label": "C",
+        "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2-10-3.png"
       }
     ],
     "answer": "B"

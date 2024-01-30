@@ -8,6 +8,7 @@ import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 import { Button, Form } from "antd";
 import { ValidateStatus } from "antd/es/form/FormItem";
+import BigCountdown from "@/components/BigCountdown";
 
 enum Stage {
   Intro,
@@ -32,7 +33,7 @@ const overview = {
   title: "简单反应时",
   description:
     "<strong>指导语</strong>：这是信息加工能力测验的第二段测验。<br /><br />接下来电脑界面上将呈现一个灯泡，请在灯泡亮起时尽可能快地按下“G”键。<br /><br />现在，请先进行练习测验，练习完成后开始正式测验。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-8-2.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-8-2.mp3",
 };
 
 export default function Idex() {
@@ -42,6 +43,7 @@ export default function Idex() {
   const [showLight, setShowLight] = useState(Light.Off);
   const [time, setTime] = useState(0);
   const questionId = `${partId}.${testNo + 1}`;
+  const [countdown, setCountdown] = useState<number>(0);
 
   const [validateStatus, setValidateStatus] =
     useState<ValidateStatus>("success");
@@ -101,6 +103,11 @@ export default function Idex() {
 
   const onStart = () => {
     setStage(Stage.Test);
+    setCountdown(Date.now() + 1000 * 4);
+  };
+
+  const onCountdownFinish = () => {
+    setCountdown(0);
     startTest();
   };
 
@@ -113,78 +120,93 @@ export default function Idex() {
         <>
           <Progress
             currentIndex={partNo - 1}
-            currentPercent={stage === Stage.Test ? 0 : testNo / count}
+            currentPercent={
+              stage === Stage.Test
+                ? 0
+                : stage === Stage.End
+                ? 1
+                : testNo / count
+            }
             titles={["辨别反应时", "简单反应时", "匹配反应时"]}
           />
           {stage !== Stage.End ? (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
-                <Form
-                  name="basic"
-                  autoComplete="off"
-                  layout="vertical"
-                  requiredMark={false}
-                  className="flex flex-col justify-between"
-                >
-                  <Form.Item
-                    label={
-                      <label className="w-full text-center">
-                        {stage === Stage.Test && "练习题"}
-                      </label>
-                    }
-                    help={
-                      <div className="flex justify-center mt-4">{help}</div>
-                    }
-                    validateStatus={validateStatus}
-                  >
-                    {stage === Stage.Mid ? (
-                      <div className="mt-40">
-                        <div className="text-center text-primary-700">
-                          现在你将进入正式测验，点击“开始测验”按钮开始吧！
-                        </div>
-                        <div className="mt-40 flex justify-center">
-                          <Button
-                            size="large"
-                            shape="round"
-                            onClick={() => {
-                              setStage(Stage.Main);
-                              startTest();
-                            }}
-                          >
-                            开始测试
-                          </Button>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="flex justify-center items-center mt-20">
-                        <img
-                          className="w-80"
-                          src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q133.jpg"
-                        />
-                        <div
-                          style={{
-                            width: "5rem",
-                            height: "5rem",
-                            position: "relative",
-                            borderRadius: "50%",
-                            left: "-200px",
-                            top: "-55px",
-                            opacity: 0.7,
-                            background: "#fff50a",
-                            boxShadow: "#fff50a 0px 0px 75px 75px",
-                            ...(showLight === Light.Off && {
-                              visibility: "hidden",
-                            }),
-                          }}
-                        />
+                {countdown !== 0 ? (
+                  <BigCountdown
+                    countdown={countdown}
+                    onFinish={onCountdownFinish}
+                  />
+                ) : (
+                  <>
+                    <Form
+                      name="basic"
+                      autoComplete="off"
+                      layout="vertical"
+                      requiredMark={false}
+                      className="flex flex-col justify-between"
+                    >
+                      <Form.Item
+                        label={
+                          <label className="w-full text-center">
+                            {stage === Stage.Test && "练习题"}
+                          </label>
+                        }
+                        help={
+                          <div className="flex justify-center mt-4">{help}</div>
+                        }
+                        validateStatus={validateStatus}
+                      >
+                        {stage === Stage.Mid ? (
+                          <div className="mt-40">
+                            <div className="text-center text-primary-700">
+                              现在你将进入正式测验，点击“开始测验”按钮开始吧！
+                            </div>
+                            <div className="mt-40 flex justify-center">
+                              <Button
+                                size="large"
+                                shape="round"
+                                onClick={() => {
+                                  setStage(Stage.Main);
+                                  setCountdown(Date.now() + 1000 * 4);
+                                }}
+                              >
+                                开始测试
+                              </Button>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="flex justify-center items-center mt-20">
+                            <img
+                              className="w-80"
+                              src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q133.jpg"
+                            />
+                            <div
+                              style={{
+                                width: "5rem",
+                                height: "5rem",
+                                position: "relative",
+                                borderRadius: "50%",
+                                left: "-200px",
+                                top: "-55px",
+                                opacity: 0.7,
+                                background: "#fff50a",
+                                boxShadow: "#fff50a 0px 0px 75px 75px",
+                                ...(showLight === Light.Off && {
+                                  visibility: "hidden",
+                                }),
+                              }}
+                            />
+                          </div>
+                        )}
+                      </Form.Item>
+                    </Form>
+                    {stage !== Stage.Mid && (
+                      <div className="w-full pt-10 text-primary-700 text-center text-[22px]">
+                        请在灯泡亮起时尽可能快地按下“G”键。
                       </div>
                     )}
-                  </Form.Item>
-                </Form>
-                {stage !== Stage.Mid && (
-                  <div className="w-full pt-10 text-primary-700 text-center text-[22px]">
-                    请在灯泡亮起时尽可能快地按下“G”键。
-                  </div>
+                  </>
                 )}
               </div>
             </div>

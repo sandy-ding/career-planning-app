@@ -7,7 +7,7 @@
       "type": "Radio",
       "menuId": "12.1",
       "label": "1. 线段2是线段1的多少倍？",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q154.png",
+      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-12-1-1.png",
       "options": [
         {
           "value": "A",
@@ -36,7 +36,7 @@
       "menuId": "12.1",
       "label": "2. 线段2是线段1的多少倍？",
       "className": "w-[300px]",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q155.png",
+      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-12-1-2.png",
       "options": [
         {
           "value": "A",
@@ -65,7 +65,7 @@
       "menuId": "12.1",
       "label": "3. 线段2是线段1的多少倍？",
       "className": "w-[340px]",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q156.png",
+      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-12-1-3.png",
       "options": [
         {
           "value": "A",
@@ -94,7 +94,7 @@
       "menuId": "12.1",
       "label": "4. 线段2是线段1的多少倍？",
       "className": "w-[340px]",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q157.png",
+      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-12-1-4.png",
       "options": [
         {
           "value": "A",
@@ -123,7 +123,7 @@
       "menuId": "12.1",
       "label": "5. 线段1和线段2谁比较长？",
       "className": "w-[340px]",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q158.png",
+      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-12-1-5.png",
       "options": [
         {
           "value": "A",
@@ -148,7 +148,7 @@
       "menuId": "12.1",
       "label": "6. 线段1和线段2谁比较长？",
       "className": "w-[300px]",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q159.png",
+      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-12-1-6.png",
       "options": [
         {
           "value": "A",
@@ -173,7 +173,7 @@
       "menuId": "12.1",
       "label": "7. 线段1和线段2谁比较长？",
       "className": "w-[300px]",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q160.png",
+      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-12-1-7.png",
       "options": [
         {
           "value": "A",
@@ -200,7 +200,7 @@
       "menuId": "12.2",
       "label": "1. 图2是图1的多少倍？",
       "className": "w-[300px]",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q161.png",
+      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-12-2-1.png",
       "options": [
         {
           "value": "A",
@@ -229,7 +229,7 @@
       "menuId": "12.2",
       "label": "2. 图2是图1的多少倍？",
       "className": "w-[320px]",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q162.png",
+      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-12-2-2.png",
       "options": [
         {
           "value": "A",
@@ -258,7 +258,7 @@
       "menuId": "12.2",
       "label": "3. 下图哪个人身材高大一点？",
       "className": "w-[320px]",
-      "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q163.png",
+      "fileUrl": "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-12-2-3.png",
       "options": [
         {
           "value": "A",

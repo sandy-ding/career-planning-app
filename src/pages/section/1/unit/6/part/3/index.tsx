@@ -26,7 +26,7 @@ const overview = {
   title: "空间想象",
   description:
     "<strong>指导语</strong>：您将在电脑界面上回答一系列问题，请尽量在8分钟内完成，8分钟后将直接进入下一段测验。现在，请按照界面上的指示进行作答。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-6-3.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-6-3.mp3",
 };
 const countdownDuration = 1000 * 60 * 8;
 

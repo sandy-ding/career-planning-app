@@ -21,7 +21,7 @@ const overview = {
   title: "数字广度测验",
   description:
     "<strong>指导语</strong>：下面开始数字广度测验。你将听到“哔”一声（提示音），之后我会说出一串数字，你需按照我说的顺序，把听到的数字输入到屏幕中。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。注意：若连错3次测验即停止，以最后一次答对数字串所包含的数字个数为最终得分。下面点击“练习”，开始练习吧。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-3-1.mp3",
 };
 
 export default function Index() {
@@ -42,6 +42,7 @@ export default function Index() {
 
   const { mutate } = useSubmitAnswerMutation(getDataSource());
 
+  console.log({ questionIndex });
   const onFinish = async () => {
     const currentTime = Date.now();
     if (goNext) {
@@ -76,6 +77,9 @@ export default function Index() {
           },
         });
         setOtp("");
+        if (questionIndex + 1 === 13) {
+          setStage(Stage.Mid);
+        }
       } else if (numOfSubmission >= 2) {
         setShowInput(false);
         setNumOfSubmission(0);
@@ -90,6 +94,7 @@ export default function Index() {
           setQuestionIndex(13);
           setHelp("");
           setOtp("");
+          setStage(Stage.Mid);
         } else {
           setStage(Stage.End);
         }
@@ -200,14 +205,21 @@ export default function Index() {
                 description="很好。点击“开始”，开启正式测验，你将听到“哔”一声（提示音），之后我会说出一串数字，你需按照我说的顺序，把听到的数字输入到屏幕中。注意：若连错3次测验即停止。"
                 btnText="开始"
                 onClick={() => setStage(Stage.Main)}
-                audioUrl="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-M-1.mp3"
+                audioUrl="https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-3-1-M-1.mp3"
+              />
+            ) : questionIndex === 13 ? (
+              <Overview
+                description="现在我们来试试倒着复述数字。你将听到“哔”的测验提示音，之后我会说一些数字，当我一说完你需要把听到的数字按倒序输入到屏幕中。"
+                btnText="开始"
+                onClick={() => setStage(Stage.Main)}
+                audioUrl="https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-3-1-M-2.mp3"
               />
             ) : (
               <Overview
                 description="很好。点击“开始”，开启正式测验。你将听到“哔”一声（提示音），之后我会说出一串数字，你需要把听到的数字按倒序输入到屏幕中。注意：若连错3次测验即停止。"
                 btnText="开始"
                 onClick={() => setStage(Stage.Main)}
-                audioUrl="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-1-M-2.mp3"
+                audioUrl="https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-3-1-M-3.mp3"
               />
             ))}
           {stage === Stage.End && <UnitEnd goNext={onEnd} />}

@@ -6,7 +6,7 @@ const overview = {
   title: "职业兴趣测验",
   description:
     "欢迎来到职业兴趣测验系统！职业兴趣是探索未来职业道路的重要一步。我们致力于帮助您发现兴趣所在，探索各种职业领域。通过我们的测验，您将了解自己的优势、爱好和职场偏好，这将为未来的职业规划提供有力指导。<br /><br />我们尊重您的隐私，系统将确保您的数据安全。快来寻找您的职业兴趣所在吧！",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/3.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/3.mp3",
 };
 
 export default function Index() {

@@ -1,5 +1,4 @@
-import { SoundTwoTone } from "@ant-design/icons";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function AudioPlayer({
   fileUrl,

@@ -27,6 +27,7 @@ export default function Overview({
     const audio = new Audio(audioUrl);
     setAudio(audio);
     audio.play();
+    return () => audio?.pause();
   }, []);
 
   return (

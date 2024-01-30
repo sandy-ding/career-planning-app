@@ -33,7 +33,7 @@ const overview = {
   title: "目标比较",
   description:
     "<strong>指导语</strong>：接下来电脑屏幕上会呈现出两幅图片，你需要参照左图，通过鼠标点选的方式选出右图中与之不同的地方（只点右图），一共有10处不同，请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br/><br/>现在，请开始测验。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-9-2.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-9-2.mp3",
 };
 
 const countdownDuration = 1000 * 60 * 10;

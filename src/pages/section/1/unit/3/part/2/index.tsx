@@ -15,6 +15,7 @@ import Image from "next/image";
 
 enum Stage {
   Intro,
+  Mid,
   ReadDescription,
   ShowQuestion,
   WhiteScreen,
@@ -33,7 +34,7 @@ const overview = {
   title: "视觉矩阵测验",
   description:
     "<strong>指导语</strong>：接下来是视觉矩阵测验。在屏幕中央，将出现一个放有蓝色棋子的方格棋盘，这些棋子呈现5秒后会消失，请你留意这些棋子的位置，并在随后出现的空白棋盘上准确地指出这些棋子的位置。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。注意若连错3次测验即停止，以最后一次答对的棋子数量为最终得分。下面点击“练习”，开始练习吧。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-3-2.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-3-2.mp3",
 };
 
 export default function Index() {
@@ -103,8 +104,12 @@ export default function Index() {
       setGoNext(false);
       setHelp("");
       setQuestionIndex(questionIndex + 1);
-      startTest();
       setNumOfSubmission(0);
+      if (questionIndex === 3) {
+        setStage(Stage.Mid);
+      } else {
+        startTest();
+      }
     } else if (question.isTest) {
       if (question.answer === answerStr) {
         setGoNext(true);
@@ -199,52 +204,70 @@ export default function Index() {
           {stage !== Stage.End ? (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
-                <Form
-                  name="basic"
-                  onFinish={onFinish}
-                  autoComplete="off"
-                  layout="vertical"
-                  requiredMark={false}
-                  className="flex flex-col justify-between h-full"
-                >
-                  <Form.Item
-                    label={
-                      <div className="w-full text-center">
-                        <div>{question.isTest && "练习题 "}</div>
-                        <label className="contents">{question.label}</label>
-                      </div>
-                    }
-                    className="h-full"
-                    help={
-                      <div className="flex justify-center mt-2">{help}</div>
-                    }
-                    validateStatus={validateStatus}
+                {stage === Stage.Mid ? (
+                  <div className="mt-40">
+                    <div className="text-center text-primary-700 text-lg">
+                      现在你将进入正式测验，点击“开始测验”按钮开始吧！
+                    </div>
+                    <div className="mt-40 flex justify-center">
+                      <Button
+                        size="large"
+                        shape="round"
+                        onClick={() => {
+                          startTest();
+                        }}
+                      >
+                        开始测试
+                      </Button>
+                    </div>
+                  </div>
+                ) : (
+                  <Form
+                    name="basic"
+                    onFinish={onFinish}
+                    autoComplete="off"
+                    layout="vertical"
+                    requiredMark={false}
+                    className="flex flex-col justify-between h-full"
                   >
-                    {stage !== Stage.ReadDescription &&
-                      stage !== Stage.WhiteScreen && (
-                        <div
-                          className={classNames("flex justify-center mt-24")}
-                          style={{ marginTop: "100px" }}
-                        >
-                          <div>{board}</div>
+                    <Form.Item
+                      label={
+                        <div className="w-full text-center">
+                          <div>{question.isTest && "练习题 "}</div>
+                          <label className="contents">{question.label}</label>
                         </div>
-                      )}
-                  </Form.Item>
-
-                  <Form.Item className="flex justify-center">
-                    <Button
-                      htmlType="submit"
-                      size="large"
-                      shape="round"
-                      disabled={
-                        stage !== Stage.AnswerQuestion &&
-                        stage !== Stage.ShowCorrectAnswer
                       }
+                      className="h-full"
+                      help={
+                        <div className="flex justify-center mt-2">{help}</div>
+                      }
+                      validateStatus={validateStatus}
                     >
-                      {goNext ? "下一题" : "提交"}
-                    </Button>
-                  </Form.Item>
-                </Form>
+                      {stage !== Stage.ReadDescription &&
+                        stage !== Stage.WhiteScreen && (
+                          <div
+                            className={classNames("flex justify-center mt-24")}
+                            style={{ marginTop: "100px" }}
+                          >
+                            <div>{board}</div>
+                          </div>
+                        )}
+                    </Form.Item>
+                    <Form.Item className="flex justify-center">
+                      <Button
+                        htmlType="submit"
+                        size="large"
+                        shape="round"
+                        disabled={
+                          stage !== Stage.AnswerQuestion &&
+                          stage !== Stage.ShowCorrectAnswer
+                        }
+                      >
+                        {goNext ? "下一题" : "提交"}
+                      </Button>
+                    </Form.Item>
+                  </Form>
+                )}
               </div>
             </div>
           ) : (

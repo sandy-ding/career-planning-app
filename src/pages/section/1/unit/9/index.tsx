@@ -8,7 +8,7 @@ const overview = {
   title: "自然观察能力",
   description:
     "自然观察能力是指人们辨别生物（动物和植物）以及对自然世界（云朵、石头等形状）的其他特征敏感的能力。自然观察能力强的人，观察敏锐、细致，能够主动发现问题、探究问题、解决问题。<br/><br/>测试提示：欢迎参与自然观察能力测验！本测验包括目标搜索、目标比较和目标拼图3个模块，共5题，每小题限时10分钟。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-9.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-9.mp3",
 };
 
 export default function Index() {

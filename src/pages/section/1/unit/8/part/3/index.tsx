@@ -68,7 +68,7 @@ const overview = {
   title: "匹配反应时",
   description:
     "<strong>指导语</strong>：这是信息加工能力测验的第三段测验。<br /><br />接下来电脑界面上将呈现5×5排列的字符组合图片，请根据题目要求在图片中找出相应的5个字符组合，并用鼠标点击对应位置。选择完成后点击提交，确认后将进入下一题。<br /><br />现在，请开始测验。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-8-3.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-8-3.mp3",
 };
 
 const sectionNo = 1;

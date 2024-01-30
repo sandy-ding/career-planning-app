@@ -68,7 +68,7 @@ export default function RadioForm({
           <Space
             direction={isHorizontal ? "horizontal" : "vertical"}
             size={15}
-            className="flex justify-between mt-5 w-full flex-wrap"
+            className="flex lg:justify-between mt-5 w-full flex-wrap"
           >
             {question?.options?.map(({ value, label }) => (
               <Radio

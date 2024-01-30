@@ -16,8 +16,8 @@ const partId = `${unitId}${partNo}`;
 const overview = {
   title: "三维空间旋转",
   description:
-    "<strong>指导语</strong>：下面每道题的最左边有一个标准图形，右边的 4 个图形中总有两个与左边的标准图形是一样的(只是呈现的角度不同)，请你找出哪两个图形与左边的标准图形一样。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-6-2.mp3",
+    "<strong>指导语</strong>：每道题的上方是标准图形，下方是4个比较图形，这4个当中总有2个与标准图形是一样的(只是呈现的角度不同)，请你找出这2个图形。",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-6-2.mp3",
 };
 
 export default function Index() {

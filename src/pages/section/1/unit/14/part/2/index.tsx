@@ -3,12 +3,12 @@ import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
 import { useMemo, useState } from "react";
 import questions from "./index.json";
-import RadioForm from "@/components/RadioForm";
 import Header from "@/components/Layout/Header";
 import Progress from "@/components/Progress";
 import { Stage } from "@/types";
 import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
+import RadioImageForm from "@/components/RadioImageForm";
 
 const sectionNo = 1;
 const unitNo = 14;
@@ -18,7 +18,8 @@ const overview = {
   title: "（二）文字转换为对应图片",
   description:
     "<strong>指导语</strong>：这是思维转换能力的第二段测验。<br /><br />你将在电脑界面上回答一系列问题，屏幕上只会呈现一道题。请你根据题目呈现的文字，尽可能快地选择出与文字相对应的图片。<br /><br />现在，请开始测验。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-14-2.mp3",
+  audioUrl:
+    "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-14-2.mp3",
 };
 
 export default function Index() {
@@ -66,6 +67,7 @@ export default function Index() {
     router.push(`/section/${sectionNo}/unit/${unitNo + 1}`);
   };
 
+  console.log(questions[questionIndex]);
   return (
     <div className="flex flex-col h-screen bg-primary-200">
       <Header title="思维转换能力" />
@@ -81,7 +83,7 @@ export default function Index() {
           {isQuestionStage ? (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
-                <RadioForm
+                <RadioImageForm
                   name={questionId}
                   question={questions[questionIndex]}
                   onChange={onChange}

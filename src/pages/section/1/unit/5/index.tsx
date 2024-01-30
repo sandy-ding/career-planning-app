@@ -23,19 +23,19 @@ const overview = {
   title: "信息检索与归纳能力",
   description:
     "信息检索与归纳能力是指对给定的资料的全部或部分内容，观点或问题进行分析和归纳，多角度的思考资料内容，做出合理的推断或评价的能力。<br/><br/>测试提示：信息检索与归纳能力测验包括表格分析和图形分析2个模块，每个模块限时8分钟，共10题。答对一题得一分，答错不计分。请您<strong>尽快</strong>做答。下面开始测试。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-5.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-5.mp3",
 };
 const overview1 = {
   title: "表格分析",
   description:
     "<strong>指导语</strong>：这是信息检索与归纳能力测验的第一段测验。<br/><br/>您将在电脑界面上回答一系列问题，屏幕只会呈现一道题，确认选项后将会自动进入下一题，右下角为答题卡，点击数字可进入相应题目。请尽力在8分钟内完成，8分钟后将直接入下一段测验。如果时间充裕，你也可以选择提交答题卡，提前进入下一段测验。<br/><br/>现在，请开始测验，按照界面上的指示进行作答。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-5-1.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-5-1.mp3",
 };
 const overview2 = {
   title: "图形分析",
   description:
     "<strong>指导语</strong>：这是信息检索与归纳能力的第二段测验。<br/><br/>您将在电脑界面上回答一系列问题，屏幕只会呈现一道题，确认选项后将会自动进入下一题，右下角为答题卡，点击数字可进入相应题目。请尽力在8分钟内完成，8分钟后将直接入下一段测验。如果时间充裕，你也可以选择提交答题卡，提前进入下一段测验。<br/><br/>现在，请开始测验，按照界面上的指示进行作答。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-5-2.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-5-2.mp3",
 };
 
 const countdownDuration = 1000 * 60 * 8;

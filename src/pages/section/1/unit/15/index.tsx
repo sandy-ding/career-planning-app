@@ -31,13 +31,15 @@ const overview = {
   title: "控制抑制能力",
   description:
     "控制抑制能力指个体在目标导向活动中有意识地抑制干扰或反应倾向的能力，与实际生活中对突发事件的应变能力密切相关。这种认知能力作为我们的执行职能之一，有助于预测，规划和目标设定，从而控制阻断行为并停止不适当的自动反应。控制抑制能力通过Stroop任务实验来衡量。",
-  audioUrl: "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-15.mp3",
+  audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-15.mp3",
 };
 
 const overview1 = {
   title: "控制抑制能力",
   description:
-    "<strong>指导语</strong>：欢迎参与控制抑制能力测验！ <br /><br />你将在屏幕正中央看到一个字母，分辨其颜色，颜色与字词含义一致按按“F”键，不一致按“J”键。在判断正确的前提下，反应越快越好。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。下面点击“练习”，开始练习吧。",
+    "<strong>指导语</strong>：欢迎参与控制抑制能力测验！ <br /><br />你将在屏幕正中央看到一个字母，分辨其颜色，颜色与字词含义一致按“F”键，不一致按“J”键。在判断正确的前提下，反应越快越好。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。下面点击“练习”，开始练习吧。",
+  audioUrl:
+    "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-15-1.mp3",
 };
 
 enum Stage {

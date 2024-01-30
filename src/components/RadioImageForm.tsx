@@ -27,8 +27,8 @@ export default function RadioImageForm({
 }: IProps) {
   const [form] = Form.useForm();
   useEffect(() => form.resetFields(), [name, defaultValue]);
-  const row = 2;
-  const col = question?.options.length / 2;
+  const row = question?.options.length > 3 ? 2 : 1;
+  const col = question?.options.length / row;
 
   let Options: ReactElement[] = [];
   for (let i = 0; i < row; i++) {
