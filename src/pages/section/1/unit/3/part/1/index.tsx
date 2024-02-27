@@ -42,7 +42,6 @@ export default function Index() {
 
   const { mutate } = useSubmitAnswerMutation(getDataSource());
 
-  console.log({ questionIndex });
   const onFinish = async () => {
     const currentTime = Date.now();
     if (goNext) {

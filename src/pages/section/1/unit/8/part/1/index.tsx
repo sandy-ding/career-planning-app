@@ -167,7 +167,7 @@ export default function Index() {
                         {stage === Stage.Mid ? (
                           <div className="mt-40">
                             <div className="text-center text-primary-700">
-                              现在你将进入正式测验，点击“开始测验”按钮开始吧！
+                              现在你将进入正式测验，点击“开始测试”按钮开始吧！
                             </div>
                             <div className="mt-40 flex justify-center">
                               <Button
