@@ -12,10 +12,7 @@ import UnitEnd from "@/components/UnitEnd";
 import { Button, Form } from "antd";
 import Countdown from "antd/lib/statistic/Countdown";
 import areas from "./areas.json";
-import ImageMapper, {
-  AreaEvent,
-  MapAreas,
-} from "@/components/ImageMapper/ImageMapper";
+import ImageMapper from "@/components/ImgMapper/ImageMapper";
 import { getCountdown } from "@/utils";
 import Image from "next/image";
 
@@ -32,7 +29,7 @@ const partId = `${unitId}${partNo}`;
 const overview = {
   title: "目标比较",
   description:
-    "<strong>指导语</strong>：接下来电脑屏幕上会呈现出两幅图片，你需要参照左图，通过鼠标点选的方式选出右图中与之不同的地方（只点右图），一共有10处不同，请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br/><br/>现在，请开始测验。",
+    "<strong>指导语</strong>：接下来电脑屏幕上会呈现出两幅图片，请通过鼠标点选的方式选出右图中与左图不同的地方（只点右图），一共有10处不同，请尽力在10分钟之内完成，10分钟后自动进入下一题。如果时间充裕，可以选择提交，提前进入下一测验。<br/><br/>现在，请开始测验。",
   audioUrl: "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-9-2.mp3",
 };
 
@@ -74,12 +71,7 @@ export default function Idex() {
     }, 1000 * 10);
   }, []);
 
-  const onClick = (
-    area: any,
-    index: number,
-    e: AreaEvent,
-    updatedAreas: MapAreas[]
-  ) => {
+  const onClick = (area: any) => {
     const { id } = area;
     const currentTime = Date.now();
     mutate({
@@ -89,9 +81,7 @@ export default function Idex() {
         isCorrect: true,
       },
     });
-    setAnswer(
-      updatedAreas.filter((area) => !!area.preFillColor).map((i) => i.id!)
-    );
+    setAnswer((answer) => [...answer, area.id]);
     setTime(currentTime);
   };
 
@@ -171,8 +161,8 @@ export default function Idex() {
                         <ImageMapper
                           src="https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-9-2-2.png"
                           map={{ name: "areas", areas }}
-                          onClick={onClick}
-                          stayMultiHighlighted
+                          onChange={onClick}
+                          isMulti
                         />
                       </div>
                       <div className="flex flex-col items-center text-primary-700 mt-4">

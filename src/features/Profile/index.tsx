@@ -77,7 +77,7 @@ export default function Profile() {
     </div>
   ) : (
     <div className="grow flex gap-10 px-10 bg-primary-200">
-      <div className="m-autobg-white px-20 py-12 rounded-lg">
+      <div className="m-autobg-white px-20 py-12 rounded-lg min-w-[500px] bg-primary-200">
         <Form
           name="basic"
           onFinish={onFinish}
@@ -103,8 +103,8 @@ export default function Profile() {
             }),
           }}
         >
-          <div className="mb-4 text-center font-bold text-primary-700">
-            个人信息
+          <div className="my-10 text-center font-bold text-primary-700">
+            个人信息（全部必填）
           </div>
           <Row gutter={24}>
             <Col span={8}>
@@ -210,7 +210,7 @@ export default function Profile() {
               </Form.Item>
             </Col>
             <Col span={8}>
-              <Form.Item label="特长：：" name="speciality">
+              <Form.Item label="专业特长：：" name="speciality">
                 <Input />
               </Form.Item>
             </Col>
@@ -254,7 +254,7 @@ export default function Profile() {
           </div>
 
           <Row gutter={24}>
-            <Col span={6}>
+            <Col span={12}>
               <Form.Item
                 label="父亲出生年份：："
                 name="fathersYearOfBirth"
@@ -268,7 +268,7 @@ export default function Profile() {
                 />
               </Form.Item>
             </Col>
-            <Col span={6}>
+            <Col span={12}>
               <Form.Item
                 label="父亲职业：："
                 name="fathersWork"
@@ -281,7 +281,9 @@ export default function Profile() {
                 </Select>
               </Form.Item>
             </Col>
-            <Col span={6}>
+          </Row>
+          <Row gutter={24}>
+            <Col span={12}>
               <Form.Item
                 label="父亲学历：："
                 name="fathersEducation"
@@ -294,7 +296,7 @@ export default function Profile() {
                 </Select>
               </Form.Item>
             </Col>
-            <Col span={6}>
+            <Col span={12}>
               <Form.Item
                 label="父亲月收入：："
                 name="fathersMonthlyIncome"
@@ -309,7 +311,7 @@ export default function Profile() {
             </Col>
           </Row>
           <Row gutter={24}>
-            <Col span={6}>
+            <Col span={12}>
               <Form.Item
                 label="母亲出生年份：："
                 name="mothersYearOfBirth"
@@ -322,7 +324,7 @@ export default function Profile() {
                 />
               </Form.Item>
             </Col>
-            <Col span={6}>
+            <Col span={12}>
               <Form.Item
                 label="母亲职业：："
                 name="mothersWork"
@@ -335,7 +337,9 @@ export default function Profile() {
                 </Select>
               </Form.Item>
             </Col>
-            <Col span={6}>
+          </Row>
+          <Row gutter={24}>
+            <Col span={12}>
               <Form.Item
                 label="母亲学历：："
                 name="mothersEducation"
@@ -348,7 +352,7 @@ export default function Profile() {
                 </Select>
               </Form.Item>
             </Col>
-            <Col span={6}>
+            <Col span={12}>
               <Form.Item
                 label="母亲月收入：："
                 name="mothersMontylyIncome"

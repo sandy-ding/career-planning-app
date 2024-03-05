@@ -12,7 +12,7 @@ import UnitEnd from "@/components/UnitEnd";
 import { Button, Form } from "antd";
 import Countdown from "antd/lib/statistic/Countdown";
 import areas from "./areas.json";
-import ImageMapper from "@/components/ImageMapper/ImageMapper";
+import ImageMapper from "@/components/ImgMapper/ImageMapper";
 import { getCountdown } from "@/utils";
 import Image from "next/image";
 
@@ -83,7 +83,7 @@ export default function Idex() {
     }
   }, [index, answer]);
 
-  const onClick = (area: any, index: number) => {
+  const onClick = (area: any) => {
     const { id } = area;
     const currentTime = Date.now();
     mutate({
@@ -93,7 +93,7 @@ export default function Idex() {
         isCorrect: true,
       },
     });
-    setIndex(index);
+    setIndex(id);
     setTime(currentTime);
   };
 
@@ -160,20 +160,20 @@ export default function Idex() {
                   <Form.Item
                     label={
                       <label className="w-full text-center">
-                        请你尽可能多的在图片中找出题目要求的各个目标物，并用鼠标点击图片对应处。
+                        请你尽可能多的在图片中找出题目要求的14个目标物，并用鼠标点击图片对应处。
                       </label>
                     }
                   >
                     <div>
                       <div className="flex flex-col gap-4 items-center my-2 text-primary-700">
-                        剩余{areas.length - answer.length}个目标物
+                        剩余{areas.length / 2 - answer.length}个目标物
                       </div>
                       <div className="flex justify-center">
                         <ImageMapper
                           src={URL}
                           map={MAP}
-                          onClick={onClick}
-                          stayMultiHighlighted
+                          onChange={onClick}
+                          isMulti
                         />
                       </div>
                       <div className="flex flex-col gap-4 items-center mt-4">

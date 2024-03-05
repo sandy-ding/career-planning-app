@@ -4,7 +4,7 @@
     "category1": "空间能力",
     "category2": "（二）三维空间旋转",
     "type": "Radio",
-    "label": "1．请你找出哪两个图形与下面的标准图形一样。你选择",
+    "label": "1．请你从<span class='highlight'>下面</span>四个备选图形中，找出哪两个图形与<span class='highlight'>上图</span>一样，你选择：",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-6-2-1.png",
     "options": [
       {
@@ -35,7 +35,7 @@
     "category1": "空间能力",
     "category2": "（二）三维空间旋转",
     "type": "Radio",
-    "label": "2．请你找出哪两个图形与下面的标准图形一样。你选择",
+    "label": "2．请你从<span class='highlight'>下面</span>四个备选图形中，找出哪两个图形与<span class='highlight'>上图</span>一样，你选择：",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-6-2-2.png",
     "options": [
       {
@@ -66,7 +66,7 @@
     "category1": "空间能力",
     "category2": "（二）三维空间旋转",
     "type": "Radio",
-    "label": "3．请你找出哪两个图形与下面的标准图形一样。你选择",
+    "label": "3．请你从<span class='highlight'>下面</span>四个备选图形中，找出哪两个图形与<span class='highlight'>上图</span>一样，你选择：",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-6-2-3.png",
     "options": [
       {
@@ -97,7 +97,7 @@
     "category1": "空间能力",
     "category2": "（二）三维空间旋转",
     "type": "Radio",
-    "label": "4．请你找出哪两个图形与下面的标准图形一样。你选择",
+    "label": "4．请你从<span class='highlight'>下面</span>四个备选图形中，找出哪两个图形与<span class='highlight'>上图</span>一样，你选择：",
     "fileUrl": "https://carerer-planning.oss-cn-shanghai.aliyuncs.com/1-6-2-4.png",
     "options": [
       {

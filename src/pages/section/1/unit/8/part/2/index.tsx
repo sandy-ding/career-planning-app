@@ -28,6 +28,7 @@ const unitId = "H";
 const partId = `${unitId}${partNo}`;
 const testCount = 5;
 const count = 15;
+const intervals = [1, 2, 1, 2, 3, 2, 1, 3, 2, 3, 1, 3, 1, 3, 2];
 
 const overview = {
   title: "简单反应时",
@@ -98,17 +99,24 @@ export default function Idex() {
     setTimeout(() => {
       setShowLight(Light.On);
       setTime(Date.now());
-    }, 1000);
+    }, intervals[testNo] * 1000);
   };
+
+  let audio: HTMLAudioElement | undefined;
+  if (typeof Audio != "undefined") {
+    audio = new Audio(
+      "https://career-planning-app.oss-cn-beijing.aliyuncs.com/countdown-321.mp3"
+    );
+  }
 
   const onStart = () => {
     setStage(Stage.Test);
     setCountdown(Date.now() + 1000 * 4);
+    audio?.play();
   };
 
   const onCountdownFinish = () => {
     setCountdown(0);
-    startTest();
   };
 
   return (
@@ -169,6 +177,7 @@ export default function Idex() {
                                 onClick={() => {
                                   setStage(Stage.Main);
                                   setCountdown(Date.now() + 1000 * 4);
+                                  audio?.play();
                                 }}
                               >
                                 开始测试
@@ -180,6 +189,7 @@ export default function Idex() {
                             <img
                               className="w-80"
                               src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q133.jpg"
+                              onLoad={startTest}
                             />
                             <div
                               style={{

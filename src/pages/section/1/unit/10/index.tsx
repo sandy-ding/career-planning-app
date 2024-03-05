@@ -1,8 +1,5 @@
 import { useRouter } from "next/router";
-import {
-  useAnswerQuery,
-  useSubmitAnswerMutation,
-} from "@/graphql/generated/graphql";
+import { useSubmitAnswerMutation } from "@/graphql/generated/graphql";
 import { getDataSource } from "@/graphql/queryClient";
 import { useMemo, useState } from "react";
 import questions from "./index.json";

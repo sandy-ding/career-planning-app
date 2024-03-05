@@ -23,6 +23,8 @@ const GOAL_SIZE_DEFAULT = 15;
  *            goalHeight?: number,
  *            wallLuminosityThreshold?: number,
  *            moveSpeed?: number,
+ *            moverSize?: number,
+ *            diagonalMove?: boolean,
  *            onWin?: function,
  *          }} MazeOptions
  *
@@ -135,7 +137,7 @@ export const initMaze = function (canvasId, imageId, options) {
   canvas.width = image.naturalWidth;
   canvas.height = image.naturalHeight;
 
-  const { onWin } = options;
+  const { onWin, diagonalMove, moverSize = 4 } = options;
   const {
     startX,
     startY,
@@ -169,26 +171,50 @@ export const initMaze = function (canvasId, imageId, options) {
   // Gets current direction represented by held keys
   const getKeyboardDirection = (function () {
     // Records whether or not each key is currently held down
-    const keyHeld = {};
+    let keyHeld = {};
+    const keysPressing = {};
     for (let i = 0; i < MOVEMENT_KEY_NAMES.length; i++) {
       keyHeld[MOVEMENT_KEY_NAMES[i]] = false;
+      keysPressing[MOVEMENT_KEY_NAMES[i]] = false;
     }
 
     // listen for key down and up
     document.addEventListener("keydown", function (event) {
       if (!hasCollision && !hasWon) {
         const keyName = event.key;
-        for (let i = 0; i < MOVEMENT_KEY_NAMES.length; i++) {
-          keyHeld[MOVEMENT_KEY_NAMES[i]] = MOVEMENT_KEY_NAMES[i] === keyName;
+        if (MOVEMENT_KEY_NAMES.includes(keyName)) {
+          if (diagonalMove) {
+            keysPressing[keyName] = true;
+          } else {
+            Object.keys(keysPressing).forEach((key) => {
+              keysPressing[key] = key === keyName;
+            });
+          }
+        }
+        if (
+          Object.values(keysPressing)?.filter((i) => i === true)?.length <= 2
+        ) {
+          keyHeld = { ...keysPressing };
         }
       }
       // Prevent keypresses from scrolling the page.
       if (SCROLLING_KEY_NAMES.includes(event.key)) event.preventDefault();
     });
 
+    // listen for key down and up
+    document.addEventListener("keyup", function (event) {
+      if (!hasCollision && !hasWon) {
+        const keyName = event.key;
+        if (MOVEMENT_KEY_NAMES.includes(keyName)) {
+          keysPressing[keyName] = false;
+        }
+      }
+    });
+
     document.addEventListener("collision", function () {
       for (let i = 0; i < MOVEMENT_KEY_NAMES.length; i++) {
         keyHeld[MOVEMENT_KEY_NAMES[i]] = false;
+        keysPressing[MOVEMENT_KEY_NAMES[i]] = false;
       }
       hasCollision = true;
       setTimeout(() => {
@@ -225,7 +251,7 @@ export const initMaze = function (canvasId, imageId, options) {
   Mover.prototype.draw = function () {
     c.beginPath();
     c.fillStyle = "crimson";
-    c.arc(this.pos.x, this.pos.y, 4, 0, Math.PI * 2, false); // mover size
+    c.arc(this.pos.x, this.pos.y, moverSize, 0, Math.PI * 2, false); // mover size
     c.fill(); // fill inside
   };
 
@@ -477,7 +503,6 @@ export const initMaze = function (canvasId, imageId, options) {
     ) {
       hasWon = true;
       canvas.dispatchEvent(new CustomEvent("win", {}));
-      console.log("Win: Reached goal.");
       if (onWin) {
         onWin();
       }

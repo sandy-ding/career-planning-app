@@ -100,6 +100,13 @@ export default function Index() {
     };
   }, [showLight]);
 
+  let audio: HTMLAudioElement | undefined;
+  if (typeof Audio != "undefined") {
+    audio = new Audio(
+      "https://career-planning-app.oss-cn-beijing.aliyuncs.com/countdown-321.mp3"
+    );
+  }
+
   const startTest = () => {
     setShowLight(Light.Off);
     if (stage === Stage.Test && testNo === testLights.length - 1) {
@@ -117,11 +124,11 @@ export default function Index() {
   const onStart = () => {
     setStage(Stage.Test);
     setCountdown(Date.now() + 1000 * 4);
+    audio?.play();
   };
 
   const onCountdownFinish = () => {
     setCountdown(0);
-    startTest();
   };
 
   return (
@@ -176,6 +183,7 @@ export default function Index() {
                                 onClick={() => {
                                   setStage(Stage.Main);
                                   setCountdown(Date.now() + 1000 * 4);
+                                  audio?.play();
                                 }}
                               >
                                 开始测试
@@ -184,7 +192,10 @@ export default function Index() {
                           </div>
                         ) : (
                           <div className="flex justify-center items-center mt-20">
-                            <img src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q132.png" />
+                            <img
+                              src="https://carerer-planning.oss-cn-shanghai.aliyuncs.com/q132.png"
+                              onLoad={startTest}
+                            />
                             <div
                               className="w-10 h-10"
                               style={{

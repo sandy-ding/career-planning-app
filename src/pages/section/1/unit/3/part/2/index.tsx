@@ -12,6 +12,7 @@ import { ValidateStatus } from "antd/es/form/FormItem";
 import classNames from "classnames";
 import Countdown from "antd/lib/statistic/Countdown";
 import Image from "next/image";
+import AudioPlayer from "@/components/AudioPlayer";
 
 enum Stage {
   Intro,
@@ -157,9 +158,17 @@ export default function Index() {
     }
   };
 
+  let audio: HTMLAudioElement | undefined;
+  if (typeof Audio != "undefined") {
+    audio = new Audio(
+      "https://career-planning-app.oss-cn-beijing.aliyuncs.com/bi.mp3"
+    );
+  }
+
   const startTest = () => {
     setStage(Stage.ShowQuestion);
     setCountdown(Date.now() + 1000 * 5);
+    audio?.play();
   };
 
   const onEnd = () => {

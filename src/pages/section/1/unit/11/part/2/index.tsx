@@ -11,7 +11,7 @@ import Maze from "@/components/Maze";
 
 const sectionNo = 1;
 const unitNo = 11;
-const partNo = 1;
+const partNo = 2;
 const unitId = "K";
 const partId = `${unitId}${partNo}`;
 
@@ -25,30 +25,30 @@ const overview = {
 
 const mazes = [
   {
-    imgSrc: "http://localhost:3000/1-11-1.png",
-    startX: 9,
-    startY: 340,
-    goalX: 392,
-    goalY: 70,
-    goalWidth: 32,
-    goalHeight: 32,
+    imgSrc: "http://localhost:3000/1-11-3.png",
+    startX: 212,
+    startY: 5,
+    goalX: 171,
+    goalY: 131,
+    goalWidth: 103,
+    goalHeight: 155,
     isTest: true,
-    moveSpeed: 0.8,
-    moverSize: 4,
-    diagonalMove: false,
+    moveSpeed: 0.5,
+    moverSize: 3,
+    diagonalMove: true,
   },
   {
-    imgSrc: "http://localhost:3000/1-11-2.png",
+    imgSrc: "http://localhost:3000/1-11-4.png",
     startX: 6,
-    startY: 19,
-    goalX: 448,
-    goalY: 448,
-    goalWidth: 23,
-    goalHeight: 23,
+    startY: 203,
+    goalX: 193,
+    goalY: 200,
+    goalWidth: 40,
+    goalHeight: 34,
     isTest: false,
-    moveSpeed: 1,
-    moverSize: 4,
-    diagonalMove: false,
+    moveSpeed: 0.5,
+    moverSize: 3,
+    diagonalMove: true,
   },
 ];
 
@@ -93,6 +93,10 @@ export default function Index() {
     }
   };
 
+  const onEnd = async () => {
+    router.push(`/section/${sectionNo}/unit/${unitNo + 1}`);
+  };
+
   const onSubmit = () => {
     if (mazes[questionIndex].isTest) {
       setStage(Stage.Mid);
@@ -120,7 +124,7 @@ export default function Index() {
       ) : (
         <>
           <Progress
-            currentIndex={0}
+            currentIndex={1}
             currentPercent={stage === Stage.End ? 1 : 0}
             titles={["直线运动", "曲线运动"]}
           />
@@ -175,7 +179,7 @@ export default function Index() {
               </div>
             </div>
           ) : (
-            <UnitEnd goNext={() => router.push(`${partNo + 1}`)} />
+            <UnitEnd goNext={onEnd} />
           )}
         </>
       )}

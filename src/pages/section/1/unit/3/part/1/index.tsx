@@ -49,6 +49,7 @@ export default function Index() {
       setGoNext(false);
       setHelp("");
       setOtp("");
+      setValidateStatus("success");
       setQuestionIndex(questionIndex + 1);
       if (question.isTest && (questionIndex === 1 || questionIndex === 14)) {
         setStage(Stage.Mid);
@@ -101,7 +102,6 @@ export default function Index() {
         setNumOfSubmission(numOfSubmission + 1);
         setHelp(`回答错误，请再次输入，剩余${2 - numOfSubmission}次机会`);
         setValidateStatus("error");
-        setOtp("");
       }
     }
   };
@@ -137,7 +137,7 @@ export default function Index() {
                   autoComplete="off"
                   layout="vertical"
                   requiredMark={false}
-                  className="flex flex-col justify-between h-full"
+                  className="flex flex-col justify-between h-96"
                 >
                   <Form.Item
                     label={
@@ -163,6 +163,7 @@ export default function Index() {
                     {showInput && (
                       <div className="flex justify-center">
                         <OtpInput
+                          shouldAutoFocus
                           containerStyle={{ marginTop: "100px" }}
                           value={otp}
                           onChange={(otp: string) => {
@@ -176,7 +177,7 @@ export default function Index() {
                           renderInput={(props) => (
                             <input
                               {...props}
-                              className="!w-12 h-12 m-1 text-3xl border-2 border-black"
+                              className="!w-12 h-12 m-1 text-3xl border-2 border-black !rounded"
                             />
                           )}
                         />
@@ -189,7 +190,11 @@ export default function Index() {
                       htmlType="submit"
                       size="large"
                       shape="round"
-                      disabled={!otp || otp.length !== question.answer.length}
+                      disabled={
+                        !otp ||
+                        otp.length !== question.answer.length ||
+                        (!question.isTest && validateStatus !== "success")
+                      }
                     >
                       {goNext ? "下一题" : "提交"}
                     </Button>

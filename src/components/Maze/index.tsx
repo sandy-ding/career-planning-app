@@ -11,6 +11,8 @@ interface IProps {
   goalWidth: number;
   goalHeight: number;
   moveSpeed?: number;
+  moverSize?: number;
+  diagonalMove?: boolean;
   onSuccess: () => void;
 }
 
@@ -30,16 +32,10 @@ export default function Maze(props: IProps) {
     goalWidth,
     goalHeight,
     moveSpeed,
+    diagonalMove,
+    moverSize,
     onSuccess,
   } = props;
-
-  useEffect(() => {
-    window.addEventListener("win", () => {
-      setShowCanvas(false);
-      setHasWon(true);
-      onSuccess();
-    });
-  }, []);
 
   useEffect(() => {
     window.addEventListener("collision", () => {
@@ -53,12 +49,11 @@ export default function Maze(props: IProps) {
   }, []);
 
   const onWin = () => {
-    console.log("win win win");
     setShowCanvas(false);
     setHasWon(true);
+    onSuccess();
   };
 
-  console.log({ showCanvas });
   return (
     <>
       <img
@@ -76,6 +71,8 @@ export default function Maze(props: IProps) {
             goalWidth,
             goalHeight,
             moveSpeed,
+            diagonalMove,
+            moverSize,
             onWin,
           })
         }

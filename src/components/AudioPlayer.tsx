@@ -2,10 +2,10 @@ import { useEffect } from "react";
 
 export default function AudioPlayer({
   fileUrl,
-  onEnd,
+  onEnd = () => {},
 }: {
   fileUrl: string;
-  onEnd: () => void;
+  onEnd?: () => void;
 }) {
   const audio = new Audio(fileUrl);
 
@@ -14,8 +14,8 @@ export default function AudioPlayer({
   }, [audio]);
 
   useEffect(() => {
-    audio.play();
+    audio?.play();
   }, []);
 
-  return <div />;
+  return <></>;
 }

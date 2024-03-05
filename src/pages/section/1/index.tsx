@@ -2,7 +2,7 @@ import Entry from "@/components/Entry";
 
 const props = {
   headerTitle: "潜能测评",
-  title: "你的智力有多高？",
+  title: "你的优势智能有哪些？",
   btnUrl: "/section/1/overview",
   className: "px-20",
   bgImage:
