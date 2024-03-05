@@ -25,7 +25,7 @@ const overview = {
 
 const mazes = [
   {
-    imgSrc: "http://localhost:3000/1-11-3.png",
+    imgSrc: "/1-11-3.png",
     startX: 212,
     startY: 5,
     goalX: 171,
@@ -38,7 +38,7 @@ const mazes = [
     diagonalMove: true,
   },
   {
-    imgSrc: "http://localhost:3000/1-11-4.png",
+    imgSrc: "/1-11-4.png",
     startX: 6,
     startY: 203,
     goalX: 193,
