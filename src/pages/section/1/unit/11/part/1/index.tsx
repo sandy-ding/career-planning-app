@@ -191,7 +191,11 @@ export default function Index() {
               </div>
             </div>
           ) : (
-            <UnitEnd goNext={() => router.push(`${partNo + 1}`)} />
+            <UnitEnd
+              goNext={() =>
+                router.push(`/section/${sectionNo}/unit/${unitNo + 1}`)
+              }
+            />
           )}
         </>
       )}
