@@ -228,16 +228,16 @@ export const initMaze = function (canvasId, imageId, options) {
     return function () {
       const resultant = new Vector2(0, 0);
       if (keyHeld["ArrowLeft"]) {
-        resultant.x -= 1;
-      }
-      if (keyHeld["ArrowUp"]) {
-        resultant.y -= 1;
-      }
-      if (keyHeld["ArrowRight"]) {
         resultant.x += 1;
       }
-      if (keyHeld["ArrowDown"]) {
+      if (keyHeld["ArrowUp"]) {
         resultant.y += 1;
+      }
+      if (keyHeld["ArrowRight"]) {
+        resultant.x -= 1;
+      }
+      if (keyHeld["ArrowDown"]) {
+        resultant.y -= 1;
       }
       return resultant;
     };

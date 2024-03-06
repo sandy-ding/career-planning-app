@@ -8,6 +8,8 @@ import Overview from "@/components/Overview";
 import UnitEnd from "@/components/UnitEnd";
 import { Button } from "antd";
 import Maze from "@/components/Maze";
+import Countdown from "antd/lib/statistic/Countdown";
+import Image from "next/image";
 
 const sectionNo = 1;
 const unitNo = 11;
@@ -18,7 +20,7 @@ const partId = `${unitId}${partNo}`;
 const overview = {
   title: "迷宫",
   description:
-    "<strong>指导语</strong>：屏幕中央会出现一个方形或者圆形的迷宫，此刻你正处于迷宫的入口处，你需要尽快穿越迷宫到达插有旗帜的目的地，注意尽量不要撞到任何墙壁，否则你将等待3秒才能复活继续游戏。测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。下面点击“练习”，开始练习吧。",
+    "<strong>指导语</strong>：屏幕中央将出现一个迷宫，此刻你正处于迷宫的入口，你需要尽快穿越迷宫到达插有旗帜的地方。注意尽量不要撞到任何墙壁，否则你将等待3秒才能复活继续游戏。我们的按键采用反向按键，即按“←”键表示向右走，按“→”键表示向左走，按“↑”键表示向下走，按“↓”键表示向上走！测试分练习和正式2部分，练习结束后点击“开始”按钮，进行正式测验。<br/><br/>下面点击“练习”，开始练习吧。",
   audioUrl:
     "https://career-planning-app.oss-cn-beijing.aliyuncs.com/1-11-1.mp3",
 };
@@ -26,28 +28,30 @@ const overview = {
 const mazes = [
   {
     imgSrc: "/1-11-1.png",
+    startX: 18,
+    startY: 78,
+    goalX: 460,
+    goalY: 37,
+    goalWidth: 40,
+    goalHeight: 77,
+    isTest: true,
+    moveSpeed: 1,
+    moverSize: 6,
+    preTime: 3000,
+    diagonalMove: false,
+  },
+  {
+    imgSrc: "/1-11-2.png",
     startX: 9,
     startY: 340,
     goalX: 392,
     goalY: 70,
     goalWidth: 32,
     goalHeight: 32,
-    isTest: true,
-    moveSpeed: 0.8,
-    moverSize: 4,
-    diagonalMove: false,
-  },
-  {
-    imgSrc: "/1-11-2.png",
-    startX: 6,
-    startY: 19,
-    goalX: 448,
-    goalY: 448,
-    goalWidth: 23,
-    goalHeight: 23,
     isTest: false,
     moveSpeed: 1,
     moverSize: 4,
+    preTime: 5000,
     diagonalMove: false,
   },
 ];
@@ -66,6 +70,7 @@ export default function Index() {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [goNext, setGoNext] = useState(false);
   const [time, setTime] = useState(0);
+  const [countdown, setCountdown] = useState(0);
 
   const dataSource = getDataSource();
   const { mutateAsync: submitAnswer } = useSubmitAnswerMutation(dataSource);
@@ -77,7 +82,7 @@ export default function Index() {
   const startTest = () => {
     setGoNext(false);
     setQuestionIndex(questionIndex + 1);
-    setTimeout(() => setGoNext(true), 1000 * 10);
+    setTimeout(() => setGoNext(true), 1000 * 15);
   };
 
   const onWin = () => {
@@ -110,20 +115,30 @@ export default function Index() {
 
   return (
     <div className="flex flex-col h-screen bg-primary-200">
-      <Header title="运动协调能力" />
+      <Header title="运动协调能力">
+        {countdown !== 0 ? (
+          <Countdown
+            value={countdown}
+            format="m:ss"
+            className="leading-8 !text-xl"
+          />
+        ) : (
+          <></>
+        )}
+        <Image src="/countdown.png" alt="user" width="32" height="32" />
+      </Header>
       {stage === Stage.Intro ? (
         <Overview
           {...overview}
           btnText="练习"
-          onClick={() => setStage(Stage.Test)}
+          onClick={() => {
+            setStage(Stage.Test);
+            setCountdown(Date.now() + 3 * 1000);
+          }}
         />
       ) : (
         <>
-          <Progress
-            currentIndex={0}
-            currentPercent={stage === Stage.End ? 1 : 0}
-            titles={["直线运动", "曲线运动"]}
-          />
+          <Progress currentIndex={0} currentPercent={0} titles={[""]} />
           {stage !== Stage.End ? (
             <div className="grow flex gap-10 px-10 items-center bg-primary-200">
               <div className="grow w-3/5 h-[calc(100%-80px)] p-20 py-10 bg-white">
@@ -143,7 +158,8 @@ export default function Index() {
                           onClick={() => {
                             setStage(Stage.Main);
                             startTest();
-                            setTime(Date.now());
+                            setTime(Date.now() + 5 * 1000);
+                            setCountdown(Date.now() + 5 * 1000);
                           }}
                         >
                           开始测试
@@ -152,7 +168,7 @@ export default function Index() {
                     </div>
                   ) : (
                     <>
-                      <div className="flex justify-center items-center my-10">
+                      <div className="flex justify-center items-center my-8">
                         <Maze {...mazes[questionIndex]} onSuccess={onWin} />
                       </div>
                     </>
@@ -161,7 +177,7 @@ export default function Index() {
                 {stage !== Stage.Mid && (
                   <>
                     <div className="w-full text-primary-700 text-center text-[22px]">
-                      请按上下左右方向键移动。
+                      按键采用反向按键，即按“←”键表示向右走，按“→”键表示向左走，按“↑”键表示向下走，按“↓”键表示向上走！
                     </div>
                     {goNext && (
                       <div className="mt-4 flex justify-center">

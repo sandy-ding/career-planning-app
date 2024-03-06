@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { initMaze } from "./canvas";
 import Countdown from "antd/lib/statistic/Countdown";
+import classNames from "classnames";
 
 interface IProps {
   imgSrc: string;
@@ -13,6 +14,7 @@ interface IProps {
   moveSpeed?: number;
   moverSize?: number;
   diagonalMove?: boolean;
+  preTime: number;
   onSuccess: () => void;
 }
 
@@ -34,6 +36,7 @@ export default function Maze(props: IProps) {
     moveSpeed,
     diagonalMove,
     moverSize,
+    preTime,
     onSuccess,
   } = props;
 
@@ -46,6 +49,23 @@ export default function Maze(props: IProps) {
         setShowHint(false);
       }, countdownDuration + 500);
     });
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      initMaze("canvas", "source", {
+        startX,
+        startY,
+        goalX,
+        goalY,
+        goalWidth,
+        goalHeight,
+        moveSpeed,
+        diagonalMove,
+        moverSize,
+        onWin,
+      });
+    }, preTime);
   }, []);
 
   const onWin = () => {
@@ -62,20 +82,6 @@ export default function Maze(props: IProps) {
         className="select-none z-0"
         width="500px"
         height="500px"
-        onLoad={() =>
-          initMaze("canvas", "source", {
-            startX,
-            startY,
-            goalX,
-            goalY,
-            goalWidth,
-            goalHeight,
-            moveSpeed,
-            diagonalMove,
-            moverSize,
-            onWin,
-          })
-        }
       />
       {showCanvas && (
         <canvas

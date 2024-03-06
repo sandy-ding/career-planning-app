@@ -12,7 +12,6 @@ import { ValidateStatus } from "antd/es/form/FormItem";
 import classNames from "classnames";
 import Countdown from "antd/lib/statistic/Countdown";
 import Image from "next/image";
-import AudioPlayer from "@/components/AudioPlayer";
 
 enum Stage {
   Intro,
